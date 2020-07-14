@@ -1,6 +1,6 @@
 |[![!BuyMeACoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/thomashighbaugh)|
 |[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Thomashighbaugh/ama/blob/master/README.md)|
-|[![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/dotfiles)|
+|[![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)|
 
 ### TLH Around the Web
 | Link | Description |
