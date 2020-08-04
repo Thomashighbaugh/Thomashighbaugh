@@ -32,7 +32,7 @@
 ---
 ### Connect with me:
 
-[[<img alt="Twitter ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]    
+[<img alt="Twitter ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]    
 
 [<img  alt="Reddit ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
 
