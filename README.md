@@ -27,8 +27,13 @@
 <br />
 
 ### Connect with me:
-[<img align="center" alt="|| Twitter ||" width="72px" padding='12%' src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-[<img align="center" alt="|| Reddit ||" width="72px" padding='12%' src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-[<img align="center" alt="|| Github ||" width="72px" padding='12%' src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
-[<img align="center" alt="|| Instagram ||" width="72px" padding='12%' src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img align="center" alt="|| Email ||" width="72px" padding='12%' src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img align="center" alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+<br>
+[<img align="center" alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+<br>
+[<img align="center" alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+<br>
+[<img align="center" alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+<br>
+[<img align="center" alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+<br>
