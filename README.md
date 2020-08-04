@@ -27,8 +27,8 @@
 <br />
 
 ### Connect with me:
-[<img align="left" alt="adi1090x | Twitter" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-[<img align="left" alt="adi1090x | Reddit" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-[<img align="left" alt="adi1090x | Github" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
-[<img align="left" alt="adi1090x | Instagram" width="72px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img align="left" alt="adi1090x | Email" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img align="center" alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img align="center" alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+[<img align="center" alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img align="center" alt="|| Instagram ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img align="center" alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
