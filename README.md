@@ -31,8 +31,8 @@
 <br/>
 ---
 ### Connect with me:
-[<img alt="Twitter ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-[<img  alt="Reddit ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-[<img  alt="Github ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
-[<img  alt="Instagram ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img  alt="Email ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img align="left" alt="Twitter ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img align="left"  alt="Reddit ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+[<img align="left" alt="Github ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img align="left" alt="Instagram ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img align="left" alt="Email ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
