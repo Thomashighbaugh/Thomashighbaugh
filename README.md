@@ -11,7 +11,7 @@
 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Thomashighbaugh/ama/blob/master/README.md)
 [![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+[![TLH's github stats](https://github-readme-stats.vercel.app/api?username=Thomashighbaugh)](https://github.com/anuraghazra/github-readme-stats)
 <div style="width: 100%; display:inline-flex;">
 <img style="align-self: center; float:left;" src="https://avatars1.githubusercontent.com/u/32242061?s=60&v=4" alt="me">
 <h1 style="float:right; text-align: right;"> I'm Thomas Leon Highbaugh (or TLH for short)</h1></div>
