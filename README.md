@@ -12,9 +12,8 @@
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Thomashighbaugh/ama/blob/master/README.md)
 [![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)
 
-### I'm Thomas Leon Highbaugh (or TLH for short)
-
-##### I'm a Freelance Web Developer, Student-Teacher & Linux Zealot
+## I'm Thomas Leon Highbaugh (or TLH for short)
+### Freelance Web Developer, Student-Teacher & Linux Zealot
 - Web Development
   - Exploring Preact
   - Integrating more Styled Components
