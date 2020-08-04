@@ -31,7 +31,7 @@
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' width='33%' height='80'>](https://github.com/https://github.com/Thomashighbaugh) 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' width='33%' height='80'>](https://dev.to/https://dev.to/thomashighbaugh) 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' width='33%' height='80'>](https://www.linkedin.com/in/https://linkedin.com/in/thomas-leon-highbaugh/)  
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' width='33%' height='80' fill='#8265ff'>](https://www.instagram.com/https://instagram.com/thomashighbaugh/) 
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' width='33%' height='80' style='color: #8265FF !important;'>](https://www.instagram.com/https://instagram.com/thomashighbaugh/) 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' width='33%' height='80'>](https://twitter.com/@thomashighbaugh) 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg' alt='Reddit' width='33%' height='80'>](https://www.reddit.com/user/https://www.reddit.com/user/ThomasLeonHighbaugh)  
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' width='33%' height='80'>](https://thomasleonhighbaugh.me)  
