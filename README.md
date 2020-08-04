@@ -12,20 +12,25 @@
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Thomashighbaugh/ama/blob/master/README.md)
 [![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)
 
-### Hi there, I'm Aditya Shakya 👋
+### I'm Thomas Leon Highbaugh (or TLH for short)
 
-I'm a Student, Learner & Linux Enthusiast!
-- 🔭 I’m currently working on [Archcraft][archcrafts]
-- 🌱 I’m currently learning `bash` and `python`
-- 👯 I’m looking to collaborate with other content creators
-- 🥅 2020 Goals: Contribute more to Open Source projects
-- ⚡ Fun fact: I love 📸 | 🎨 | 🐶 | 👨‍💻
+##### I'm a Freelance Web Developer, Student-Teacher & Linux Zealot
+- Web Development
+  - Exploring Preact
+  - Integrating more Styled Components
+  - Rethinking my SASS scaffolding
+  - Playing Around with Bootstrap 5 
 
-
+- Linux 
+  - Exploring Hypervisor options and Proxmox alternatives
+  - Developing intranet landing page
+  - Working out the kinks in the internal network
+  - Designing a NAS from spare parts
+  - 
 
 <br />
 
-### Languages and Tools:
+### Dev Stack:
 [<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />](https://www.google.com/search?&q=HTML5)
 [<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />](https://www.google.com/search?&q=CSS)
 [<img align="left" alt="Bash" width="26px" src="https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/128x128.svg" />](https://www.google.com/search?&q=Bash)
