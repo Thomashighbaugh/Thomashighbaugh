@@ -9,6 +9,7 @@
 [paypal]: paypal.me/thomasleonhighbaugh
 [patreon]: https://www.patreon.com/thomasleonhighbaugh
 
+[<img align="left" alt="Linux" width="26px" src="https://image.flaticon.com/icons/svg/226/226772.svg" />](https://github.com/Thomnashighbaugh/dotfiles)
 
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 - Web Development
@@ -27,12 +28,10 @@
 <br />
 
 ### Connect with me:
-[<img align="center" alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-
-[<img align="center" alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-
+[<img align="left" alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img align="left" alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
 [<img align="center" alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img align="right" alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img align="right" alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
 
-[<img align="center" alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
 
-[<img align="center" alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
