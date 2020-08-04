@@ -10,8 +10,9 @@
 [patreon]: https://www.patreon.com/thomasleonhighbaugh
 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Thomashighbaugh/ama/blob/master/README.md)
-[![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)
-![Me](https://avatars1.githubusercontent.com/u/32242061?s=60&v=4)
+[![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)\
+
+<img style="align-self: center; width: 45%" src="https://avatars1.githubusercontent.com/u/32242061?s=60&v=4" alt="me">
 ## I'm Thomas Leon Highbaugh (or TLH for short)
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 - Web Development
