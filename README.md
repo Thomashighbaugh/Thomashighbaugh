@@ -28,10 +28,10 @@
 <br />
 
 ### Connect with me:
-[<img  justify='center' alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-[<img  justify='center' alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-[<img  justify='center' alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
-[<img  justify='center' alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img  justify='center' alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img margin="10%" justify='center' alt="|| Twitter ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img margin="10%" justify='center' alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+[<img margin="10%" justify='center' alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img margin="10%" justify='center' alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img margin="10%" justify='center' alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
 
 
