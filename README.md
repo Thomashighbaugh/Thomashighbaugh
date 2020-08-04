@@ -9,11 +9,7 @@
 [paypal]: paypal.me/thomasleonhighbaugh
 [patreon]: https://www.patreon.com/thomasleonhighbaugh
 
-[![OS !](https://img.shields.io/badge/OS-Linux-00caff)](https://github.com/Thomashighbaugh/dotfiles)
-[![TLH's github stats](https://github-readme-stats.vercel.app/api?username=Thomashighbaugh)](https://github.com/anuraghazra/github-readme-stats)
-<div style="width: 100%; display:inline-flex;">
-<img style="align-self: center; float:left;" src="https://avatars1.githubusercontent.com/u/32242061?s=60&v=4" alt="me">
-<h1 style="float:right; text-align: right;"> I'm Thomas Leon Highbaugh (or TLH for short)</h1></div>
+
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 - Web Development
   - Exploring Preact
@@ -26,6 +22,7 @@
   - Developing intranet landing page
   - Working out the kinks in the internal network
   - Designing a NAS from spare parts
+
 
 <br />
 
