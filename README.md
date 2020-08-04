@@ -27,7 +27,8 @@
 <br />
 
 ### Connect with me:
-| | | |
-|------|------|------|
-| [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' width='100%'>](https://github.com/https://github.com/Thomashighbaugh) | [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' width='100%' >](https://dev.to/https://dev.to/thomashighbaugh) | [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' width='`100%'>](https://www.linkedin.com/in/https://linkedin.com/in/thomas-leon-highbaugh/)  |
-|[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' width='`100%'>](https://instagram.com/thomashighbaugh/) | [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' width='`100%'>](https://twitter.com/@thomashighbaugh) | [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg' alt='Reddit' width='`100%'>](https://www.reddit.com/user/ThomasLeonHighbaugh) |[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' width='`100%'>](https://thomasleonhighbaugh.me)   |
+[<img align="left" alt="adi1090x | Twitter" width="72px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img align="left" alt="adi1090x | Reddit" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+[<img align="left" alt="adi1090x | Github" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img align="left" alt="adi1090x | Instagram" width="72px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img align="left" alt="adi1090x | Email" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][gmail]
