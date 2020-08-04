@@ -23,7 +23,6 @@
   - Developing intranet landing page
   - Working out the kinks in the internal network
   - Designing a NAS from spare parts
-  - 
 
 <br />
 
@@ -32,6 +31,6 @@
 [<img style="margin:10%" justify='center' alt="|| Reddit ||" width="72px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
 [<img style="margin:10%" justify='center' alt="|| Github ||" width="72px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
 [<img style="margin:10%"justify='center' alt="|| Instagram ||" width="72px"  src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img style="margin:10%" justify='center' alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img style="margin:10%" alt="|| Email ||" width="72px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
 
 
