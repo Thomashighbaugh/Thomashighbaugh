@@ -14,7 +14,7 @@
 
 <div style="width: 100%; display:inline-flex;">
 <img style="align-self: center; width: 35%; float:left;" src="https://avatars1.githubusercontent.com/u/32242061?s=60&v=4" alt="me">
-<h1 style="width:50%; float:right;"> I'm Thomas Leon Highbaugh (or TLH for short)</h1></div>
+<h1 style="width:50%; float:right; text-align: right;"> I'm Thomas Leon Highbaugh (or TLH for short)</h1></div>
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 - Web Development
   - Exploring Preact
