@@ -31,7 +31,7 @@
 <br/>
 ---
 ### Connect with me:
-
+<div style="align-content: center;">
 [<img alt="Twitter ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]    
 
 [<img  alt="Reddit ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
@@ -42,3 +42,4 @@
 
 [<img  alt="Email ||| TLH" width="48px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
 
+</div>
