@@ -11,8 +11,8 @@
 
 
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
-|----|-----|
 | Web Development | Linux  |
+|----|-----|
 | Exploring Preact | Lua configuration for AwesomeWM ongoing |
 | Integrating more Styled Components | Exploring Hypervisor options and Proxmox alternatives |
 | Rethinking my SASS scaffolding | - Better Dashboard for Internal Network Access |
