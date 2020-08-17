@@ -11,18 +11,12 @@
 
 
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
-- Web Development
-  - Exploring Preact
-  - Integrating more Styled Components
-  - Rethinking my SASS scaffolding
-  - Playing Around with Bootstrap 5 
-
-- Linux 
-  - Lua configuration for AwesomeWM ongoing
-  - Exploring Hypervisor options and Proxmox alternatives
-  - Better Dashboard for Internal Network Access
-  - Designing a NAS from Spare Parts
-
+| ---- | -----|
+| Web Development | Linux  |
+| Exploring Preact | Lua configuration for AwesomeWM ongoing |
+| Integrating more Styled Components | Exploring Hypervisor options and Proxmox alternatives |
+| Rethinking my SASS scaffolding | - Better Dashboard for Internal Network Access |
+| Playing Around with Bootstrap 5 | Designing a NAS from Spare Parts |
 
 <br />
 
