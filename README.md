@@ -13,6 +13,8 @@
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 
 <figcaption>Present Learnings and Projects</figcaption>
+
+
 | Web Development | Linux  |
 |----|-----|
 | Exploring Preact | Lua configuration for AwesomeWM ongoing |
