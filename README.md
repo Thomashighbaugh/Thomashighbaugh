@@ -12,7 +12,6 @@
 
 ### Freelance Web Developer, Student-Teacher & Linux Zealot
 
-<figcaption>Present Learnings and Projects</figcaption>
 
 
 | Web Development | Linux  |
@@ -22,6 +21,9 @@
 | Rethinking my SASS scaffolding |  Better Dashboard for Internal Network Access |
 | Playing Around with Bootstrap 5 | Designing a NAS from Spare Parts |
 
+<figcaption>Present Learnings and Projects</figcaption>
+
+<hr />
 <br />
 
 ### Dev Stack:
