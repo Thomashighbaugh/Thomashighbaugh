@@ -13,10 +13,9 @@
 [<img align="left" alt="Github" width="64px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
 [<img align="left" alt="Instagram" width="64px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
 [<img align="left" alt="Email" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/18228185181552562375-64.png" />][zoho]
-[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/20202126831581534847-64.png" />][bmac]
-[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/2247097691551942131-64.png"/>][patreon]
-[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://ph-files.imgix.net/382b2671-29b3-464f-afc0-7fbb5ad55031?auto=format&fit=crop&h=570&w=430" />][ko-fi]
-[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/11528985111530099329-512.png" />][paypal]
+[<img align="left" alt="Patreon" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/2247097691551942131-64.png"/>][patreon]
+[<img align="left" alt="Ko-fi" width="64px" src="https://ph-files.imgix.net/382b2671-29b3-464f-afc0-7fbb5ad55031?auto=format&fit=crop&h=570&w=430" />][ko-fi]
+[<img align="left" alt="Paypal" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/11528985111530099329-512.png" />][paypal]
 
 <!-- List Of Websites-->
 [twitter]: https://www.twitter.com/thomashighbaugh
