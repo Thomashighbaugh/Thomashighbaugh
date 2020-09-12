@@ -8,14 +8,15 @@
 <br/>
 <br/>
 ### Connect with me:
-[<img align="left" alt="Twitter ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
-[<img align="left"  alt="Reddit ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
-[<img align="left" alt="Github ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
-[<img align="left" alt="Instagram ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img align="left" alt="Email ||| TLH" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/18228185181552562375-64.png" />][zoho]
-
-<i class="fas fa-envelope-open-text"></i>
-</body>
+[<img align="left" alt="Twitter" width="64px" src="https://image.flaticon.com/icons/svg/733/733579.svg" />][twitter]
+[<img align="left"  alt="Reddit" width="64px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
+[<img align="left" alt="Github" width="64px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
+[<img align="left" alt="Instagram" width="64px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
+[<img align="left" alt="Email" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/18228185181552562375-64.png" />][zoho]
+[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/20202126831581534847-64.png" />][bmac]
+[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/2247097691551942131-64.png"/>][patreon]
+[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://ph-files.imgix.net/382b2671-29b3-464f-afc0-7fbb5ad55031?auto=format&fit=crop&h=570&w=430" />][ko-fi]
+[<img align="left" alt="Buy Me a Coffee" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/11528985111530099329-512.png" />][paypal]
 
 <!-- List Of Websites-->
 [twitter]: https://www.twitter.com/thomashighbaugh
