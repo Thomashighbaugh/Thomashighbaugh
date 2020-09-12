@@ -8,7 +8,7 @@
 [ko-fi]: https://ko-fi.com/thomashighbaugh
 [paypal]: paypal.me/thomasleonhighbaugh
 [patreon]: https://www.patreon.com/thomasleonhighbaugh
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 ### A Reluctant, Freelance Web Developer & Linux Zealot
 #### From _BEAUTIFUL_ Hayward, California
@@ -25,3 +25,5 @@
 [<img align="left" alt="Github ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
 [<img align="left" alt="Instagram ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
 [<img align="left" alt="Email ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+
+<i class="fas fa-envelope-open-text"></i>
