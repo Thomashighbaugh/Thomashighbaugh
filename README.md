@@ -15,30 +15,6 @@
 <br />
 
 
-<table style="width: 100%;">
-  <tr>  
-    <th>Web Development </th> 
-    <th>Linux  </th>
-  </tr>
-  <tr>
-    <td> Exploring Preact </td>
-    <td> Lua configuration for AwesomeWM ongoing </td>
-  </tr>
-  <tr>
-    <td> Integrating more Styled Components </td>\
-    <td> Exploring Hypervisor options and Proxmox alternatives </td>
-  </tr>
-<tr>
-  <td>Rethinking my SASS scaffolding </td><td>  Better Dashboard for Internal Network Access </td>
-  </tr>
-<tr>
-  <td>Playing Around with Bootstrap 5 </td><td> Designing a NAS from Spare Parts </td>
-  </tr>
-</table>
-<figcaption>Present Learnings and Projects</figcaption>
-
-<hr />
-
 ### Dev Stack:
 [<img align="left" alt="HTML5" width="64px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />](https://www.google.com/search?&q=HTML5)      [<img align="left" alt="CSS3" width="64px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />](https://www.google.com/search?&q=CSS)     [<img align="left" alt="Bash" width="64px" src="https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/128x128.svg" />](https://www.google.com/search?&q=Bash)      [<img align="left" alt="Git" width="64px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />](https://www.google.com/search?&q=Git)      [<img align="left" alt="GitHub" width="64px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />](https://www.google.com/search?&q=Github)      [<img align="left" alt="Terminal" width="48px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />](https://www.google.com/search?&q=command+line+interface)      [<img align="left" alt="Linux" width="64px" src="https://image.flaticon.com/icons/svg/226/226772.svg" />](https://www.google.com/search?&q=Linux)  [<img align="left" alt="Gatsby.js" width="64px" src="https://raw.githubusercontent.com/grommet/grommet-icons/42afc131e8d20dab8a2ab01b6830dbf4c1a49f0c/public/img/gatsbyjs.svg" />](https://gatsbyjs.org)
 <br/>
