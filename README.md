@@ -15,7 +15,7 @@
 <br />
 
 
-<table>
+<table style="width: 100%;">
   <tr>  
     <th>Web Development </th> 
     <th>Linux  </th>
