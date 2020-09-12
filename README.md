@@ -12,7 +12,7 @@
 [<img align="left"  alt="Reddit ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/2111/2111589.svg" />][reddit]
 [<img align="left" alt="Github ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733553.svg" />][github]
 [<img align="left" alt="Instagram ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/733/733558.svg" />][instagram]
-[<img align="left" alt="Email ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
+[<img align="left" alt="Email ||| TLH" width="64px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/18228185181552562375-64.png" />][zoho]
 
 <i class="fas fa-envelope-open-text"></i>
 </body>
