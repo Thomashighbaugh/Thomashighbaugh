@@ -1,16 +1,10 @@
-<!-- List Of Websites-->
-[twitter]: https://www.twitter.com/thomashighbaugh
-[reddit]: https://www.reddit.com/user/ThomasLeonHighbaugh
-[github]: https://www.github.com/Thomashighbaugh
-[instagram]: https://www.instagram.com/thomashighbaugh/
-[zoho]: mailto:thighbaugh@zoho.com
-[bmac]: https://www.buymeacoffee.com/thomashighbaugh
-[ko-fi]: https://ko-fi.com/thomashighbaugh
-[paypal]: paypal.me/thomasleonhighbaugh
-[patreon]: https://www.patreon.com/thomasleonhighbaugh
+
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
+
+
+<body>
 ### A Reluctant, Freelance Web Developer & Linux Zealot
 #### From _BEAUTIFUL_ Hayward, California
 <br />
@@ -28,3 +22,15 @@
 [<img align="left" alt="Email ||| TLH" width="64px" src="https://image.flaticon.com/icons/svg/732/732200.svg" />][zoho]
 
 <i class="fas fa-envelope-open-text"></i>
+</body>
+
+<!-- List Of Websites-->
+[twitter]: https://www.twitter.com/thomashighbaugh
+[reddit]: https://www.reddit.com/user/ThomasLeonHighbaugh
+[github]: https://www.github.com/Thomashighbaugh
+[instagram]: https://www.instagram.com/thomashighbaugh/
+[zoho]: mailto:thighbaugh@zoho.com
+[bmac]: https://www.buymeacoffee.com/thomashighbaugh
+[ko-fi]: https://ko-fi.com/thomashighbaugh
+[paypal]: paypal.me/thomasleonhighbaugh
+[patreon]: https://www.patreon.com/thomasleonhighbaugh
