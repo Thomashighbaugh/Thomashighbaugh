@@ -15,13 +15,26 @@
 <br />
 
 
-| Web Development | Linux  |
-|----|-----|
-| Exploring Preact | Lua configuration for AwesomeWM ongoing |
-| Integrating more Styled Components | Exploring Hypervisor options and Proxmox alternatives |
-| Rethinking my SASS scaffolding |  Better Dashboard for Internal Network Access |
-| Playing Around with Bootstrap 5 | Designing a NAS from Spare Parts |
-
+<table>
+  <tr>  
+    <th>Web Development </th> 
+    <th>Linux  </th>
+  </tr>
+  <tr>
+    <td> Exploring Preact </td>
+    <td> Lua configuration for AwesomeWM ongoing </td>
+  </tr>
+  <tr>
+    <td> Integrating more Styled Components </td>\
+    <td> Exploring Hypervisor options and Proxmox alternatives </td>
+  </tr>
+<tr>
+  <td>Rethinking my SASS scaffolding </td><td>  Better Dashboard for Internal Network Access </td>
+  </tr>
+<tr>
+  <td>Playing Around with Bootstrap 5 </td><td> Designing a NAS from Spare Parts </td>
+  </tr>
+</table>
 <figcaption>Present Learnings and Projects</figcaption>
 
 <hr />
