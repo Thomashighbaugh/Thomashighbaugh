@@ -10,8 +10,8 @@
 [patreon]: https://www.patreon.com/thomasleonhighbaugh
 
 
-### Freelance Web Developer, Student-Teacher & Linux Zealot
-
+### A Reluctant, Freelance Web Developer & Linux Zealot
+#### From _BEAUTIFUL_ Hayward, California
 <br />
 
 
