@@ -13,10 +13,6 @@
 
 - ⚡ Fun fact: I have an eight year old **Beligian Malinois** named **Bismarck** (named such because I thought he was a German Shepherd when I got him otherwise his name would have been **Kurtz**) ⚡
 
-### Blogs posts
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-
 <p align="center">
 <h3 align="center">Connect with me:</h3>
 <a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh" height="120" width="120" /></a>
