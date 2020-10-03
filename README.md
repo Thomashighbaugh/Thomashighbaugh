@@ -26,7 +26,7 @@
 -----
 
 <p align="center">
-<h2 align="center">Me Around the Web:</h2>
+<h3 align="center">Me Around the Web:</h3>
 <a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh" height="120" width="120" /></a>
 <a href="https://dev.to/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="thomashighbaugh"  height="120" width="120" /></a>
 <a href="https://linkedin.com/in/thomas-leon-highbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thomas-leon-highbaugh"  height="120" width="120" /></a>
