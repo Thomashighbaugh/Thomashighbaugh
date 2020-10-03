@@ -11,7 +11,7 @@
 
 - 📫 Email me **thighbaugh@zoho.com** 
 
-- ⚡ Fun fact **I have an eight year old Beligian Malinois named Bismarck (named such because I thought he was a German Shepherd when I got him otherwise his name would have been Kurtz)**
+- ⚡ Fun fact: I have an eight year old **Beligian Malinois** named **Bismarck** (named such because I thought he was a German Shepherd when I got him otherwise his name would have been **Kurtz**) ⚡
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
