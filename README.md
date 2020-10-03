@@ -5,8 +5,6 @@
 
 - 🔭 I’m currently working on [Electric Tantra Linux](https://github.com/Thomashighbaugh/electric-tantra-linux-iso)
 
-- 🌱 I’m currently learning **Redux, Rust**
-
 - 👨‍💻 My portfolio site [https://thomasleonhighbaugh.me](https://thomasleonhighbaugh.me)
 
 ### Blogs posts
