@@ -3,17 +3,15 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
 
-- 🔭 I’m currently working on [Electric Tantra Linux](https://github.com/Thomashighbaugh/electric-tantra-linux-iso)
+- 🔭 I’m currently working on [Electric Tantra Linux](https://github.com/Thomashighbaugh/electric-tantra-linux-iso), my customized Linux distro that demonstrates my dotfiles (and makes installs easier)
 
-- 🌱 I’m currently learning **Redux, Rust**
+- 👨‍💻 My portfolio site [https://thomasleonhighbaugh.me](https://thomasleonhighbaugh.me) is pretty r a d, none of the unncessary boilerplate and a really snazzy design make it a unique and functional alternative to **every other portfolio template**.
 
-- 👨‍💻 My portfolio site [https://thomasleonhighbaugh.me](https://thomasleonhighbaugh.me)
+- 💬 Ask me about **react, js, linux anything, dog training**
 
-- 💬 Ask me about **react, js, linux, dog training**
+- 📫 Email me **thighbaugh@zoho.com** 
 
-- 📫 How to reach me **thighbaugh@zoho.com**
-
-- ⚡ Fun fact **I have an eight year old Beligian Malinois named Bismarck (because I thought he was a German Shepherd when I got him)**
+- ⚡ Fun fact **I have an eight year old Beligian Malinois named Bismarck (named such because I thought he was a German Shepherd when I got him otherwise his name would have been Kurtz)**
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
