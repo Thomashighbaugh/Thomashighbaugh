@@ -17,8 +17,8 @@
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
-<p align="left">
-<h3 align="left">Connect with me:</h3>
+<p align="center">
+<h3 align="center">Connect with me:</h3>
 <a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh" height="60" width="60" /></a>
 <a href="https://dev.to/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="thomashighbaugh" height="60" width="60"/></a>
 <a href="https://linkedin.com/in/thomas-leon-highbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thomas-leon-highbaugh"  height="60" width="60"/></a>
