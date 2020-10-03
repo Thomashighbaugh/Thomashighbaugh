@@ -19,13 +19,13 @@
 
 <p align="left">
 <h3 align="left">Connect with me:</h3>
-<a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh" height="30" width="40" /></a>
-<a href="https://dev.to/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="thomashighbaugh" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thomas-leon-highbaugh" height="30" width="40" /></a>
-<a href="https://codesandbox.com/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codesandbox.svg" alt="thomashighbaugh" height="30" width="40" /></a>
-<a href="https://kaggle.com/thomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/kaggle.svg" alt="thomasleonhighbaugh" height="30" width="40" /></a>
-<a href="https://instagram.com/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thomashighbaugh" height="30" width="40" /></a>
-<a href="https://dribbble.com/thighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dribbble.svg" alt="thighbaugh" height="30" width="40" /></a>
+<a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh" height="60" width="60" /></a>
+<a href="https://dev.to/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="thomashighbaugh" height="60" width="60"/></a>
+<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thomas-leon-highbaugh"  height="60" width="60"/></a>
+<a href="https://codesandbox.com/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codesandbox.svg" alt="thomashighbaugh" height="60" width="60" /></a>
+<a href="https://kaggle.com/thomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/kaggle.svg" alt="thomasleonhighbaugh"  height="60" width="60" /></a>
+<a href="https://instagram.com/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thomashighbaugh"  height="60" width="60" /></a>
+<a href="https://dribbble.com/thighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dribbble.svg" alt="thighbaugh"  height="60" width="60" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
