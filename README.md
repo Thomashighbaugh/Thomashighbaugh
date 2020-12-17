@@ -1,5 +1,4 @@
-<h1 align="center">Hi 👋, I'm Thomas Leon Highbaugh</h1>
-<h3 align="center">A zealous frontend developer from Hayward, California</h3>
+
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
 
