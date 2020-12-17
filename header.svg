@@ -50,7 +50,7 @@
 					height: 400px;
 					background: linear-gradient(-35deg, #00a9ff, #fc29a8,  #6fffff);
 					background-size: 600% 400%;
-					animation: gradientBackground 3s ease infinite;
+					animation: gradientBackground 1s ease infinite;
 					border-radius: 18px;
 					color: white;
 					text-align: center;
@@ -60,7 +60,6 @@
 					font-size: 45px;
 					line-height: 1.3;
 					letter-spacing: 3px;
-					text-transform: uppercase;
 					text-shadow:
 						0 1px 0 #edeeff,
 						0 2px 0 #edeeff,
