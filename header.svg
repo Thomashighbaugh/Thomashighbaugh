@@ -55,7 +55,7 @@
 					height: 400px;
 					background: linear-gradient(-35deg, #00a9ff, #fc29a8,  #6fffff);
 					background-size: 600% 400%;
-					animation: gradientBackground 10s ease infinite;
+					animation: gradientBackground 18s ease infinite;
 					border-radius: 18px;
 					color: white;
 					text-align: center;
@@ -64,7 +64,7 @@
 				h1 {
 					font-size: 35px;
 					line-height: 1.3;
-					letter-spacing: 5px;
+					letter-spacing: 3px;
 					text-transform: uppercase;
 					text-shadow:
 						0 1px 0 #edeeff,
@@ -82,7 +82,7 @@
 				}
 			</style>
 			<div class="container">
-				<h1>||Thomas Leon || Highbaugh||</h1>
+				<h1> Thomas Leon || Highbaugh </h1>
 				<p>|| web dev || linux pro || designer ||</p>
 			</div>
 		</div>
