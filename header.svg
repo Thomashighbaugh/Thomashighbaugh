@@ -37,13 +37,8 @@
 
 				.container {
 					font-family:
-						system-ui,
 						-apple-system,
-						'Segoe UI',
 						Roboto,
-						Helvetica,
-						Arial,
-						sans-serif,
 						'Apple Color Emoji',
 						'Segoe UI Emoji';
 					display: flex;
@@ -55,14 +50,14 @@
 					height: 400px;
 					background: linear-gradient(-35deg, #00a9ff, #fc29a8,  #6fffff);
 					background-size: 600% 400%;
-					animation: gradientBackground 18s ease infinite;
+					animation: gradientBackground 3s ease infinite;
 					border-radius: 18px;
 					color: white;
 					text-align: center;
 				}
 
 				h1 {
-					font-size: 35px;
+					font-size: 455px;
 					line-height: 1.3;
 					letter-spacing: 3px;
 					text-transform: uppercase;
@@ -76,7 +71,7 @@
 				}
 
 				p {
-					font-size: 18px;
+					font-size: 28px;
 					text-shadow: 0 1px 0 #edeeff;
 					animation: 5s ease 0s normal forwards 1 fadeIn;
 				}
