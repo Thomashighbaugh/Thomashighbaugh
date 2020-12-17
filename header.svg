@@ -66,8 +66,8 @@
 						0 2px 0 #edeeff,
 						0 3px 0 #edeeff,
 						0 4px 0 #edeeff,
-						0 12px 5px rgba(255, 255, 255, 0.1);
-					animation: rotate ease-in-out 1s infinite alternate;
+						0 12px 5px #282c34;
+					animation: rotate ease-in-out 0.5s infinite alternate;
 				}
 
 				p {
