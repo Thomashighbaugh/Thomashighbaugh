@@ -67,11 +67,11 @@
 					letter-spacing: 5px;
 					text-transform: uppercase;
 					text-shadow:
-						0 1px 0 #efefef,
-						0 2px 0 #efefef,
-						0 3px 0 #efefef,
-						0 4px 0 #efefef,
-						0 12px 5px rgba(0, 0, 0, 0.1);
+						0.125rem 1px 0 #556,
+						0.125rem 2px 0 #556,
+						0.125rem 3px 0 #556,
+						0.125rem 4px 0 #556,
+						0.125rem 12px 5px #556;
 					animation: rotate ease-in-out 1s infinite alternate;
 				}
 
