@@ -31,14 +31,6 @@
 
 <a href="https://dribbble.com/thighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dribbble.svg" alt="thighbaugh"  width="90" height="90"  /></a>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
-
-
-
-
-
-
-
 
 
 </p>
