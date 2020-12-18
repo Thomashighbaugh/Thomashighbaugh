@@ -1,5 +1,5 @@
 
-
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/c44bf64309d3b3b97f44ca80acbf319ca2c411b3/header.svg" alt="XHTML + CSS in Markdown" />
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
 
 - 🔭 I’m currently working on [Electric Tantra Linux](https://github.com/Thomashighbaugh/electric-tantra-linux-iso), my customized Linux distro that demonstrates my dotfiles (and makes installs easier)
