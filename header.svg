@@ -15,8 +15,14 @@
 					0% {
 						background-position: 0% 50%;
 					}
+					25%{
+						background-position: 50% 25%;
+					}
 					50% {
 						background-position: 100% 50%;
+					}
+					75%{
+					background-position: 50% 25%;
 					}
 					100% {
 						background-position: 0% 50%;
@@ -28,7 +34,7 @@
 						opacity: 0;
 					}
 					66% {
-						opacity: 0;
+						opacity: 0.5;
 					}
 					100% {
 						opacity: 1;
@@ -36,7 +42,6 @@
 				}
 
 				.container {
-					font-family:monospace;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -62,7 +67,7 @@
 						0 3px 0 #edeeff,
 						0 4px 0k #edeeff,
 						0 12px 5px #282c34;
-					animation: fill ease-in-out t0.5s infinite alternate;
+					animation: rotate ease-in-out t0.5s infinite alternate;
 				}
 
 				p {
