@@ -51,7 +51,7 @@
 					margin: 0;
 					width: 100%;
 					height: 400px;
-					background: linear-gradient(-25deg, #00a9ff, #00caff,  #6fffff, #00eaff);
+					background: linear-gradient(-25deg, #556, #282a34,  #313424, #17161d);
 					background-size: 600% 400%;
 					animation: gradientBackground 6s ease infinite;
 					border-radius: 18px;
@@ -70,7 +70,9 @@
 				p {
 					font-size: 28px;
 					text-shadow: 0 1px 0 #edeeff;
-					animation: 5s ease 0s normal forwards 1 fadeIn;
+					text-shadow: 0.125rem 0.125rem #556;
+
+					animation: 1.5s ease 0s normal forwards 1 fadeIn;
 				}
 			</style>
 			<div class="container">
