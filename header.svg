@@ -4,10 +4,10 @@
 			<style>
 				@keyframes rotate {
 					0% {
-						transform: rotate(3deg);
+						transform: rotate(1deg);
 					}
 					100% {
-						transform: rotate(-3deg);
+						transform: rotate(-1deg);
 					}
 				}
 
