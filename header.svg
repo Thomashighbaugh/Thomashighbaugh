@@ -36,11 +36,7 @@
 				}
 
 				.container {
-					font-family:
-						-apple-system,
-						Roboto,
-						'Apple Color Emoji',
-						'Segoe UI Emoji';
+					font-family:monospace;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -64,9 +60,9 @@
 						0 1px 0 #edeeff,
 						0 2px 0 #edeeff,
 						0 3px 0 #edeeff,
-						0 4px 0 #edeeff,
+						0 4px 0k #edeeff,
 						0 12px 5px #282c34;
-					animation: rotate ease-in-out 0.5s infinite alternate;
+					animation: fill ease-in-out t0.5s infinite alternate;
 				}
 
 				p {
