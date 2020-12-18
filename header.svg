@@ -2,7 +2,7 @@
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+				@import url('https://fonts.googleapis.com/css2?family=Archivo+Black');
 				@keyframes rotate {
 					0% {
 						transform: rotate(3deg);
