@@ -1,19 +1,5 @@
 
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/c44bf64309d3b3b97f44ca80acbf319ca2c411b3/header.svg" alt="XHTML + CSS in Markdown" />
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
-
-- 🔭 I’m currently working on [Electric Tantra Linux](https://github.com/Thomashighbaugh/electric-tantra-linux-iso), my customized Linux distro that demonstrates my dotfiles (and makes installs easier)
-
-- 👨‍💻 My portfolio site [https://thomasleonhighbaugh.me](https://thomasleonhighbaugh.me) is pretty r a d, none of the unncessary boilerplate and a really snazzy design make it a unique and functional alternative to **every other portfolio template**.
-
-- 💬 Ask me about **_literally anything_**
-
-- 📫 Email me **thighbaugh@zoho.com** 
-
-- ⚡ Fun fact: I learned Lua just for configuring AwesomeWM.
-
-
------
+<img src="header.gif" />
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thomashighbaugh&layout=compact" alt="thomashighbaugh" /></p>
 
@@ -28,7 +14,6 @@
 
 
 <p align="center">
-<h3 align="center">Me Around the Web:</h3>
 <a href="https://codepen.io/thomashighbaughthomasleonhighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="thomashighbaughthomasleonhighbaugh"width="90" height="90" /></a>
 <a href="https://dev.to/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="thomashighbaugh" width="90" height="90" /></a>
 <a href="https://linkedin.com/in/thomas-leon-highbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thomas-leon-highbaugh" width="90" height="90" /></a>
@@ -37,3 +22,4 @@
 <a href="https://instagram.com/thomashighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thomashighbaugh"  width="90" height="90"  /></a>
 <a href="https://dribbble.com/thighbaugh" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dribbble.svg" alt="thighbaugh"  width="90" height="90"  /></a>
 </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=thomashighbaugh" alt="thomashighbaugh" /> </p>
