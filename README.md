@@ -1,6 +1,6 @@
-
+<div style="width: 45%; float:left;">
 <img src="header.gif" />
-
+</div>
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thomashighbaugh&layout=compact" alt="thomashighbaugh" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=thomashighbaugh&show_icons=true" alt="thomashighbaugh" /></p>
