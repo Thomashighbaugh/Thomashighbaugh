@@ -33,6 +33,7 @@
   
 
 <br/>  
+-----
 
 
 ## Github Stats  
@@ -47,6 +48,7 @@
 </td></tr></table>  
 
 <br/>  
+-----
 
 <details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
 
@@ -118,6 +120,7 @@
 </td></tr></table></details>  
 
 <br/>  
+-----
 
 <table><tr><td valign="top" width="50%">
 
@@ -146,4 +149,3 @@
 <br />
 
 ----
-<div align="center">Generated using <a href="https://profilinator.rishav.dev/" target="_blank">Github Profilinator</a></div>
