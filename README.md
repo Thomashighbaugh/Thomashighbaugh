@@ -33,7 +33,7 @@
   
 
 <br/>  
------
+<hr/>
 
 
 ## Github Stats  
@@ -48,7 +48,7 @@
 </td></tr></table>  
 
 <br/>  
------
+<hr/>
 
 <details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
 
@@ -120,7 +120,7 @@
 </td></tr></table></details>  
 
 <br/>  
------
+<hr/>
 
 <table><tr><td valign="top" width="50%">
 
