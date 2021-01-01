@@ -123,25 +123,26 @@
 <hr/>
 
 
-<div align="left">
+
 <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
-</div>  
 
 
 
-<div align="right">
+
             <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
                 <img
                     src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square" 
                     align="left"
                 />
             </a>
+            
+            
             <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
                 <img
                     src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" 
                     align="right"
                 />
-            </a></div>
+            </a>
 
 <br />
 
