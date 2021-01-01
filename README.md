@@ -122,20 +122,18 @@
 <br/>  
 <hr/>
 
-<table><tr><td valign="top" width="50%">
 
-<div align="center">
+<div align="left">
 <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
 </div>  
 
 
-</td><td valign="top" width="50%">
 
 <div align="right">
             <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
                 <img
                     src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square" 
-                    align="right"
+                    align="left"
                 />
             </a>
             <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
@@ -145,7 +143,6 @@
                 />
             </a></div>
 
-</td></tr></table>
 <br />
 
 ----
