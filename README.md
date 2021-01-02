@@ -7,7 +7,7 @@
 
 
 <div align="center">
-  <h1> Presence </h1>
+  <h3> Around the Web </h3>
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
@@ -29,7 +29,7 @@
   <br/>
   <br/>
   <br/>
-  <h1> Funding </h1>
+  <h3> Help Contribute to my Work </h3>
 <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" >
   <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" style="margin-bottom: 5px;"  />
  </a>
