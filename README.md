@@ -1,6 +1,6 @@
 
 
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "50%" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
   
 
 <img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?languages=1&gists=1&pagespeed=1&followup=1&languages.ignored=vimscript%2C&pagespeed.detailed=true&config.timezone=UTC" align="right" width="50%"/>
