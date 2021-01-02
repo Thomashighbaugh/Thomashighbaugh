@@ -38,6 +38,7 @@
   <a href="https://paypal.me/thomasleonhighbaugh" target="_blank">
                 <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor style="margin-bottom: 5px;" /></a>
   <hr/>
+  <hr/>
   <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=for-the-badge" align="center" />
 
 </div>  
