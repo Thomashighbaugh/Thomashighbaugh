@@ -61,7 +61,7 @@
 
 <h3>Frontend  </h3>
 <div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/react-original-wordmark.svg" alt="React" height="25%" />  
+<img style="margin: 10px" src="skills-assets/react-original-wordmark.svg" alt="React" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25%" />  
