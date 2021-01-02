@@ -5,9 +5,6 @@
 
 <!--<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?pagespeed=1&languages=1&followup=1&gists=1&pagespeed.detailed=true&config.timezone=UTC" align="right" width="50%"/>-->
 
-
-
-
 <h1 style="padding: 5rem; " align="center"> Connect with me  </h1>
 <div align="center">
 <a href="https://github.com/Thomashighbaugh" target="_blank">
