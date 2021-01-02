@@ -5,7 +5,6 @@
 
 <!--<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?pagespeed=1&languages=1&followup=1&gists=1&pagespeed.detailed=true&config.timezone=UTC" align="right" width="50%"/>-->
 
-<h1 style="padding: 5rem; " align="center"> Connect with me  </h1>
 <div align="center">
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
@@ -25,6 +24,9 @@
 <a href="https://dribbble.com/thighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble style="margin-bottom: 5px;" />
 </a>
+  <br/>
+  <br/>
+  <br/>
 <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" >
   <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" style="margin-bottom: 5px;"  />
  </a>
