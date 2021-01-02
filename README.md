@@ -6,7 +6,7 @@
   
 
 <div align="right" width="50%">
-<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?languages=1&gists=1&pagespeed=1&followup=1&languages.ignored=vimscript%2C&pagespeed.detailed=true&config.timezone=UTC" width="100%"/>
+<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?languages=1&gists=1&pagespeed=1&followup=1&languages.ignored=vimscript%2C&pagespeed.detailed=true&config.timezone=UTC" width="50%"/>
 </div>
 <br/>  
 
