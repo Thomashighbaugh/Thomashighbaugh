@@ -1,8 +1,4 @@
 
-<br/>  
-<hr/>
-<br/>
-
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
   
@@ -37,15 +33,10 @@
  </a>
   <a href="https://paypal.me/thomasleonhighbaugh" target="_blank">
                 <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor style="margin-bottom: 5px;" /></a>
-  <hr height="1"/>
-  <hr/>
+  <br/>
   <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=for-the-badge" align="center" />
 
 </div>  
-  
-
-<br/>  
-<hr/>
 
 
 
@@ -59,6 +50,3 @@
             
 
 
-<br />
-
-----
