@@ -58,70 +58,26 @@
 <h2> My Skill Set </h2>
 
 
+Languages
+<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/c%20-%2300599C.svg?&style=for-the-badge&logo=c&logoColor=white"/>
+<img src="https://img.shields.io/badge/c++%20-%2300599C.svg?&style=for-the-badge&logo=c%2B%2B&ogoColor=white"/>
 
-<h3>Frontend  </h3>
-<div align="center">  
-<img style="margin: 10px" src="skills-assets/react-original-wordmark.svg" alt="React" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/electron-original.svg" alt="Electron" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/sass-original.svg" alt="Sass" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/graphql.png" alt="GraphQL" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/figma-icon.svg" alt="Figma" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gatsby.png" alt="Gatsby" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gulp-plain.svg" alt="gulp.js" height="25%" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/webpack-original.svg" alt="Webpack" height="25%" />  
-</div>
+Frameworks
+<img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+<img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>
 
+Tools
+<img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+<img src ="https://img.shields.io/badge/postgres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white"/>
+<img src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
 
-
-<h3> Backend  </h3>
-<div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/cplusplus-original.svg" alt="C++" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/php-original.svg" alt="PHP" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/python-original.svg" alt="Python" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/express-original-wordmark.svg" alt="Express.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/redux-original.svg" alt="Redux" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/java-original-wordmark.svg" alt="Java" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/ruby-original-wordmark.svg" alt="Ruby" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/firebase.png" alt="Firebase" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/redis-original-wordmark.svg" alt="Redis" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/rails-original-wordmark.svg" alt="Ruby on Rails" height="25" />  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-<h3>DevOps/SysAd  </h3>
-<div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/google_cloud-icon.svg" alt="GCP" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/git-scm-icon.svg" alt="Git" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/docker-original-wordmark.svg" alt="Docker" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/jenkins-icon.svg" alt="Jenkins" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/haskell.png" alt="Haskell" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/ansible.png" alt="Ansible" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/latex.png" alt="Latex" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/linux-original.svg" alt="Linux" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/raspberrypi.png" alt="Raspberry Pi" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gnu_bash-icon.svg" alt="Bash" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/android-original-wordmark.svg" alt="Android" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/rust-plain.svg" alt="Rust" height="25" />  
-</div>
-
-<br/>  
-<hr/>
 
 
 
