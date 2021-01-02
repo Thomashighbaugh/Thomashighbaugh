@@ -7,7 +7,6 @@
 
 
 <div align="center">
-  <h3> Around the Web </h3>
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github width="25%" style="margin-bottom: 5px; " />
 </a>
@@ -31,10 +30,10 @@
   <br/>
   <h3> Contributions </h3>
 <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" >
-  <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" style="margin-bottom: 5px;"  />
+  <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" width="25%" style="margin-bottom: 5px;"  />
  </a>
   <a href="https://paypal.me/thomasleonhighbaugh" target="_blank">
-                <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor style="margin-bottom: 5px;" /></a>
+                <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor width="25%" style="margin-bottom: 5px;" /></a>
   <br/>
     <br/>
   <br/>
