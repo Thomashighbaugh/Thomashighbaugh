@@ -55,7 +55,7 @@
 <br/>  
 <hr/>
 
-<details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
+<h2> My Skill Set </h2>
 
 
 
@@ -76,8 +76,6 @@
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gulp-plain.svg" alt="gulp.js" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/webpack-original.svg" alt="Webpack" height="25%" />  
 </div>
-
-</td><td valign="top" width="33%">
 
 
 
@@ -121,8 +119,6 @@
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/android-original-wordmark.svg" alt="Android" height="25" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/rust-plain.svg" alt="Rust" height="25" />  
 </div>
-
-</td></tr></table></details>  
 
 <br/>  
 <hr/>
