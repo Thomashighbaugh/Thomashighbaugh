@@ -1,3 +1,10 @@
+<style>
+  *{
+  padding: 15px;
+  
+  }
+  </style>
+
 <div align="center">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="center" style="width: 100%" />
 </div>  
