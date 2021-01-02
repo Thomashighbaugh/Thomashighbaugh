@@ -1,7 +1,7 @@
 
 
 <div align="left" width="100%">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="center" style="width: 50%" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "50%" />
 </div>  
   
 
