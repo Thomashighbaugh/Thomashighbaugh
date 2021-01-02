@@ -59,7 +59,7 @@
 
 
 
-### Frontend  
+<h3>Frontend  </h3>
 <div align="center">  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/react-original-wordmark.svg" alt="React" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25%" />  
@@ -81,7 +81,7 @@
 
 
 
-### Backend  
+<h3> Backend  </h3>
 <div align="center">  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/cplusplus-original.svg" alt="C++" height="25" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25" />  
@@ -104,7 +104,7 @@
 
 
 
-### DevOps/SysAd  
+<h3>DevOps/SysAd  </h3>
 <div align="center">  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="25" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/google_cloud-icon.svg" alt="GCP" height="25" />  
