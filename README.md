@@ -6,7 +6,7 @@
 <br/>  
 
 
-## Connect with me  
+<h2 style="padding-left: 5rem;"> Connect with me  </h2>
 <div align="center">
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
@@ -38,7 +38,8 @@
 <hr/>
 
 
-## Github Stats  
+
+<h2 style="padding-left: 5rem;"> Github Stats  </h2>
 <table><tr><td valign="top" width="50%">
 
 <div align="center"><img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&show_icons=true&count_private=true&hide_border=true" align="center" /></div>
