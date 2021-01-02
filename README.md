@@ -41,14 +41,14 @@
 
 
 
-<h2 style="padding-left: 5rem;" align="center"> Github Stats  </h2>
+<h1 style="padding-left: 5rem;" align="center"> Github Stats  </h1>
 <table><tr><td valign="top" width="50%">
 
-<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&show_icons=true&count_private=true&hide_border=true" align="center" /></div>
+<div align="center"><img width="100%" src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&show_icons=true&count_private=true&hide_border=true" align="center" /></div>
 
 </td><td valign="top" width="50%">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true&layout=compact" align="left" />
+<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true&layout=compact" align="left" />
 
 </td></tr></table>  
 
