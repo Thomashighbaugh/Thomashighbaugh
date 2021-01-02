@@ -61,20 +61,20 @@
 
 ### Frontend  
 <div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/react-original-wordmark.svg" alt="React" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/electron-original.svg" alt="Electron" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/sass-original.svg" alt="Sass" height="25" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/react-original-wordmark.svg" alt="React" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/electron-original.svg" alt="Electron" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/sass-original.svg" alt="Sass" height="25%" />  
 <img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/graphql.png" alt="GraphQL" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/figma-icon.svg" alt="Figma" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gatsby.png" alt="Gatsby" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gulp-plain.svg" alt="gulp.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/webpack-original.svg" alt="Webpack" height="25" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/graphql.png" alt="GraphQL" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/figma-icon.svg" alt="Figma" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gatsby.png" alt="Gatsby" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gulp-plain.svg" alt="gulp.js" height="25%" />  
+<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/webpack-original.svg" alt="Webpack" height="25%" />  
 </div>
 
 </td><td valign="top" width="33%">
