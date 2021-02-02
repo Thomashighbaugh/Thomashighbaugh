@@ -20,8 +20,6 @@
 <img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram width="25%" style="margin-bottom: 5px;" />
 </a>
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="25%" style="margin-bottom: 5px;" />
-</a>
 <a href="https://dribbble.com/thighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble width="25%" style="margin-bottom: 5px;" />
 </a>
