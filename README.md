@@ -34,10 +34,10 @@
                 <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor width="25%" height="50%" style="margin-bottom: 5px;" /></a>
   <br/>
     <br/>
-  <br/>
+<center>  <br/>
 
   <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=for-the-badge" align="center" />
-
+</center>
 </div>  
 
 
