@@ -19,10 +19,7 @@
 <a href="https://dribbble.com/thighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble width="25%" style="margin-bottom: 5px;" />
 </a>
-  <br/>
-  <br height="256px"/>
-  <hr/>
-  <h3> Contributions </h3>
+
 <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" >
   <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" width="50%" height="25%" style="margin-bottom: 5px;"  />
  </a>
