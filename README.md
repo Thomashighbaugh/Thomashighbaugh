@@ -2,10 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
 
-
-<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?pagespeed=1&languages=1&followup=1&gists=1&pagespeed.detailed=true&config.timezone=UTC" align="right" width="50%"/>
-<hr>
-<div align="center">
+<div align="right">
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github width="25%" style="margin-bottom: 5px; " />
 </a>
