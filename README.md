@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "75%" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
 </div>
 
 <!--<img alt="Metrics" src="https://metrics.lecoq.io/Thomashighbaugh?pagespeed=1&languages=1&followup=1&gists=1&pagespeed.detailed=true&config.timezone=UTC" align="right" width="50%"/>-->
