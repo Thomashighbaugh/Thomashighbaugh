@@ -27,7 +27,7 @@
   <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge&logo=buymeacoffee&logoColor" width="50%" height="25%" style="margin-bottom: 5px;"  />
  </a>
   <a href="https://paypal.me/thomasleonhighbaugh" target="_blank">
-                <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor width="25%" height="50%" style="margin-bottom: 5px;" /></a>
+                <img src=https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal&logoColor width="50%" height="50%" style="margin-bottom: 5px;" /></a>
   <br/>
     <br/>
 <center>
