@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
 
-<div align="right" style="display:inline-block">
+<div align="right" style="display:flex">
 <!-- <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github width="50%" height="25%" style="margin-bottom: 5px; " />
 </a> -->
