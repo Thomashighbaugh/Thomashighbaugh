@@ -6,6 +6,8 @@
 <!-- <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github width="50%" height="25%" style="margin-bottom: 5px; " />
 </a> -->
+ <br/>
+ <hr/>
  <a href="https://dev.to/thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto width="25%" />
 </a>
