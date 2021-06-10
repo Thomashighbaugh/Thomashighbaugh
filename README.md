@@ -1,4 +1,4 @@
-<div width="100%" margin="15%"><p>    </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
+<div width="100%" margin="15%"><p>    </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
 
   <table align="right" width="45%">
 <tr>
@@ -42,6 +42,7 @@
 
 <td>
 
+<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
 </td>
 
 </tr>
@@ -139,14 +140,3 @@
 
 <br/>  
 <hr/>
-
-<table><tr><td valign="top" width="50%">
-
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
-</div>
-
-</td></tr></table>
-<br />
-
----
