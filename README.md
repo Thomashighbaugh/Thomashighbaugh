@@ -1,4 +1,4 @@
-<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="75%" />
+<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 
 <details><summary> Connect </summary>
 <table width="100%">
