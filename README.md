@@ -60,8 +60,8 @@
 <br/>  
 <hr/>
 
-<div align="right" width="50%">
-<h2>Github Stats</h2>
+<!-- <div align="right" width="50%">
+<h2>Github Stats</h2> -->
 
 <!-- <table align="right">
 <tr>
