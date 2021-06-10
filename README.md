@@ -60,7 +60,8 @@
 <br/>  
 <hr/>
 
-## Github Stats
+<div align="right" width="50%">
+<h2>Github Stats</h2>
 
 <table align="right">
 <tr>
@@ -78,7 +79,7 @@
 
 </tr>
 </table>
-
+</div>
 <br/>  
 <hr/>
 
