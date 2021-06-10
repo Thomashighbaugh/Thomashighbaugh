@@ -68,9 +68,9 @@
 <!--####################################################################-->
 <!--####################################################################-->
 <!--####################################################################-->
-<details width="100%"><summary> Connect </summary>
+<details ><summary> Connect </summary>
 <table>
-<tr>
+<tr width="100%">
 
 <td valign="top" width="33%">
 <a href="https://dev.to/thomashighbaugh" target="_blank">
@@ -90,7 +90,7 @@
 </a>
 </td>
 </tr>
-<tr>
+<tr width="100%">
 <td valign="top" width="33%">
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="100%" style="margin-bottom: 5px;" />
@@ -111,7 +111,7 @@
 </a>
 </td>
 </tr>
-<tr>
+<tr width="100%">
 <td valign="top" width="33%">
 <a href="https://gitlab.com/Thomashighbaugh">
 <img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"/>
