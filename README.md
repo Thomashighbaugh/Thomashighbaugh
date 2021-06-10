@@ -1,4 +1,4 @@
-<div margin="5%"></div><div align="left">
+<div margin="5%"><p>   </p></div><div align="left">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
 </div>
 
