@@ -1,4 +1,4 @@
-<div width="100%" margin="15%"><p>    </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
+<div style="display:flex" ><div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
 
   <table align="right" width="45%">
 <tr>
@@ -141,3 +141,4 @@
 </div>
 <br/>  
 <hr/>
+</div>
