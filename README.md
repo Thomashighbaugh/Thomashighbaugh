@@ -3,7 +3,7 @@
 </div>
 
 <div align="right" width="45%">
-<h2>Connect</h2>
+Connect
   <table>
 <tr>
 
