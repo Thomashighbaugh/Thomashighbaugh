@@ -98,7 +98,7 @@
 </a>
 
 <a href="https://gitlab.com/Thomashighbaugh">
-<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"/>
+<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab" align="center" width="100%"/>
 </a>
 
   </table>
