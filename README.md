@@ -53,7 +53,23 @@
 </td>
 
 </tr>
+<tr>
+<td valign="top" width="50%">
+        <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
+                <img
+                    src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square"
+                    align="right"
+                />
+            </a>
 
+</td>
+<td>        <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
+                <img
+                    src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square"
+                    align="right"
+                />
+            </a></td>
+</tr>
   </table>
 </div>
 
@@ -147,22 +163,6 @@
 <div align="center">
 <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
 </div>
-
-</td><td valign="top" width="50%">
-
-<div align="right">
-            <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
-                <img
-                    src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square" 
-                    align="right"
-                />
-            </a>
-            <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
-                <img
-                    src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" 
-                    align="right"
-                />
-            </a></div>
 
 </td></tr></table>
 <br />
