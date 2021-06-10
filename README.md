@@ -88,20 +88,20 @@
 <h3>Frontend</h3>
 
 <div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/react-original-wordmark.svg" alt="React" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/electron-original.svg" alt="Electron" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/sass-original.svg" alt="Sass" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/graphql.png" alt="GraphQL" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/figma-icon.svg" alt="Figma" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gatsby.png" alt="Gatsby" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gulp-plain.svg" alt="gulp.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/webpack-original.svg" alt="Webpack" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" alt="Electron" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="Sass" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql.png" alt="GraphQL" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-icon.svg" alt="Figma" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gatsby/gatsby.png" alt="Gatsby" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg" alt="gulp.js" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg" alt="Webpack" height="25" />  
 </div>
 
 </td><td valign="op" width="33%">
@@ -109,21 +109,21 @@
 <h3>Backend</h3>
 
 <div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/cplusplus-original.svg" alt="C++" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/javascript-original.svg" alt="JavaScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/typescript-original.svg" alt="TypeScript" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/php-original.svg" alt="PHP" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/python-original.svg" alt="Python" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/express-original-wordmark.svg" alt="Express.js" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/redux-original.svg" alt="Redux" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/java-original-wordmark.svg" alt="Java" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/ruby-original-wordmark.svg" alt="Ruby" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/firebase.png" alt="Firebase" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/redis-original-wordmark.svg" alt="Redis" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/rails-original-wordmark.svg" alt="Ruby on Rails" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express.js" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg" alt="Java" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original-wordmark.svg" alt="Ruby" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase.png" alt="Firebase" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="Redis" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="Ruby on Rails" height="25" />  
 </div>
 
 </td>
@@ -131,20 +131,20 @@
 <td valign="top" width="33%">
 <h3>DevOps/SysAd</h3>
 <div align="center">  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/google_cloud-icon.svg" alt="GCP" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/git-scm-icon.svg" alt="Git" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/docker-original-wordmark.svg" alt="Docker" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/jenkins-icon.svg" alt="Jenkins" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/haskell.png" alt="Haskell" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/ansible.png" alt="Ansible" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/latex.png" alt="Latex" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/linux-original.svg" alt="Linux" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/raspberrypi.png" alt="Raspberry Pi" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/gnu_bash-icon.svg" alt="Bash" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/android-original-wordmark.svg" alt="Android" height="25" />  
-<img style="margin: 10px" src="http://127.0.0.1:8000/skills-assets/rust-plain.svg" alt="Rust" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google-cloud/google_cloud-icon.svg" alt="GCP" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-icon.svg" alt="Kubernetes" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-scm-icon.svg" alt="Git" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-icon.svg" alt="Jenkins" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/haskell/haskell.png" alt="Haskell" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible.png" alt="Ansible" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/latex/latex.png" alt="Latex" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/raspberrypi/raspberrypi.png" alt="Raspberry Pi" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gnu-bash/gnu_bash-icon.svg" alt="Bash" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="Android" height="25" />  
+<img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="Rust" height="25" />  
 </div>
 
 </td>
