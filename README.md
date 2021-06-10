@@ -63,22 +63,22 @@
 <div align="right" width="50%">
 <h2>Github Stats</h2>
 
-<table align="right">
+<!-- <table align="right">
 <tr>
 
 <td valign="center">
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&theme=material-palenight&show_icons=true&count_private=true&hide_border=true&layout=compact" align="center" />
+<img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&theme=material-palenight&show_icons=true&count_private=true&hide_border=true" align="center" />
 </div>
 </td>
 
 <td valign="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true&layout=compact" align="center" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true" align="center" />
 </td>
 
 </tr>
-</table>
+</table> -->
 </div>
 <br/>  
 <hr/>
