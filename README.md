@@ -1,5 +1,5 @@
 <div align="left">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
 </div>
 
 <br/>
