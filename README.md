@@ -1,4 +1,4 @@
-<div  margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left"  />
+<div  margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 
 <details><summary> Skills </summary>
 <table>
