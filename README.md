@@ -100,7 +100,10 @@
 
 <td valign="top" width="33%">
 
-<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
+<a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
+<img src="https://aleen42.github.io/badges/src/reddit.svg" align="center" />
+
+</a>
 </td>
 
 </tr>
