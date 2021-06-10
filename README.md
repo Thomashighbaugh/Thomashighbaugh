@@ -57,9 +57,6 @@
   </table>
 </div>
 
-<br/>  
-<hr/>
-
 <!-- <div align="right" width="50%">
 <h2>Github Stats</h2> -->
 
@@ -79,9 +76,9 @@
 
 </tr>
 </table> -->
-</div>
-<br/>  
-<hr/>
+<!-- </div>
+<br/>
+<hr/> -->
 
 <details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
 
