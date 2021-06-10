@@ -1,9 +1,9 @@
 
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
-
+<right>
 <a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white" alt=devto  style="margin: 0 !important;padding-bottom:0;" width="45%" />
+<img src="https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white" alt=devto  style="margin: 0 !important;padding-bottom:0;" width="45%" />
 </a>
 <br>
 <a href="https://linkedin.com/in/rishavanand" target="_blank">
@@ -19,11 +19,11 @@
 </a>
   <br/>
     <br/>
-<center>
+
 
   <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=for-the-badge" align="center" />
-</center>
-</div>  
+
+                                                                                                    </right>
 
 
 
