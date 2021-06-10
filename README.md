@@ -85,8 +85,6 @@
 
 <details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
 
-<h3>Frontend</h3>
-
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="50" />  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap" height="50" />  
@@ -104,8 +102,6 @@
 </div>
 
 </td><td valign="op" width="33%">
-
-<h3>Backend</h3>
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" height="50" />  
@@ -127,7 +123,7 @@
 </td>
 
 <td valign="top" width="33%">
-<h3>DevOps/SysAd</h3>
+
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" />  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" height="50" />
