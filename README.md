@@ -65,6 +65,7 @@
 </td>
 <td>        <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
                 <img
+                width="100%"
                     src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square"
                     align="right"
                 />
