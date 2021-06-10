@@ -1,7 +1,5 @@
-<div margin="5%"><p>   </p></div>
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
 
-<div >
   <table align="right" width="45%">
 <tr>
 
@@ -68,7 +66,6 @@
             </a></td>
 </tr>
   </table>
-</div>
 
 <!-- <div align="right" width="50%">
 <h2>Github Stats</h2> -->
