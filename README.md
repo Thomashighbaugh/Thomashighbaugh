@@ -47,39 +47,8 @@
 </td>
 
 </tr>
-<tr>
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
   </table>
-
-<!-- <div align="right" width="50%">
-<h2>Github Stats</h2> -->
-
-<!-- <table align="right">
-<tr>
-
-<td valign="center">
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&theme=material-palenight&show_icons=true&count_private=true&hide_border=true" align="center" />
-</div>
-</td>
-
-<td valign="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true" align="center" />
-</td>
-
-</tr>
-</table> -->
-<!-- </div>
-<br/>
-<hr/> -->
-
+</details>
 <div width="100%" margin="10%">
 <details width="100%"><summary> Skills </summary><table><tr><td valign="top" width="33%">
 
@@ -139,6 +108,6 @@
 </tr>
 </table>
 </details>
-</div>
+</>
 <br/>  
 <hr/>
