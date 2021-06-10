@@ -78,7 +78,8 @@
 <!-- </div>
 <br/>
 <hr/> -->
-
+<br>
+<hr/>
 <details><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
 
 <div align="center">  
