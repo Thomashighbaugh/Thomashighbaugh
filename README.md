@@ -69,7 +69,7 @@
 <td valign="center">
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&show_icons=true&count_private=true&hide_border=true" align="center" />
+<img src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&theme=material-palenight&show_icons=true&count_private=true&hide_border=true&layout=compact" align="center" />
 </div>
 </td>
 
