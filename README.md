@@ -1,7 +1,7 @@
-<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
+<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="75%" />
 
-<details width="100%"><summary> Connect </summary>
-  <table align="right" width="45%">
+<details><summary> Connect </summary>
+  <table align="right" width="100%">
 <tr>
 
 <td>
@@ -50,7 +50,7 @@
   </table>
 </details>
 
-<details width="50%"><summary> Skills </summary><table><tr><td valign="top" width="33%">
+<details><summary> Skills </summary><table><tr><td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="50" />  
@@ -108,6 +108,3 @@
 </tr>
 </table>
 </details>
-</>
-<br/>  
-<hr/>
