@@ -41,30 +41,17 @@
 </td>
 
 <td>
-<a href="https://www.kaggle.com/thomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/kaggle-%2344BAE8.svg?&style=for-the-badge&logo=kaggle&logoColor=white alt=kaggle width="100%" style="margin-bottom: 5px;" />
-</a>
+
 </td>
 
 </tr>
 <tr>
 <td>
-        <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
-                <img
-                width="100%"
-                    src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square"
-                    align="right"
-                />
-            </a>
 
 </td>
-<td>        <a href="https://paypal.me/thomasleonhighbaugh" target="_blank" style="display: inline-block;">
-                <img
-                width="100%"
-                    src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square"
-                    align="right"
-                />
-            </a></td>
+<td>
+
+</td>
 </tr>
   </table>
 
