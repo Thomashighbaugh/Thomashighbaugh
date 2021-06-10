@@ -135,7 +135,7 @@
 <img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/800px-LaTeX_logo.svg.png" alt="Latex" height="25" />  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="25" />  
 <img style="margin: 10px" src="https://elinux.org/images/thumb/c/cb/Raspberry_Pi_Logo.svg/475px-Raspberry_Pi_Logo.svg.png" alt="Raspberry Pi" height="25" />  
-<img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/512px-Bash_Logo_Colored.svg" alt="Bash" height="25" />  
+<img style="margin: 10px" src="https://mpng.subpng.com/20180808/ytw/kisspng-bash-shell-script-bourne-shell-scripting-language-create-and-delete-files-and-folders-in-bash-from-5b6ab0e6d589e2.2952756215337187588747.jpg" alt="Bash" height="25" />  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="Android" height="25" />  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="Rust" height="25" />  
 </div>
