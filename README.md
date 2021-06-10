@@ -49,8 +49,8 @@
 </tr>
   </table>
 </details>
-<div width="100%" margin="10%">
-<details width="100%"><summary> Skills </summary><table><tr><td valign="top" width="33%">
+
+<details width="50%"><summary> Skills </summary><table><tr><td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="50" />  
