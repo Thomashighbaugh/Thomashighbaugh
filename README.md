@@ -1,4 +1,4 @@
-<div  margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
+<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 
 <details><summary> Skills </summary>
 <table>
@@ -43,7 +43,7 @@
 
 </td>
 
-<td valign="top">
+<td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" />  
@@ -70,48 +70,48 @@
 <!--####################################################################-->
 <details ><summary> Connect </summary>
 <table>
-<tr >
+<tr width="100%">
 
 <td valign="top">
 <a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto  style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto width="100%" style="margin-bottom: 5px;" />
 </a>
 </td>
 
 <td valign="top">
 <a href="https://linkedin.com/in/rishavanand" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin width="100%"style="margin-bottom: 5px;" />
 </a>
 </td>
 
 <td valign="top">
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram  style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram width="100%" style="margin-bottom: 5px;" />
 </a>
 </td>
 </tr>
-<tr >
+<tr width="100%">
 <td valign="top">
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen  style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="100%" style="margin-bottom: 5px;" />
 </a>
 </td>
 
 <td valign="top">
 <a href="https://dribbble.com/thighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble  style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble width="100%" style="margin-bottom: 5px;" />
 </a>
 </td>
 
 <td valign="top">
 
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
-<img src="https://aleen42.github.io/badges/src/reddit.svg" align="center" />
+<img src="https://aleen42.github.io/badges/src/reddit.svg" align="center" width="100%"/>
 
 </a>
 </td>
 </tr>
-<tr >
+<tr width="100%">
 <td valign="top">
 <a href="https://gitlab.com/Thomashighbaugh">
 <img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"/>
