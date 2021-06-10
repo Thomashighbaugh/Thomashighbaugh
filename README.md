@@ -1,5 +1,5 @@
-<div align="center">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="center" style="width: 100%" />
+<div align="left">
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
 </div>  
   
 
@@ -7,7 +7,7 @@
 
 
 
-<div align="right">
+<div align="right" width="45%">
 <h2>Connect With Me!</h2>
 <a href="https://github.com/Thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
