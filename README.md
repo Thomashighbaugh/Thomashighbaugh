@@ -2,8 +2,6 @@
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
 </div>
 
-<br/>
-
 <div align="right" width="45%">
 <h2>Connect</h2>
   <table>
