@@ -30,7 +30,7 @@
 <!--####################################################################-->
 <!--####################################################################-->
 <!--####################################################################-->
-<details><summary> <button>Skills</button> </summary>
+<details><summary> <button style="background: #3c3f4c; color: #f4f4f7; border: ##f4f4f7 solid 3px; ">Skills</button> </summary>
 <table>
 <tr>
 <td valign="top">
