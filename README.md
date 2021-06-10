@@ -1,13 +1,14 @@
-<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="75%" />
+<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="85%" />
 
 <details><summary> Connect </summary>
-  <table align="right" width="100%">
+<table width="100%">
 <tr>
 
 <td>
 <a href="https://dev.to/thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto width="100%" style="margin-bottom: 5px;" />
-</a></td>
+</a>
+</td>
 
 <td>
 <a href="https://linkedin.com/in/rishavanand" target="_blank">
