@@ -1,10 +1,8 @@
-<div margin="5%"><p>   </p></div><div align="left">
+<div margin="5%"><p>   </p></div>
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="40%" />
-</div>
 
-<div align="right" width="45%">
-Connect
-  <table>
+<div >
+  <table align="right" width="45%">
 <tr>
 
 <td>
