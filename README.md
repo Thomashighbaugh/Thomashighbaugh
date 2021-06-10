@@ -1,7 +1,7 @@
 
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width= "45%" />
-<right>
+<div align="right" style="justify-content: 'center'; align-content: 'middle'; justify-self: 'center'; justify-items: 'center';  ">
 <a href="https://dev.to/thomashighbaugh" target="_blank">
 <img src="https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white" alt=devto  style="margin: 0 !important;padding-bottom:0;" width="25%" />
 </a>
@@ -23,8 +23,7 @@
 
   <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=for-the-badge" align="center" />
 
-                                                                                                    </right>
-
+</div>
 
 
 
