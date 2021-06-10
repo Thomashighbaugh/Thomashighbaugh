@@ -1,6 +1,9 @@
 <div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 
-<details><summary> Skills </summary><table><tr><td valign="top" width="33%">
+<details><summary> Skills </summary>
+<table>
+<tr>
+<td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="50" />  
@@ -76,10 +79,6 @@
 </a>
 </td>
 
-</tr>
-
-<tr>
-
 <td valign="top" width="33%">
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
 <img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram width="100%" style="margin-bottom: 5px;" />
@@ -91,10 +90,6 @@
 <img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="100%" style="margin-bottom: 5px;" />
 </a>
 </td>
-
-</tr>
-
-<tr>
 
 <td valign="top" width="33%">
 <a href="https://dribbble.com/thighbaugh" target="_blank">
