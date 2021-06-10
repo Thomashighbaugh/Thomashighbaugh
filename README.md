@@ -62,7 +62,7 @@
 
 ## Github Stats
 
-<table>
+<table align="right">
 <tr>
 
 <td valign="center" width="50%">
@@ -72,7 +72,7 @@
 </div>
 </td>
 
-<td valign="top" width="50%">
+<td valign="center" width="50%">
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&hide_border=true&layout=compact" align="left" />
 </td>
 
