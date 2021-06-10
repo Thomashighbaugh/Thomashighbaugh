@@ -109,7 +109,7 @@
 <tr>
 <td valign="top" width="33%">
 <a href="https://gitlab.com/Thomashighbaugh">
-<img src=" 	https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"/>
+<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"/>
 </a>
 </td>
 </tr>
