@@ -1,56 +1,5 @@
 <div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 
-<details><summary> Connect </summary>
-<table width="100%">
-<tr>
-
-<td width="50%">
-<a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto width="100%" style="margin-bottom: 5px;" />
-</a>
-</td>
-
-<td width="50%">
-<a href="https://linkedin.com/in/rishavanand" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin width="100%"style="margin-bottom: 5px;" />
-</a>
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%">
-<a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram width="100%" style="margin-bottom: 5px;" />
-</a>
-</td>
-
-<td width="50%">
-<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="100%" style="margin-bottom: 5px;" />
-</a>
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%">
-<a href="https://dribbble.com/thighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble width="100%" style="margin-bottom: 5px;" />
-</a>
-</td>
-
-<td width="50%">
-
-<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
-</td>
-
-</tr>
-  </table>
-</details>
-
 <details><summary> Skills </summary><table><tr><td valign="top" width="33%">
 
 <div align="center">  
@@ -69,7 +18,8 @@
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg" alt="Webpack" height="50" />  
 </div>
 
-</td><td valign="op" width="33%">
+</td>
+<td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" height="50" />  
@@ -108,4 +58,55 @@
 
 </tr>
 </table>
+</details>
+
+<details><summary> Connect </summary>
+<table width="100%">
+<tr>
+
+<td valign="top" width="33%">
+<a href="https://dev.to/thomashighbaugh" target="_blank">
+<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto width="100%" style="margin-bottom: 5px;" />
+</a>
+</td>
+
+<td valign="top" width="33%">
+<a href="https://linkedin.com/in/rishavanand" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin width="100%"style="margin-bottom: 5px;" />
+</a>
+</td>
+
+</tr>
+
+<tr>
+
+<td valign="top" width="33%">
+<a href="https://instagram.com/thomashighbaugh" target="_blank">
+<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram width="100%" style="margin-bottom: 5px;" />
+</a>
+</td>
+
+<td valign="top" width="33%">
+<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
+<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="100%" style="margin-bottom: 5px;" />
+</a>
+</td>
+
+</tr>
+
+<tr>
+
+<td valign="top" width="33%">
+<a href="https://dribbble.com/thighbaugh" target="_blank">
+<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble width="100%" style="margin-bottom: 5px;" />
+</a>
+</td>
+
+<td valign="top" width="33%">
+
+<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&&style=flat-square" align="center" />
+</td>
+
+</tr>
+  </table>
 </details>
