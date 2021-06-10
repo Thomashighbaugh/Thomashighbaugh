@@ -1,5 +1,6 @@
-<div style="display:inline-block" ><div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
+<div width="100%" margin="15%"><p> </p></div><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="45%" />
 
+<details width="100%"><summary> Connect </summary>
   <table align="right" width="45%">
 <tr>
 
@@ -80,7 +81,7 @@
 <hr/> -->
 
 <div width="100%" margin="10%">
-<details width="100%"><summary> My Skill Set </summary><table><tr><td valign="top" width="33%">
+<details width="100%"><summary> Skills </summary><table><tr><td valign="top" width="33%">
 
 <div align="center">  
 <img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" height="50" />  
@@ -141,4 +142,3 @@
 </div>
 <br/>  
 <hr/>
-</div>
