@@ -101,7 +101,7 @@
 <td valign="top" width="33%">
 
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
-<img src="https://aleen42.github.io/badges/src/reddit.svg" align="center" />
+<img src="https://aleen42.github.io/badges/src/reddit.svg" align="center" width="100%"/>
 
 </a>
 </td>
