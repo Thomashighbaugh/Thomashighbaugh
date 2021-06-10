@@ -54,7 +54,7 @@
 
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td>
         <a href="https://www.buymeacoffee.com/thomashighbaugh" target="_blank" style="display: inline-block;">
                 <img
                     src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square"
