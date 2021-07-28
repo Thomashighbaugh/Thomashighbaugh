@@ -99,33 +99,33 @@
 <details ><summary> Connect </summary>
 
 <a href="https://dev.to/thomashighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="84"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="84" width="84"  />
 </a>
-<div width="24"></div>
+
 <a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="84" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="84" width="84" />
 </a>
-<div width="24"></div>
+
 <a href="https://instagram.com/thomashighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="84"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="84" width="84"  />
 </a>
-<div width="24"></div>
+
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="84"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="84" width="84"  />
 </a>
-<div width="24"></div>
+
 <a href="https://dribbble.com/thighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="84"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="84" width="84"  />
 </a>
-<div width="24"></div>
+
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="84"/>
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="84" width="84"/>
 
 </a>
-<div width="24"></div>
+
 <a href="https://gitlab.com/Thomashighbaugh" target="_blank" >
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="84" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="84" width="84" />
 </a>
-<div width="24"></div>
+
   </table>
 </details>
