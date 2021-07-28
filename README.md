@@ -4,6 +4,7 @@
   src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif"
   align="left"
   height="100%"
+  width="100%"
 />
 <br/>
 
