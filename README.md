@@ -1,7 +1,7 @@
 <img
   src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif"
   align="left"
-  width="100%"
+  height="50%"
 />
 
 <!--##############################################################################################################################################################-->
