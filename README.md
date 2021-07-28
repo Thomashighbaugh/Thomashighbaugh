@@ -9,15 +9,15 @@
 <summary>About</summary>
 <table>
 <tr>
-<td align="center">
+<td align="center" valign="center">
 <h3>Web Developer</h3>
 <p>I work with lots of different technologies to make stylish web interfaces that are functional and run on clean code that conforms to best standards and modern practices. Having built a solid foundational understanding of HTML, CSS & JS I currently work mostly with React and lately have been really enjoying using Tailwind.css for design purposes. </p>
 </td>
-<td align="center">
+<td align="center" valign="center">
 <h3>Linux Professional</h3>
 <p>My journey began with a passion for Linux I developed after first stumbling into the Linux scene. Five years later, I run it on all of my machines, from Pis to my rack mounted home lab environment I have cobbled together over the years that hosts docker containers replacing the need for most external cloud servers. Currently working on a certification from the Linux Foundation.</p>
 </td>
-<td align="center">
+<td align="center" valign="center">
 <h3>Digital Artist</h3>
 <p>I discovered a latent artistic talent while learning CSS that has grown from there into an entire aspect of my skills. As I use Linux, I can not reliably work with Adobe products, so I have instead learned to do the same things with the more fickle free and open source alternatives like GIMP and Inkscape.</p>
 </td>
@@ -99,39 +99,39 @@
 <details ><summary> Connect </summary>
 <table>
 <tr>
-<td align="center">
-<a href="https://dev.to/thomashighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://dev.to/thomashighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="84" width="84"  />
 </a>
 </td>
-<td align="center">
-<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://linkedin.com/in/thomas-leon-highbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="84" width="84" />
 </a>
 </td>
-<td align="center">
-<a href="https://instagram.com/thomashighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://instagram.com/thomashighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="84" width="84"  />
 </a>
 </td>
-<td align="center">
-<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="84" width="84"  />
 </a>
 </td>
-<td align="center">
-<a href="https://dribbble.com/thighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://dribbble.com/thighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="84" width="84"  />
 </a>
 </td>
-<td align="center">
-<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="84" width="84"/>
 
 </a>
 </td>
-<td align="center">
-<a href="https://gitlab.com/Thomashighbaugh" target="_blank" >
+<td align="center" valign="center">
+<a href="https://gitlab.com/Thomashighbaugh" style="margin: 10px" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="84" width="84" />
 </a>
 </td>
