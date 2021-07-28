@@ -281,19 +281,18 @@
 <details>
   <summary>Connect</summary>
   <table width="45%">
-  <thead>
     <tr>
       <th colspan="7">
-      <font size="+3">
-        I am happy to connect with anyone so interested about any projects I
-        have done, any they would want to do with me or whatever else (if you
-        dare). Just send me <a href="mailto:thighbaugh@zoho.com">an email</a> or
-        use one of the icons below to find me on other platforms, no guarantees
-        I check those though.</font>
+        <font size="+3">
+          I am happy to connect with anyone so interested about any projects I
+          have done, any they would want to do with me or whatever else (if you
+          dare). Just send me
+          <a href="mailto:thighbaugh@zoho.com">an email</a> or use one of the
+          icons below to find me on other platforms, no guarantees I check those
+          though.</font
+        >
       </th>
     </tr>
-    </thead>
-      <tbody>
     <tr>
       <td align="center" valign="center">
         <a
@@ -394,6 +393,5 @@
         </a>
       </td>
     </tr>
-    </tbody>
   </table>
 </details>
