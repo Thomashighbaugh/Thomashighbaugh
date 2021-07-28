@@ -98,32 +98,32 @@
 <!--####################################################################-->
 <details ><summary> Connect </summary>
 
-<a href="https://dev.to/thomashighbaugh" target="_blank" style="margin:24px">
+<a href="https://dev.to/thomashighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="128"  />
 </a>
 
-<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank" style="margin:24px">
+<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="128" />
 </a>
 
-<a href="https://instagram.com/thomashighbaugh" target="_blank" style="margin:24px">
+<a href="https://instagram.com/thomashighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="128"  />
 </a>
 
-<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank" style="margin:24px">
+<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="128"  />
 </a>
 
-<a href="https://dribbble.com/thighbaugh" target="_blank" style="margin:24px">
+<a href="https://dribbble.com/thighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="128"  />
 </a>
 
-<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" target="_blank" style="margin:24px">
+<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="128"/>
 
 </a> 
 
-<a href="https://gitlab.com/Thomashighbaugh" target="_blank" style="margin:24px">
+<a href="https://gitlab.com/Thomashighbaugh" target="_blank" margin="24px">
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="128" />
 </a>
 
