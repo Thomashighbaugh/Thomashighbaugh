@@ -107,7 +107,7 @@
 </a>
 
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="64"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.png?raw=true" alt=instagram  height="64"  />
 </a>
 
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
