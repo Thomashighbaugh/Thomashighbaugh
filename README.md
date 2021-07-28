@@ -1,8 +1,10 @@
+<div width="100%">
 <img
   src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif"
   align="center"
   height="60%"
 />
+</div>
 <br/>
 
 <!--##############################################################################################################################################################-->
