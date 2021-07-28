@@ -100,7 +100,7 @@
 <!--####################################################################-->
 <details ><summary> Connect </summary>
 <p>I am happy to connect with anyone so interested about any projects I have done, any they would want to do with me or whatever else (if you dare). Just send me <a href="mailto:thighbaugh@zoho.com">an email</a> or use one of the icons below to find me on other platforms, no guarantees I check those though.  </p>
-<table>
+<table width="100%" >
 <tr>
 <td align="center" valign="center">
 <a href="https://dev.to/thomashighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
