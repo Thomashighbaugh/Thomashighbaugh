@@ -282,7 +282,7 @@
   <summary>Connect</summary>
   <table>
     <tr>
-      <th>
+      <th colspan="7">
         I am happy to connect with anyone so interested about any projects I
         have done, any they would want to do with me or whatever else (if you
         dare). Just send me <a href="mailto:thighbaugh@zoho.com">an email</a> or
