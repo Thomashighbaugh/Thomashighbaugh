@@ -99,32 +99,32 @@
 <details ><summary> Connect </summary>
 
 <a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto align="left" width="46%"height="75"  />
+<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto align="left" width="26%" height="75"  />
 </a>
 
 <a href="https://linkedin.com/in/rishavanand" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin align="right" width="46%"height="75" />
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin align="right" width="26%"height="75" />
 </a>
 
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram align="left" width="46%"height="75"  />
+<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram align="left" width="26%"height="75"  />
 </a>
 
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen align="right" width="46%"height="75"  />
+<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen align="right" width="26%"height="75"  />
 </a>
 
 <a href="https://dribbble.com/thighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble align="left" width="46%"height="75"  />
+<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble align="left" width="26%"height="75"  />
 </a>
 
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
-<img src="https://aleen42.github.io/badges/src/reddit.svg" align="right" width="46%"height="75" height="75"/>
+<img src="https://aleen42.github.io/badges/src/reddit.svg" align="right" width="26%"height="75%"/>
 
 </a>
 
 <a href="https://gitlab.com/Thomashighbaugh">
-<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab" align="right" height="75" width="46%"height="75" height="75"/>
+<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab" align="right" height="75" width="26%"height="75" height="75"/>
 </a>
 
   </table>
