@@ -1,6 +1,6 @@
-<head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> </head>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 <!--####################################################################-->
@@ -21,7 +21,7 @@
 <h3>Linux Professional</h3>
 <p>My journey began with a passion for Linux I developed after first stumbling into the Linux scene. Five years later, I run it on all of my machines, from Pis to my rack mounted home lab environment I have cobbled together over the years that hosts docker containers replacing the need for most external cloud servers. Currently working on a certification from the Linux Foundation.</p>
 </td>
-<td align="center" valign="center" style="font-family: 'Press Start 2P', cursive;">
+<td align="center" valign="center">
 <h3>Digital Artist</h3>
 <p>I discovered a latent artistic talent while learning CSS that has grown from there into an entire aspect of my skills. As I use Linux, I can not reliably work with Adobe products, so I have instead learned to do the same things with the more fickle free and open source alternatives like GIMP and Inkscape.</p>
 </td>
