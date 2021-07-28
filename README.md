@@ -99,32 +99,32 @@
 <details ><summary> Connect </summary>
 
 <a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/dev.svg?raw=true" alt=devto   height="64"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="64"  />
 </a>
 
 <a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/linkedin.svg?raw=true" alt=linkedin height="64" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="64" />
 </a>
 
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/instagram.svg?raw=true" alt=instagram  height="64"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="64"  />
 </a>
 
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/codepen.svg?raw=true"alt=codepen height="64"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="64"  />
 </a>
 
 <a href="https://dribbble.com/thighbaugh" target="_blank">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/linkedin.svg?raw=true" alt=dribbble  height="64"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="64"  />
 </a>
 
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/reddit.svg?raw=true"" height="64"/>
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="64"/>
 
 </a> 
 
 <a href="https://gitlab.com/Thomashighbaugh">
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/gitlab.svg?raw=true" alt="gitlab"  height="64" />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="64" />
 </a>
 
   </table>
