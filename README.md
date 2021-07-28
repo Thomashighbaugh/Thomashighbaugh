@@ -281,6 +281,7 @@
 <details>
   <summary>Connect</summary>
   <table width="45%">
+  <thead>
     <tr>
       <th colspan="7">
       <font size="+3">
@@ -291,6 +292,8 @@
         I check those though.</font>
       </th>
     </tr>
+    </thead>
+      <tbody>
     <tr>
       <td align="center" valign="center">
         <a
@@ -391,5 +394,6 @@
         </a>
       </td>
     </tr>
+    </tbody>
   </table>
 </details>
