@@ -100,38 +100,38 @@
 <table>
 <tr>
 <td align="center" valign="center">
-<a href="https://dev.to/thomashighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://dev.to/thomashighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/dev.svg?raw=true" alt=devto   height="84" width="84"  />
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://linkedin.com/in/thomas-leon-highbaugh" style="margin: 10px" target="_blank" >
+<a href="https://linkedin.com/in/thomas-leon-highbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=linkedin height="84" width="84" />
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://instagram.com/thomashighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://instagram.com/thomashighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/instagram.svg?raw=true" alt=instagram  height="84" width="84"  />
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/codepen.svg?raw=true"alt=codepen height="84" width="84"  />
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://dribbble.com/thighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://dribbble.com/thighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/linkedin.svg?raw=true" alt=dribbble  height="84" width="84"  />
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://www.reddit.com/user/ThomasLeonHighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/reddit.svg?raw=true"" height="84" width="84"/>
 
 </a>
 </td>
 <td align="center" valign="center">
-<a href="https://gitlab.com/Thomashighbaugh" style="margin: 10px" target="_blank" >
+<a href="https://gitlab.com/Thomashighbaugh" style="margin: 10px; padding:10px;" target="_blank" >
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/icons/gitlab.svg?raw=true" alt="gitlab"  height="84" width="84" />
 </a>
 </td>
