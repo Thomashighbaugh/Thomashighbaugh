@@ -99,32 +99,32 @@
 <details ><summary> Connect </summary>
 
 <a href="https://dev.to/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto  width="23%" height="75%"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/dev.svg?raw=true" alt=devto   height="64"  />
 </a>
 
-<a href="https://linkedin.com/in/rishavanand" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin width="23%"height="75%" />
+<a href="https://linkedin.com/in/thomas-leon-highbaugh" target="_blank">
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/linkedin.svg?raw=true" alt=linkedin height="64" />
 </a>
 
 <a href="https://instagram.com/thomashighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram  width="23%"height="75%"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/instagram.svg?raw=true" alt=instagram  height="64"  />
 </a>
 
 <a href="https://codepen.com/thomashighbaughthomasleonhighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen width="23%"height="75%"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/codepen.svg?raw=true"alt=codepen height="64"  />
 </a>
 
 <a href="https://dribbble.com/thighbaugh" target="_blank">
-<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble  width="23%"height="75%"  />
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/linkedin.svg?raw=true" alt=dribbble  height="64"  />
 </a>
 
 <a href="https://www.reddit.com/user/ThomasLeonHighbaugh">
-<img src="https://aleen42.github.io/badges/src/reddit.svg" width="23%"height="75%"/>
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/reddit.svg?raw=true"" height="64"/>
 
 </a> 
 
 <a href="https://gitlab.com/Thomashighbaugh">
-<img src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab"  height="75%" width="23%"/>
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/icons/gitlab.svg?raw=true" alt="gitlab"  height="64" />
 </a>
 
   </table>
