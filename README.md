@@ -1,6 +1,4 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
 
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif" align="left" width="100%" />
 <!--####################################################################-->
@@ -13,11 +11,11 @@
 <summary>About</summary>
 <table>
 <tr>
-<td align="center" valign="center" style="font-family: 'Press Start 2P', cursive;">
+<td align="center" valign="center" >
 <h3>Web Developer</h3>
 <p>I work with lots of different technologies to make stylish web interfaces that are functional and run on clean code that conforms to best standards and modern practices. Having built a solid foundational understanding of HTML, CSS & JS I currently work mostly with React and lately have been really enjoying using Tailwind.css for design purposes. </p>
 </td>
-<td align="center" valign="center" style="font-family: 'Press Start 2P', cursive;">
+<td align="center" valign="center" >
 <h3>Linux Professional</h3>
 <p>My journey began with a passion for Linux I developed after first stumbling into the Linux scene. Five years later, I run it on all of my machines, from Pis to my rack mounted home lab environment I have cobbled together over the years that hosts docker containers replacing the need for most external cloud servers. Currently working on a certification from the Linux Foundation.</p>
 </td>
@@ -101,6 +99,7 @@
 <!--####################################################################-->
 <!--####################################################################-->
 <details ><summary> Connect </summary>
+<p>I am happy to connect with anyone so interested about any projects I have done, any they would want to do with me or whatever else (if you dare). Just send me <a href="mailto:thighbaugh@zoho.com">an email</a> or use one of the icons below to find me on other platforms, no guarantees I check those though.  </p>
 <table>
 <tr>
 <td align="center" valign="center">
