@@ -1,0 +1,190 @@
+<svg viewBox="0 0 100 100">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100vh;
+        }
+
+        body {
+            background-color: hsl(210, 0%, 18%);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        svg {
+            background-color: #8b9cbe;
+            animation: bgcol 3s linear infinite alternate;
+        }
+
+        @keyframes bgcol {
+            0% {
+                background-color: hsl(20, 100%, 45%);
+            }
+
+            50% {
+                background-color: hsl(40, 100%, 45%);
+            }
+
+            100% {
+                background-color: hsl(60, 100%, 45%);
+            }
+        }
+
+        svg>path {
+            fill: hsl(210, 75%, 35%);
+            opacity: 1;
+        }
+
+        svg>path:nth-child(1) {
+            animation: opac 1s linear .05s infinite;
+        }
+
+        svg>path:nth-child(2) {
+            animation: opac 1s linear .10s infinite;
+        }
+
+        svg>path:nth-child(3) {
+            animation: opac 1s linear .15s infinite;
+        }
+
+        svg>path:nth-child(4) {
+            animation: opac 1s linear .20s infinite;
+        }
+
+        svg>path:nth-child(5) {
+            animation: opac 1s linear .25s infinite;
+        }
+
+        svg>path:nth-child(6) {
+            animation: opac 1s linear .30s infinite;
+        }
+
+        svg>path:nth-child(7) {
+            animation: opac 1s linear .35s infinite;
+        }
+
+        svg>path:nth-child(8) {
+            animation: opac 1s linear .40s infinite;
+        }
+
+        svg>path:nth-child(9) {
+            animation: opac 1s linear .45s infinite;
+        }
+
+        svg>path:nth-child(10) {
+            animation: opac 1s linear .50s infinite;
+        }
+
+        svg>path:nth-child(11) {
+            animation: opac 1s linear .55s infinite;
+        }
+
+        svg>path:nth-child(12) {
+            animation: opac 1s linear .60s infinite;
+        }
+
+        svg>path:nth-child(13) {
+            animation: opac 1s linear .65s infinite;
+        }
+
+        svg>path:nth-child(14) {
+            animation: opac 1s linear .70s infinite;
+        }
+
+        svg>path:nth-child(15) {
+            animation: opac 1s linear .75s infinite;
+        }
+
+        svg>path:nth-child(16) {
+            animation: opac 1s linear .80s infinite;
+        }
+
+        svg>path:nth-child(17) {
+            animation: opac 1s linear .85s infinite;
+        }
+
+        svg>path:nth-child(18) {
+            animation: opac 1s linear .90s infinite;
+        }
+
+        svg>path:nth-child(19) {
+            animation: opac 1s linear .95s infinite;
+        }
+
+        svg>path:nth-child(20) {
+            animation: opac 1s linear 1.0s infinite;
+        }
+
+        @keyframes opac {
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #center-circle {
+            fill: hsl(210, 75%, 35%);
+            stroke: hsla(147, 75%, 0%, 0.4);
+            stroke-width: 0.75;
+        }
+
+        #spinner {
+            fill: hsl(155, 100%, 35%);
+            stroke: hsla(155, 100%, 25%, 0.4);
+            stroke-width: 0.5;
+            transform-origin: center center;
+            animation: pulse 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1.0) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(0.66) rotate(90deg);
+            }
+
+            100% {
+                transform: scale(1.0) rotate(180deg);
+            }
+        }
+
+        #eye {
+            fill: hsl(60, 40%, 65%);
+        }
+    </style>
+    <path id="ray01" d="M50 0V100H45L55 0z" />
+    <path id="ray02" d="M40 100L60 0H65L35 100z" />
+    <path id="ray03" d="M70 0L30 100H25L75 0z" />
+    <path id="ray04" d="M80 0L20 100H15L85 0z" />
+    <path id="ray05" d="M90 0L10 100H5L95 0z" />
+    <path id="ray06" d="M100 0L0 100V95L100 5z" />
+    <path id="ray07" d="M100 10L0 90V85L100 15z" />
+    <path id="ray08" d="M100 20L0 80V75L100 25z" />
+    <path id="ray09" d="M0 70L100 30V35L0 65z" />
+    <path id="ray10" d="M0 60L100 40V45L0 55z" />
+    <path id="ray11" d="M0 50H100V55L0 45z" />
+    <path id="ray12" d="M100 65L0 35V40L100 60z" />
+    <path id="ray13" d="M0 25L100 75V70L0 30z" />
+    <path id="ray14" d="M0 20L100 80V85L0 15z" />
+    <path id="ray15" d="M0 10L100 90V95L0 5z" />
+    <path id="ray16" d="M0 0L100 100H95L5 0z" />
+    <path id="ray17" d="M10 0L90 100H85L15 0z" />
+    <path id="ray18" d="M20 0L80 100H75L25 0z" />
+    <path id="ray19" d="M30 0L70 100H65L35 0z" />
+    <path id="ray20" d="M60 100L40 0H45L55 100z" />
+    <g>
+        <path id="center-circle" d="M60 50A10 10 0 1 1 40 50 10 10 0 1 1 60 50" />
+        <path id="eye"
+            d="M43.63 53.9C43.3 53.7 43 53.3 42.86 52.8 42.64 52.1 42.79 51.2 43.83 50.7 44.78 50.4 46.1 51.1 45.93 52.1 45.93 52.9 44.81 53.3 44.3 52.7 43.89 52.1 44.4 51.3 45.2 51.6 45.52 51.7 45.1 51.1 44.49 51.1 43.75 51.1 43.1 51.9 43.4 52.6 43.52 53.4 44.2 53.9 45.1 53.9 46.5 54 48.2 53.1 49.3 52.3 50.4 51.6 51.1 51.1 52.1 50 51.4 50.1 50.67 50.2 49.78 50.1 48.62 49.9 48.2 49.8 47.4 49.4 46.64 49 46.2 48.6 45.82 48.3 45.3 48.2 42.3 48.5 42.2 48.2 42.64 47.7 45.1 47.9 45.85 47.58 46.79 46.94 48.4 46.2 50.7 46.1 53.1 46.2 54.3 47.1 56.3 47.6 56.66 47.8 57.4 47.4 57.4 47.9 56.78 48.2 55.87 48.4 55.1 48.9 54.4 49.3 54.4 49.6 54.5 49.9 54.6 50.2 55.2 50.2 55.2 50.4 54.74 50.6 54.62 50.6 54.6 51.1 54.3 52.1 54.5 54.1 54.1 54 53.65 53.9 53.95 52 54 50.8 54 50.3 53.93 49.7 53.7 49.6 53.1 49.5 52.62 50.3 52.1 50.8 50.88 52 49.5 52.9 47.58 53.8 46.84 54.2 46.1 54.4 45.1 54.4 44.3 54.3 43.92 54.1 43.63 53.9M49.3 49.5C48.82 49.1 48.73 48.9 48.71 48.2 48.67 47.6 48.71 47.2 49.1 46.82 47.7 47.1 46.2 47.8 46.2 48 46.2 48.2 47.1 48.7 47.67 49 48.2 49.3 48.77 49.5 49.3 49.5M52.3 49.5C53.3 49.3 53.81 49.1 54.3 48.8 54.91 48.5 55.67 48.2 55.66 48 55.65 47.7 54.4 47.52 53.88 47.3 53.4 47.2 52.77 46.96 52.4 46.95 52.64 47.4 52.71 47.58 52.74 48.1 52.8 48.6 52.5 49.1 52.3 49.5M55.5 46.5C54.5 46.4 53.77 46 52.4 45.59 50.65 45.1 48.84 45.3 47.2 45.79 46 46.1 44.94 46.4 43.8 46.57 43.3 46.57 42.4 46.79 42.3 46.2 42.48 45.97 43.1 46.53 46 45.51 47.5 45.1 48.94 44.5 50.5 44.57 52.83 44.78 54.89 45.98 57.2 46.3 57.6 46.2 57.95 46.5 57.4 46.61 56.74 46.74 56.2 46.61 55.5 46.5" />
+        <path id="spinner"
+            d="M50 4.98C43.1 4.98 53.63 31.1 46.88 32.3 40.1 33.45 41 5.35 34.59 7.7 28.1 10.1 46.94 30.96 41 34.39 35.1 37.82 26.32 11.1 21.1 15.51 15.8 19.92 40.63 33.2 36.2 38.42 31.81 43.68 14.46 21.54 11 27.48 7.6 33.42 35.44 37.4 33.1 43.82 30.75 50.3 6.88 35.41 5.69 42.2 4.5 48.92 32 43.1 32 50 32 56.82 4.5 51 5.69 57.82 6.88 64.5 30.75 49.72 33.1 56.1 35.44 62.6 7.6 66.5 11 72.5 14.46 78.4 31.81 56.3 36.2 61.5 40.63 66.82 15.8 80 21.1 84.4 26.32 88.8 35.1 62.1 41 65.6 46.94 69 28.1 89.9 34.59 92.2 41 94.6 40.1 66.5 46.88 67.7 53.63 68.92 43.1 95 50 95 56.86 95 46.4 68.92 53.1 67.7 59.88 66.5 58.96 94.6 65.4 92.2 71.86 89.9 53.1 69 59 65.6 64.94 62.1 73.7 88.8 78.94 84.4 84.2 80 59.4 66.82 63.78 61.5 68.2 56.3 85.5 78.4 88.97 72.5 92.4 66.5 64.6 62.6 66.91 56.1 69.3 49.72 93.1 64.5 94.3 57.82 95.5 51 68 56.82 68 50 68 43.1 95.5 48.92 94.3 42.2 93.1 35.41 69.3 50.3 66.91 43.82 64.6 37.4 92.4 33.42 88.97 27.48 85.5 21.54 68.2 43.68 63.78 38.42 59.4 33.2 84.2 19.92 78.94 15.51 73.7 11.1 64.94 37.82 59 34.39 53.1 30.96 71.86 10.1 65.4 7.7 58.96 5.35 59.88 33.45 53.1 32.3 46.4 31.1 56.86 4.98 50 4.98M50 34.98C58.3 34.98 65 41.7 65 50 65 58.2 58.3 65 50 65 41.72 65 35 58.2 35 50 35 41.7 41.72 34.98 50 34.98" />
+    </g>
+</svg>
