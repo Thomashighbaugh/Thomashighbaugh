@@ -1,20 +1,20 @@
 <svg className="  text-gray-300" width="500" height="500" viewBox="0 0 160 160" fill="url(#Gradient2)"
-    stroke="#555e7099" stop-width="2px">
+    stroke="#555e7099" strokeWidth="2px">
     <defs>
         <linearGradient id="Gradient3" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#e9efff" stop-opacity="10" />
-            <stop offset="60%" stop-color="#0badff" stop-opacity="10" />
-            <stop offset="100%" stop-color="#0872A8" stop-opacity="10" />
+            <stop offset="0%" stop-color="#e9efff" stopOpacity="10" />
+            <stop offset="60%" stop-color="#0badff" stopOpacity="10" />
+            <stop offset="100%" stop-color="#0872A8" stopOpacity="10" />
         </linearGradient>
         <linearGradient id="Gradient2" x1="0" x2="0" y1="1" y2="1">
-            <stop offset="0%" stop-color="#00caff" stop-opacity="30" />
-            <stop offset="70%" stop-color="#0badff" stop-opacity="80" />
-            <stop offset="100%" stop-color="#0872A8" stop-opacity="90" />
+            <stop offset="0%" stop-color="#00caff" stopOpacity="30" />
+            <stop offset="70%" stop-color="#0badff" stopOpacity="80" />
+            <stop offset="100%" stop-color="#0872A8" stopOpacity="90" />
         </linearGradient>
         <linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stop-color="#e9efff" stop-opacity="80" />
-            <stop offset="50%" stop-color="#ff00aa" stop-opacity="100" />
-            <stop offset="100%" stop-color="#f0ffaa" stop-opacity="80" />
+            <stop offset="0%" stop-color="#e9efff" stopOpacity="80" />
+            <stop offset="50%" stop-color="#ff00aa" stopOpacity="100" />
+            <stop offset="100%" stop-color="#f0ffaa" stopOpacity="80" />
         </linearGradient>
     </defs>
     <circle cx="80" cy="80" r="50" fill="url(#Gradient2)" />
@@ -26,6 +26,6 @@
         </path>
     </g>
 
-    <path d="M 50,0 A 50,50 0 0,0 -50,0Z" fill="url(#Gradient3)" stroke="#00000000" stroke-width="1px"
+    <path d="M 50,0 A 50,50 0 0,0 -50,0Z" fill="url(#Gradient3)" stroke="#00000000" strokeWidth="1px"
         transform="matrix(0.836, -0.495, 0.495, 0.836, 80, 80)" />
 </svg>
