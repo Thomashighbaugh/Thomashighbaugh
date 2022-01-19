@@ -20,7 +20,7 @@
     }
 
     #wave2 {
-      animation-duration: 5s;
+      animation-duration: 1s;
       animation-direction: reverse;
       opacity: .6
     }
