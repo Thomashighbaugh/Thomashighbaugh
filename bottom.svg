@@ -31,13 +31,13 @@
     }
 
     #wave4 {
-      animation-duration: 7s;
+      animation-duration: 3s;
       opacity: .1;
       fill: #8b9cbe
     }
 
     #wave5 {
-      animation-duration: 7s;
+      animation-duration: 9s;
       opacity: 0.31;
       fill: #00eaff;
     }
