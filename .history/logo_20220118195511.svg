@@ -8,6 +8,7 @@
         text {
             filter: url(#filter);
             fill: white;
+            background: black;
             font-family: 'Share Tech Mono', sans-serif;
             font-size: 100px;
             -webkit-font-smoothing: antialiased;
