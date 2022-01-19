@@ -3,7 +3,7 @@
     src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.png"
     align="right"
     height="100%"
-    width="80%"
+    width="100%"
   />
   <br />
 
