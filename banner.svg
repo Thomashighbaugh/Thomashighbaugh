@@ -88,7 +88,7 @@
                     opacity: 0;
                     background-color: #0badff;
                     box-sizing: border-box;
-                    font-family: "Sys";
+                    font-family: "Terminal";
 
                     opacity: 0.66;
 
