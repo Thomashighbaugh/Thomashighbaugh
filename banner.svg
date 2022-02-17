@@ -20,7 +20,7 @@
                 }
 
                 .screen::before {
-                    background: transparent linear-gradient(to bottom, #8b9cbe 0%, #22262d 100%) repeat scroll 0 0;
+                    background: transparent linear-gradient(to bottom, #8b9cbe66 0%, #22262d88 100%) repeat scroll 0 0;
                     content: "";
                     position: absolute;
                     left: 50%;
