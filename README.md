@@ -241,9 +241,8 @@
         <tr>
           <th colspan="7">
             <font size="+3">
-              I am happy to connect with anyone so interested about any projects
-              I have done, any they would want to do with me or whatever else
-              (if you dare). Just send me
+              I am happy to connect with anyone so interested, in regards to any of the projects
+              I have worked or am working on, any they would want to do with me or whatever else.  I am as open as open sourced software...(sad trombone).<br/> Just send me
               <a href="mailto:thighbaugh@zoho.com">an email</a> or use one of
               the icons below to find me on other platforms, no guarantees I
               check those though.</font
