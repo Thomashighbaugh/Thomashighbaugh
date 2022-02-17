@@ -354,4 +354,4 @@
   </div>
 </div>
 
-<img src="bottom.svg" alt="bottom graphic">
+
