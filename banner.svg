@@ -28,18 +28,18 @@
                     left: 50%;
                     top: 50%;
                     transform: translate3d(-50%, -50%, 0);
-                    width: 100%;
+                    min-width: 100%;
                     font-weight: 900;
-                    height: 100%;
+                    min-height: 100%;
                     z-index: -1;
                 }
 
                 .scanlines .overlay {
-                    height: 100%;
+                    min-height: 100%;
                     left: 0;
                     position: absolute;
                     top: 0;
-                    width: 100%;
+                    min-width: 100%;
                     opeacity: 0.35;
                     z-index: 1;
                     display: flex;
@@ -77,9 +77,9 @@
                 }
 
                 .picture {
-                    height: 100vh;
+                    min-height: 100vh;
                     overflow: hidden;
-                    width: 100vw;
+                    min-width: 100vw;
                     z-index: -1;
                     transform: scale(3, 3);
                     background: transparent linear-gradient(to bottom, #8b9cbecc 0%, #323431aa 100%);
