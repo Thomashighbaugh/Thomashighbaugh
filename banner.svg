@@ -40,10 +40,12 @@
 
                 .scanlines .overlay {
                     min-height: 100%;
+                height:100%;
                     left: 0;
                     position: absolute;
                     top: 0;
                     min-width: 100%;
+                width:100%;
                     opeacity: 0.35;
                     z-index: 1;
                     display: flex;
