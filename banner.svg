@@ -27,8 +27,8 @@
                     background: transparent linear-gradient(to bottom, #8b9cbe66 0%, #22262d88 100%) repeat scroll 0 0;
                     content: "";
                     position: absolute;
-                    left: 100%;
-                    top: 100%;
+                    left: 50%;
+                    top: 50%;
                     transform: translate3d(-50%, -50%, 0);
                     min-width: 100%;
                     width:100% !important;
