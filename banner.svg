@@ -106,18 +106,18 @@
                     font-family: "Press Start 2P";
                     opacity: 0.76;
                     font-size: 60% !important;
-                    height: 75%;
+                    height: auto;
                     text-align: center;
                     text-transform: uppercase;
                     min-width: 83%;
                     width:83%;
-                    text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
+                    text-shadow: 6px 6px 0 #000000, -3px -3px 0 #000000, 6px -6px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f7;
-                    -webkit-animation: jerkup 100ms infinite;
+                    -webkit-animation: jerkup 300ms infinite;
                     background-repeat: no-repeat;
                     overflow: hidden;
-                    animation: jerkup 100ms infinite;
+                    animation: jerkup 300ms infinite;
                 }
 
                 .menu header {
