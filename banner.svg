@@ -12,6 +12,10 @@
                     min-width: 100% !important;
                 width: 100% !important;
                 }
+                footer{
+                display: inline-flex;
+                
+                }
 
                 @font-face {
                     src: url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
@@ -104,7 +108,8 @@
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
-                    width: 63%;
+                    min-width: 83%;
+                width:83%;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f7;
@@ -665,7 +670,6 @@
                             </ul>
                             <footer>
                                 <div class="key"> <span>Github </span></div>
-
                                 <div class="key"> <span>README </span></div>
                             </footer>
                         </div>
