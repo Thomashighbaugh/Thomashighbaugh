@@ -1,6 +1,6 @@
-<div width="100%">
+i<div width="100%">
   <img
-    src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg"
+    src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/header.gif"
     align="right"
     height="100%"
     width="100%"
