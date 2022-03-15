@@ -111,7 +111,7 @@
                     text-transform: uppercase;
                     min-width: 83%;
                     width:83%;
-                    text-shadow: 6px 6px 0 #000000, -3px -3px 0 #000000, 6px -6px 0 #000000, -3px 3px 0 #000000;
+                    text-shadow: 6px 6px 0 #000000, 0 0 0 #000000, 6px -6px 0 #000000, 0 0 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f7;
                     -webkit-animation: jerkup 300ms infinite;
