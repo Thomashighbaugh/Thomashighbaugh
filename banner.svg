@@ -161,8 +161,8 @@
                     background-color: #44ffdd;
                     margin-top: 5px;
                     padding: 12.5px 15px;
-                    -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
-                    animation: 15s ease 4000ms normal none infinite running glitch;
+                    -webkit-animation: 5s ease 3000ms normal none infinite running glitch;
+                    animation: 5s ease 3000ms normal none infinite running glitch;
                 }
 
                 .menu footer::after {
