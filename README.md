@@ -9,7 +9,7 @@
 
 
 <details>
-  <summary><b>W O U L D   Y O U   L I K E   T O   K N O W   M O R E   ???</b></summary>
+  <summary><b>Would You Like to Know More?</b></summary>
   <ul>
     <li><b>Email</b> > <a href="mailto:thighbaughbaugh@zoho.com">thighbaughbaugh@zoho.com</a> </li>
     <li><b>Site</b> > <a href="https://thomasleonhighbaugh.me">thomasleonhighbaugh.me</a></li>
