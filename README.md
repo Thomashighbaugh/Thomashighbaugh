@@ -9,7 +9,7 @@
 
 
 <details>
-  <summary><b>Would You Like to Know More?</b></summary>
+  <summary><b>but wait there's more!</b></summary>
   <hr/>
   <hr/>
   <hr/>
