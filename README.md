@@ -13,8 +13,4 @@
   <a href="https://biolink-delta.vercel.app">I wrote a site for that!</a>
   
 </details>
-
-  <details>
-    <summary><b>Languages?</b></summary>
-    [![GitHub Trends SVG](https://api.githubtrends.io/user/svg/Thomashighbaugh/langs?include_private=true&compact=true)](https://githubtrends.io)
-  </details>
+[![GitHub Trends SVG](https://api.githubtrends.io/user/svg/Thomashighbaugh/langs?include_private=true&compact=true)](https://githubtrends.io)
