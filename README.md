@@ -15,4 +15,4 @@
 </details>
   
   ---- 
-[![GitHub Trends SVG](https://api.githubtrends.io/user/svg/Thomashighbaugh/langs?include_private=true&compact=true)](https://githubtrends.io)
+[![GitHub Trends SVG](https://api.githubtrends.io/user/svg/Thomashighbaugh/langs?include_private=true)](https://githubtrends.io)
