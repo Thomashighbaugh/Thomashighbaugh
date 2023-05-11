@@ -37,7 +37,7 @@
     };
 
     // Glitch
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 5; i++) {
         var span = text.firstElementChild.cloneNode(true);
         text.appendChild(span);
     }
