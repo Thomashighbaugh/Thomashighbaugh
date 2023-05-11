@@ -11,7 +11,7 @@
 <details>
   <summary><b>Contact Info?</b></summary>
   <br/>
-  <a href="https://biolink-delta.vercel.app"> <img height="120px" width="240px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/19524004f858163caa233e264df499447000e097/contact_button.svg" alt="contact button"/></a>
+  <a href="https://biolink-delta.vercel.app"> <img height="60px" width="120px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/19524004f858163caa233e264df499447000e097/contact_button.svg" alt="contact button"/></a>
   <br />
   <hr />
   <br />
