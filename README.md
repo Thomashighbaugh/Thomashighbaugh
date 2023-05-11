@@ -11,7 +11,7 @@
 <details>
   <summary><b>Contact Info?</b></summary>
   <br/>
-  <a href="https://biolink-delta.vercel.app">I wrote a site for that!</a>
+  <a href="https://biolink-delta.vercel.app"> <img src="https://github.com/Thomashighbaugh/biolink/blob/main/public/favicon/favicon-72x72.png?raw=true" alt="logo" /> I wrote a site for that! <img src="https://github.com/Thomashighbaugh/biolink/blob/main/public/favicon/favicon-72x72.png?raw=true" alt="logo" /></a>
   <br />
   <hr />
   <br />
