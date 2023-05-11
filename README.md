@@ -20,6 +20,7 @@
 <br/>
   <div>
   <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="user stats"/>
+    <img src="https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="user stats" />
   </div>
   </details>
  
