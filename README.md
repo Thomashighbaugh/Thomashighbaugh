@@ -10,12 +10,19 @@
 
 <details>
   <summary><b>Contact Info?</b></summary>
+  <br/>
   <a href="https://biolink-delta.vercel.app">I wrote a site for that!</a>
   
 </details>
   
+<details>
+  <summary>GitHub User Stats</summary>
+<br/>
+  <div>
+  <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="user stats"/>
+  </div>
+  </details>
+ 
   
-![](https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only)
-![]()
-  ---- 
+  <hr/> 
 
