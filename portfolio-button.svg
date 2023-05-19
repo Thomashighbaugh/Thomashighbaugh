@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="190.31364mm"
+   height="78.33445mm"
+   viewBox="0 0 190.31364 78.33445"
+   version="1.1"
+   id="svg986"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="portfolio-button.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview988"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.45011024"
+     inkscape:cx="-482.10412"
+     inkscape:cy="86.64544"
+     inkscape:window-width="1600"
+     inkscape:window-height="860"
+     inkscape:window-x="0"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs983">
+    <rect
+       x="89.42292"
+       y="284.99573"
+       width="664.68005"
+       height="208.95076"
+       id="rect1682" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-12.339959,-63.081779)">
+    <rect
+       style="fill:#191919;fill-opacity:1;stroke:#0c0c0c;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1522"
+       width="187.31364"
+       height="75.33445"
+       x="13.839959"
+       y="64.581779" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.33129411,0,0,0.48599265,-13.288987,-68.857577)"
+       id="text1680"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:131.878px;font-family:Norwester;-inkscape-font-specification:Norwester;white-space:pre;shape-inside:url(#rect1682);fill:#f4f4f4;fill-opacity:1;stroke:#0c0c0c;stroke-width:5.681;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"><tspan
+         x="89.423828"
+         y="406.98325"
+         id="tspan1016">Portfolio</tspan></text>
+  </g>
+</svg>

@@ -25,7 +25,7 @@
             len = b.length;
 
         for (var i = 0; i < len; i++) {
-            b[i] = ((255 * Math.random()) | 0) << 12;
+            b[i] = ((255 * Math.random()) | 0) << ;
         }
 
         ctx.putImageData(d, 0, 0);
