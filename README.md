@@ -12,9 +12,9 @@
   <summary><b>||| Portfolio | Resume | Contact ||| </b></summary>
 <br/>
   <div>
-    <a href="https://biolink-delta.vercel.app"> <img  width="30%" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/19524004f858163caa233e264df499447000e097/contact_button.svg" alt="contact button"/></a>
-    <a href="https://thomasleonhighbaugh.me"> <img width="30%" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5b77239380705b1eef79cdc7145a894ce4c3dfa4/portfolio-button.svg" alt="Portfolio"/> </a>
-    <a href="" > <img width="30%"  src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/47076d06f4ff190917fbecd26cfc176b22d4b67f/resume.svg" alt="Resume"> </a>
+    <a href="https://biolink-delta.vercel.app"> <img  width="30%"src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/999ffd1489e9876561b1400cc7a6bde49c802783/contact_button.svg" alt="contact button"/></a>
+    <a href="https://thomasleonhighbaugh.me"> <img width="30%" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/999ffd1489e9876561b1400cc7a6bde49c802783/portfolio-button.svg" alt="Portfolio"/> </a>
+    <a href="" > <img width="30%"  src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/999ffd1489e9876561b1400cc7a6bde49c802783/resume.svg" alt="Resume"> </a>
       
   </div>
   <br />
