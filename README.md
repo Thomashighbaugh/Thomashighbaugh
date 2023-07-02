@@ -13,13 +13,12 @@
 <br/>
 
 <div>
-<a href="https://thomasleonhighbaugh.me"> <img src="https://github.com/Thomashighbaugh/Thomashighbaugh/blob/main/portfolio-button.svg" alt="Portfolio"/> </a>
+<a href="https://thomasleonhighbaugh.me"> <img src="portfolio-button.svg" alt="Portfolio"/> </a>
 
-<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img src="https://github.com/Thomashighbaugh/Thomashighbaugh/blob/main/resume.svg" alt="Resume"> </a>
+<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img src="resume.svg" alt="Resume"> </a>
 
 <a href="https://biolink-delta.vercel.app"> 
-<img  src="https://github.com/Thomashighbaugh/Thomashighbaugh/blob/main/contact_button.svg" alt="contact button"/></a>
-
+<img  src="contact_button.svg" alt="contact button"/></a>
 
   <br />
   <hr />
