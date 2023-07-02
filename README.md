@@ -9,10 +9,10 @@
   <hr />
   <br />
 <details>
-  <summary><b>||| Portfolio | Resume | Contact ||| </b></summary>
+<summary> <b>||| Portfolio | Resume | Contact ||| </b></summary>
 <br/>
-  <div>
 
+<div>
 <a href="https://thomasleonhighbaugh.me"> <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/portfolio-button.svg" alt="Portfolio"/> </a>
 
 <a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/resume.svg" alt="Resume"> </a>
@@ -20,7 +20,7 @@
 <a href="https://biolink-delta.vercel.app"> 
 <img  src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/contact_button.svg" alt="contact button"/></a>
 
-  </div>
+
   <br />
   <hr />
   <br />
