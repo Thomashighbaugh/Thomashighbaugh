@@ -102,7 +102,7 @@
 
                     opacity: 0.76;
 
-                    font-size: 1rem; 
+                    font-size: 1rem !important; 
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
