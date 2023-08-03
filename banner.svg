@@ -102,11 +102,11 @@
 
                     opacity: 0.76;
 
-                    font-size: 6rem; 
+                    font-size: 1rem; 
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
-                    width: 63%;
+                    width: 83%;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f7;
