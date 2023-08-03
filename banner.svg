@@ -152,7 +152,7 @@
 
                 @-webkit-keyframes jerk {
                     50% {
-                        transform: translateX(1px)
+                        transform: translateX(3px)
                     }
 
                     51% {
@@ -162,7 +162,7 @@
 
                 @keyframes jerk {
                     50% {
-                        transform: translateX(1px)
+                        transform: translateX(3px)
                     }
 
                     51% {
@@ -172,7 +172,7 @@
 
                 @-webkit-keyframes jerkup {
                     0% {
-                        transform: translateY(1px)
+                        transform: translateY(3px)
                     }
 
                     to {
@@ -182,7 +182,7 @@
 
                 @keyframes jerkup {
                     0% {
-                        transform: translateY(1px)
+                        transform: translateY(3px)
                     }
 
                     to {
@@ -295,7 +295,7 @@
                 }
 
                 body {
-                    background: #1d1d1d 0 0;
+                    background-color: #1d1d1d;
                     margin: 0;
                     min-height: 100% !important;
                     height: 100% !important;
@@ -311,14 +311,12 @@
 
                 @font-face {
                     src: url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
-                    font-family: &quot;
-                    Terminal&quot;
+                    font-family: "Terminal";
                 }
 
                 @font-face {
-                    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/sys.ttf) format(&quot; truetype&quot; );
-                    font-family: &quot;
-                    Sys&quot;
+                    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/sys.ttf) format(" truetype" );
+                    font-family: "Sys";
                 }
 
                 .scanlines .overlay,
@@ -331,9 +329,7 @@
 
                 .screen::before {
                     background: linear-gradient(to bottom, #71717166 0, #2c2c2c88 100%) 0 0;
-                    content: &quot;
-                    &quot;
-                    ;
+                    content: "" ;
                     left: 50%;
                     top: 50%;
                     transform: translate3d(-50%, -50%, 0);
@@ -366,8 +362,7 @@
                 .scanlines .overlay::after {
                     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/crt.png);
                     background-blend-mode: color-burn;
-                    content: &quot;
-                    &quot;
+                    content: "";
                 }
 
                 .scanlines .overlay::before {
@@ -375,9 +370,7 @@
                     height: 100%;
                     bottom: 0;
                     right: 0;
-                    content: &quot;
-                    &quot;
-                    ;
+                    content: "";
                     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, .25) 50%), linear-gradient(-45deg, rgba(255, 0, 0, .03), rgba(0, 255, 0, .01), rgba(0, 0, 255, .03));
                     z-index: 2;
                     background-size: 100% 2px, 3px 100%;
@@ -401,9 +394,7 @@
 
                 .menu {
                     background-color: #0badff;
-                    font-family: &quot;
-                    Press Start 2P&quot;
-                    ;
+                    font-family: "Press Start 2P";
                     opacity: .76;
                     font-size: 60% !important;
                     height: auto;
@@ -464,8 +455,8 @@
 
                 .menu footer::after {
                     clear: both;
-                    content: &quot;
-                    &quot;
+                    content: "
+                    "
                     ;
                     display: table
                 }
@@ -507,9 +498,7 @@
 
                 .text {
                     color: #bf4040;
-                    content: &quot;
-                    AUX&quot;
-                    ;
+                    content: "AUX";
                     opacity: 0;
                     filter: blur(.35px);
                     font-family: Sys;
@@ -518,59 +507,59 @@
                     position: absolute;
                     text-shadow: 0 0 3px #bf4040;
                     top: 10%;
-                    width: 200px
+                    width: 200px;
                 }
 
                 .on .menu,
                 .on .text {
                     opacity: 1;
-                    transition: opacity 10ms ease 2000ms
+                    transition: opacity 10ms ease 2000ms;
                 }
 
                 .text span {
                     filter: blur(1px);
                     position: absolute;
                     -webkit-animation: blur 10ms infinite, jerk 30ms infinite;
-                    animation: blur 28ms infinite, jerk 43ms infinite
+                    animation: blur 28ms infinite, jerk 43ms infinite;
                 }
 
                 .text span:nth-child(1) {
                     color: #e61919;
                     margin-left: -2px;
-                    filter: blur(2px)
+                    filter: blur(2px);
                 }
 
                 .text span:nth-child(2) {
                     color: #bf4040;
                     margin-left: 2px;
-                    filter: blur(2px)
+                    filter: blur(2px);
                 }
 
                 .text span:nth-child(3) {
                     color: #2fb1d4;
                     position: 20px 0;
-                    filter: blur(1px)
+                    filter: blur(1px);
                 }
 
                 .text span:nth-child(4) {
                     color: #f4f4f7;
                     filter: blur(1px);
-                    text-shadow: 0 0 50px rgba(255, 255, 255, .4)
+                    text-shadow: 0 0 50px rgba(255, 255, 255, .4);
                 }
 
                 .text span:nth-child(5) {
                     color: rgba(255, 255, 255, .1);
-                    filter: blur(15px)
+                    filter: blur(15px);
                 }
 
                 .text span:nth-child(3) {
                     -webkit-animation: glitch1 1s infinite;
-                    animation: glitch1 1s infinite
+                    animation: glitch1 1s infinite;
                 }
 
                 .text span:nth-child(2) {
                     -webkit-animation: glitch2 1s infinite;
-                    animation: glitch2 1s infinite
+                    animation: glitch2 1s infinite;
                 }
 
                 .overlay .text {
@@ -619,17 +608,14 @@
 
     // Generate CRT noise
     function snow() {
-
         var w = ctx.canvas.width,
             h = ctx.canvas.height,
             d = ctx.createImageData(w, h),
             b = new Uint32Array(d.data.buffer),
             len = b.length;
-
         for (var i = 0; i < len; i++) {
             b[i] = ((255 * Math.random()) | 0) << ;
         }
-
         ctx.putImageData(d, 0, 0);
     }
 
