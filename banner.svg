@@ -213,7 +213,7 @@
                     opacity: 0;
                     filter: blur(0.35px);
                     font-family: Sys;
-                    font-size: 8rem; 
+                    font-size: 90%; 
                     left: 5%;
                     position: absolute;
                     text-shadow: 0 0 3px #ff3d81;
