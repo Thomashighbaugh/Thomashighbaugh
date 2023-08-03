@@ -152,7 +152,7 @@
 
                 @-webkit-keyframes jerk {
                     50% {
-                        transform: translateX(3px)
+                        transform: translateX(1px)
                     }
 
                     51% {
@@ -162,7 +162,7 @@
 
                 @keyframes jerk {
                     50% {
-                        transform: translateX(3px)
+                        transform: translateX(1px)
                     }
 
                     51% {
@@ -172,7 +172,7 @@
 
                 @-webkit-keyframes jerkup {
                     0% {
-                        transform: translateY(3px)
+                        transform: translateY(1px)
                     }
 
                     to {
@@ -182,7 +182,7 @@
 
                 @keyframes jerkup {
                     0% {
-                        transform: translateY(3px)
+                        transform: translateY(1px)
                     }
 
                     to {
@@ -201,7 +201,7 @@
 
                     31%,
                     to {
-                        transform: translateX(10px)
+                        transform: translateX(15px)
                     }
                 }
 
@@ -216,7 +216,7 @@
 
                     31%,
                     to {
-                        transform: translateX(10px)
+                        transform: translateX(15px)
                     }
                 }
 
@@ -231,7 +231,7 @@
 
                     31%,
                     to {
-                        transform: translateX(-10px)
+                        transform: translateX(-15px)
                     }
                 }
 
@@ -246,7 +246,7 @@
 
                     31%,
                     to {
-                        transform: translateX(-10px)
+                        transform: translateX(-15px)
                     }
                 }
 
