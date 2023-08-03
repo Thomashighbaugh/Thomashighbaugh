@@ -147,7 +147,7 @@
                     text-shadow: 0.5rem 0.5rem solid #1b1d24cc;
                 }
 
-                .menu ul li a {
+                .menu ul li  {
                     color: #fff;
                     font-size: 1.75rem;
                     text-decoration: none;
@@ -214,7 +214,7 @@
                     opacity: 0;
                     filter: blur(0.35px);
                     font-family: Sys;
-                    font-size: 5vmin;
+                    font-size: 1rem; 
                     left: 5%;
                     position: absolute;
                     text-shadow: 0 0 3px #ff3d81;
