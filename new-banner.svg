@@ -238,12 +238,10 @@
                 color: #fff;
                 font-size: 5em;
                 letter-spacing: 8px;
-                font-family: "Lucida Console", Monaco, monospace;	
+                font-family: "Press Start 2P", "Lucida Console", Monaco, monospace;	
                 font-weight: 400;
                 /*Create overlap*/
                 
-                margin: 0;
-                line-height: 0;
                 /*Animation*/
                 
                 animation: glitch1 2.5s infinite;
@@ -260,6 +258,7 @@
 
 				p {
 					font-size: 20px;
+          margin-top:10%;
 					text-shadow: 0 1px 0 #efefef;
 			
           					text-shadow:
@@ -276,6 +275,8 @@
 				<h1>Thomas Leon Highbaugh</h1>
 		<h1>Thomas Leon Highbaugh</h1>
 		<h1>Thomas Leon Highbaugh</h1>
+    <br/>
+    <br/>
 				<p>Web Developer, Linux Professional, Artist, Aspiring Prompt Engineer</p>
 			</div>
 		</div>
