@@ -100,13 +100,13 @@
                     box-sizing: border-box;
                     font-family: "Press Start 2P";
 
-                    opacity: 0.66;
+                    opacity: 0.76;
 
-                    font-size: 60% !important;
+                    font-size: 6rem; 
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
-                    width: 63;
+                    width: 63%;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f7;
@@ -649,21 +649,10 @@
                             <ul>
 
 
-                                <li class="active"><a href="#" title="">
-                                        Web Developer
-                                    </a>
-
-                                </li>
-                                <li><a href="https://github.com/the-Electric-Tantra-Linux" title="">
-                                        Linux Professional
-                                    </a>
-
-                                </li>
-                                <li><a href=" https://github.com/Thomashighbaugh/nvim" title="">
-                                        Digital Artist
-                                    </a>
-
-                                </li>
+                                <li class="active">Full-Stack Web Development </li>
+                                <li> Linux Administration </li>
+                                <li> Art/Design</li>
+                                <li>Prompt Engineering</li>
                             </ul>
                             <footer>
                                 <div class="key"> <span>Github</span></div>
