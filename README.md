@@ -12,13 +12,13 @@
 <summary> <b>||| Portfolio | Resume | Contact ||| </b></summary>
 <br/>
 
-<div>
-<a href="https://thomasleonhighbaugh.me"> <img src="portfolio-button.svg" alt="Portfolio"/> </a>
+<div style="display:inline-block;">
+<a href="https://thomasleonhighbaugh.me"> <img width="200px" src="portfolio-button.svg" alt="Portfolio"/> </a>
 
-<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img src="resume.svg" alt="Resume"> </a>
+<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img width="200px" src="resume.svg" alt="Resume"> </a>
 
 <a href="https://biolink-delta.vercel.app"> 
-<img  src="contact_button.svg" alt="contact button"/></a>
+<img width="200px" src="contact_button.svg" alt="contact button"/></a>
 
   <br />
   <hr />
