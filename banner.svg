@@ -621,7 +621,6 @@
         <div class="screen">
           <canvas id="canvas" class="picture"></canvas>
           <div class="overlay">
-            <div class="menu">
               <header>Thomas Leon Highbaugh</header>
               <ul>
                 <li class="active">Software Engineer</li>
@@ -633,22 +632,21 @@
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://thomasleonhighbaugh.me"
-                  > <div class="key">PORTFOLIO</div></a
+                  >PORTFOLIO</a
                 >
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://resume-thomas-leon-highbaugh.vercel.app/"
                 >
-                 <div class="key"> RESUME</div></a
+                  RESUME</a
                 >
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://biolink-delta.vercel.app/"
-                  > <div class="key">CONTACT</div>
+                  >CONTACT
                 </a>
               </footer>
             </div>
-          </div>
         </div>
       </main>
     </div>
