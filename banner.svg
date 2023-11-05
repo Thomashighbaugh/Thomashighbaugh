@@ -173,7 +173,7 @@
                             padding: 0.5rem;
                             width: 27% !important;
                             font-weight: 900;
-                            font-size: 1.25rem;
+                            font-size: 1rem;
                             background-color: #555555 !important;
                             border: 1px solid #f4f4f4 !important;                }
                             text-decoration:none !important;
@@ -647,7 +647,7 @@
                   RESUME</a
                 >
                 <a
-                  style="color: #f4f4f4 !important; margin-right:5rem !important;"
+                  style="color: #f4f4f4 !important; "
                   href="https://biolink-delta.vercel.app/"
                   >CONTACT
                 </a>
