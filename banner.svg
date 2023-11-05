@@ -154,8 +154,8 @@
                             background-color: #00ffcc;
                             display: inline-flex;
                             margin-top: 5px;
-                            margin-right:2rem;
-                            margin-left:2rem;
+                          padding-right:2rem;
+                            padding-left:2rem;
                             padding: 15px;
                             -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
                             animation: 5s ease 1000ms normal none infinite running glitch;
