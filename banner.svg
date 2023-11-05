@@ -166,7 +166,7 @@
                     font-weight: 900;
 
                 }
-                .menu footer .key span a {
+               a {
                     background-color: #555555 !important;
                     border: 1px solid #f4f4f4 !important;
                     font-size: 1rem;
