@@ -3,6 +3,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
                         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
+
                         body {
                             background: #1b1b1b none repeat scroll 0 0;
                             margin: 0;
@@ -14,10 +15,12 @@
                             justify-items: center;
 
                         }
+
                         @font-face {
                             src: url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
                             font-family: "Terminal";
                         }
+
                         .screen::before {
                             background: transparent linear-gradient(to bottom, #56565666 0%, #22262d88 100%) repeat scroll 0 0;
                             content: "";
@@ -148,7 +151,7 @@
                             background-color: #00ffcc;
                             display: inline-flex;
                             margin-top: 5px;
-                            padding: 12.5px 15px 1% 1%;
+                            padding: 12.5px 15px;
                             -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
                             animation: 15s ease 4000ms normal none infinite running glitch;
         justify-items: space-between;
@@ -165,7 +168,6 @@
                             padding: 0.5rem;
                             width: 30%i !important;
                             font-weight: 900;
-                            font-size:2rem;
                             background-color: #555555 !important;
                             border: 1px solid #f4f4f4 !important;                }
                             text-decoration:none !important;
@@ -557,7 +559,7 @@
                             }
                         }
 
-                        .text {
+                        .overlay .text {
                             -webkit-animation: 30s ease 6000ms normal none infinite running glitch;
                             animation: 30s ease 6000ms normal none infinite running glitch;
                         }
@@ -617,6 +619,8 @@
       <main class="scanlines on">
         <div class="screen">
           <canvas id="canvas" class="picture"></canvas>
+          <div class="overlay">
+            <div class="menu">
               <header>Thomas Leon Highbaugh</header>
               <ul>
                 <li class="active">Software Engineer</li>
@@ -642,6 +646,8 @@
                   >CONTACT
                 </a>
               </footer>
+            </div>
+          </div>
         </div>
       </main>
     </div>
