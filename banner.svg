@@ -199,8 +199,7 @@
                     color: #E42026;
                     content: "AUX";
                     opacity: 0;
-                    filter: blur(0.35px);
-                    font-family: Sys;
+                    filter: blur(0.35px); 
                     font-size: 90%; 
                     left: 5%;
                     position: absolute;
