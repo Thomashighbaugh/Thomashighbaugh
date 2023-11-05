@@ -634,8 +634,9 @@
                                 <li>Aspiring Prompt Engineer</li>
                             </ul>
                             <footer>
-                                <div class="key"> <span>Github</span></div>
-                                <div class="key"><span>README</span></div>
+                               <a href="https://thomasleonhighbaugh.me"> <div class="key"> <span>PORTFOLIO</span></div> </a>
+                             <a href="https://resume-thomas-leon-highbaugh.vercel.app/">       <div class="key"><span>RESUME</span></div> </a>
+                             <a href="https://biolink-delta.vercel.app/">       <div class="key"><span>CONTACT</span></div> </
                             </footer>
                         </div>
                     </div>
