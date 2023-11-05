@@ -147,7 +147,7 @@
                     text-decoration: none;
                 }
 
-                .menu footer {
+                footer {
                     background-color: #00ffcc;
                     display: inline-flex;
                     margin-top: 5px;
@@ -156,7 +156,7 @@
                     animation: 15s ease 4000ms normal none infinite running glitch;
 justify-items: space-between;
 justify-content: space-between;
-width:100% !important;
+min-width:100% !important;
 
                 }
 
