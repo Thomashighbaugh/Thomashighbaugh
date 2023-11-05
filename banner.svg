@@ -166,7 +166,7 @@ min-width:100% !important;
                     display: table;
                 }
 
-               .menu footer  a {
+                a {
                     padding: 0.5rem;
                     width: 30%i !important;
                     font-size: 65% !important;
@@ -632,10 +632,10 @@ min-width:100% !important;
                                 <li>Digital Artist</li>
                                 <li>Aspiring Prompt Engineer</li>
                             </ul>
-                            <footer>
-                              <a href="https://thomasleonhighbaugh.me">PORTFOLIO</a>
-                              <a href="https://resume-thomas-leon-highbaugh.vercel.app/"> RESUME</a> 
-                              <a href="https://biolink-delta.vercel.app/">CONTACT </a>
+                            <footer style="width:100% !important;">
+                              <a style="color:#f4f4f4!important;" href="https://thomasleonhighbaugh.me">PORTFOLIO</a>
+                              <a  style="color:#f4f4f4!important;" href="https://resume-thomas-leon-highbaugh.vercel.app/"> RESUME</a> 
+                              <a   style="color:#f4f4f4!important;" href="https://biolink-delta.vercel.app/">CONTACT </a>
                             </footer>
                         </div>
                     </div>
