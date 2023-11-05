@@ -167,12 +167,12 @@
 
                 }
                 .menu footer .key span a {
-                    background-color: #555555;
-                    border: 1px solid #f4f4f4;
-                    font-size: 1.5rem;
+                    background-color: #555555 !important;
+                    border: 1px solid #f4f4f4 !important;
+                    font-size: 1rem;
                     border-radius: 0.5rem;
                     display: inline-block;
-                    padding: 1.75rem;
+                    padding: 1rem;
 
                 }
                 
