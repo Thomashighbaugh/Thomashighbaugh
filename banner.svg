@@ -136,6 +136,7 @@
                             box-sizing: border-box;
                             list-style: outside none none;
                             padding: 3px;
+                            font-size:70% !important;
                         }
 
                         .menu ul li.active {
@@ -625,9 +626,9 @@
               <header>Thomas Leon Highbaugh</header>
               <ul>
                 <li class="active">Software Engineer</li>
-                <li>Linux Professional</li>
-                <li>Digital Artist</li>
-                <li>Aspiring Prompt Engineer</li>
+                <li>Linux Systems Administration </li>
+                <li>Digital Art and Graphics Design</li>
+                <li>Prompt Engineering</li>
               </ul>
               <footer style="width: 100% !important">
                 <a
