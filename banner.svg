@@ -625,14 +625,14 @@
             <div class="menu">
               <header>Thomas Leon Highbaugh</header>
               <ul>
-                <li class="active">Software Engineer</li>
+                <li class="active">Software Engineering</li>
                 <li>Linux Systems Administration </li>
                 <li>Digital Art and Graphics Design</li>
                 <li>Prompt Engineering</li>
               </ul>
-              <footer style="width: 100% !important">
+              <footer style="width: 100% !important; margin-left:0 !important;">
                 <a
-                  style="color: #f4f4f4 !important"
+                  style="color: #f4f4f4 !important;margin-left:0 !important;"
                   href="https://thomasleonhighbaugh.me"
                   >PORTFOLIO</a
                 >
