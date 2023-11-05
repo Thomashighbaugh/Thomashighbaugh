@@ -633,18 +633,18 @@
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://thomasleonhighbaugh.me"
-                  >PORTFOLIO</a
+                  > <div class="key">PORTFOLIO</div></a
                 >
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://resume-thomas-leon-highbaugh.vercel.app/"
                 >
-                  RESUME</a
+                 <div class="key"> RESUME</div></a
                 >
                 <a
                   style="color: #f4f4f4 !important"
                   href="https://biolink-delta.vercel.app/"
-                  >CONTACT
+                  > <div class="key">CONTACT</div>
                 </a>
               </footer>
             </div>
