@@ -181,7 +181,6 @@
                             color: #f4f4f4 !important;
                             border-radius: 0.5rem;
                             padding: 1rem;
-                            margin-left:2rem;
                         }
 
                         .faded {
