@@ -22,6 +22,8 @@
                         }
 
                         .screen::before {
+                            background: transparent linear-gradient(to bottom, #56565666 0%, #22262d88 100%) repeat scroll 0 0;
+                            content: "";
                             position: absolute;
                             left: 50%;
                             top: 50%;
@@ -160,6 +162,8 @@
 
                         .menu footer::after {
                             clear: both;
+                            content: " ";
+                            display: table;
                         }
 
                         a {
@@ -172,7 +176,6 @@
                             color: #f4f4f4 !important;
                             border-radius: 0.5rem;
                             padding: 1rem;
-                            margin-left: 10rem;
                         }
 
                         .faded {
