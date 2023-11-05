@@ -99,8 +99,9 @@
                             box-sizing: border-box;
                             font-family: "Press Start 2P";
                             opacity: 0.86;
-                            font-size: 60% !important;
+                            font-size: 1.5rem !important;
                             height: auto;
+                            z-index: 1;
                             text-align: center;
                             text-transform: uppercase;
                             min-height: 100% !important;
