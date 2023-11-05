@@ -146,6 +146,7 @@
 
                 .menu footer {
                     background-color: #00ffcc;
+                    display: inline-flex;
                     margin-top: 5px;
                     padding: 12.5px 15px;
                     -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
@@ -159,24 +160,22 @@
                 }
 
                 .menu footer .key {
-                    float: left;
                     padding: 0.5rem;
-                    width: 40%;
+                    width: 30%;
                     font-size: 65% !important;
                     font-weight: 900;
 
                 }
-                .menu footer .key span {
+                .menu footer .key span a {
                     background-color: #555555;
                     border: 1px solid #f4f4f4;
                     font-size: 1.5rem;
                     border-radius: 0.5rem;
                     display: inline-block;
                     padding: 1.75rem;
+
                 }
-                .menu footer .key:last-child {
-                    text-align: right;
-                }
+                
                 .faded {
                     color: #727f96
                 }
