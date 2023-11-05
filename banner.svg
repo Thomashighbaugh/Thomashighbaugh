@@ -162,8 +162,6 @@
 
                         .menu footer::after {
                             clear: both;
-                            content: " ";
-                            display: table;
                         }
 
                         a {
