@@ -11,6 +11,8 @@
                     height:100% !important;
                     min-width: 100% !important;
                     width: 100% !important;
+                    justify-content: center;
+
                 }
 
                 @font-face {
@@ -98,7 +100,7 @@
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
-                    width: 63%;
+                    width: 83%;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f4;
@@ -146,7 +148,8 @@
 
                 .menu footer {
                     background-color: #00ffcc;
-                    display: inline-flex;
+                    display: flex;
+                    flex-direction: row;
                     margin-top: 5px;
                     padding: 12.5px 15px;
                     -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
