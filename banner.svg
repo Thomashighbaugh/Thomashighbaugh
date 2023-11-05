@@ -560,7 +560,7 @@
                             }
                         }
 
-                        .overlay .text {
+                        .text {
                             -webkit-animation: 30s ease 6000ms normal none infinite running glitch;
                             animation: 30s ease 6000ms normal none infinite running glitch;
                         }
@@ -620,7 +620,6 @@
       <main class="scanlines on">
         <div class="screen">
           <canvas id="canvas" class="picture"></canvas>
-          <div class="overlay">
             <div class="menu">
               <header>Thomas Leon Highbaugh</header>
               <ul>
@@ -647,7 +646,6 @@
                   >CONTACT
                 </a>
               </footer>
-            </div>
           </div>
         </div>
       </main>
