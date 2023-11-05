@@ -101,9 +101,7 @@
                     height: auto;
                     text-align: center;
                     text-transform: uppercase;
-                    width: 90%;
-                    margin-left: 5% !important;
-                    margin-right: 5% !important;
+                    width: 100%;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f4;
@@ -114,7 +112,7 @@
                 }
 
                 .menu header {
-                    color: #ffffaf;
+                    color: #ffda19;
                     margin-bottom: 10px;
                     margin-top: 10px;
                     padding: 5px 5px 10px 10px;
@@ -624,9 +622,7 @@
             <main class="scanlines on">
                 <div class="screen">
                     <canvas id="canvas" class="picture"></canvas>
-                        <div class="text">
-                            <span>AUX</span>
-                        </div>
+                        <div class="overlay">
                         <div class="menu">
                             <header>
                                 Thomas Leon Highbaugh
@@ -643,6 +639,7 @@
                                     <div class="key"><span><a href="https://biolink-delta.vercel.app/"><span>CONTACT </span></a></span></div>
                             </footer>
                         </div>
+                    </div>
                     </div>
             </main>
         </div>
