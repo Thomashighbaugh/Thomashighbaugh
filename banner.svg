@@ -618,7 +618,6 @@
             <main class="scanlines on">
                 <div class="screen">
                     <canvas id="canvas" class="picture"></canvas>
-                    <div class="overlay">
                         <div class="text">
                             <span>AUX</span>
                         </div>
@@ -639,7 +638,6 @@
                             </footer>
                         </div>
                     </div>
-                </div>
             </main>
         </div>
     </foreignObject>
