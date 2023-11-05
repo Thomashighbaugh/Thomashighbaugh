@@ -102,8 +102,8 @@
                     text-align: center;
                     text-transform: uppercase;
                     width: 90%;
-                    margin-left: 5%;
-                    margin-right: 5%;
+                    margin-left: 5% !important;
+                    margin-right: 5% !important;
                     text-shadow: 2px 2px 0 #000000, -3px -3px 0 #000000, 2px -2px 0 #000000, -3px 3px 0 #000000;
                     filter: blur(1.5px);
                     color: #f4f4f4;
@@ -638,9 +638,9 @@
                                 <li>Aspiring Prompt Engineer</li>
                             </ul>
                             <footer>
-                                <div class="key"> <span><a href="https://thomasleonhighbaugh.me">PORTFOLIO</a></span></div>
-                                  <div class="key"><span><a href="https://resume-thomas-leon-highbaugh.vercel.app/">  RESUME</a></span></div> 
-                                    <div class="key"><span><a href="https://biolink-delta.vercel.app/">CONTACT </a></span></div>
+                                <div class="key"> <span><a href="https://thomasleonhighbaugh.me"><span>PORTFOLIO</span></a></span></div>
+                                  <div class="key"><span><a href="https://resume-thomas-leon-highbaugh.vercel.app/"><span>  RESUME</span></a></span></div> 
+                                    <div class="key"><span><a href="https://biolink-delta.vercel.app/"><span>CONTACT </span></a></span></div>
                             </footer>
                         </div>
                     </div>
