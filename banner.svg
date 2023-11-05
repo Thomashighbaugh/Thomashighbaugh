@@ -155,6 +155,8 @@
                     padding: 12.5px 15px;
                     -webkit-animation: 15s ease 4000ms normal none infinite running glitch;
                     animation: 15s ease 4000ms normal none infinite running glitch;
+                    display: inline-flex;
+
                 }
 
                 .menu footer::after {
@@ -163,9 +165,9 @@
                     display: table;
                 }
 
-                .menu footer .key a {
+                 a {
                     padding: 0.5rem;
-                    width: 30%;
+                    width: 30%i !important;
                     font-size: 65% !important;
                     font-weight: 900;
                     background-color: #555555 !important;
