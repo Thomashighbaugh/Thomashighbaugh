@@ -169,7 +169,7 @@
 
                         a {
                             padding: 0.5rem;
-                            width: 30% !important;
+                            width: 27% !important;
                             font-weight: 900;
                             font-size: 1.25rem;
                             background-color: #555555 !important;
