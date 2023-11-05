@@ -168,14 +168,13 @@
 
                         .menu footer::after {
                             clear: both;
-                            content: " ";
-                            display: table;
                         }
 
                         a {
                             padding: 0.5rem;
-                            width: 30%i !important;
+                            width: 30% !important;
                             font-weight: 900;
+                            font-size: 1.25rem;
                             background-color: #555555 !important;
                             border: 1px solid #f4f4f4 !important;                }
                             text-decoration:none !important;
