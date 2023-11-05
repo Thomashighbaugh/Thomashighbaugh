@@ -156,6 +156,7 @@
                     animation: 15s ease 4000ms normal none infinite running glitch;
 justify-items: space-between;
 justify-content: space-between;
+width:100% !important;
 
                 }
 
