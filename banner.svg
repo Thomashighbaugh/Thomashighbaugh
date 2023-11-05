@@ -3,7 +3,6 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
                         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
-
                         body {
                             background: #1b1b1b none repeat scroll 0 0;
                             margin: 0;
@@ -15,12 +14,10 @@
                             justify-items: center;
 
                         }
-
                         @font-face {
                             src: url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
                             font-family: "Terminal";
                         }
-
                         .screen::before {
                             background: transparent linear-gradient(to bottom, #56565666 0%, #22262d88 100%) repeat scroll 0 0;
                             content: "";
@@ -560,7 +557,7 @@
                             }
                         }
 
-                        .overlay .text {
+                        .text {
                             -webkit-animation: 30s ease 6000ms normal none infinite running glitch;
                             animation: 30s ease 6000ms normal none infinite running glitch;
                         }
@@ -620,7 +617,6 @@
       <main class="scanlines on">
         <div class="screen">
           <canvas id="canvas" class="picture"></canvas>
-          <div class="overlay">
               <header>Thomas Leon Highbaugh</header>
               <ul>
                 <li class="active">Software Engineer</li>
@@ -646,7 +642,6 @@
                   >CONTACT
                 </a>
               </footer>
-            </div>
         </div>
       </main>
     </div>
