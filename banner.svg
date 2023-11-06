@@ -645,18 +645,18 @@
             <footer style="width: 100% !important; margin-left: 0 !important">
               <div class="button-group">
                 <a
-                  style="color: #f4f4f4 !important; margin-left: 0 !important"
+                  style="color: #f4f4f4 !important; margin-left: 15px !important; margin-right:15px !important;"
                   href="https://thomasleonhighbaugh.me"
                   >PORTFOLIO</a
                 >
                 <a
-                  style="color: #f4f4f4 !important"
+                  style="color: #f4f4f4 !important;  margin-left: 15px !important; margin-right:15px !important;"
                   href="https://resume-thomas-leon-highbaugh.vercel.app/"
                 >
                   RESUME</a
                 >
                 <a
-                  style="color: #f4f4f4 !important"
+                  style="color: #f4f4f4 !important;  margin-left: 15px !important; margin-right:15px !important;"
                   href="https://biolink-delta.vercel.app/"
                   >CONTACT
                 </a>
