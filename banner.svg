@@ -172,6 +172,8 @@
                                 a {
                                     padding: 0.5rem;
                                     width: 27% !important;
+                                    margin-left: 1rem;
+                                    margin-right:1rem;
                                     font-weight: 900;
                                     font-size: 1rem;
                                     background-color: #555555 !important;
