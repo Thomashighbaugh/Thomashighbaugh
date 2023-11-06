@@ -8,9 +8,9 @@
 <summary> <b>Click the links on the image or in case that doesn't work... </b></summary>
 <br/>
 
-<a href="https://thomasleonhighbaugh.me"> <img width="200px" src="portfolio-button.svg" alt="Portfolio"/> </a>
-<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img width="200px" src="resume.svg" alt="Resume"> </a>
-<a href="https://biolink-delta.vercel.app"> <img width="200px" float="right" src="contact_button.svg" alt="contact button"/></a>
+<a href="https://thomasleonhighbaugh.me"> <img width="200px" src="./buttons/portfolio-button.svg" alt="Portfolio"/> </a>
+<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img width="200px" src="./buttons/resume.svg" alt="Resume"> </a>
+<a href="https://biolink-delta.vercel.app"> <img width="200px" float="right" src="./buttons/contact_button.svg" alt="contact button"/></a>
 
   <br />
   <hr />
@@ -27,14 +27,15 @@
         <p>The buttons at the bottom even work as clickable links, however you first would have to click the image and be taken to just the raw image then click the button again to see the link, thus I also provided the same links in matching buttons in the dropdown above as well.</p>
         <p><b>Note:</b> Getting the arrow keys to select menu items is still on the to-do list. As is better arranging and cleaning up the SVG's code. </p>
         <br />
-    <hr />
-    <br />
+        <hr />
+        <br />
 
 </details>
-
-        <details>
+<details>
     <summary>Account Stats</summary>
       <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="user stats"/>
     <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="user stats" />
-
+    <br />
+    <hr />
+    <br />
   </details>
