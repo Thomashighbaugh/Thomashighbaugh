@@ -1,7 +1,7 @@
 {
     "scripts": {
         "format-svg": "./node_modules/.bin/prettier --plugin=@prettier/plugin-xml --write '**/*.svg'",
-        "format": "prettier -w **/*"
+        "format-md": "prettier -w **/*.md"
     },
     "devDependencies": {
         "prettier": "^3.0.3",

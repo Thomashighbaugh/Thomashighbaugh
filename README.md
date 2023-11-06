@@ -1,5 +1,5 @@
 <div width="100%">
-<object type="image/svg" data="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg"></object>
+<img width="850px" height="300px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg" />
 
   <br />
   <hr />
@@ -11,7 +11,6 @@
 <a href="https://thomasleonhighbaugh.me"> <img width="200px" src="./buttons/portfolio-button.svg" alt="Portfolio"/> </a>
 <a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img width="200px" src="./buttons/resume.svg" alt="Resume"> </a>
 <a href="https://biolink-delta.vercel.app"> <img width="200px" float="right" src="./buttons/contact_button.svg" alt="contact button"/></a>
-
   <br />
   <hr />
   <br />
@@ -32,7 +31,7 @@
 
 </details>
 <details>
-    <summary>Account Stats</summary>
+    <summary><b>Account Stats</b></summary>
       <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="user stats"/>
     <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="user stats" />
     <br />
