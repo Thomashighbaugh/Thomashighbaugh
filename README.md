@@ -1,5 +1,5 @@
 <div width="100%">
-<img width="800px" height="300px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg" />
+<img width="850px" height="300px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg" />
 
   <br />
   <hr />
