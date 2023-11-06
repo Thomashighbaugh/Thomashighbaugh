@@ -180,8 +180,6 @@
                             color: #f4f4f4 !important;
                             border-radius: 0.5rem;
                             padding: 1rem;
-                            margin-right:2rem;
-                            margin-left:2rem;
                         }
 
                         .faded {
@@ -215,7 +213,13 @@
                             opacity: 1;
                             transition: opacity 10ms ease 2000ms;
                         }
-
+.button-group{
+    padding-left: 5rem; 
+    padding-right: 5rem;
+    width: 100%; 
+display: flex;
+flex-direction: row;
+  }
                         @-webkit-keyframes on {
                             0% {
                                 transform: scale(1, 0.8) translate3d(0, 0, 0);
@@ -635,6 +639,7 @@
                 <li>Prompt Engineering</li>
               </ul>
               <footer style="width: 100% !important; margin-left:0 !important;">
+                <div class="button-group">
                 <a
                   style="color: #f4f4f4 !important;margin-left:0 !important;"
                   href="https://thomasleonhighbaugh.me"
@@ -651,6 +656,7 @@
                   href="https://biolink-delta.vercel.app/"
                   >CONTACT
                 </a>
+                </div>
               </footer>
           </div>
         </div>
