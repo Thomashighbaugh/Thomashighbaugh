@@ -214,6 +214,8 @@
                                     transition: opacity 10ms ease 2000ms;
                                 }
                                 .button-group{
+                                   justify-items: space-between;
+                                   justify-content: space-between;
                                     margin-left: 15rem;
                                     margin-right: 15rem;
                                     width: 100%;
