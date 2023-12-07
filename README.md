@@ -14,9 +14,8 @@
   <br />
   <hr />
   <br />
-  </details>
-  
-<details> <summmary><b>About This Image</b></summmary>
+
+  <details> <summmary><b>About This Image</b></summmary>
         <h3>About the Image Itself</h3>
         <p>The image is meant to simulate the menu of early digital cable television from the mid to late 1990s I remember as a kid. </p>
         <p>Using the style of these throwback menus gives me a good excuse for some glitch animations, which are especially fitting in this context.</p>
@@ -38,3 +37,6 @@
     <hr />
     <br />
   </details>
+
+  </details>
+  
