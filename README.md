@@ -5,7 +5,7 @@
   <hr />
   <br />
 <details>
-<summary> <b>Click the links on the image or in case that doesn't work... </b></summary>
+<summary> <b>Would you like to know more?</b></summary>
 <br/>
 
 <a href="https://thomasleonhighbaugh.me"> <img width="200px" src="./buttons/portfolio-button.svg" alt="Portfolio"/> </a>
