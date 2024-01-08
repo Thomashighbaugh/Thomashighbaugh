@@ -4,7 +4,7 @@ const dateStringifier = require('date-stringifier');
 async function drawFollowerImage(follower, fileName) {
   const avatar = await Jimp.read(follower.avatar_url);
   const avatarmask = await Jimp.read('./src/resources/images/levelMask.png');
-  avatar.resize(269, 269);
+  avatar.resize(229, 229);
   avatar.mask(avatarmask, 0, 0);
 
   const base = await Jimp.read('./src/resources/images/CoderBase.png');

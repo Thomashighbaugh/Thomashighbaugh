@@ -15,7 +15,7 @@ module.exports = {
     styles: {
       align: 'center',
       style: 'for-the-badge',
-      color: theme.colors.lightSecondary,
+      color: theme.colors.primary,
       logoColor: theme.colors.white,
     },
     badges: [
@@ -43,8 +43,8 @@ module.exports = {
   socialMedias: {
     styles: {
       align: 'left',
-      style: 'for-the-badge',
-      color: theme.colors.lightSecondary,
+      style: 'plastic',
+      color: theme.colors.primary,
       logoColor: theme.colors.white,
     },
     links: [
@@ -62,8 +62,30 @@ module.exports = {
         href: 'mailto:thighbaugh@zoho.com',
       },
       {
-        name: 'npm',
-        href: 'https://www.npmjs.com/~thomashighbaugh',
+        name: 'email',
+        logo: 'zoho',
+        href: 'mailto:thighbaugh@zoho.com',
+      },
+      {
+        name: 'alternative email',
+        logo: 'thunderbird',
+        href: 'mailto:me@thomasleonhighbaugh.me',
+      },
+
+      {
+        name: 'portfolio website',
+        href: 'https://thomasleonhighbaugh.me',
+        logo: 'firefoxbrowser',
+      },
+      {
+        name: 'linktree alternative',
+        href: 'https://biolink-delta.vercel.app',
+        logo: 'linktree',
+      },
+      {
+        name: 'resume',
+        href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
+        logo: 'libreoffice',
       },
       {
         name: 'codepen',
@@ -89,6 +111,9 @@ module.exports = {
       { name: 'Typescript', isHighlighted: true },
       { name: 'HTML5' },
       { name: 'HTML' },
+      { name: 'XHTML' },
+      { name: 'XML' },
+      { name: 'JSON' },
       { name: 'SVG' },
       { name: 'Markdown' },
       { name: 'CSS3' },
@@ -132,6 +157,7 @@ module.exports = {
       { name: 'Gitlab' },
       { name: 'Codeberg' },
       { name: 'Visual Studio Code' },
+      { name: 'JetBrains IDEs', logo: 'jetbrains' },
       { name: 'Neovim', isHighlighted: true },
       { name: 'Docker', isHighlighted: true },
       { name: 'GitHub Actions', isHighlighted: true },
