@@ -1,54 +1,121 @@
-<div width="100%">
-<img width="850px" height="300px" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/master/banner.svg" />
+<p align="center"><img src="src/resources/images/banner.svg" width="600"/></p>
+<p align="center"><a href="https://twitter.com/thomashighbaugh"><img src="https://img.shields.io/badge/twitter-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
+<a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="https://img.shields.io/badge/linkedin-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
+<a href="https://thomasleonhighbaugh.me"><img src="https://img.shields.io/badge/website-BEBAE2?logo=esri&style=for-the-badge&logoColor=F2F2F2"/></a>
+<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&style=for-the-badge&color=BEBAE2&logoColor=F2F2F2&logo=undefined"/></p>
 
-  <br />
-  <hr />
-  <br />
-<details>
-<summary> <b>Would you like to know more?</b></summary>
-<br/>
+<p align="center">
+I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
+</p>
 
-<a href="https://thomasleonhighbaugh.me"> <img width="200px" src="./buttons/portfolio-button.svg" alt="Portfolio"/> </a>
-<a href="https://resume-thomas-leon-highbaugh.vercel.app/" > <img width="200px" src="./buttons/resume.svg" alt="Resume"> </a>
-<a href="https://biolink-delta.vercel.app"> <img width="200px" float="right" src="./buttons/contact_button.svg" alt="contact button"/></a>
-  <br />
-  <hr />
-  <br />
+<details><summary>About Me</summary>
 
-  <details> <summmary><b>About This Image</b></summmary>
-        <h3>About the Image Itself</h3>
-        <p>The image is meant to simulate the menu of early digital cable television from the mid to late 1990s I remember as a kid. </p>
-        <p>Using the style of these throwback menus gives me a good excuse for some glitch animations, which are especially fitting in this context.</p>
-        <h3>Underlying Technical Functionality</h3>
-        <p>This SVG image is actually written essentially as a typical webpage, with HTML5 elements, an internal style sheet, inline styles and internal Javascript functionality.</p>
-        <p>Because GitHub's Markdown rendering engine will render SVGs, I am essentially able to change the "page's" extension to svg, embed it in an image tag and it will render on GitHub animations and all. </p>
-        <p>The buttons at the bottom even work as clickable links, however you first would have to click the image and be taken to just the raw image then click the button again to see the link, thus I also provided the same links in matching buttons in the dropdown above as well.</p>
-        <p><b>Note:</b> Getting the arrow keys to select menu items is still on the to-do list. As is better arranging and cleaning up the SVG's code. </p>
-        <br />
-        <hr />
-        <br />
+<strong><em>Fun Facts</em></strong>
+<ul>
+<li>From beautiful San Francisco, California</li>
+<li>Well Versed in Full Stack Web Development</li>
+<li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> User</li>
+<li>Currently Learning Rust</li>
+<li>Been writing code for: 5 Years, 6 Months and 4 Dayss </li>
+ </ul>
+
+
+<hr/>
+
+<strong><em>Get in Touch</em></strong>
+
+<p align="left"><a href="https://twitter.com/thomasleonhighbaugh"><img src="https://img.shields.io/badge/twitter-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
+<a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="https://img.shields.io/badge/linkedin-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
+<a href="mailto:thighbaugh@zoho.com"><img src="https://img.shields.io/badge/email-BEBAE2?logo=gmail&style=for-the-badge&logoColor=F2F2F2"/></a>
+<a href="https://www.npmjs.com/~thomashighbaugh"><img src="https://img.shields.io/badge/npm-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=npm"/></a>
+<a href="https://codepen.io/thomashighbaughThomasLeonHighbaugh"><img src="https://img.shields.io/badge/codepen-BEBAE2?style=for-the-badge&logoColor=F2F2F2&logo=codepen"/></a>
+<img src="https://img.shields.io/badge/thomasleonhighbaugh-BEBAE2?logo=discord&labelColor=948ae3&style=for-the-badge&logoColor=F2F2F2"/></p>
+
+<hr/>
+
+
+<em><strong>Skill Wall</strong></em>
+
+<p align="left"><img src="https://img.shields.io/badge/netlify-BEBAE2?logo=netlify&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/jest-BEBAE2?logo=jest&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/lua-948ae3?logo=lua&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/bash/zsh-69676c?logo=gnu+bash&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/codeberg-948ae3?logo=codeberg&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/inkscape-948ae3?logo=inkscape&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/ant_design-69676c?logo=ant+design&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/figma-BEBAE2?logo=figma&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/styled%20components-948ae3?logo=styled%20components&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/neovim-69676c?logo=neovim&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/javascript-948ae3?logo=javascript&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/firebase-948ae3?logo=firebase&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/linux-69676c?logo=linux&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/react-69676c?logo=react&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/markdown-948ae3?logo=markdown&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/jquery-948ae3?logo=jquery&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/visual%20studio%20code-BEBAE2?logo=visual%20studio%20code&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/mern%20stack-69676c?logo=mern%20stack&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/sqlite-948ae3?logo=sqlite&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/express.js-948ae3?logo=express&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/photoshop-948ae3?logo=adobe+photoshop&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/flask-948ae3?logo=flask&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/less-BEBAE2?logo=less&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/html-BEBAE2?logo=html&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github-BEBAE2?logo=github&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/bootstrap-BEBAE2?logo=bootstrap&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/node.js-69676c?logo=node.js&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/vercel-948ae3?logo=vercel&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/sass-948ae3?logo=sass&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/nixos-69676c?logo=nixos&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/heroku-948ae3?logo=heroku&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/python-948ae3?logo=python&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/mongodb-BEBAE2?logo=mongodb&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/docker-69676c?logo=docker&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/git-69676c?logo=git&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/gitlab-BEBAE2?logo=gitlab&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github%20actions-69676c?logo=github%20actions&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/html5-BEBAE2?logo=html5&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/css3-948ae3?logo=css3&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/svg-948ae3?logo=svg&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/graphql-948ae3?logo=graphql&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/npm-948ae3?logo=npm&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/gimp-BEBAE2?logo=gimp&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/tailwindcss-69676c?logo=tailwindcss&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/tsx-BEBAE2?logo=react&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/css-BEBAE2?logo=css&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/chakra-948ae3?logo=chakraui&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/storybook-BEBAE2?logo=storybook&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/fastapi-69676c?logo=fastapi&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github%20pages-948ae3?logo=github&style=plastic&logoColor=F2F2F2"/></p>
 
 </details>
-<details>
-    <summary><b>Account Stats</b></summary>
-      <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="user stats"/>
-    <img src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="user stats" />
-    <!--STARTS_HERE_QUOTE_README-->
-<i>❝elgoog.im (Google spelled backwards) is a mirrored website of Google Search with horizontally flipped search results, also known as a “Google mirror”. An unofficial elgooG website was created by All Too Flat “for fun”, which started to gain popularity in 2002❞</i>
-<!--ENDS_HERE_QUOTE_README-->
-  
-<!--START_SECTION:activity-->
-1. 🎉 Merged PR [#176](https://github.com/Thomashighbaugh/crazy-wise-gatsby-starter/pull/176) in [Thomashighbaugh/crazy-wise-gatsby-starter](https://github.com/Thomashighbaugh/crazy-wise-gatsby-starter)
-2. 🎉 Merged PR [#30](https://github.com/Thomashighbaugh/mern-contact-keeper/pull/30) in [Thomashighbaugh/mern-contact-keeper](https://github.com/Thomashighbaugh/mern-contact-keeper)
-3. 🎉 Merged PR [#27](https://github.com/Thomashighbaugh/mern-contact-keeper/pull/27) in [Thomashighbaugh/mern-contact-keeper](https://github.com/Thomashighbaugh/mern-contact-keeper)
-4. ❌ Closed PR [#6](https://github.com/Thomashighbaugh/mern-contact-keeper/pull/6) in [Thomashighbaugh/mern-contact-keeper](https://github.com/Thomashighbaugh/mern-contact-keeper)
-5. 🎉 Merged PR [#9](https://github.com/Thomashighbaugh/mern-contact-keeper/pull/9) in [Thomashighbaugh/mern-contact-keeper](https://github.com/Thomashighbaugh/mern-contact-keeper)
-<!--END_SECTION:activity-->
-  
-    <br />
-    <hr />
-    <br />
-  </details>
+<details><summary>Automatically Updated Statistics About My Work</summary>
+<strong><em>Recent Projects</strong></em>
 
-  </details>
-  
+<a href="https://github.com/Thomashighbaugh/Blot"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=Blot&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+<a href="https://github.com/Thomashighbaugh/Awesome-AwesomeWM-Modules-Widgets-And-Libraries"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=Awesome-AwesomeWM-Modules-Widgets-And-Libraries&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+<a href="https://github.com/Thomashighbaugh/manjaro-workstation-playbook"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=manjaro-workstation-playbook&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+<a href="https://github.com/Thomashighbaugh/gpt_scripts"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=gpt_scripts&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+<a href="https://github.com/Thomashighbaugh/firefox"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=firefox&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+<a href="https://github.com/Thomashighbaugh/gpt_notebook"><img height=100 src="https://github-readme-stats.vercel.app/api/pin/?username=Thomashighbaugh&repo=gpt_notebook&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&icon_color=F2F2F2&border_radius=20"/></a>
+
+<strong><em>Follower Showcase</em></strong>
+
+<em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
+
+<a href="https://github.com/y-sugiyama654" alt="Yuta Sugiyama"><img style="height:150px;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/></a>
+
+<hr>
+
+
+<p align="center">
+  <img height=200 align="center" alt=gitstats src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=20"/>
+
+<img height=200 align="center" alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=20&layout=donut-vertical" />
+</p>
+
+
+
+</details>
+
