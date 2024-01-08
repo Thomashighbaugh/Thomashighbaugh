@@ -2,7 +2,7 @@ const theme = require('../theme');
 const { generateBadge } = require('../utils/generateBadge');
 const { generateElement } = require('../utils/generateElement');
 
-const wallColors = [theme.colors.secondary, theme.colors.lightSecondary];
+const wallColors = [theme.colors.primary, theme.colors.lightPrimary];
 const highlightColor = theme.colors.primary;
 
 const randomItem = (array) => array[Math.floor(Math.random() * array.length)];

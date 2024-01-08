@@ -22,20 +22,23 @@ module.exports = {
     badges: [
       {
         type: 'badge',
-        name: 'twitter',
-        href: 'https://twitter.com/thomashighbaugh',
+        name: 'contacts',
+        href: 'https://biolink-delta.vercel.app',
+        logo: 'linktree',
       },
-      {
-        type: 'badge',
-        name: 'linkedin',
-        href: 'https://linkedin.com/in/thomas-leon-highbaugh',
-      },
+
       {
         type: 'badge',
         name: 'website',
         href: 'https://thomasleonhighbaugh.me',
-        logo: 'esri',
+        logo: 'firefox',
       },
+     {
+       type: 'badge',
+       name: 'resume',
+       href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
+       logo: 'libreoffice',
+     },
       {
         type: 'views',
       },
@@ -59,11 +62,6 @@ module.exports = {
       },
       {
         name: 'email',
-        logo: 'gmail',
-        href: 'mailto:thighbaugh@zoho.com',
-      },
-      {
-        name: 'email',
         logo: 'zoho',
         href: 'mailto:thighbaugh@zoho.com',
       },
@@ -73,21 +71,11 @@ module.exports = {
         href: 'mailto:me@thomasleonhighbaugh.me',
       },
 
-      {
-        name: 'portfolio website',
-        href: 'https://thomasleonhighbaugh.me',
-        logo: 'firefoxbrowser',
-      },
-      {
-        name: 'linktree alternative',
-        href: 'https://biolink-delta.vercel.app',
-        logo: 'linktree',
-      },
-      {
-        name: 'resume',
-        href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
-        logo: 'libreoffice',
-      },
+ 
+ 
+ 
+ 
+ 
       {
         name: 'codepen',
         href: 'https://codepen.io/thomashighbaughThomasLeonHighbaugh',
