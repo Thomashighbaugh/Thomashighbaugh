@@ -10,14 +10,14 @@ module.exports = {
   header: {
     image: {
       src: 'src/resources/images/banner.svg',
-      width: 800,
-      height: 400,
+      width: 850,
+      height: 300,
     },
     styles: {
       align: 'center',
       style: 'for-the-badge',
       color: theme.colors.primary,
-      logoColor: theme.colors.white,
+      logoColor: theme.colors.secondary,
     },
     badges: [
       {
