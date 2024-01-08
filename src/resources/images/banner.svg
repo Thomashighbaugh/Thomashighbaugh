@@ -4,6 +4,124 @@
             <style>
                 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
 
+                @-webkit-keyframes on {
+                    0% {
+                        transform: scale(1, .8) translate3d(0, 0, 0);
+                        filter: brightness(4);
+                        opacity: 1
+                    }
+
+                    3.5% {
+                        transform: scale(1, .8) translate3d(0, 100%, 0)
+                    }
+
+                    3.6% {
+                        transform: scale(1, .8) translate3d(0, -100%, 0);
+                        opacity: 1
+                    }
+
+                    9% {
+                        transform: scale(1.3, .6) translate3d(0, 100%, 0);
+                        filter: brightness(4);
+                        opacity: 0
+                    }
+
+                    11% {
+                        transform: scale(1, 1) translate3d(0, 0, 0);
+                        filter: contrast(0) brightness(0);
+                        opacity: 0
+                    }
+
+                    to {
+                        transform: scale(1, 1) translate3d(0, 0, 0);
+                        filter: contrast(1) brightness(1.2) saturate(1.3);
+                        opacity: 1
+                    }
+                }
+
+                @keyframes on {
+                    0% {
+                        transform: scale(1, .8) translate3d(0, 0, 0);
+                        filter: brightness(4);
+                        opacity: 1
+                    }
+
+                    3.5% {
+                        transform: scale(1, .8) translate3d(0, 100%, 0)
+                    }
+
+                    3.6% {
+                        transform: scale(1, .8) translate3d(0, -100%, 0);
+                        opacity: 1
+                    }
+
+                    9% {
+                        transform: scale(1.3, .6) translate3d(0, 100%, 0);
+                        filter: brightness(4);
+                        opacity: 0
+                    }
+
+                    11% {
+                        transform: scale(1, 1) translate3d(0, 0, 0);
+                        filter: contrast(0) brightness(0);
+                        opacity: 0
+                    }
+
+                    to {
+                        transform: scale(1, 1) translate3d(0, 0, 0);
+                        filter: contrast(1) brightness(1.2) saturate(1.3);
+                        opacity: 1
+                    }
+                }
+
+                @-webkit-keyframes off {
+                    0% {
+                        transform: scale(1, 1);
+                        filter: brightness(1)
+                    }
+
+                    40% {
+                        transform: scale(1, .005);
+                        filter: brightness(100)
+                    }
+
+                    70% {
+                        transform: scale(1, .005)
+                    }
+
+                    90% {
+                        transform: scale(.005, .005)
+                    }
+
+                    to {
+                        transform: scale(0, 0)
+                    }
+                }
+
+                @keyframes off {
+                    0% {
+                        transform: scale(1, 1);
+                        filter: brightness(1)
+                    }
+
+                    40% {
+                        transform: scale(1, .005);
+                        filter: brightness(100)
+                    }
+
+                    70% {
+                        transform: scale(1, .005)
+                    }
+
+                    90% {
+                        transform: scale(.005, .005)
+                    }
+
+                    to {
+                        transform: scale(0, 0)
+                    }
+                }
+
                 @-webkit-keyframes blur {
 
                     0%,
@@ -189,7 +307,8 @@
 
                 @font-face {
                     src: url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
-                    font-family: "Terminal";
+                    font-family: &quot;
+                    Terminal&quot;
                 }
 
                 .screen::before {
@@ -268,14 +387,11 @@
                     box-sizing: border-box
                 }
 
-                main {
-                    font-family: "Terminal", monospace;
-                }
-
                 .menu {
                     background-color: #0badff;
-
-
+                    font-family: &quot;
+                    Press Start 2P&quot;
+                    ;
                     opacity: .86;
                     font-size: 1.5rem !important;
                     z-index: 1;
@@ -366,7 +482,8 @@
 
                 .text {
                     color: #e42026;
-                    content: "AUX";
+                    content: &quot;
+                    AUX&quot;
                     ;
                     opacity: 0;
                     filter: blur(.35px);
@@ -395,7 +512,7 @@
                 }
 
                 .text span {
-                    filter: blur(0.35px);
+                    filter: blur(1px);
                     position: absolute;
                     -webkit-animation: blur 10ms infinite, jerk 30ms infinite;
                     animation: blur 28ms infinite, jerk 43ms infinite
@@ -404,13 +521,13 @@
                 .text span:nth-child(1) {
                     color: #e91e63;
                     margin-left: -2px;
-                    filter: blur(0.6px)
+                    filter: blur(2px)
                 }
 
                 .text span:nth-child(2) {
                     color: #ff3d81;
                     margin-left: 2px;
-                    filter: blur(0.4px)
+                    filter: blur(2px)
                 }
 
                 .text span:nth-child(3) {
@@ -421,13 +538,13 @@
 
                 .text span:nth-child(4) {
                     color: #f4f4f4;
-                    filter: blur(0.24px);
+                    filter: blur(1px);
                     text-shadow: 0 0 50px rgba(255, 255, 255, .4)
                 }
 
                 .text span:nth-child(5) {
                     color: rgba(255, 255, 255, .1);
-                    filter: blur(0.5px)
+                    filter: blur(15px)
                 }
 
                 .text span:nth-child(3) {
@@ -456,14 +573,13 @@
                             <li>Prompt Engineering</li>
                         </ul>
                         <footer style="width:100%!important;margin-left:0!important">
-                            <div class="button-group">
-                                <button
-                                    style="color:#f4f4f4!important;background:#565656!important;margin-left:15px!important;margin-right:15px!important">GITHUB</button>
-                                <button
-                                    style="color:#f4f4f4!important;background:#565656!important;margin-left:15px!important;margin-right:15px!important">PORTFOLIO</button>
-                                <button
-                                    style="color:#f4f4f4!important;background:#565656!important;margin-left:15px!important;margin-right:15px!important">README</button>
-                            </div>
+                            <div class="button-group"><a
+                                    style="color:#f4f4f4!important;margin-left:15px!important;margin-right:15px!important"
+                                    href="https://thomasleonhighbaugh.me">PORTFOLIO</a><a
+                                    style="color:#f4f4f4!important;margin-left:15px!important;margin-right:15px!important"
+                                    href="https://resume-thomas-leon-highbaugh.vercel.app/">RESUME</a><a
+                                    style="color:#f4f4f4!important;margin-left:15px!important;margin-right:15px!important"
+                                    href="https://biolink-delta.vercel.app/">CONTACT</a></div>
                         </footer>
                     </div>
                 </div>
@@ -472,55 +588,80 @@
     </foreignObject>
     <script type="text/javascript">
         <![CDATA[
-        const main = document.querySelector('main');
-    const canvas = document.getElementById('canvas');
-    const text = document.querySelector('.text');
-    const menu = document.querySelector('.menu');
-    const ul = menu.querySelector('ul');
-    const ctx = canvas.getContext('2d');
-    const ww = window.innerWidth;
-    const idx = 0;
-    const count = ul.childElementCount - 1;
-    const toggle = true;
-    let frame;
+        var main = document.querySelector('main'),
+        canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        text = document.querySelector('.text'),
+        ww = window.innerWidth,
+        menu = document.querySelector('.menu'),
+        ul = menu.querySelector('ul'),
+        idx = 0,
+        count = ul.childElementCount - 1,
+        toggle = true,
+        frame;
 
     // Set canvas size
     canvas.width = ww / 3;
     canvas.height = (ww * 0.5625) / 3;
 
     // Generate CRT noise
-    function generateNoise() {
-        const w = ctx.canvas.width;
-        const h = ctx.canvas.height;
-        const data = ctx.createImageData(w, h);
-        const buffer = new Uint32Array(data.data.buffer);
-        const len = buffer.length;
+    function snow() {
 
-        for (let i = 0; i < len; i++) {
-            buffer[i] = ((255 * Math.random()) | 0) << 24;
+        var w = ctx.canvas.width,
+            h = ctx.canvas.height,
+            d = ctx.createImageData(w, h),
+            b = new Uint32Array(d.data.buffer),
+            len = b.length;
+
+        for (var i = 0; i < len; i++) {
+            b[i] = ((255 * Math.random()) | 0) << 24;
         }
 
-        ctx.putImageData(data, 0, 0);
+        ctx.putImageData(d, 0, 0);
     }
 
     function animate() {
-        generateNoise();
+        snow();
         frame = requestAnimationFrame(animate);
-        main.classList.add('on');
-         main.classList.remove('off');
-    }
+    };
 
     // Glitch
-    for (let i = 0; i < 4; i++) {
-        let span = text.firstElementChild.cloneNode(true);
+    for (i = 0; i < 4; i++) {
+        var span = text.firstElementChild.cloneNode(true);
         text.appendChild(span);
     }
 
-    window.addEventListener('DOMContentLoaded', function (e) {
-        setTimeout(function () {
+    window.addEventListener('DOMContentLoaded', function(e) {
+        setTimeout(function() {
+            main.classList.add('on');
+            main.classList.remove('off');
             animate();
         }, 1000);
     });
+
+    window.addEventListener('keydown', function(e) {
+        var key = e.keyCode;
+        var prev = idx;
+        if (key == 38 || key == 40) {
+            e.preventDefault();
+
+            switch (key) {
+                case 38:
+                    if (idx > 0) {
+                        idx--;
+                    }
+                    break;
+                case 40:
+                    if (idx < count) {
+                        idx++;
+                    }
+                    break;
+            }
+
+            ul.children[prev].classList.remove('active');
+            ul.children[idx].classList.add('active');
+        }
+    }, false);
         ]]>
     </script>
 </svg>
