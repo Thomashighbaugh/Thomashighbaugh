@@ -11,7 +11,7 @@ module.exports = {
     image: {
       src: 'src/resources/images/banner.svg',
       width: 850,
-      height: 400,
+      height: 375,
     },
     styles: {
       align: 'center',
@@ -33,12 +33,12 @@ module.exports = {
         href: 'https://thomasleonhighbaugh.me',
         logo: 'firefox',
       },
-     {
-       type: 'badge',
-       name: 'resume',
-       href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
-       logo: 'libreoffice',
-     },
+      {
+        type: 'badge',
+        name: 'resume',
+        href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
+        logo: 'libreoffice',
+      },
       {
         type: 'views',
       },
@@ -71,11 +71,6 @@ module.exports = {
         href: 'mailto:me@thomasleonhighbaugh.me',
       },
 
- 
- 
- 
- 
- 
       {
         name: 'codepen',
         href: 'https://codepen.io/thomashighbaughThomasLeonHighbaugh',
