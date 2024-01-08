@@ -42,62 +42,62 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 
 <h3>Skill Wall</h3>
 
-<p align="left"><img src="https://img.shields.io/badge/svg-BEBAE2?logo=svg&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/css3-BEBAE2?logo=css3&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/styled%20components-948ae3?logo=styled%20components&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/bootstrap-BEBAE2?logo=bootstrap&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/tsx-BEBAE2?logo=react&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/photoshop-BEBAE2?logo=adobe+photoshop&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/node.js-69676c?logo=node.js&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/git-69676c?logo=git&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/gimp-948ae3?logo=gimp&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/tailwindcss-69676c?logo=tailwindcss&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/docker-69676c?logo=docker&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/html-BEBAE2?logo=html&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/fastapi-69676c?logo=fastapi&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/gitlab-BEBAE2?logo=gitlab&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/xml-948ae3?logo=xml&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/lua-948ae3?logo=lua&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/express.js-948ae3?logo=express&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/html5-948ae3?logo=html5&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/sass-948ae3?logo=sass&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/markdown-BEBAE2?logo=markdown&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/codeberg-948ae3?logo=codeberg&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/github%20pages-948ae3?logo=github&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/sqlite-BEBAE2?logo=sqlite&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/python-BEBAE2?logo=python&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/jest-BEBAE2?logo=jest&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/json-BEBAE2?logo=json&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/figma-948ae3?logo=figma&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/javascript-BEBAE2?logo=javascript&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/npm-BEBAE2?logo=npm&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/github-948ae3?logo=github&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/less-BEBAE2?logo=less&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/heroku-948ae3?logo=heroku&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/jetbrains%20ides-BEBAE2?logo=jetbrains&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/netlify-948ae3?logo=netlify&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/storybook-948ae3?logo=storybook&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/graphql-BEBAE2?logo=graphql&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/visual%20studio%20code-BEBAE2?logo=visual%20studio%20code&style=plastic&logoColor=F2F2F2"/>
+<p align="left"><img src="https://img.shields.io/badge/javascript-BEBAE2?logo=javascript&style=plastic&logoColor=F2F2F2"/>
 <img src="https://img.shields.io/badge/firebase-BEBAE2?logo=firebase&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/xhtml-948ae3?logo=xhtml&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/ant_design-69676c?logo=ant+design&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/bash/zsh-69676c?logo=gnu+bash&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/nixos-69676c?logo=nixos&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/chakra-BEBAE2?logo=chakraui&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/markdown-948ae3?logo=markdown&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/docker-69676c?logo=docker&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/express.js-BEBAE2?logo=express&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/xml-948ae3?logo=xml&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/styled%20components-948ae3?logo=styled%20components&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/gitlab-948ae3?logo=gitlab&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/json-BEBAE2?logo=json&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/git-69676c?logo=git&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/less-BEBAE2?logo=less&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/html5-948ae3?logo=html5&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/svg-948ae3?logo=svg&style=plastic&logoColor=F2F2F2"/>
 <img src="https://img.shields.io/badge/react-69676c?logo=react&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/github%20actions-69676c?logo=github%20actions&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/inkscape-948ae3?logo=inkscape&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/flask-BEBAE2?logo=flask&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/mern%20stack-69676c?logo=mern%20stack&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/linux-69676c?logo=linux&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/vercel-BEBAE2?logo=vercel&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/npm-BEBAE2?logo=npm&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/tailwindcss-69676c?logo=tailwindcss&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/netlify-948ae3?logo=netlify&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/tsx-BEBAE2?logo=react&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/photoshop-948ae3?logo=adobe+photoshop&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/heroku-BEBAE2?logo=heroku&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/nixos-69676c?logo=nixos&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/sass-BEBAE2?logo=sass&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/html-BEBAE2?logo=html&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/vercel-948ae3?logo=vercel&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/chakra-BEBAE2?logo=chakraui&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/storybook-948ae3?logo=storybook&style=plastic&logoColor=F2F2F2"/>
 <img src="https://img.shields.io/badge/neovim-69676c?logo=neovim&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/bash/zsh-69676c?logo=gnu+bash&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/bootstrap-BEBAE2?logo=bootstrap&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/visual%20studio%20code-948ae3?logo=visual%20studio%20code&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github%20pages-948ae3?logo=github&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/python-BEBAE2?logo=python&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github%20actions-69676c?logo=github%20actions&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/mern%20stack-69676c?logo=mern%20stack&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/github-BEBAE2?logo=github&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/css3-BEBAE2?logo=css3&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/typescript-69676c?logo=typescript&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/fastapi-69676c?logo=fastapi&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/jetbrains%20ides-BEBAE2?logo=jetbrains&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/figma-BEBAE2?logo=figma&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/node.js-69676c?logo=node.js&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/mongodb-948ae3?logo=mongodb&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/graphql-BEBAE2?logo=graphql&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/xhtml-948ae3?logo=xhtml&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/lua-BEBAE2?logo=lua&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/linux-69676c?logo=linux&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/jquery-BEBAE2?logo=jquery&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/sqlite-948ae3?logo=sqlite&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/codeberg-948ae3?logo=codeberg&style=plastic&logoColor=F2F2F2"/>
 <img src="https://img.shields.io/badge/css-BEBAE2?logo=css&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/mongodb-BEBAE2?logo=mongodb&style=plastic&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/jquery-948ae3?logo=jquery&style=plastic&logoColor=F2F2F2"/></p>
+<img src="https://img.shields.io/badge/flask-BEBAE2?logo=flask&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/gimp-948ae3?logo=gimp&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/ant_design-69676c?logo=ant+design&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/inkscape-948ae3?logo=inkscape&style=plastic&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/jest-BEBAE2?logo=jest&style=plastic&logoColor=F2F2F2"/></p>
 
 </details>
 <details><summary>Automatically Updated Statistics About My Work</summary>
@@ -127,7 +127,7 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
 
-<a href="https://github.com/darklight147" alt="Mohamed Belkamel"><img style="height:150px;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/></a>
+<a href="https://github.com/MSayib" alt="Sayib"><img style="height:150px;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/></a>
 
 
 </details>
