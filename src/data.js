@@ -11,7 +11,7 @@ module.exports = {
     image: {
       src: 'src/resources/images/banner.svg',
       width: 850,
-      height: 300,
+      height: 350,
     },
     styles: {
       align: 'center',
