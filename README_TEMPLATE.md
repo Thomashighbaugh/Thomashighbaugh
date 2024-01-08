@@ -37,9 +37,9 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 <h3>Account Statistics</h3>
 
 <p align="center">
-  <img height=250 align="center" alt=gitstats src="https://raw.githubusercontent.com/Thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
+  <img height=250 align="center" alt=gitstats src="https://raw.githubusercontent.com/thomashighbaugh/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
 
-<img height=300 align="center" alt="Top Langs" src="https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
+<img height=300 align="center" alt="Top Langs" src="https://raw.githubusercontent.com/thomashighbaugh/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
 </p>
 
 <hr/>
