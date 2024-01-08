@@ -5,13 +5,13 @@ const theme = require('./theme');
 
 module.exports = {
   user: 'Thomashighbaugh',
-  startedProgramming: '6/30/2016',
-  repoQuantity: 6,
+  startedProgramming: '06/03/2016',
+  repoQuantity: 9,
   header: {
     image: {
       src: 'src/resources/images/banner.svg',
       width: 850,
-      height: 375,
+      height: 350,
     },
     styles: {
       align: 'center',
