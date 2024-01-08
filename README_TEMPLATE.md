@@ -37,7 +37,7 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 <h3>Account Statistics</h3>
 
 <p align="center">
-  <img height=300 align="center" alt=gitstats src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=20"/>
+  <img height=250 align="center" alt=gitstats src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=20"/>
 
 <img height=300 align="center" alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=20&layout=donut-vertical" />
 </p>
