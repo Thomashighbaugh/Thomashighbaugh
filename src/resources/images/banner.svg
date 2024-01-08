@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 850 300">
-  <foreignObject width="850" height="350">
+  <foreignObject width="850" height="375">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
@@ -268,9 +268,9 @@
 
         .menu header {
         color: #FE3B7B;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin-top: 10px;
-        padding: 5px 5px 10px 10px;
+        padding: 5px;
         -webkit-animation: 5s ease 1s normal none infinite running glitch;
         animation: 1s ease 500ms normal none infinite running glitch;
         font-weight: 900;
@@ -300,7 +300,7 @@
         margin-right: 12rem;
         border-radius: 0.25rem;
         border: #f4f4f7 solid 0.06125rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 5px;
         box-shadow: 0.5rem 0.5rem #000;
         text-shadow: 0.125rem 0.125rem solid #3c3c3c
         }
