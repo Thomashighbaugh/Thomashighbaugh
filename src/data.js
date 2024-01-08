@@ -10,7 +10,8 @@ module.exports = {
   header: {
     image: {
       src: 'src/resources/images/banner.svg',
-      width: 600,
+      width: 800,
+      height: 400,
     },
     styles: {
       align: 'center',

@@ -6,50 +6,55 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 
 <details><summary>About Me</summary>
 
-<strong><em>Fun Facts</em></strong>
+<h3>Fun Facts</h3>
 <ul>
 <li>From beautiful San Francisco, California</li>
-<li>Well Versed in Full Stack Web Development</li>
+<li>My 11 year old Beligan Malinois & I walk everywhere instead of driving or paying to use a gym.</li>
+<li>Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces in TSX + Tailwind.css + Next.js</li>
 <li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> User</li>
-<li>Currently Learning Rust</li>
+<li>Currently Exploring Rust</li>
+<li>Working on Automating Book Generation with GPT4Free + Python</li>
 <li>Been writing code for: %{myexperience}</li>
  </ul>
 
 
 <hr/>
 
-<strong><em>Get in Touch</em></strong>
+<h3>Get in Touch</h3>
 
 %{socialMedias}
 
 <hr/>
 
 
-<em><strong>Skill Wall</strong></em>
+<h3>Skill Wall</h3>
 
 %{skillswall}
 
 </details>
 <details><summary>Automatically Updated Statistics About My Work</summary>
-<strong><em>Recent Projects</strong></em>
+
+<h3>Account Statistics</h3>
+
+<p align="center">
+  <img height=300 align="center" alt=gitstats src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=20"/>
+
+<img height=300 align="center" alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=20&layout=donut-vertical" />
+</p>
+
+<hr/>
+
+<h3>Recent Projects</h3>
 
 %{recentworks}
 
-<strong><em>Follower Showcase</em></strong>
+<hr/>
+
+<h3>Follower Showcase</h3>
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
 
 %{randomFollower}
-
-<hr>
-
-
-<p align="center">
-  <img height=200 align="center" alt=gitstats src="https://github-readme-stats.vercel.app/api?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=20"/>
-
-<img height=200 align="center" alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=d0ecf1&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=20&layout=donut-vertical" />
-</p>
-
 
 
 </details>
