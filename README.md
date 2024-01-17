@@ -5,7 +5,7 @@
 <img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&style=for-the-badge&color=3c3c3c&logoColor=948ae3&logo=undefined"/></p>
 
 <p align="center">
-I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
+:point_up: :sunglasses: stars and forks welcome :stuck_out_tongue_winking_eye: :+1:
 </p>
 
 <details><summary>About Me</summary>
