@@ -235,9 +235,9 @@
 
                 .menu ul li.active {
                     background-color: #3c3c3c;
-                    margin-left: 12rem;
-                    margin-right: 12rem; 
-                    padding:0.25rem;
+                    margin-left: 10rem;
+                    margin-right: 10rem; 
+                    padding:0.75rem;
                     border-radius: 0.25rem;
                     border: #f4f4f7 solid 0.06125rem;
                     margin-bottom: 1.25rem;
