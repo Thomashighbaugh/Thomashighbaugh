@@ -13,12 +13,11 @@ I am Thomas Leon Highbaugh and this is my self-updating GitHub Profile ReadMe
 <h3>Fun Facts</h3>
 <ul>
 <li>From beautiful San Francisco, California</li>
-<li>My 11 year old Beligan Malinois & I walk everywhere instead of driving or paying to use a gym.</li>
 <li>Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces in TSX + Tailwind.css + Next.js</li>
-<li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> User</li>
-<li>Currently Exploring Rust</li>
-<li>Working on Automating Book Generation with GPT4Free + Python</li>
-<li>Been writing code for: 7 Years, 9 Months and 13 Dayss </li>
+<li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> User Working With Code Ergonomically Using <a href="https://github.com/Thomashighbaugh/nvim-forge">NeoVim</a></li>
+<li>Currently Exploring Rust Web Frameworks & Wayland Compositors</li>
+<li>Working on Automating Book Generation with generative AI using <a href="https://github.com/Thomashighbaugh/gpt_scripts">Python</a> scripts (for free thanks to GPT4Free)</li>
+<li>Been writing code and using Linux for: 7 Years, 9 Months and 13 Dayss </li>
  </ul>
 
 
