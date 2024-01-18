@@ -242,7 +242,8 @@
                     border: #f4f4f7 solid 0.06125rem;
                     margin-bottom: 1.25rem;
                     box-shadow: 0.5rem 0.5rem #000;
-                    text-shadow: 0.125rem 0.125rem solid #3c3c3c
+                font-size: 125%;
+                    text-shadow: 0.125rem 0.125rem solid #3c3c3c;
                 }
 
                 footer {
