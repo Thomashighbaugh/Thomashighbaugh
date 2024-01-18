@@ -44,10 +44,13 @@
 </div>
 
 </p>
-
+<br/>
 <br/>
 <hr/>
 <br/>
+<br/>
+<br/>
+<h2>Projects</h2>
 <div style="display:flex; flex-direction:row;">
 
 %{recentworks}
