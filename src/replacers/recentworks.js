@@ -7,7 +7,7 @@ module.exports = async function (data) {
   const formatJson = (elem) =>
     `<a href="${
       elem.html_url
-    }"><img height=250 width="40%" align="center" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${
+    }"><img height=250 min-height=250 max-height=250 width="40%" align="center" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${
       data.user
     }&repo=${encodeURIComponent(
       elem.name,
