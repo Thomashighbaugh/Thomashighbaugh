@@ -50,8 +50,8 @@
 <br/>
 <br/>
 <br/>
-<h2>Projects</h2>
-<div style="display:flex; flex-direction:row;">
+<h2 style="margin-top:2rem;">Projects</h2>
+<div  style="align:center; display:flex; flex-direction:row; mmargin-bottom:2rem;">
 
 %{recentworks}
 
