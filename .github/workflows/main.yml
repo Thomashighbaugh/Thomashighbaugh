@@ -17,3 +17,40 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          template: "@terminal"
+          setup_community_templates: lowlighter/metrics@master:terminal+trust
+          base: header, metadata
+          config_timezone: America/Los_Angeles
+          retries: 3
+          retries_delay: 300
+          config_display: columns
+          plugin_activity: yes
+           plugin_languages: yes
+          plugin_stars: yes
+          plugin_starlists: yes
+          plugin_starlists_limit_repositories: 5
+          plugin_gists: yes
+          plugin_fortune: yes
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+          extras_css: |
+             * {
+                background-color: #2c2c2c;
+             }
+             .title{
+               color: #fc618d;
+               }
+              .button{
+              color: #6ab0f3;
+              border-color: #6ab0f3;
+              box-shadow: 2px 2px #000000;
+              }
+              .banner{
+              color: #69676c;
+              }
+              .stdin{
+              color:#f2f2f2;
+              }
+
+          
