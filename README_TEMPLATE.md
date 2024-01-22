@@ -46,7 +46,7 @@
 <br/>
 <hr/>
 
-<h3>Account Statistics</h3>
+<h3 style="clear:both;">Account Statistics</h3>
 
 <p align="center">
 <div style="direction:flex; flex-direction:row;">
@@ -54,16 +54,11 @@
 
 <img height="200"  align="right" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" />
 </div>
-
 </p>
 <br/>
-<br/>
-<hr/>
 <hr/>
 <br/>
-<br/>
-<br/>
-<h2 style="clear:both;margin-top:2rem;">Projects</h2>
+<h3 style="clear:both;margin-top:2rem;">Projects</h3>
 <div  style="align:center; display:flex; flex-direction:row; mmargin-bottom:2rem;">
 
 %{recentworks}
@@ -71,4 +66,87 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
