@@ -44,17 +44,14 @@
 <br/>
 <hr/>
 <br/>
-<hr/>
 
 <h3 style="clear:both;">Account Statistics</h3>
 
-<p align="center">
 <div style="direction:flex; flex-direction:row;">
- <img height="150"  align="left" alt=gitstats src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&show=discussions_answered&hide=contribs,issues"/>
+ <img height="150"  alt=gitstats src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&show=discussions_answered&hide=contribs,issues"/>
 
-<img height="200"  align="right" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" />
+<img height="200"  alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" />
 </div>
-</p>
 <br/>
 <hr/>
 <br/>
