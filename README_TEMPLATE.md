@@ -1,9 +1,9 @@
 %{header}
-
+<img align="left" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/ea57485cf7072b1a9df44373deb5b20c1f3bbc0c/src/resources/images/logo.svg" />
 <p align="center">
 :point_up_2: :sunglasses: Stars and Forks Are Always Welcome! :stuck_out_tongue_winking_eye: :thumbsup:
 </p>
-
+<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/ea57485cf7072b1a9df44373deb5b20c1f3bbc0c/src/resources/images/logo.svg" />
 <details><summary>About Me</summary>
 
 <h3>Fun Facts</h3>
