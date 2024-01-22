@@ -366,9 +366,9 @@
                         <footer style="width:100%!important;margin-left:0!important">
                             <div class="button-group">
                                 <button
-                                    style="margin-left:15px!important;margin-right:15px!important">GITHUB</button><button
+                                    style="margin-left:15px!important;margin-right:15px!important"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5464a22baa809633d9bee339a019ce8da40c1b87/src/resources/images/logo.svg"/></button><button
                                     style="margin-left:15px!important;margin-right:15px!important">PROFILE</button><button
-                                    style="margin-left:15px!important;margin-right:15px!important">README</button>
+                                    style="margin-left:15px!important;margin-right:15px!important"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5464a22baa809633d9bee339a019ce8da40c1b87/src/resources/images/logo.svg"/></button>
                             </div>
                         </footer>
                     </div>
