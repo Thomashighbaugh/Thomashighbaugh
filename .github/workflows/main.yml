@@ -29,8 +29,8 @@ jobs:
           plugin_languages: yes
           plugin_stars: yes
           plugin_starlists: yes
-          plugin_starlists_limit: 5
-          plugin_starlists_limit_repositories: 5
+          plugin_starlists_limit_repositories: 10
+          plugin_starlists_only: NixOS, AwesomeWM, 
           plugin_gists: yes
           plugin_fortune: yes
           plugin_topics: yes
