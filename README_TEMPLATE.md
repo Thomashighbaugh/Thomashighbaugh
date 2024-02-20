@@ -3,14 +3,14 @@
 <p align="center">
 :point_up_2: :sunglasses: Stars and Forks Are Always Welcome! :stuck_out_tongue_winking_eye: :thumbsup:
 </p>
-
-<details><summary>About Me</summary>
+<hr>
+<h2 text-align="center">About Me</h2>
 
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/ea57485cf7072b1a9df44373deb5b20c1f3bbc0c/src/resources/images/logo.svg" />
 
 <h3>Fun Facts</h3>
 <ul>
-<li>From (not actually) Sunny San Francisco, California</li>
+<li>From Beautiful San Francisco, California</li>
 
 <li>Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces in TSX + Tailwind.css + Next.js</li>
 <li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> User </li>
@@ -34,8 +34,8 @@
 
 %{skillswall}
 
-</details>
-<details><summary>Automatically Updated Stats</summary>
+<hr>
+<h2 text-align="center">Automatically Updated Stats</h2>
 <h3>Follower Showcase</h3>
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
@@ -60,4 +60,4 @@
 <hr/>
 <br/>
 
-</details>
+
