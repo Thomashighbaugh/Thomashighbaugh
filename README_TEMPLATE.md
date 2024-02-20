@@ -51,7 +51,7 @@
  <img height="150"  alt=gitstats src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/>
 
 <img height="250"  alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" />
-<img src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" />
+<img height="150" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" />
 <br/>
 <h3>Even More Detailed Statistics</h3>
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5e10c8aae6848bbf91cd589d535625b84c475d9b/github-metrics.svg"/>
