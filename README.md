@@ -8,8 +8,10 @@
 :point_up_2: :sunglasses: Stars and Forks Are Always Welcome! :stuck_out_tongue_winking_eye: :thumbsup:
 </p>
 <hr>
+<details>
+ <summary>
 <h2 text-align="center">About Me</h2>
-
+ </summary>
 <img align="right" height="350" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 
 <h3>Fun Facts</h3>
@@ -97,7 +99,7 @@
 <img src="https://img.shields.io/badge/svg-3c3c3c?logo=svg&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/bash/zsh-3c3c3c?logo=gnu+bash&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/inkscape-3c3c3c?logo=inkscape&style=plastic&logoColor=F4F4F7"/></p>
-
+</details>
 <hr>
 <h2 text-align="center">Automatically Updated Stats</h2>
 <h3>Follower Showcase</h3>
