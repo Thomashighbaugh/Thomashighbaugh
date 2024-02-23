@@ -56,7 +56,7 @@
 <img height="150" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" />
 <br/>
 <h3>Even More Detailed Statistics</h3>
-<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5e10c8aae6848bbf91cd589d535625b84c475d9b/github-metrics.svg"/>
+<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/github-metrics.svg"/>
 </div>
 </details>
 <br/>
