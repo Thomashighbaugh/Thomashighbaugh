@@ -4,7 +4,8 @@
 :point_up_2: :sunglasses: Stars and Forks Are Always Welcome! :stuck_out_tongue_winking_eye: :thumbsup:
 </p>
 <hr>
-<h2 text-align="center">About Me</h2>
+<details>
+<summary><h2 text-align="center">About Me</h2></summary>
 
 <img align="right" height="350" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 
@@ -33,7 +34,7 @@
 <h3>Skill Wall</h3>
 
 %{skillswall}
-
+</details>
 <hr>
 <h2 text-align="center">Automatically Updated Stats</h2>
 <h3>Follower Showcase</h3>
