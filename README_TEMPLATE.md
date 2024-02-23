@@ -6,7 +6,7 @@
 <hr>
 <h2 text-align="center">About Me</h2>
 
-<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<img align="right" height="350" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 
 <h3>Fun Facts</h3>
 <ul>
@@ -22,7 +22,7 @@
 <br/>
 <br/>
 <hr/>
-<img align="left"" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<img align="left" width="640" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 <h3>Get in Touch</h3>
 
 %{socialMedias}
