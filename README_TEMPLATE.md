@@ -7,7 +7,7 @@
 <details>
 <summary><h2 text-align="center">About Me</h2></summary>
 
-<img align="right" height="350" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 
 <h3>Fun Facts</h3>
 <ul>
@@ -23,7 +23,7 @@
 <br/>
 <br/>
 <hr/>
-<img align="left" width="640" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<img align="left" width="250" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 <h3>Get in Touch</h3>
 
 %{socialMedias}
@@ -36,7 +36,8 @@
 %{skillswall}
 </details>
 <hr>
-<h2 text-align="center">Automatically Updated Stats</h2>
+<details>
+ <summary><h2 text-align="center">Automatically Updated Stats</h2></summary>
 <h3>Follower Showcase</h3>
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
@@ -57,6 +58,7 @@
 <h3>Even More Detailed Statistics</h3>
 <img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/5e10c8aae6848bbf91cd589d535625b84c475d9b/github-metrics.svg"/>
 </div>
+</details>
 <br/>
 <hr/>
 <br/>
