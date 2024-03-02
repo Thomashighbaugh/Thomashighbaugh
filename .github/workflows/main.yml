@@ -1,0 +1,60 @@
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, metadata, activity, community, repositories
+          base_hireable: yes
+          repositories_affiliations: owner, collaborator, organization_member
+          config_timezone: America/Los_Angeles
+          retries: 3
+          retries_delay: 300
+          config_display: large
+          plugin_lines: yes
+          plugin_activity: yes
+          plugin_languages: yes
+          plugin_stars: yes
+          plugin_starlists: yes
+          plugin_starlists_limit_repositories: 10
+          plugin_starlists_only: NixOS, AwesomeWM, 
+          plugin_gists: yes
+          plugin_fortune: yes
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+          extras_css: |
+             * {
+                background-color: #2c2c2c;
+                width: 100% !important; 
+             }
+             h1{
+               color: #fc618d;
+               text-shadow: 5px 5px #000000;
+               }
+              h2{
+              color: #6ab0f3;
+              border-color: #6ab0f3;
+              text-shadow: 2px 2px #000000;
+              }
+              h3, h4, h5, h6, a{
+              color: #69676c;
+              }
+              p, section, div{
+              color:#f2f2f2;
+              }
+
+          
