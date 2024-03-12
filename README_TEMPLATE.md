@@ -52,7 +52,7 @@ Get in Touch
 
 
 <details>
-<summary><h3>Follower Showcase</h3> </summary>
+<summary>Follower Showcase </summary>
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
 
