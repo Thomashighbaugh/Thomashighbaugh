@@ -83,12 +83,13 @@ Account Statistics</summary>
 
 <td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
    </tr>
+<tr>
+ <td><img align="center" width="100%" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/github-metrics.svg"/>
+</td>
+</tr>
   </table>
 <br/>
 <hr>
 <br>
-
-<h3>Even More Detailed Statistics</h3>
-<img align="center" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/github-metrics.svg"/>
 </div>
 </details>
