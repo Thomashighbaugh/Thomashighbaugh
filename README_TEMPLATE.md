@@ -35,7 +35,7 @@ Fun Facts
 Get in Touch
 </summary>
 
-<img align="left" width="250" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 
 %{socialMedias}
 
@@ -50,6 +50,8 @@ Get in Touch
 </details>
 
 
+
+![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <details>
 <summary>Follower Showcase </summary>
