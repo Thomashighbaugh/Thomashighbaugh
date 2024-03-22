@@ -81,9 +81,15 @@ Account Statistics</summary>
 
 <td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
 </tr>
+<tr><td><img alt="github achievements" src="https://github-profile-trophy.vercel.app/?username=Thomashighbaugh&theme=darkhub&no-frame=true&column=10"></td></tr>
   </table>
 <br/>
 <hr>
 <br>
-</div>
+</div><img alt="link to the repository of my personal portfolio" src="https://github-readme-stats-carol42.vercel.app/api/pin/?username=Carol42&repo=portfolio&theme=midnight-purple&hide_border=true">
+</details>
+
+<details>
+ <summary>My Work With Linux</summary>
+<img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&background=2c2c2c&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
 </details>
