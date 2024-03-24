@@ -100,14 +100,14 @@ Account Statistics</summary>
  <summary>Personal Branding</summary>
  <table>
   <tr>
-   <td  width="33%">
+   <td  width="33%"  height="5rem">
      <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=Personal-Site&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">   
   </td>
-  <td  width="33%">
+  <td  width="33%"  height="5rem">
         <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=biolink&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 
   </td>
-  <td  width="33%">
+  <td  width="33%"  height="5rem">
         <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=resume&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 
   </td>
@@ -125,15 +125,15 @@ Account Statistics</summary>
 <!---- Sanatana Linux account ---->
  
  <tr>
-   <td width="33%">
+   <td width="33%"  height="5rem">
      <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
    </td>
 
-<td width="33%"> 
+<td width="33%"  height="5rem"> 
  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-awesomewm&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 </td>
 
- <td width="33%">
+ <td width="33%"  height="5rem">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=Sanatana-Linux-Grub-Theme&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
 
@@ -143,15 +143,15 @@ Account Statistics</summary>
 
 <tr >
 
- <td width="33%">
+ <td width="33%" height="5rem" >
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=arch_install&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
  
- <td width="33%">
+ <td width="33%" height="5rem">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-iso&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
 
-  <td width="33%">
+  <td width="33%" height="5rem">
    <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-repo&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
   </td>
 
@@ -161,14 +161,14 @@ Account Statistics</summary>
 
 <tr>
  
- <td  width="33%" > 
+ <td  width="33%" height="5rem" > 
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=nvim-forge&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  </td>
  
- <td  width="33%">
+ <td  width="33%" height="5rem">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=dotfiles&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  </td>
-<td  width="33%">
+<td  width="33%" height="5rem">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=firefox&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  
 </td>
