@@ -70,11 +70,15 @@ Account Statistics</summary>
    <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai"></td>
    </tr>
   <tr>
-
-   <td><img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"> </td>
-
-<td><img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai"></td>
-   </tr>
+   <td>
+      <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"> 
+    </td>
+    <td>
+      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
+    </td>
+   
+ </tr>
+  
   <tr>
 
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" /></td>
@@ -89,15 +93,19 @@ Account Statistics</summary>
 </div><img alt="link to the repository of my personal portfolio" src="https://github-readme-stats-carol42.vercel.app/api/pin/?username=Carol42&repo=portfolio&theme=midnight-purple&hide_border=true">
 </details>
 
+<!---- Pinned Repositories ---->
+<details> <summary>Some of My Work</summary>
 <details>
- <summary>My Work With Linux</summary>
-<table>
-  
-  <tr>
+ <summary>Linux Customization Repositories</summary>
+ 
+<table>  
 
+<!---- Sanatana Linux account ---->
+ 
+ <tr>
    <td>
- <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
-</td>
+     <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
+   </td>
 
 <td> 
  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-awesomewm&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
@@ -108,6 +116,8 @@ Account Statistics</summary>
  </td>
 
 </tr>
+
+<!---From the archive account --->
 
 <tr>
 
@@ -125,9 +135,9 @@ Account Statistics</summary>
 
 </tr>
 
+<!--- From my personal account ---->
 
-
-
+please in 250 characters write about my work with open source both in the Linux ricing community and web development
 <tr>
  
  <td>
@@ -141,4 +151,5 @@ Account Statistics</summary>
 </tr>
 
  </table>
+</details>
 </details>
