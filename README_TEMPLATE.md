@@ -98,7 +98,7 @@ Account Statistics</summary>
 <details>
  <summary>Linux Customization Repositories</summary>
  
-<table>  
+<table style="border-collapse:collapse; width:100%;">  
 
 <!---- Sanatana Linux account ---->
  
