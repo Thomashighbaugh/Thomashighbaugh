@@ -122,15 +122,15 @@ Account Statistics</summary>
 <!---- Sanatana Linux account ---->
  
  <tr>
-   <td>
+   <td width="33%">
      <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
    </td>
 
-<td> 
+<td width="33%"> 
  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-awesomewm&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 </td>
 
- <td>
+ <td width="33%">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=Sanatana-Linux-Grub-Theme&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
 
@@ -140,16 +140,16 @@ Account Statistics</summary>
 
 <tr >
 
- <td>
-  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=arch_install&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4FF7">
+ <td width="33%">
+  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=arch_install&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
  
- <td>
-  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-iso&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4FF7">
+ <td width="33%">
+  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-iso&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
  </td>
 
-  <td>
-   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-repo&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4FF7">
+  <td width="33%">
+   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-repo&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
   </td>
 
 </tr>
@@ -158,7 +158,7 @@ Account Statistics</summary>
 
 <tr>
  
- <td>
+ <td > 
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=nvim-forge&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  </td>
  
