@@ -95,25 +95,28 @@ Account Statistics</summary>
 
 <!---- Pinned Repositories ---->
 <details> <summary>Some of My Work</summary>
-
+<!---- Personal Branding ---->
 <details>
  <summary>Personal Branding</summary>
  <table>
-  <tr><td>
+  <tr>
+   <td  width="33%">
      <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=Personal-Site&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">   
   </td>
-  <td>
+  <td  width="33%">
         <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=biolink&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 
   </td>
-  <td>
+  <td  width="33%">
         <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=resume&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
 
   </td>
   </tr>
+  <!--- Web Development Projects --->
+  
  </table>
 </details>
- 
+ <!---- Linux Customization ---->
 <details>
  <summary>Linux Customization Repositories</summary>
  
@@ -158,14 +161,17 @@ Account Statistics</summary>
 
 <tr>
  
- <td > 
+ <td  width="33%" > 
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=nvim-forge&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  </td>
  
- <td>
+ <td  width="33%">
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=dotfiles&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
  </td>
-
+<td  width="33%">
+  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=firefox&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
+ 
+</td>
 </tr>
 
  </table>
