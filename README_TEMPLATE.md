@@ -90,7 +90,7 @@ Account Statistics</summary>
 <br/>
 <hr>
 <br>
-</div><img alt="link to the repository of my personal portfolio" src="https://github-readme-stats-carol42.vercel.app/api/pin/?username=Carol42&repo=portfolio&theme=midnight-purple&hide_border=true">
+</div>
 </details>
 
 <!---- Pinned Repositories ---->
