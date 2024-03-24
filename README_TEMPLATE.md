@@ -102,7 +102,7 @@ Account Statistics</summary>
 
 <!---- Sanatana Linux account ---->
  
- <tr>
+ <tr style="border-collapse:collapse; width:100%;">
    <td>
      <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
    </td>
@@ -119,7 +119,7 @@ Account Statistics</summary>
 
 <!---From the archive account --->
 
-<tr>
+<tr style="border-collapse:collapse; width:100%;">
 
  <td>
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=arch_install&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4FF7">
@@ -137,8 +137,7 @@ Account Statistics</summary>
 
 <!--- From my personal account ---->
 
-please in 250 characters write about my work with open source both in the Linux ricing community and web development
-<tr>
+<tr style="border-collapse:collapse; width:100%;">
  
  <td>
   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=nvim-forge&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2">
