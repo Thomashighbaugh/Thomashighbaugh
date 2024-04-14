@@ -187,7 +187,7 @@
                 }
 
                 .menu {
-                    font-family: "Press Start 2P";
+                    font-family: "Press Start 2P" !important;
                     opacity: .86;
                     font-size: 1.5rem !important;
                     font-weight: 900;
