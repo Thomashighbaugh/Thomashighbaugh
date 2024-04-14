@@ -63,22 +63,24 @@ Account Statistics</summary>
 
 <div style="clear:both;">
  <table>
+  <!--- Row ---->
   <tr>
 
    <td> <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> </td>
+    <td>
+      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
+    </td>
 
-   <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
    </tr>
+  <!--- Row ---->
   <tr>
    <td>
       <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"> 
     </td>
-    <td>
-      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
-    </td>
-   
+      <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
+
  </tr>
-  
+  <!--- Row ---->
   <tr>
 
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" /></td>
