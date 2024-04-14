@@ -67,9 +67,10 @@ Account Statistics</summary>
   <tr>
 
    <td> <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> </td>
-    <td>
-      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
-    </td>
+  
+<td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
+
+
 
    </tr>
   <!--- Row ---->
@@ -82,10 +83,12 @@ Account Statistics</summary>
  </tr>
   <!--- Row ---->
   <tr>
+  <td>
+      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
+    </td>
 
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" /></td>
 
-<td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
 </tr>
   </table>
 <br/>
