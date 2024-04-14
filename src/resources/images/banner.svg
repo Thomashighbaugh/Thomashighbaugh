@@ -292,7 +292,7 @@
                 .menu,
                 .text {
                     opacity: 1;
-                    transition: opacity 10ms ease 2000ms
+                    transition: opacity 30ms ease 3000ms
                 }
 
                 .button-group {
