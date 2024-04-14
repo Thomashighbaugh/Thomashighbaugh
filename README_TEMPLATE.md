@@ -61,7 +61,7 @@ Get in Touch
 <summary>
 Account Statistics</summary>
 
-<div style="clear:both; direction:flex; flex-direction:row;">
+<div style="clear:both; direction:flex; flex-direction:column;">
  <table>
   <tr>
 
