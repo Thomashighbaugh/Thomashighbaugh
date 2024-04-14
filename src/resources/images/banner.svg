@@ -149,7 +149,7 @@
                 }
 
                 body {
-font-family: "Jersey 20", monospace;
+
                     margin: 0;
                     min-height: 100% !important;
                     height: 100% !important;
@@ -187,7 +187,7 @@ font-family: "Jersey 20", monospace;
                 }
 
                 .menu {
-                    font-family: "Press Start 2P";
+                    font-family: "Jersey 20";
                     opacity: .86;
                     font-size: 1.5rem !important;
                     font-weight: 900;
