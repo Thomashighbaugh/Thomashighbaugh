@@ -55,62 +55,62 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="left"><img src="https://img.shields.io/badge/flask-69676c?logo=flask&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/styled%20components-3c3c3c?logo=styled%20components&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/git-3c3c3c?logo=git&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/xhtml-3c3c3c?logo=xhtml&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/firebase-3c3c3c?logo=firebase&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/bootstrap-3c3c3c?logo=bootstrap&style=plastic&logoColor=F4F4F7"/>
+<p align="left"><img src="https://img.shields.io/badge/graphql-3c3c3c?logo=graphql&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/css-69676c?logo=css&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/codeberg-3c3c3c?logo=codeberg&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/heroku-69676c?logo=heroku&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/ant_design-3c3c3c?logo=ant+design&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/chakra-3c3c3c?logo=chakraui&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/mern%20stack-3c3c3c?logo=mern%20stack&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/visual%20studio%20code-69676c?logo=visual%20studio%20code&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/xml-69676c?logo=xml&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/tsx-3c3c3c?logo=react&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/jest-69676c?logo=jest&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/inkscape-69676c?logo=inkscape&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/jetbrains%20ides-69676c?logo=jetbrains&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/github-3c3c3c?logo=github&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/nixos-3c3c3c?logo=nixos&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/tailwindcss-3c3c3c?logo=tailwindcss&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/neovim-3c3c3c?logo=neovim&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/markdown-3c3c3c?logo=markdown&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/xhtml-69676c?logo=xhtml&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/npm-69676c?logo=npm&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/python-3c3c3c?logo=python&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/json-3c3c3c?logo=json&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/gimp-3c3c3c?logo=gimp&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/nixos-3c3c3c?logo=nixos&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/jest-69676c?logo=jest&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/html-69676c?logo=html&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/tsx-3c3c3c?logo=react&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/github%20actions-3c3c3c?logo=github%20actions&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/bash/zsh-3c3c3c?logo=gnu+bash&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/lua-3c3c3c?logo=lua&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/linux-3c3c3c?logo=linux&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/markdown-3c3c3c?logo=markdown&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/css3-3c3c3c?logo=css3&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/photoshop-69676c?logo=adobe+photoshop&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/react-3c3c3c?logo=react&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/fastapi-3c3c3c?logo=fastapi&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/svg-3c3c3c?logo=svg&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/github%20pages-69676c?logo=github&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/jetbrains%20ides-69676c?logo=jetbrains&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/jquery-3c3c3c?logo=jquery&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/mongodb-3c3c3c?logo=mongodb&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/heroku-3c3c3c?logo=heroku&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/sqlite-3c3c3c?logo=sqlite&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/sass-3c3c3c?logo=sass&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/npm-69676c?logo=npm&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/neovim-3c3c3c?logo=neovim&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/ant_design-3c3c3c?logo=ant+design&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/less-3c3c3c?logo=less&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/chakra-69676c?logo=chakraui&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/express.js-69676c?logo=express&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/tailwindcss-3c3c3c?logo=tailwindcss&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/mern%20stack-3c3c3c?logo=mern%20stack&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/css-69676c?logo=css&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/javascript-3c3c3c?logo=javascript&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/storybook-69676c?logo=storybook&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/docker-3c3c3c?logo=docker&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/gitlab-3c3c3c?logo=gitlab&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/node.js-3c3c3c?logo=node.js&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/netlify-69676c?logo=netlify&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/github-69676c?logo=github&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/graphql-69676c?logo=graphql&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/mongodb-3c3c3c?logo=mongodb&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/svg-3c3c3c?logo=svg&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/css3-3c3c3c?logo=css3&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/fastapi-3c3c3c?logo=fastapi&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/docker-3c3c3c?logo=docker&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/javascript-69676c?logo=javascript&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/git-3c3c3c?logo=git&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/linux-3c3c3c?logo=linux&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/sqlite-3c3c3c?logo=sqlite&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/html5-69676c?logo=html5&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/vercel-69676c?logo=vercel&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/inkscape-3c3c3c?logo=inkscape&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/flask-69676c?logo=flask&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/storybook-69676c?logo=storybook&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/xml-3c3c3c?logo=xml&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/firebase-69676c?logo=firebase&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/gimp-3c3c3c?logo=gimp&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/vercel-3c3c3c?logo=vercel&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/photoshop-3c3c3c?logo=adobe+photoshop&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/lua-3c3c3c?logo=lua&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/netlify-3c3c3c?logo=netlify&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/sass-3c3c3c?logo=sass&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/jquery-3c3c3c?logo=jquery&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/styled%20components-3c3c3c?logo=styled%20components&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/github%20pages-69676c?logo=github&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/bash/zsh-3c3c3c?logo=gnu+bash&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/gitlab-69676c?logo=gitlab&style=plastic&logoColor=F4F4F7"/>
 <img src="https://img.shields.io/badge/figma-3c3c3c?logo=figma&style=plastic&logoColor=F4F4F7"/>
-<img src="https://img.shields.io/badge/codeberg-3c3c3c?logo=codeberg&style=plastic&logoColor=F4F4F7"/></p>
+<img src="https://img.shields.io/badge/html-3c3c3c?logo=html&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/bootstrap-69676c?logo=bootstrap&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/express.js-69676c?logo=express&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/less-3c3c3c?logo=less&style=plastic&logoColor=F4F4F7"/>
+<img src="https://img.shields.io/badge/github%20actions-3c3c3c?logo=github%20actions&style=plastic&logoColor=F4F4F7"/></p>
 </details>
 
 <details>
@@ -118,7 +118,7 @@ Get in Touch
 
 <em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
 
-<a href="https://github.com/anbgsl1110" alt="jiayongliang"><img style="height:150px; overflow:none !important;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/></a>
+<a href="https://github.com/darklight147" alt="Mohamed Belkamel"><img style="height:150px; overflow:none !important;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/></a>
 </details>
 
 <details>
@@ -127,22 +127,24 @@ Account Statistics</summary>
 
 <div style="clear:both;">
  <table>
+  <!--- Row ---->
   <tr>
 
    <td> <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> </td>
+    <td>
+      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
+    </td>
 
-   <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
    </tr>
+  <!--- Row ---->
   <tr>
    <td>
       <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"> 
     </td>
-    <td>
-      <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
-    </td>
-   
+      <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
+
  </tr>
-  
+  <!--- Row ---->
   <tr>
 
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=donut-vertical" /></td>
