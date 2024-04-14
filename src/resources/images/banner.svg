@@ -3,7 +3,7 @@
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
-                @import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
                 @-webkit-keyframes jerk {
                     50% {
                         transform: translateX(1px)
@@ -187,7 +187,7 @@
                 }
 
                 .menu {
-                    font-family: "Jersey 20";
+                    font-family: "Press Start 2P";
                     opacity: .86;
                     font-size: 1.5rem !important;
                     font-weight: 900;
