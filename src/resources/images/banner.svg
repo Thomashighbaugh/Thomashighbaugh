@@ -214,7 +214,7 @@
                     padding: 5px 5px 10px 10px;
                     -webkit-animation: 5s ease 1s normal none infinite running glitch;
                     animation: 1s ease 500ms normal none infinite running glitch;
-                    text-shadow: #69676c 0.2rem 0.2rem;
+                    text-shadow: #3c3c3c 0.2rem 0.2rem;
                     font-size: 2.35rem;
                  font-family: "Press Start 2P", monospace !important;
                 }
