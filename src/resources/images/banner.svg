@@ -186,7 +186,7 @@
                 }
 
                 .menu {
-                    font-family: "Press Start 2P" !important;
+                    font-family: "Press Start 2P", monospace !important;
                     opacity: .86;
                     font-size: 1.5rem !important;
                     font-weight: 900;
@@ -213,7 +213,8 @@
                     animation: 1s ease 500ms normal none infinite running glitch;
                     font-weight: 900;
                     text-shadow: #69676c 0.25rem 0.25rem;
-                    font-size: 2.35rem
+                    font-size: 2.35rem;
+                 font-family: "Press Start 2P", monospace !important;
                 }
 
                 .menu ul {
@@ -229,7 +230,7 @@
                     font-size: 60% !important;
                     color: #f4f4f7;
                     font-size: 1.75rem;
-                    text-decoration: none
+                 font-family: "Press Start 2P", monospace !important;
                 }
 
                 .menu ul li.active {
@@ -242,6 +243,7 @@
                     margin-bottom: 1.25rem;
                     box-shadow: 0.65rem 0.65rem #000;
                 font-size: 125%;
+                 font-family: "Press Start 2P", monospace !important;
                     text-shadow: 0.125rem 0.125rem solid #3c3c3c;
                 }
 
@@ -263,7 +265,7 @@
 
                 button {
                     padding: .5rem;
-                    font-family: "Press Start 2P", monospace;
+                    font-family: "Press Start 2P", monospace !important;
                     max-width: 30%;
                     margin-left: 0.5rem;
                     margin-right: 0.5rem;
