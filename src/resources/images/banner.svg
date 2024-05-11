@@ -2,7 +2,9 @@
     <foreignObject width="850" height="425">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
+                @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
                 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
+                
                 @-webkit-keyframes jerk {
                     50% {
                         transform: translateX(1px)
@@ -148,7 +150,8 @@
                 }
 
                 body {
-                    font-family: "Press Start 2P", sans-serif !important;
+                  font-family: "VT323", monospace !important;
+                font-size: 150% !important;
                     margin: 0;
                     min-height: 100% !important;
                     height: 100% !important;
@@ -186,9 +189,9 @@
                 }
 
                 .menu {
-                    font-family: "Press Start 2P", monospace !important;
+                    font-family: "VT323", monospace !important;
                     opacity: .86;
-                    font-size: 1.5rem !important;
+                    font-size: 2.5rem !important;
                     font-weight: 900;
                     z-index: 1;
                     text-align: center;
