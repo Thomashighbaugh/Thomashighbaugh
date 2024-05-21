@@ -48,7 +48,7 @@ Get in Touch
 
 %{skillswall}
 </details>
-
+%{starred}
 <details>
 <summary>Follower Showcase </summary>
 
@@ -67,13 +67,13 @@ Account Statistics</summary>
   <tr>
 
    <td> <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> </td>
-  
+
 <td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
    </tr>
   <!--- Row ---->
   <tr>
    <td>
-      <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"> 
+      <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai">
     </td>
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=compact" /></td>
 
@@ -101,36 +101,36 @@ Account Statistics</summary>
  <table>
   <tr>
    <td  width="33%"  max-height="5rem">
-<a href="https://github.com/Thomashighbaugh/Personal=Site">     <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=Personal-Site&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">   
+<a href="https://github.com/Thomashighbaugh/Personal=Site">     <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=Personal-Site&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
   </td>
   <td  width="33%"  max-height="5rem">
      <a href="https://github.com/Thomashighbaugh/resume">   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=biolink&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
   </td>
-  
+
   <td  width="33%"  max-height="5rem">
-   <a href="https://github.com/Thomashighbaugh/resume"> 
+   <a href="https://github.com/Thomashighbaugh/resume">
    <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=resume&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"> </a>
   </td>
   </tr>
 
   <!--- Web Development Projects --->
-  
+
  </table>
 </details>
  <!---- Linux Customization ---->
 <details>
  <summary>Linux Customization Repositories</summary>
- 
-<table>  
+
+<table>
 
 <!---- Sanatana Linux account ---->
- 
+
  <tr>
    <td width="33%"  max-height="5rem">
      <a href="https://github.com/Sanatana-Linux/nixos-config"><img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
    </td>
 
-<td width="33%"  max-height="5rem"> 
+<td width="33%"  max-height="5rem">
 <a href="https://github.com/Sanatana-Linux/nixos-awesomewm"> <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-awesomewm&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
 </td>
 
@@ -147,7 +147,7 @@ Account Statistics</summary>
  <td width="33%" max-height="5rem" >
 <a href="https://github.com/the-Electric-Tantra-Linux/electric-tantra-repo">  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=arch_install&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
  </td>
- 
+
  <td width="33%" max-height="5rem">
 <a href="https://github.com/the-Electric-Tantra-Linux/electric-tantra-linux-iso">  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=the-Electric-Tantra-Linux&repo=electric-tantra-linux-iso&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
  </td>
@@ -161,17 +161,17 @@ Account Statistics</summary>
 <!--- From my personal account ---->
 
 <tr>
- 
- <td  width="33%" max-height="5rem" > 
+
+ <td  width="33%" max-height="5rem" >
   <a href="https://github.com/Thomashighbaugh/nvim-forge"><img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=nvim-forge&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2"></a>
  </td>
- 
+
  <td  width="33%" max-height="5rem">
 <a href="https://github.com/Thomashighbaugh/dotfiles">  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=dotfiles&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2"></a>
  </td>
 <td  width="33%" max-height="5rem">
 <a href="https://github.com/Thomashighbaugh/firefox">  <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=firefox&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F2F2F2"></a>
- 
+
 </td>
 </tr>
 
