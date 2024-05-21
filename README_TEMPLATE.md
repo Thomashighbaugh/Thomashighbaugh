@@ -95,6 +95,7 @@ Account Statistics</summary>
 
 <!---- Pinned Repositories ---->
 <details> <summary>Some of My Work</summary>
+%{recentworks}
 <!---- Personal Branding ---->
 <details>
  <summary>Personal Branding</summary>
