@@ -48,7 +48,7 @@ Get in Touch
 
 %{skillswall}
 </details>
-%{starred}
+
 <details>
 <summary>Follower Showcase </summary>
 
