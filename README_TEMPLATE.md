@@ -57,6 +57,8 @@ Get in Touch
 %{randomFollower}
 </details>
 
+%{starredSection}
+
 <details>
 <summary>
 Account Statistics</summary>
