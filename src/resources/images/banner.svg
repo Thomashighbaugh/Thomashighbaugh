@@ -2,9 +2,8 @@
     <foreignObject width="850" height="425">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
-                @import url('https://fonts.googleapis.com/css2?family=VT323');
                 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
-                
+
                 @-webkit-keyframes jerk {
                     50% {
                         transform: translateX(1px)
@@ -150,8 +149,7 @@
                 }
 
                 body {
-                  font-family: "Press Start 2P", monospace !important;
-                font-size: 150% !important;
+                    font-family: "Press Start 2P" !important;
                     margin: 0;
                     min-height: 100% !important;
                     height: 100% !important;
@@ -189,9 +187,9 @@
                 }
 
                 .menu {
-                    font-family: "Press Start 2P", monospace !important;
+                    font-family: "Press Start 2P" !important;
                     opacity: .86;
-                    font-size: 2.5rem !important;
+                    font-size: 1.5rem !important;
                     font-weight: 900;
                     z-index: 1;
                     text-align: center;
@@ -208,15 +206,15 @@
                 }
 
                 .menu header {
-                    color: #Ffffff;
+                    color: #FE3B7B;
                     margin-bottom: 10px;
                     margin-top: 10px;
                     padding: 5px 5px 10px 10px;
                     -webkit-animation: 5s ease 1s normal none infinite running glitch;
                     animation: 1s ease 500ms normal none infinite running glitch;
-                    text-shadow: #3c3c3c 0.2rem 0.2rem;
-                    font-size: 2.35rem;
-                 font-family: "Press Start 2P", monospace !important;
+                    font-weight: 900;
+                    text-shadow: #69676c 0.25rem 0.25rem;
+                    font-size: 2.35rem
                 }
 
                 .menu ul {
@@ -232,7 +230,7 @@
                     font-size: 60% !important;
                     color: #f4f4f7;
                     font-size: 1.75rem;
-                 font-family: "Press Start 2P", monospace !important;
+                    text-decoration: none
                 }
 
                 .menu ul li.active {
@@ -245,7 +243,6 @@
                     margin-bottom: 1.25rem;
                     box-shadow: 0.65rem 0.65rem #000;
                 font-size: 125%;
-                 font-family: "Press Start 2P", monospace !important;
                     text-shadow: 0.125rem 0.125rem solid #3c3c3c;
                 }
 
@@ -267,7 +264,7 @@
 
                 button {
                     padding: .5rem;
-                    font-family: "Press Start 2P", monospace !important;
+                    font-family: "Press Start 2P", monospace;
                     max-width: 30%;
                     margin-left: 0.5rem;
                     margin-right: 0.5rem;
