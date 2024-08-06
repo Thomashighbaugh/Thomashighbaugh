@@ -10,11 +10,11 @@
 <hr>
 <br>
 
-
+<div align="center">
 
 <details>
 <summary>
-Fun Facts
+About Me
 </summary>
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 <ul>
@@ -54,7 +54,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<em><small>Showcase of One of the Awesome Individuals That Follow My Work, Updated Daily!</small></em>
+<em><small>Here Is One Of The Awesome Individuals That Follows Me On GitHub, Updated Daily!</small></em>
 
 %{randomFollower}
 </details>
@@ -181,3 +181,4 @@ Account Statistics</summary>
  </table>
 </details>
 </details>
+</div>
