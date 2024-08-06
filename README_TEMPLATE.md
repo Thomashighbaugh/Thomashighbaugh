@@ -1,10 +1,12 @@
 %{header}
 
+<div align="center">
 <strong align="center">
 :point_up_2: :sunglasses: Stars and Forks Are Always Welcome and Much Appreciated!!! :stuck_out_tongue_winking_eye: :thumbsup:
 </strong>
-
+</div>
 <br>
+<hr>
 <hr>
 <br>
 
