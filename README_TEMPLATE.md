@@ -54,7 +54,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<em><small>Here Is One Of The Awesome Individuals That Follows Me On GitHub, Updated Daily!</small></em>
+<em><small>Here Is One Of The Awesome Individuals That Follows Me On GitHub, With A New Follower Highlighted Daily!</small></em>
 
 %{randomFollower}
 </details>
@@ -68,9 +68,13 @@ Account Statistics</summary>
   <!--- Row ---->
   <tr>
 
-   <td> <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> </td>
+   <td>
+    <img align="center" width="100%" src="https://github-readme-stats-server.vercel.app/api/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&show_icons=true&icon_color=F2F2F2&rank_icon=github&border_radius=15&include_all_commits=true&hide=contribs,issues"/> 
+   </td>
 
-<td><img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" /></td>
+<td>
+ <img align="center" width="100%" src="https://streak-stats.demolab.com/?user=Thomashighbaugh&stroke=3c3c3c&currStreakNum=f2f2f2&currStreakLabel=948ae3&fire=fe3b7b&sideLabels=53bbcc&sideNums=5ab4e6&ring=8179C6&background=2c2c2c&border=3c3c3c&border_radius=15" alt="streak card" />
+</td>
    </tr>
   <!--- Row ---->
   <tr>
@@ -85,7 +89,8 @@ Account Statistics</summary>
   <td>
       <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
     </td>
-          <td><img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
+          <td>
+           <img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
 
 </tr>
   </table>
@@ -103,14 +108,14 @@ Account Statistics</summary>
  <summary>Personal Branding</summary>
  <table>
   <tr>
-   <td  width="33%"  max-height="5rem">
+   <td >
 <a href="https://github.com/Thomashighbaugh/Personal=Site">     <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=Personal-Site&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7">
   </td>
-  <td  width="33%"  max-height="5rem">
+  <td  >
      <a href="https://github.com/Thomashighbaugh/resume">   <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=biolink&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
   </td>
 
-  <td  width="33%"  max-height="5rem">
+  <td  >
    <a href="https://github.com/Thomashighbaugh/resume">
    <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Thomashighbaugh&repo=resume&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"> </a>
   </td>
@@ -129,15 +134,15 @@ Account Statistics</summary>
 <!---- Sanatana Linux account ---->
 
  <tr>
-   <td width="33%"  max-height="5rem">
+   <td >
      <a href="https://github.com/Sanatana-Linux/nixos-config"><img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-config&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
    </td>
 
-<td width="33%"  max-height="5rem">
+<td >
 <a href="https://github.com/Sanatana-Linux/nixos-awesomewm"> <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=nixos-awesomewm&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
 </td>
 
- <td width="33%"  max-height="5rem">
+ <td >
  <a href="https://github.com/Sanatana-Linux/Sanatana-Linux-Grub-Theme"> <img alt="link to the repository of my nixos configuration" src="https://github-readme-stats-server.vercel.app/api/pin/?username=Sanatana-Linux&repo=Sanatana-Linux-Grub-Theme&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border=3c3c3c&border_radius=15&title_color=FE3B7B&text_color=F4F4F7"></a>
  </td>
 
