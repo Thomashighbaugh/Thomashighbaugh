@@ -1,4 +1,5 @@
 <p align="center"><img src="src/resources/images/banner.svg" width="850" height="350"/></p>
+<small>yes that is an over engineered avg banner image</small>
 <p align="center"><a href="https://biolink-delta.vercel.app"><img src="https://img.shields.io/badge/contacts-3c3c3c?logo=linktree&style=for-the-badge&logoColor=948ae3"/></a>
 <a href="https://thomasleonhighbaugh.me"><img src="https://img.shields.io/badge/website-3c3c3c?logo=firefox&style=for-the-badge&logoColor=948ae3"/></a>
 <a href="https://resume-thomas-leon-highbaugh.vercel.app/"><img src="https://img.shields.io/badge/resume-3c3c3c?logo=libreoffice&style=for-the-badge&logoColor=948ae3"/></a>
