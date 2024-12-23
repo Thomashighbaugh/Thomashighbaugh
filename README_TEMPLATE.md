@@ -14,7 +14,7 @@
 
 <details>
 <summary>
-About Me
+WHO?
 </summary>
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
 <ul>
