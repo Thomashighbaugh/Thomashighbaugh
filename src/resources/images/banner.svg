@@ -268,7 +268,7 @@
                     font-size: 3.75rem;
                     color: #5ad4e6 !important;
 
-                    text-shadow: 0.25rem 0.25rem #1c1c1c;
+                    text-shadow: 0.25rem 0.25rem #2c2c2c;
                 }
 
                 main {
