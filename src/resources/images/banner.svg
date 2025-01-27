@@ -341,7 +341,7 @@
                 }
             </style>
             <main>
-                <div class="screen"><canvas id="canvas" class="picture" />
+                <div class="screen">
                     <div class="menu">
                         <header>Thomas Leon Highbaugh</header>
                         <div class="list">
