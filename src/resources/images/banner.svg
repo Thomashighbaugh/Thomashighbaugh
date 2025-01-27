@@ -228,37 +228,28 @@
                 .menu div {
                     margin-top: 4rem;
                     padding: 0;
-
-                    display: inline-flex;
-                    flex-direction: row;
+                    display: flex;
+                    justify-content: space-between;
                     width: 100%;
                     -webkit-animation: 5s ease 2000ms normal none infinite running glitch;
                     animation: 5s ease 2000ms normal none infinite running glitch
                 }
 
-                .menu div button {
-
-
-                    color: #f4f4f7;
-                    font-size: 1rem !important;
-                    font-family: "Tiny5", monospace !important;
-                }
-
                 .menu div button.active {
                     background-color: #3c3c3c;
-                    margin-left: 1rem;
-                    margin-right: 0.5rem;
+                    color: #f4f4f4;
+                    margin: 1rem;
                     padding: 0.75rem;
                     border-radius: 0.25rem;
                     border: #f4f4f7 solid 0.06125rem;
-                    margin-bottom: 1.25rem;
                     box-shadow: 0.65rem 0.65rem #000;
                     font-size: 125%;
                     font-family: "Press Start 2P", monospace !important;
                     text-shadow: 0.125rem 0.125rem solid #3c3c3c;
+                    -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
                     -animation: jerkup 5ms infinite, jerk 10ms infinite;
                     animation: jerkup 5ms infinite, jerk 10ms infinite;
-                    v
+                    
                 }
 
                 footer {
@@ -342,7 +333,7 @@
 
                 .text span:nth-child(2) {
                     -webkit-animation: glitch2 1s infinite;
-                    animation: glitch2 1s infinite
+                    animation: glitch2 1s infinitecommunity support that is there is a group of academics working on doctorates that try to be helpful but have long since lost touch with being humans and due to being Dutch/German speakers that pick up English easily enough to have never attempted to learn it too precisely thus can be
                 }
 
                 .text {
