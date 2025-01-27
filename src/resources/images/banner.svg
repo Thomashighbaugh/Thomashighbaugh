@@ -290,55 +290,6 @@
                     -webkit-animation: glitch2 10s infinite;
                     animation: glitch2 10s infinite
                 }
-
-
-                .text span {
-
-                    position: absolute;
-                    -webkit-animation: jerkup 10ms infinite, jerk 30ms infinite;
-                    animation: jerkup 28ms infinite, jerk 43ms infinite
-                }
-
-                .text span:nth-child(1) {
-                    color: #e91e63;
-                    margin-left: -2px;
-                }
-
-                .text span:nth-child(2) {
-                    color: #ff3d81;
-                    margin-left: 2px;
-                }
-
-                .text span:nth-child(3) {
-                    color: #2fb1d4;
-                    position: 20px 0;
-                }
-
-                .text span:nth-child(4) {
-                    color: #f4f4f4;
-
-                    text-shadow: 0.2rem 0.2rem #000000;
-                }
-
-                .text span:nth-child(5) {
-                    color: rgba(255, 255, 255, .1);
-
-                }
-
-                .text span:nth-child(3) {
-                    -webkit-animation: glitch1 1s infinite;
-                    animation: glitch1 1s infinite
-                }
-
-                .text span:nth-child(2) {
-                    -webkit-animation: glitch2 1s infinite;
-                    animation: glitch2 1s infinitecommunity support that is there is a group of academics working on doctorates that try to be helpful but have long since lost touch with being humans and due to being Dutch/German speakers that pick up English easily enough to have never attempted to learn it too precisely thus can be
-                }
-
-                .text {
-                    -webkit-animation: 30s ease 6000ms normal none infinite running glitch;
-                    animation: 30s ease 6000ms normal none infinite running glitch
-                }
             </style>
             <main>
                 <div class="screen">
