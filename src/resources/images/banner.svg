@@ -205,9 +205,9 @@
                 }
 
                 header {
-                    color: #Ffffff;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
+                    color: #ffffff;
+                    margin-bottom: 4rem;
+                    margin-top: 2rem;
                     padding: 5px 5px 10px 10px;
                     -webkit-animation: glitch1 35ms infinite, jerkup 15ms infinite, jerk 40ms infinite;
                     animation: glitch1 35ms infinite, jerkup 15ms infinite, jerk 40ms infinite;
