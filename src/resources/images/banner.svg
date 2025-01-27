@@ -205,13 +205,13 @@
                 }
 
                 header {
-                    color: #ffffff;
+                 
                     margin-bottom: 4rem;
                     margin-top: 3rem;
                     -webkit-animation: glitch1 35ms infinite, jerkup 15ms infinite, jerk 40ms infinite;
                     animation: glitch1 35ms infinite, jerkup 15ms infinite, jerk 40ms infinite;
 
-                    text-shadow: #3c3c3c 0.35rem 0.35rem;
+                    text-shadow: #4c4c4c 0.35rem 0.35rem;
                     font-size: 4.5rem;
                     color: #fc618d;
                     font-family: "Knewave", monospace !important;
