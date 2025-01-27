@@ -220,6 +220,7 @@
 
                 .list {
                     margin-top: 4rem;
+                    margin-bottom:4rem;
                     padding: 0;
                     display: flex;
                     justify-content: space-between;
