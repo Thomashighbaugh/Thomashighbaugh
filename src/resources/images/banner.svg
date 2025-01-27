@@ -259,7 +259,7 @@
                     justify-content: space-around;
                 }
 
-                .menu footer::after {
+                .menu, footer::after {
                     clear: both
                 }
 
