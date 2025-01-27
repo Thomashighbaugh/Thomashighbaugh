@@ -187,12 +187,9 @@
                     min-width: 100% !important
                 }
 
-                .menu,
-                .menu div button {
-                    box-sizing: border-box;
-                }
-
+    
                 .menu {
+                box-sizing: border-box;
                     font-family: "Press Start 2P", monospace;
                     opacity: .86;
                     font-size: 1.5rem !important;
@@ -238,12 +235,13 @@
                 .menu div button.active {
                     background-color: #3c3c3c;
                     color: #f4f4f4;
+                    box-sizing: border-box;
                     margin: 1rem;
                     padding: 0.75rem;
                     border-radius: 0.25rem;
                     border: #f4f4f7 solid 0.06125rem;
                     box-shadow: 0.65rem 0.65rem #000;
-                    font-size: 150%;
+                    font-size: 100%;
                     font-weight:900;
                     font-family: "Tiny5", monospace !important;
                     text-shadow: 0.125rem 0.125rem solid #3c3c3c;
