@@ -154,7 +154,7 @@
                 }
 
                 #canvas {
-                    font-family: "Press Start 2P", monospace;
+       
                     font-size: 150% !important;
                     margin: 0;
                     min-height: 100% !important;
@@ -187,7 +187,7 @@
               
                 .menu {
                 box-sizing: border-box;
-                    font-family: "Press Start 2P", monospace;
+ 
                     opacity: .86;
                     font-size: 1.5rem !important;
                     font-weight: 900;
