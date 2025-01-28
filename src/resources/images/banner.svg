@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 850 425">
-    <foreignObject width="850" height="395">
+    <foreignObject width="850" height="425">
 
         <div   xmlns="http://www.w3.org/1999/xhtml" id="canvas">
             <style>
@@ -316,7 +316,7 @@
         var main = document.querySelector('main'),
         canvas = document.getElementById('canvas'),
         ctx = canvas.getContext('2d'),
-        text = document.querySelector('.text'),
+        text = document.querySelecto=('.text'),
         ww = window.innerWidth,
         menu = document.querySelector('.menu'),
         ul = menu.querySelector('ul'),
@@ -326,27 +326,12 @@
         frame;
 
     // Set canvas size
-    canvas.width = 850;
-    canvas.height = 395;
+         var ww = window.innerWidth;
+ canvas.width = ww / 3;
+ canvas.height = (ww * 0.5625) / 3;
 
-    // Generate CRT noise
-    function snow() {
-
-        var w = 850,
-            h = 395,
-            d = ctx.createImageData(w, h),
-            b = new Uint32Array(d.data.buffer),
-            len = b.length;
-
-        for (var i = 0; i < len; i++) {
-            b[i] = ((255 * Math.random()) | 0) << 24;
-        }
-
-        ctx.putImageData(d, 0, 0);
-    }
 
     function animate() {
-        snow();
         frame = requestAnimationFrame(animate);
     };
 
