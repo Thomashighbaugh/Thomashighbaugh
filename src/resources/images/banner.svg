@@ -293,9 +293,9 @@
                     <div class="menu">
                         <header> <span class="text">Thomas Leon Highbaugh </span> </header>
                         <div class="list">
-                            <button class="text">Software Engineer</button>
-                            <button class="text">Linux Administrator</button>
-                            <button class="text">Graphics
+                            <button>Software Engineer</button>
+                            <button>Linux Administrator</button>
+                            <button>Graphics
                                 Designer</button>
                             
                         </div>
@@ -334,7 +334,7 @@
     };
 
     // Glitch
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 4; i++) {
         var span = text.firstElementChild.cloneNode(true);
         text.appendChild(span);
     }
