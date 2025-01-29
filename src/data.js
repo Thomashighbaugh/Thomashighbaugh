@@ -11,7 +11,7 @@ module.exports = {
     image: {
       src: 'src/resources/images/banner.svg',
       width: 850,
-      height: 350,
+      height: 425,
     },
     styles: {
       align: 'center',
@@ -23,7 +23,7 @@ module.exports = {
       {
         type: 'badge',
         name: 'contacts',
-        href: 'https://biolink-delta.vercel.app',
+        href: 'https://links.thomasleonhighbaugh.me',
         logo: 'linktree',
       },
 
@@ -36,7 +36,7 @@ module.exports = {
       {
         type: 'badge',
         name: 'resume',
-        href: 'https://resume-thomas-leon-highbaugh.vercel.app/',
+        href: 'https://resume.thomasleonhighbaugh.me',
         logo: 'libreoffice',
       },
       {
