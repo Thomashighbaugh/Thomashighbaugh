@@ -42,6 +42,9 @@ Get in Touch
 %{socialMedias}
 
 <br clear="both" style="clear:both;" >
+<br>
+<br>
+<br>
 
 </details>
 
