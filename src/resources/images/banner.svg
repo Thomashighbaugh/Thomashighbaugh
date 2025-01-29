@@ -277,7 +277,7 @@
                     margin: 0;
                     min-height: 100% !important;
                     height: 100% !important;
-                    max-height:100% !important;@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Tiny5&family=VT323&display=swap');
+                    max-height:100% !important;
                     min-width: 100% !important;
                     width: 100% !important;
                     max-width:100% !important;
@@ -291,11 +291,11 @@
             <main>
                 <div class="screen">
                     <div class="menu">
-                        <header> <h1 class="text">Thomas Leon Highbaugh </h1> </header>
+                        <header> <h1>Thomas Leon Highbaugh </h1> </header>
                         <div class="list">
-                            <button>Software Engineer</button>
-                            <button>Linux Administrator</button>
-                            <button>Graphics
+                            <button class="active">Software Engineer</button>
+                            <button class="active">Linux Administrator</button>
+                            <button class="active">Graphics
                                 Designer</button>
                             
                         </div>
