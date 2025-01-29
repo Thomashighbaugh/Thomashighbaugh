@@ -155,7 +155,7 @@
                  header::after {
                     clear: both
                 }
-                 header span {          
+                 header h1 {          
                     margin-bottom: 4rem;
                     margin-top: 3rem;
                     -webkit-animation: glitch1 35ms infinite, jerkup 15ms infinite, jerk 40ms infinite;
@@ -291,7 +291,7 @@
             <main>
                 <div class="screen">
                     <div class="menu">
-                        <header> <span class="text">Thomas Leon Highbaugh </span> </header>
+                        <header> <h1 class="text">Thomas Leon Highbaugh </h1> </header>
                         <div class="list">
                             <button>Software Engineer</button>
                             <button>Linux Administrator</button>
