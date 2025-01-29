@@ -4,12 +4,15 @@
         <div   xmlns="http://www.w3.org/1999/xhtml" id="canvas">
             <style>
                 /************************************************************************ 
-                define animations 
+                Import Fonts
                 ************************************************************************/
                 @import url(https://fonts.googleapis.com/css2?family=VT323);
                 @import url(https://fonts.googleapis.com/css2?family=Knewave);
                 @import url(https://fonts.googleapis.com/css2?family=Tiny5);
                 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
+                /************************************************************************ 
+                define animations 
+                ************************************************************************/
                 // define jerk
                 @-webkit-keyframes jerk {
                     50% {
@@ -256,7 +259,7 @@
                     box-shadow: 0.65rem 0.65rem #000;
                     font-size: 130%;
                     font-weight:900;
-                    font-family: "Tiny5", monospace !important;
+                    font-family: "VT323", monospace !important;
                     text-shadow: 0.125rem 0.125rem solid #3c3c3c;
                     -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
                     -animation: jerkup 5ms infinite, jerk 10ms infinite;
