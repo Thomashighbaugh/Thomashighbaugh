@@ -6,10 +6,7 @@
                 /************************************************************************ 
                 Import Fonts
                 ************************************************************************/
-                @import url(https://fonts.googleapis.com/css2?family=VT323);
-                @import url(https://fonts.googleapis.com/css2?family=Knewave);
-                @import url(https://fonts.googleapis.com/css2?family=Tiny5);
-                @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
+                @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Tiny5&family=VT323&display=swap');
                 /************************************************************************ 
                 define animations 
                 ************************************************************************/
