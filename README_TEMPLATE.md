@@ -14,18 +14,18 @@
 
 <details>
 <summary>
-WHO?
+Information About Me
 </summary>
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
-<ul>
-<li>From Beautiful San Francisco, California</li>
-<li>Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces in TSX + Tailwind.css + Next.js</li>
-<li><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> User </li>
-<li>Currently Exploring Rust Web Frameworks and Wayland Compositors</li>
-<li>Working on Long-Form Fictional Content Generation Leveraging GPT4Free Using <a href="https://github.com/thomashighbaugh/gpt_scripts">Python Scripts</a></li>
-<li>The header as well as my reoccurring personal icon, are both examples of the handcrafted graphical flare I infuse into my work. </li>
-<li>Been writing code and shell scripts for: 7 Years, 9 Months and 13 Dayss </li>
-<li>The content below is placed into the README using Github Actions that run node.js scripts included within the <code>src/</code> directory as templated in the <code>README_TEMPLATE.md</code> file in this project's root directory.</li>
+<ul align="left">
+<li align="left">From Beautiful San Francisco, California</li>
+<li align="left">Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces in TSX + Tailwind.css + Next.js</li>
+<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> User </li>
+<li align="left">Currently Exploring Rust Web Frameworks and Wayland Compositors</li>
+<li align="left">Working on Long-Form Fictional Content Generation Leveraging GPT4Free Using <a href="https://github.com/thomashighbaugh/gpt_scripts">Python Scripts</a></li>
+<li align="left">The header as well as my reoccurring personal icon, are both examples of the handcrafted graphical flare I infuse into my work. </li>
+<li align="left">Been writing code and shell scripts for: 7 Years, 9 Months and 13 Dayss </li>
+<li align="left">The content below is placed into the README using Github Actions that run node.js scripts included within the <code>src/</code> directory as templated in the <code>README_TEMPLATE.md</code> file in this project's root directory.</li>
  </ul>
 </details>
 
