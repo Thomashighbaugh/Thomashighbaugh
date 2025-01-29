@@ -10,7 +10,7 @@
 <hr>
 <br>
 
-<div align="center">
+<div>
 
 <details>
 <summary>
