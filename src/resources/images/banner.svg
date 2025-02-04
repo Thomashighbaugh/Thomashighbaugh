@@ -260,7 +260,7 @@
                     font-size: 130%;
                     font-weight:900;
                     font-family: "VT323", monospace !important;
-                    text-shadow: 0.125rem 0.125rem solid #3c3c3c;
+                    text-shadow: 0.25rem 0.25rem solid #3c3c3c;
                     -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
                     -animation: jerkup 5ms infinite, jerk 10ms infinite;
                     animation: jerkup 5ms infinite, jerk 10ms infinite;
@@ -294,7 +294,7 @@
                         <header> <h1>Thomas Leon Highbaugh </h1> </header>
                         <div class="list">
                             <button class="active">Software Engineer</button>
-                            <button class="active">Linux Administrator</button>
+                            <button class="active">Linux SysAd</button>
                             <button class="active">Graphics
                                 Designer</button>
                             
