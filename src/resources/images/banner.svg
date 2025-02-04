@@ -260,7 +260,7 @@
                     font-size: 130%;
                     font-weight:900;
                     font-family: "VT323", monospace !important;
-                    text-shadow: 0.25rem 0.25rem solid #3c3c3c;
+                    text-shadow: 0.25rem 0.25rem solid #222222;
                     -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
                     -animation: jerkup 5ms infinite, jerk 10ms infinite;
                     animation: jerkup 5ms infinite, jerk 10ms infinite;
