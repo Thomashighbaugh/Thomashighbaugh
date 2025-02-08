@@ -12,7 +12,7 @@
   "homepage": "https://github.com/Thomashighbaugh/Thomashighbaugh#readme",
   "dependencies": {
     "date-stringifier": "^1.1.4",
-    "jimp": "^0.16.1"
+    "jimp": "^1.6.0"
   },
   "devDependencies": {
     "prettier": "^3.1.1"
