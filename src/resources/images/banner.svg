@@ -258,12 +258,13 @@
                 .list {
                     margin-top: 4rem;
                     margin-bottom:4rem;
-                margin-left: 1rem;
-                margin-right:1rem;
+                    margin-right: 2.5%;
+                    margin-left: 2.5%;
+                
                     padding: 0;
                     display: flex;
                     justify-content: space-between;
-                    width: 100%;
+                    width: 95%;
                     -webkit-animation: 8s ease 2000ms normal none infinite running glitch;
                     animation: 8s ease 2000ms normal none infinite running glitch
                 }
