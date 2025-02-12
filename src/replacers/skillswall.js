@@ -65,4 +65,3 @@ module.exports = function (data) {
   // Generate a HTML paragraph element with the badges as children
   return generateElement('p', { children: imgSkills.join('\n'), align });
 };
-

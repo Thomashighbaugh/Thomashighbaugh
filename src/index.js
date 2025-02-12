@@ -15,7 +15,6 @@ const replacers = fs
     return acc;
   }, {});
 
-
 /**
  * Update the README.md file with the values from the replacers.
  */
@@ -60,4 +59,3 @@ const replacers = fs
     });
   });
 })();
-

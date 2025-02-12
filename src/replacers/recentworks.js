@@ -39,4 +39,3 @@ module.exports = async function (data) {
   // Sort the repositories by update date and format them into HTML links
   return repos.sort(getRecents).slice(0, data.repoQuantity).map(formatJson).join('\n');
 };
-
