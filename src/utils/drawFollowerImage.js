@@ -1,5 +1,4 @@
-const Jimp = require('jimp');
-const dateStringifier = require('date-stringifier');
+import Jimp from 'jimp';
 
 async function drawFollowerImage(follower, fileName) {
   const avatar = await Jimp.read(follower.avatar_url);
@@ -24,4 +23,4 @@ async function drawFollowerImage(follower, fileName) {
   await base.writeAsync(`./src/resources/images/${fileName}`);
 }
 
-module.exports = { drawFollowerImage };
+export { drawFollowerImage };
