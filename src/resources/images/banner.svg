@@ -4,105 +4,156 @@
         <div   xmlns="http://www.w3.org/1999/xhtml" id="canvas">
             <style>
                 /************************************************************************ 
+                Import Fonts
+                ************************************************************************/
+                @import url(https://fonts.googleapis.com/css2?family=Knewave);
+                @import url(https://fonts.googleapis.com/css2?family=Tiny5);
+                @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
+                /************************************************************************ 
+                define animations 
+                ************************************************************************/
+
+                /************************************************************************ 
                 define animations 
                 ************************************************************************/
                 // define jerk
-                @keyframes jerk {
+           // define jerk
+                @-webkit-keyframes jerk {
                     50% {
-                        transform: translateX(1px);
+                        transform: translateX(1px)
                     }
 
                     51% {
-                        transform: translateX(0);
+                        transform: translateX(0)
+                    }
+                }
+
+                @keyframes jerk {
+                    50% {
+                        transform: translateX(1px)
+                    }
+
+                    51% {
+                        transform: translateX(0)
                     }
                 }
                 //define jerkup
-                @keyframes jerkup {
+                @-webkit-keyframes jerkup {
                     0% {
-                        transform: translateY(1px);
+                        transform: translateY(1px)
                     }
 
                     to {
-                        transform: translateY(-1px);
+                        transform: translateY(0)
+                    }
+                }
+                @keyframes jerkup {
+                    0% {
+                        transform: translateY(1px)
+                    }
+
+                    to {
+                        transform: translateY(-1px)
                     }
                 }
                 //define glitch1
+                @-webkit-keyframes glitch1 {
+                    0%,
+                    30%,
+                    32%,
+                    98% {
+                        transform: translateX(0)
+                    }
+                    31%,
+                    to {
+                        transform: translateX(10px)
+                    }
+                }
                 @keyframes glitch1 {
 
                     0%,
                     30%,
                     32%,
                     98% {
-                        transform: translateX(0);
+                        transform: translateX(0)
                     }
 
                     31%,
                     to {
-                        transform: translateX(3px);
+                        transform: translateX(4px)
                     }
                 }
                 //define glitch2
+                @-webkit-keyframes glitch2 {
+
+                    0%,
+                    30%,
+                    32%,
+                    98% {
+                        transform: translateX(0)
+                    }
+
+                    31%,
+                    to {
+                        transform: translateX(-10px)
+                    }
+                }
                 @keyframes glitch2 {
                     0%,
                     30%,
                     32%,
                     98% {
-                        transform: translateX(0);
+                        transform: translateX(0)
                     }
 
                     31%,
                     to {
-                        transform: translateX(-5px);
+                        transform: translateX(-10px)
                     }
                 }
                 // define glitch
+                @-webkit-keyframes glitch {
+                    40%,
+                    43% {
+                        opacity: 1;
+                        transform: scale(1, 1);
+                        transform: skew(0, 0)
+                    }
+
+                    41% {
+                        opacity: .8;
+                        transform: scale(1, 1.2);
+                        transform: skew(80deg, 0)
+                    }
+
+                    62% {
+                        opacity: .8;
+                        transform: scale(1, 1.2);
+                        transform: skew(-50deg, 0)
+                    }
+                }
                 @keyframes glitch {
 
                     40%,
                     43% {
                         opacity: 1;
                         transform: scale(1, 1);
-                        transform: skew(0, 0);
+                        transform: skew(0, 0)
                     }
 
                     41% {
-                        opacity: .7;
-                        transform: scale(1, 1.4);
-                        transform: skew(80deg, 0);
+                        opacity: .8;
+                        transform: scale(1, 1.2);
+                        transform: skew(80deg, 0)
                     }
 
                     42% {
                         opacity: .8;
                         transform: scale(1, 1.2);
-                        transform: skew(-23deg, 0)
+                        transform: skew(-50deg, 0)
                     }
-                   80%,
-                    87% {
-                        opacity: 1;
-                        transform: scale(1, 1);
-                        transform: skew(0, 0);
-                    }
+                }
 
-                    83% {
-                        opacity: .7;
-                        transform: scale(1, 1.4);
-                        transform: skew(80deg, 0);
-                    }
-                84%{
-                   opacity: .6;
-                  transform: scale(1, 1.3);
-                }
-                85%{
-                   opacity: .7;
-                  transform: scale(1, 1.25);
-                }
-                    86% {
-                        opacity: .8;
-                        transform: scale(1, 1.2);
-                        transform: skew(-23deg, 0);
-                    }
-                
-                }
                 
                 /***********************************
                 Style Elements Generic -> Specific
