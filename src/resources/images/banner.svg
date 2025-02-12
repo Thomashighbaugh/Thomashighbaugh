@@ -44,7 +44,7 @@
                     }
 
                     to {
-                        transform: translateY(0)
+                        transform: translateY(-1px)
                     }
                 }
                 @keyframes jerkup {
@@ -66,7 +66,7 @@
                     }
                     31%,
                     to {
-                        transform: translateX(10px)
+                        transform: translateX(3px)
                     }
                 }
                 @keyframes glitch1 {
@@ -80,7 +80,7 @@
 
                     31%,
                     to {
-                        transform: translateX(4px)
+                        transform: translateX(3px)
                     }
                 }
                 //define glitch2
@@ -95,7 +95,7 @@
 
                     31%,
                     to {
-                        transform: translateX(-10px)
+                        transform: translateX(-3px)
                     }
                 }
                 @keyframes glitch2 {
@@ -108,7 +108,7 @@
 
                     31%,
                     to {
-                        transform: translateX(-10px)
+                        transform: translateX(-3px)
                     }
                 }
                 // define glitch
@@ -126,10 +126,10 @@
                         transform: skew(80deg, 0)
                     }
 
-                    62% {
-                        opacity: .8;
-                        transform: scale(1, 1.2);
-                        transform: skew(-50deg, 0)
+                    42% {
+                        opacity: .7;
+                        transform: scale(1, 1.1);
+                        transform: skew(-32deg, 0)
                     }
                 }
                 @keyframes glitch {
@@ -148,9 +148,9 @@
                     }
 
                     42% {
-                        opacity: .8;
-                        transform: scale(1, 1.2);
-                        transform: skew(-50deg, 0)
+                        opacity: .7;
+                        transform: scale(1, 1.1);
+                        transform: skew(-32deg, 0)
                     }
                 }
 
@@ -165,8 +165,8 @@
                  header h1 {          
                     margin-bottom: 4rem;
                     margin-top: 3rem;
-                    -webkit-animation: glitch1 108ms infinite, jerkup 150ms infinite, jerk 400ms infinite;
-                    animation: glitch1 108ms infinite, jerkup 150ms infinite, jerk 400ms infinite;
+                    -webkit-animation: transform 0.25s cubic-bezier(0.5, 0, 0.25, 1.25), glitch1 108ms infinite, jerkup 450ms infinite, jerk 200ms infinite;
+                    animation: transform 0.25s cubic-bezier(0.5, 0, 0.25, 1.25), glitch1 108ms infinite, jerkup 450ms infinite, jerk 200ms infinite;
                     text-shadow: #4c4c4c 0.35rem 0.35rem;
                     font-size: 4.5rem;
                     color: #fc618d;
