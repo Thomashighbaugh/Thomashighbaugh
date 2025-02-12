@@ -10,8 +10,9 @@
   "version": "0.0.5",
   "homepage": "https://github.com/Thomashighbaugh/Thomashighbaugh#readme",
   "dependencies": {
-    "date-stringifier": "^1.1.4",
-    "jimp": "^1.6.0"
+    "date-stringifier": "^2.0.0",
+    "jimp": "*",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "prettier": "^3.5.0"

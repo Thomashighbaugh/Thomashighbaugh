@@ -11,7 +11,12 @@ const replacers = fs
   .readdirSync('./src/replacers')
   .filter((file) => file.endsWith('js'))
   .reduce((acc, cur) => {
-    acc[cur.slice(0, -3)] = require('./replacers/' + cur);
+    const replacerName = cur.slice(0, -3);
+    try {
+      acc[replacerName] = require('./replacers/' + cur);
+    } catch (error) {
+      console.error(`Error loading replacer ${replacerName}:`, error);
+    }
     return acc;
   }, {});
 
@@ -46,16 +51,26 @@ const replacers = fs
     }
 
     // Replace all the replacer tags in the content string with the values returned by the replacer functions
-    const updatedMd = await replaceAsync(content, replacementRegex, async (e) => {
-      return await replacers[e.slice(2, -1)](data);
-    });
+    try {
+      const updatedMd = await replaceAsync(content, replacementRegex, async (e) => {
+        const replacerName = e.slice(2, -1);
+        if (replacers[replacerName]) {
+          return await replacers[replacerName](data);
+        } else {
+          console.warn(`No replacer found for tag: ${e}`);
+          return e; // Return the original tag if no replacer is found
+        }
+      });
 
-    // Write the updated content to the README.md file
-    fs.writeFile('README.md', updatedMd, 'utf-8', (err) => {
-      if (err) {
-        throw err;
-      }
-      console.log('README update complete.');
-    });
+      // Write the updated content to the README.md file
+      fs.writeFile('README.md', updatedMd, 'utf-8', (err) => {
+        if (err) {
+          throw err;
+        }
+        console.log('README update complete.');
+      });
+    } catch (error) {
+      console.error("An error occurred during the replacement process:", error);
+    }
   });
 })();
