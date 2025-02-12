@@ -4,12 +4,6 @@
         <div   xmlns="http://www.w3.org/1999/xhtml" id="canvas">
             <style>
                 /************************************************************************ 
-                Import Fonts
-                ************************************************************************/
-                @import url(https://fonts.googleapis.com/css2?family=Knewave);
-                @import url(https://fonts.googleapis.com/css2?family=Tiny5);
-                @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
-                /************************************************************************ 
                 define animations 
                 ************************************************************************/
                 // define jerk
@@ -264,6 +258,12 @@
                     -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
                     -animation: jerkup 5ms infinite, jerk 10ms infinite;
                     animation: jerkup 5ms infinite, jerk 10ms infinite;
+                   animation: border 5s linear infinite;
+                   -animation: border 5s linear infinite;
+                   -webkit-animation: border 5s linear infinite;
+
+
+                
                     
                 }
                 .list::after {
