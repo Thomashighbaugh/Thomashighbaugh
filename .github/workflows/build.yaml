@@ -1,6 +1,7 @@
 name: Generate README
 
 on:
+  workflow_dispatch: # Run workflow via GitHub website
   schedule:
     # Run this workflow everyday at 00:01 UTC
     - cron: '1 0 */1 * *'
