@@ -6,6 +6,8 @@
   },
   "main": "src/index.js",
   "author": "Thomashighbaugh",
+  "name": "thomashighbaugh",
+  "version": "0.0.5",
   "homepage": "https://github.com/Thomashighbaugh/Thomashighbaugh#readme",
   "dependencies": {
     "date-stringifier": "^1.1.4",

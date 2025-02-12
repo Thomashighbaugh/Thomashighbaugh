@@ -1,4 +1,4 @@
-const Jimp = require('jimp');
+const { Jimp } = require('jimp');
 const dateStringifier = require('date-stringifier');
 
 async function drawFollowerImage(follower, fileName) {
