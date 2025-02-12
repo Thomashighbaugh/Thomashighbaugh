@@ -258,6 +258,8 @@
                 .list {
                     margin-top: 4rem;
                     margin-bottom:4rem;
+                margin-left: 1rem;
+                margin-right:1rem;
                     padding: 0;
                     display: flex;
                     justify-content: space-between;
