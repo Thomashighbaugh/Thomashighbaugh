@@ -9,21 +9,21 @@
                 // define jerk
                 @keyframes jerk {
                     50% {
-                        transform: translateX(1px)
+                        transform: translateX(1px);
                     }
 
                     51% {
-                        transform: translateX(0)
+                        transform: translateX(0);
                     }
                 }
                 //define jerkup
                 @keyframes jerkup {
                     0% {
-                        transform: translateY(1px)
+                        transform: translateY(1px);
                     }
 
                     to {
-                        transform: translateY(-1px)
+                        transform: translateY(-1px);
                     }
                 }
                 //define glitch1
@@ -33,12 +33,12 @@
                     30%,
                     32%,
                     98% {
-                        transform: translateX(0)
+                        transform: translateX(0);
                     }
 
                     31%,
                     to {
-                        transform: translateX(3px)
+                        transform: translateX(3px);
                     }
                 }
                 //define glitch2
@@ -47,12 +47,12 @@
                     30%,
                     32%,
                     98% {
-                        transform: translateX(0)
+                        transform: translateX(0);
                     }
 
                     31%,
                     to {
-                        transform: translateX(-5px)
+                        transform: translateX(-5px);
                     }
                 }
                 // define glitch
@@ -62,13 +62,13 @@
                     43% {
                         opacity: 1;
                         transform: scale(1, 1);
-                        transform: skew(0, 0)
+                        transform: skew(0, 0);
                     }
 
                     41% {
                         opacity: .7;
                         transform: scale(1, 1.4);
-                        transform: skew(80deg, 0)
+                        transform: skew(80deg, 0);
                     }
 
                     42% {
@@ -80,13 +80,13 @@
                     87% {
                         opacity: 1;
                         transform: scale(1, 1);
-                        transform: skew(0, 0)
+                        transform: skew(0, 0);
                     }
 
                     83% {
                         opacity: .7;
                         transform: scale(1, 1.4);
-                        transform: skew(80deg, 0)
+                        transform: skew(80deg, 0);
                     }
                 84%{
                    opacity: .6;
@@ -99,29 +99,8 @@
                     86% {
                         opacity: .8;
                         transform: scale(1, 1.2);
-                        transform: skew(-23deg, 0)
+                        transform: skew(-23deg, 0);
                     }
-                94%{
-                    opacity: .6;
-                        transform: scale(1, 1.1);
-                }, 
-                                95%{
-                    opacity: .7;
-                        transform: scale(1, 1.2);
-                }
-                96%{
-                      opacity: .6;
-                        transform: scale(1, 1.3);
-                }
-                                98%{
-                      opacity: .7;
-                        transform: scale(1, 1.2);
-                }
-                99%{
-                       opacity: 1;
-                        transform: scale(1, 1);
-                        transform: skew(0, 0)
-                }
                 
                 }
                 
