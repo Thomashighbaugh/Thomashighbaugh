@@ -307,7 +307,7 @@
                 }
 
             </style>
-            <main>
+            <main id="canvas">
                 <div class="screen">
                     <div class="menu">
                         <header> <h1>Thomas Leon Highbaugh </h1> </header>
