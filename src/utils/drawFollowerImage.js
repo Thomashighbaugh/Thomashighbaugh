@@ -10,26 +10,24 @@ async function drawFollowerImage(follower, fileName) {
       const response = await fetch(follower.avatar_url);
       avatarBuffer = await response.arrayBuffer();
     } catch (fetchError) {
-      console.error("Error fetching avatar:", fetchError);
+      console.error('Error fetching avatar:', fetchError);
       try {
         avatarBuffer = await fs.readFile('./src/resources/images/default_avatar.png');
       } catch (fallbackError) {
-        console.error("Error reading fallback avatar:", fallbackError);
+        console.error('Error reading fallback avatar:', fallbackError);
         return; // Exit if both fail
       }
     }
 
     // 2. Resize Avatar
-    const resizedAvatarBuffer = await sharp(avatarBuffer)
-      .resize(269, 269)
-      .toBuffer();
+    const resizedAvatarBuffer = await sharp(avatarBuffer).resize(269, 269).toBuffer();
 
     // 3. Load Avatar Mask
     let maskBuffer;
     try {
       maskBuffer = await fs.readFile('./src/resources/images/levelMask.png');
     } catch (maskError) {
-      console.error("Error reading mask:", maskError);
+      console.error('Error reading mask:', maskError);
       return;
     }
 
@@ -44,7 +42,7 @@ async function drawFollowerImage(follower, fileName) {
     try {
       baseBuffer = await fs.readFile('./src/resources/images/CoderBase.png');
     } catch (baseError) {
-      console.error("Error reading base image:", baseError);
+      console.error('Error reading base image:', baseError);
       return;
     }
 
@@ -55,9 +53,7 @@ async function drawFollowerImage(follower, fileName) {
       top: 18,
       left: 16,
     };
-    const composedImageBuffer = await baseImage
-      .composite([compositeOptions])
-      .toBuffer();
+    const composedImageBuffer = await baseImage.composite([compositeOptions]).toBuffer();
 
     //Text Operations are not supported in sharp. Need to composite an svg or something
     //7. Font and date loading
@@ -66,9 +62,8 @@ async function drawFollowerImage(follower, fileName) {
     // 8. Save the final Image
 
     await fs.writeFile(`./src/resources/images/${fileName}`, composedImageBuffer);
-
   } catch (error) {
-    console.error("General error in drawFollowerImage:", error);
+    console.error('General error in drawFollowerImage:', error);
   }
 }
 

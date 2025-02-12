@@ -70,7 +70,7 @@ const replacers = fs
         console.log('README update complete.');
       });
     } catch (error) {
-      console.error("An error occurred during the replacement process:", error);
+      console.error('An error occurred during the replacement process:', error);
     }
   });
 })();
