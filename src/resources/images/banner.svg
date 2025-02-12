@@ -249,22 +249,15 @@
                     margin: 1rem;
                     padding: 1rem;
                     border-radius: 0.25rem;
-                    border: #f4f4f7 solid 0.06125rem;
-                    box-shadow: 0.65rem 0.65rem #000;
+                    border: #f4f4f7 solid 0.125rem;
+                    box-shadow: 0.75rem 0.75rem #000;
                     font-size: 130%;
                     font-weight:900;
                     font-family: "VT323", monospace !important;
                     text-shadow: 0.25rem 0.25rem solid #222222;
-                    -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite; 
-                    -animation: jerkup 5ms infinite, jerk 10ms infinite;
-                    animation: jerkup 5ms infinite, jerk 10ms infinite;
-                   animation: border 5s linear infinite;
-                   -animation: border 5s linear infinite;
-                   -webkit-animation: border 5s linear infinite;
-
-
-                
-                    
+                    -webkit-animation:  border 5s linear infinite, jerkup 5ms infinite, jerk 10ms infinite; 
+                    -animation:  border 5s linear infinite, jerkup 5ms infinite, jerk 10ms infinite;
+                    animation:  border 5s linear infinite, jerkup 5ms infinite, jerk 10ms infinite;            
                 }
                 .list::after {
                     clear: both
