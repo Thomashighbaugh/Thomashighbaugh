@@ -132,11 +132,38 @@
 
                     41% {
                         opacity: .7;
-                        transform: scale(1, 1.2);
+                        transform: scale(1, 1.4);
                         transform: skew(80deg, 0)
                     }
 
                     42% {
+                        opacity: .8;
+                        transform: scale(1, 1.2);
+                        transform: skew(-23deg, 0)
+                    }
+                   80%,
+                    87% {
+                        opacity: 1;
+                        transform: scale(1, 1);
+                        transform: skew(0, 0)
+                    }
+
+                    83% {
+                        opacity: .7;
+                        transform: scale(1, 1.4);
+                        transform: skew(80deg, 0)
+                    }
+                84%{
+                   opacity: .6;
+                  transform: scale(1, 1.3);
+                }
+                85%{
+                   opacity: .7;
+                  transform: scale(1, 1.25);
+                }
+                
+
+                    86% {
                         opacity: .8;
                         transform: scale(1, 1.2);
                         transform: skew(-23deg, 0)
