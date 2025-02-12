@@ -6,24 +6,21 @@
                 /************************************************************************ 
                 Import Fonts
                 ************************************************************************/
-                @import url(https://fonts.googleapis.com/css2?family=Knewave);
-                @import url(https://fonts.googleapis.com/css2?family=Tiny5);
-                @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P);
                 @font-face{
                     font-family: "Knewave";
-                    src: url("../.fonts/Knewave/Knewave-Regular.woff2");
+                    src: url("/src/resources/fonts/Knewave/Knewave-Regular.woff2");
                 }
                 @font-face{
                     font-family: "Press Start 2P";
-                    src: url("../.fonts/Press_Start_2P/PressStart2P-Regular.woff2");
+                    src: url("/src/resources/fonts/Press_Start_2P/PressStart2P-Regular.woff2");
                 }
                 @font-face{
                     font-family: "Tiny5";
-                    src: url("../.fonts/Tiny5/Tiny5-Regular.woff2");
+                    src: url("/src/resources/fonts/Tiny5/Tiny5-Regular.woff2");
                 }
                 @font-face{
                     font-family: "VT323";
-                    src: url("../fonts/VT323/VT323-Regular.woff2");
+                    src: url("/src/resources/fonts/VT323/VT323-Regular.woff2");
                 }
                 /************************************************************************ 
                 define animations 
