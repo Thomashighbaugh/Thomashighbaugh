@@ -2,7 +2,9 @@
   "scripts": {
     "start": "node src/index.js",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
-    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\""
+    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "test": "mocha \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "main": "src/index.js",
   "author": "Thomashighbaugh",
@@ -15,6 +17,8 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "prettier": "^3.5.0"
+    "prettier": "^3.5.0",
+    "eslint": "^8.32.0",
+    "mocha": "^10.2.0"
   }
 }
