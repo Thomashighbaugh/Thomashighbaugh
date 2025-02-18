@@ -1,0 +1,180 @@
+const { expect } = require('chai');
+const sinon = require('sinon');
+const fs = require('fs');
+const path = require('path');
+const proxyquire = require('proxyquire');
+
+describe('Replacers', () => {
+  describe('header.js', () => {
+    it('should generate the correct header HTML', () => {
+      const data = {
+        header: {
+          image: {
+            src: 'src/resources/images/banner.svg',
+            width: 850,
+            height: 425,
+          },
+          styles: {
+            align: 'center',
+            style: 'for-the-badge',
+            color: '#3c3c3c',
+            logoColor: '#6AB0F3',
+          },
+          badges: [
+            {
+              type: 'badge',
+              name: 'contacts',
+              href: 'https://links.thomasleonhighbaugh.me',
+              logo: 'linktree',
+            },
+            {
+              type: 'badge',
+              name: 'website',
+              href: 'https://thomasleonhighbaugh.me',
+              logo: 'firefox',
+            },
+            {
+              type: 'badge',
+              name: 'resume',
+              href: 'https://resume.thomasleonhighbaugh.me',
+              logo: 'libreoffice',
+            },
+            {
+              type: 'views',
+            },
+          ],
+        },
+        user: 'Thomashighbaugh',
+      };
+
+      const header = require('./header')(data);
+      expect(header).to.include('<p align="center">');
+      expect(header).to.include('<img src="src/resources/images/banner.svg" width="850" height="425">');
+      expect(header).to.include('<img src="https://img.shields.io/badge/contacts-linktree-3c3c3c?style=for-the-badge&color=3c3c3c&logoColor=6AB0F3&logo=linktree">');
+      expect(header).to.include('<img src="https://img.shields.io/badge/website-firefox-3c3c3c?style=for-the-badge&color=3c3c3c&logoColor=6AB0F3&logo=firefox">');
+      expect(header).to.include('<img src="https://img.shields.io/badge/resume-libreoffice-3c3c3c?style=for-the-badge&color=3c3c3c&logoColor=6AB0F3&logo=libreoffice">');
+      expect(header).to.include('<img src="https://komarev.com/ghpvc/?username=Thomashighbaugh&style=for-the-badge&color=3c3c3c&logoColor=6AB0F3">');
+      expect(header).to.include('</p>');
+    });
+  });
+
+  describe('myexperience.js', () => {
+    it('should calculate the correct experience time', () => {
+      const data = {
+        startedProgramming: '06/03/2016',
+      };
+
+      const myexperience = require('./myexperience')(data);
+      expect(myexperience).to.match(/\d+ Years?, \d+ Months? and \d+ Days?/);
+    });
+  });
+
+  describe('randomFollower.js', () => {
+    it('should generate the correct random follower HTML', async () => {
+      const follower = {
+        html_url: 'https://github.com/testuser',
+        name: 'Test User',
+        avatar_url: 'https://avatars.githubusercontent.com/u/12345678?v=4',
+        created_at: '2020-01-01T00:00:00Z',
+      };
+
+      const getRandomFollowerStub = sinon.stub().resolves(follower);
+      const drawFollowerImageStub = sinon.stub();
+
+      const randomFollower = proxyquire('./randomFollower', {
+        '../utils/githubApi': { getRandomFollower: getRandomFollowerStub },
+        '../utils/drawFollowerImage': { drawFollowerImage: drawFollowerImageStub },
+      });
+
+      const data = { user: 'Thomashighbaugh' };
+      const result = await randomFollower(data);
+
+      expect(result).to.include('<a href="https://github.com/testuser" alt="Test User">');
+      expect(result).to.include('<img style="block-size:150px; overflow:none !important;" src=./src/resources/images/randomFollower.png alt="Follower of the day"/>');
+    });
+  });
+
+  describe('recentworks.js', () => {
+    it('should generate the correct recent works HTML', async () => {
+      const repos = [
+        {
+          name: 'repo1',
+          html_url: 'https://github.com/Thomashighbaugh/repo1',
+          updated_at: '2023-01-01T00:00:00Z',
+        },
+        {
+          name: 'repo2',
+          html_url: 'https://github.com/Thomashighbaugh/repo2',
+          updated_at: '2023-02-01T00:00:00Z',
+        },
+      ];
+
+      const getRepositoriesStub = sinon.stub().resolves(repos);
+
+      const recentworks = proxyquire('./recentworks', {
+        '../utils/githubApi': { getRepositories: getRepositoriesStub },
+      });
+
+      const data = { user: 'Thomashighbaugh', repoQuantity: 2 };
+      const result = await recentworks(data);
+
+      expect(result).to.include('<a href="https://github.com/Thomashighbaugh/repo2">');
+      expect(result).to.include('<a href="https://github.com/Thomashighbaugh/repo1">');
+    });
+  });
+
+  describe('skillswall.js', () => {
+    it('should generate the correct skills wall HTML', () => {
+      const data = {
+        skillswall: {
+          styles: {
+            align: 'left',
+            style: 'plastic',
+          },
+          randomOrder: false,
+          skills: [
+            { name: 'JavaScript' },
+            { name: 'React', isHighlighted: true },
+          ],
+        },
+      };
+
+      const skillswall = require('./skillswall')(data);
+      expect(skillswall).to.include('<p align="left">');
+      expect(skillswall).to.include('<img src="https://img.shields.io/badge/javascript-3c3c3c?style=plastic&color=3c3c3c&logoColor=F2f2f2&logo=javascript">');
+      expect(skillswall).to.include('<img src="https://img.shields.io/badge/react-3c3c3c?style=plastic&color=3c3c3c&logoColor=F2f2f2&logo=react">');
+      expect(skillswall).to.include('</p>');
+    });
+  });
+
+  describe('socialMedias.js', () => {
+    it('should generate the correct social media badges HTML', () => {
+      const data = {
+        socialMedias: {
+          styles: {
+            align: 'left',
+            style: 'plastic',
+            color: '#3c3c3c',
+            logoColor: '#F2f2f2',
+          },
+          links: [
+            {
+              name: 'twitter',
+              href: 'https://twitter.com/thomasleonhighbaugh',
+            },
+            {
+              name: 'linkedin',
+              href: 'https://linkedin.com/in/thomas-leon-highbaugh',
+            },
+          ],
+        },
+      };
+
+      const socialMedias = require('./socialMedias')(data);
+      expect(socialMedias).to.include('<p align="left">');
+      expect(socialMedias).to.include('<img src="https://img.shields.io/badge/twitter-3c3c3c?style=plastic&color=3c3c3c&logoColor=F2f2f2&logo=twitter">');
+      expect(socialMedias).to.include('<img src="https://img.shields.io/badge/linkedin-3c3c3c?style=plastic&color=3c3c3c&logoColor=F2f2f2&logo=linkedin">');
+      expect(socialMedias).to.include('</p>');
+    });
+  });
+});
