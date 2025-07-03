@@ -223,7 +223,7 @@
                     -webkit-animation: jerkup 5ms infinite, jerk 10ms infinite;
                     animation: jerkup 5ms infinite, jerk 10ms infinite;
                     font-weight: 900;
-                    font-size: 3.75rem;
+                    font-size: 1.75rem;
                     color: #5ad4e6 !important;
                     text-shadow: 0.25rem 0.25rem #2c2c2c;
                 }
