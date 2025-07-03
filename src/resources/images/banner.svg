@@ -314,7 +314,7 @@
             <main id="canvas">
                 <div class="screen">
                     <div class="menu">
-                        <header> <h1>Thomas Leon Highbaugh </h1> </header>
+                        <header> <h1 style="font-family: 'Knewave', monospace;">Thomas Leon Highbaugh </h1> </header>
                         <div class="list">
                             <button class="active">Software Engineer</button>
                             <button class="active">Linux SysAd</button>
