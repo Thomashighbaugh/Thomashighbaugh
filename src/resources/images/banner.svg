@@ -157,7 +157,7 @@
                         transform: skew(80deg, 0)
                     }
 
-                    45% {
+                    42% {
                         opacity: .7;
                         transform: scale(1, 1.1);
                         transform: skew(-32deg, 0)
