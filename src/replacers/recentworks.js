@@ -19,8 +19,7 @@ module.exports = async function (data) {
    * @param {Object} b - The second repository to compare.
    * @returns {number} - A negative number if a should be sorted before b, a positive number if a should be sorted after b, and 0 if they are equal.
    */
-  const getRecents = (a, b) => (new Date(a.updated_at) > new Date(b.updated_at) ? -1 : 1);
-
+  const getRecents = (a, b) => (new Date(a.pushed_at) > new Date(b.pushed_at) ? -1 : 1);
   /**
    * This function formats a repository into an HTML link.
    *
