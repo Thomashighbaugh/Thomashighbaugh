@@ -10,26 +10,26 @@
                     font-family: "Knewave";
                     font-weight: 400;
                     font-style: normal;
-                    src: url("/src/resources/fonts/Knewave/Knewave-Regular.woff2")  format('woff2');
+                    src: url("https://github.com/Thomashighbaugh/Thomashighbaugh/raw/refs/heads/main/src/resources/fonts/Knewave/Knewave-Regular.woff2")  format('woff2');
                 }
                 @font-face{
                     font-family: "Press Start 2P";
                     font-weight: 400;
                     font-style: normal;    
-                    src: url("/src/resources/fonts/Press_Start_2P/PressStart2P-Regular.woff2") format('woff2')
+                    src: url("https://github.com/Thomashighbaugh/Thomashighbaugh/raw/refs/heads/main/src/resources/fonts/Press_Start_2P/PressStart2P-Regular.woff2") format('woff2')
 
                 }
                 @font-face{
                     font-family: "Tiny5";
                     font-weight: 400;
                     font-style: normal;
-                    src: url("/src/resources/fonts/Tiny5/Tiny5-Regular.woff2")  format('woff2');
+                    src: url("https://github.com/Thomashighbaugh/Thomashighbaugh/raw/refs/heads/main/src/resources/fonts/Tiny5/Tiny5-Regular.woff2")  format('woff2');
                 }
                 @font-face{
                     font-family: "VT323";
                     font-weight: 400;
                     font-style: normal;
-                    src: url("/src/resources/fonts/VT323/VT323-Regular.woff2")  format('woff2');
+                    src: url("https://github.com/Thomashighbaugh/Thomashighbaugh/blob/main/src/resources/fonts/VT323/VT323-Regular.woff2")  format('woff2');
                 }
                 /************************************************************************ 
                 define animations 
