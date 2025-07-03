@@ -13,20 +13,20 @@
                     font-family: "Knewave";
                     font-weight: 400;
                     font-style: normal;
-                    src: url("../.fonts/Knewave/Knewave-Regular.woff2")  format('woff2');
+                    src: url("../fonts/Knewave/Knewave-Regular.woff2")  format('woff2');
                 }
                 @font-face{
                     font-family: "Press Start 2P";
                     font-weight: 400;
                     font-style: normal;    
-                    src: url("../.fonts/Press_Start_2P/PressStart2P-Regular.woff2") format('woff2')
+                    src: url("../fonts/Press_Start_2P/PressStart2P-Regular.woff2") format('woff2')
 
                 }
                 @font-face{
                     font-family: "Tiny5";
                     font-weight: 400;
                     font-style: normal;
-                    src: url("../.fonts/Tiny5/Tiny5-Regular.woff2")  format('woff2');
+                    src: url("../fonts/Tiny5/Tiny5-Regular.woff2")  format('woff2');
                 }
                 @font-face{
                     font-family: "VT323";
