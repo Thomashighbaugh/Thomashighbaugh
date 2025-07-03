@@ -178,7 +178,7 @@
                     -webkit-animation: transform 0.25s cubic-bezier(0.5, 0, 0.25, 1.25), glitch1 108ms infinite, jerkup 450ms infinite, jerk 200ms infinite;
                     animation: transform 0.25s cubic-bezier(0.5, 0, 0.25, 1.25), glitch1 108ms infinite, jerkup 450ms infinite, jerk 200ms infinite;
                     text-shadow: #4c4c4c 0.35rem 0.35rem;
-                    font-size: 4.5rem;
+                    font-size: 5.5rem;
                     color: #fc618d;
                     font-family: "Knewave",monospace !important;
                 }
@@ -310,7 +310,7 @@
                         <div class="list">
                             <button class="active">Software Engineer</button>
                             <button class="active">Linux Administrator</button>
-                            <button class="active">AI Engineer</button>
+                            <button class="active">AI/ML Engineer</button>
                             
                         </div>
                         <footer style="width:100%!important;margin-left:0!important">
