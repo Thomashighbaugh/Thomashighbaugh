@@ -1,8 +1,8 @@
 ## SVG Banner Documentation: Embedding Interactive HTML within GitHub Markdown
 
-You're exploring a fascinating technique for rich content rendering within GitHub's markdown! Let's break down how this works and write some documentation for it.
+Yes that is an SVG image as my banner with a nested HTML+CSS/JS page rendering inside of it, allowing me full acess to the power of HTML in more traditional contexts right here inside of my GitHub profile README.
 
----
+----
 
 This documentation explains a novel approach to rendering dynamic and interactive content, including HTML, CSS, and JavaScript, directly within GitHub's markdown files. This is achieved by embedding a full HTML document, complete with its own styling and scripting, inside an SVG (Scalable Vector Graphics) file. This SVG file is then referenced within the markdown, allowing GitHub's renderer to display the SVG, which in turn renders the embedded HTML content.
 
