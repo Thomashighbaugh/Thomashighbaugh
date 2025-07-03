@@ -287,13 +287,13 @@
                     box-sizing: border-box;
                     margin: 1rem;
                     padding: 1rem;
-                    height: 8rem;
+                    height: 6rem;
                     border-radius: 0.25rem;
                     border: #f4f4f7 solid 0.125rem;
                     box-shadow: 0.95rem 0.95rem #000;
                     font-size: 130%;
                     font-weight:900;
-                    font-family: "VT323", monospace !important;
+                    font-family: "Tiny5", monospace !important;
                     text-shadow: 0.25rem 0.25rem solid #222222;
                     -webkit-animation:  border 5s linear infinite, jerkup 5ms infinite, jerk 10ms infinite; 
                      animation:  border 5s linear infinite, jerkup 5ms infinite, jerk 10ms infinite;            
