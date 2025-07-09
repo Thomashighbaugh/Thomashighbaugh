@@ -5,7 +5,7 @@
 Tom's Law of Software Development
 </strong> 
 <br>
- <em>The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or absolutely miserable it was to develop and then iteratively refine into such a form.</em>
+ <em>The more convenient, useful or helpful a software is to use, <br> the more of a painful, tedious and/or absolutely miserable it was to <br>develop and then iteratively refine into such a form.</em>
 </div>
 <br>
 <hr>
