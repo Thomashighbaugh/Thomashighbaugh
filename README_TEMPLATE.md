@@ -3,8 +3,9 @@
 <div align="center">
 <strong>
 Tom's Law of Software Development
-</strong>
- <em>The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or miserable it was to develop.</em>
+</strong> 
+<br>
+ <em>The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or absolutely miserable it was to develop and then iteratively refine into such a form.</em>
 </div>
 <br>
 <hr>
@@ -85,7 +86,7 @@ Account Statistics</summary>
   <!--- Row ---->
   <tr>
    <td>
-      <img align="center" width="100%" alt="Repos per lang" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai">
+      https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai">
     </td>
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=compact" /></td>
 
