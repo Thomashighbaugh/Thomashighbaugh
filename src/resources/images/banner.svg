@@ -52,7 +52,6 @@
                     0% {
                         transform: translateY(1px)
                     }
- 75%2
                     to {
                         transform: translateY(-1px)
                     }
@@ -196,6 +195,9 @@
                     min-width: 100% !important;
                     width: 850px !important;
                    max-width:100% !important;
+                min-height:100% !important;
+                height:100% !important;
+                max-height:100% !important;
                     justify-content: center;
                     justify-items: center
                     font-family: "Tiny5", monospace !important;
@@ -371,4 +373,5 @@
         ]]>
     </script>
 </svg>
+
 
