@@ -4,7 +4,8 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-    "test": "mocha \"src/**/*.{js,jsx,ts,tsx}\""
+    "test": "mocha \"src/**/*.{js,jsx,ts,tsx}\"",
+    "ai-bio": "node scripts/generate-ai-bio.js"
   },
   "main": "src/index.js",
   "author": "Thomashighbaugh",
