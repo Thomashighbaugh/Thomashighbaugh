@@ -8,7 +8,7 @@ async function drawFollowerImage(follower, fileName) {
     let avatarBuffer;
     try {
       const response = await fetch(follower.avatar_url);
-      avatarBuffer = await response.arrayBuffer();
+      avatarBuffer = Buffer.from(await response.arrayBuffer());
     } catch (fetchError) {
       console.error('Error fetching avatar:', fetchError);
       try {
@@ -31,11 +31,13 @@ async function drawFollowerImage(follower, fileName) {
       return;
     }
 
-    // 4. Composite Avatar with Mask  (This is trickier with Sharp - see notes below)
-    // NOTE: Sharp doesn't have a direct "mask" function like Jimp. You'd typically
-    // have to composite the avatar with a transparent circle on top of the mask.
-    // This is a simplified example assuming the mask itself makes the image circular.
-    const maskedAvatarBuffer = resizedAvatarBuffer; // In a real implementation, you'd composite.
+    // 4. Apply mask to make avatar circular
+    // The levelMask.png is RGB (3 channels), so use its grayscale values as the
+    // alpha channel of the avatar. Brighter pixels = more opaque.
+    const grayMask = await sharp(maskBuffer).greyscale().toBuffer();
+    const maskedAvatarBuffer = await sharp(resizedAvatarBuffer)
+      .joinChannel(grayMask)
+      .toBuffer();
 
     // 5. Load CoderBase
     let baseBuffer;
@@ -46,20 +48,30 @@ async function drawFollowerImage(follower, fileName) {
       return;
     }
 
-    // 6. Composite Avatar onto Base
+    // 6. Composite Avatar onto Base with text overlay
     const baseImage = sharp(baseBuffer);
-    const compositeOptions = {
-      input: maskedAvatarBuffer,
-      top: 18,
-      left: 16,
-    };
-    const composedImageBuffer = await baseImage.composite([compositeOptions]).toBuffer();
-
-    //Text Operations are not supported in sharp. Need to composite an svg or something
-    //7. Font and date loading
+    const baseMetadata = await baseImage.metadata();
+    const width = baseMetadata.width || 900;
+    const height = baseMetadata.height || 300;
     const formattedDate = dateStringifier(new Date(follower.created_at), `Joined {MM}/{DD}/{yy}`);
 
-    // 8. Save the final Image
+    const textSvg = `
+<svg width="${width}" height="${height}">
+  <style>
+    .name { fill: #fff; font-size: 18px; font-family: sans-serif; font-weight: bold; }
+    .date { fill: #ccc; font-size: 13px; font-family: sans-serif; }
+  </style>
+  <text x="150" y="270" text-anchor="middle" class="name">${follower.login}</text>
+  <text x="150" y="288" text-anchor="middle" class="date">${formattedDate}</text>
+</svg>`;
+    const textOverlay = await sharp(Buffer.from(textSvg)).toBuffer();
+
+    const composedImageBuffer = await baseImage.composite([
+      { input: maskedAvatarBuffer, top: 18, left: 16 },
+      { input: textOverlay, top: 0, left: 0 }
+    ]).toBuffer();
+
+    // 7. Save the final Image
 
     await fs.writeFile(`./src/resources/images/${fileName}`, composedImageBuffer);
   } catch (error) {
