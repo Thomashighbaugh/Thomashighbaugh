@@ -1,3 +1,5 @@
+// @ts-check
+
 const { generateElement } = require('./generateElement');
 
 const normalizeColor = (color) => color.replace('#', '');

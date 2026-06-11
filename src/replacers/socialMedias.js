@@ -1,6 +1,12 @@
+// @ts-check
+
 const { generateBadge } = require('../utils/generateBadge');
 const { generateElement } = require('../utils/generateElement');
 
+/**
+ * Social media links replacer.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = function (data) {
   const socialMedias = data.socialMedias;
   const { align, ...badgeGenericStyles } = socialMedias.styles;

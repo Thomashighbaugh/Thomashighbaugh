@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * Theme configuration — colors used across all replacers and utils.
+ * @type {{ colors: import('./types').ThemeColors }}
+ */
 module.exports = {
   colors: {
     primary: '#3c3c3c',

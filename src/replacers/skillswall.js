@@ -1,19 +1,37 @@
+// @ts-check
+
 const theme = require('../theme');
 const { generateBadge } = require('../utils/generateBadge');
 const { generateElement } = require('../utils/generateElement');
 
+/** @type {string[]} */
 const wallColors = [theme.colors.primary, theme.colors.lightPrimary];
+
 const highlightColor = theme.colors.primary;
 
+/**
+ * @param {{ isHighlighted?: boolean }} options
+ * @returns {{ color: string, logoColor: string }}
+ */
 const getWallColor = (options = { isHighlighted: false }) => ({
   color: options.isHighlighted ? highlightColor : wallColors[Math.floor(Math.random() * wallColors.length)],
   logoColor: theme.colors.white,
 });
 
+/**
+ * Encode a string for use in shields.io badge URLs.
+ * @param {string} str
+ * @param {string} replacer - character to replace '-' with
+ * @returns {string}
+ */
 const encodeStr = (str, replacer) => {
   return encodeURI(str.toLowerCase().replace(/-/g, replacer));
 };
 
+/**
+ * Skills wall replacer — renders categorized skill badges.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = function (data) {
   const skillswall = data.skillswall;
   const { align, ...badgeGenericStyles } = skillswall.styles;

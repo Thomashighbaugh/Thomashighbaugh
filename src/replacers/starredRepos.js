@@ -1,5 +1,10 @@
+// @ts-check
+
 /**
- * Fetch starred repos for a user, sorted by star count descending.
+ * Fetch starred repos for a user.
+ * @param {string} username
+ * @param {string|null} [token]
+ * @returns {Promise<import('../types').StarredItem[]>}
  */
 async function getStarredRepos(username, token = null) {
   const headers = { 'User-Agent': 'starred-repos-script', 'Accept': 'application/vnd.github.star+json' };
@@ -12,6 +17,10 @@ async function getStarredRepos(username, token = null) {
   return await res.json();
 }
 
+/**
+ * Starred repos replacer — shows top 6 recently starred repos as pin cards.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = async function (data) {
   const { user, token } = data;
   

@@ -1,3 +1,11 @@
+// @ts-check
+
+/**
+ * Fetch recent public events for a user and map to readable activity items.
+ * @param {string} username
+ * @param {string|null} [token]
+ * @returns {Promise<import('../types').ActivityItem[]>}
+ */
 async function getRecentEvents(username, token = null) {
   const headers = { 'User-Agent': 'recentworks-script' };
   if (token) headers.Authorization = `Bearer ${token}`;
@@ -93,6 +101,11 @@ async function getRecentEvents(username, token = null) {
   return activities;
 }
 
+/**
+ * Format a date string as relative time (e.g. "2 days ago").
+ * @param {string} dateStr - ISO date string
+ * @returns {string}
+ */
 function timeAgo(dateStr) {
   const now = new Date();
   const then = new Date(dateStr);
@@ -107,6 +120,11 @@ function timeAgo(dateStr) {
   return `${Math.floor(diffDays / 365)} year${Math.floor(diffDays / 365) > 1 ? 's' : ''} ago`;
 }
 
+/**
+ * Recent events replacer — fetches public GitHub events and renders
+ * a timeline with repo pin cards.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = async function (data) {
   const { user, token } = data;
 

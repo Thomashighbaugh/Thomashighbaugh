@@ -1,6 +1,12 @@
+// @ts-check
+
 const { generateBadge, generateViewsBadge } = require('../utils/generateBadge');
 const { generateElement } = require('../utils/generateElement');
 
+/**
+ * Header replacer — banner image + contact badges.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = function (data) {
   const header = data.header;
   const { align, ...badgeGenericStyles } = header.styles;

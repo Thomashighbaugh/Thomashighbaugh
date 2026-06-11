@@ -1,10 +1,11 @@
+// @ts-check
+
 const fs = require('fs');
 const path = require('path');
 
 /**
- * Reads a cached AI-generated bio from ai-bio-cache.md.
- * This file is generated weekly by .github/workflows/ai-bio.yml
- * which calls the Gemini API with recent GitHub activity.
+ * AI-generated bio replacer — reads cached weekly bio from ai-bio-cache.md.
+ * @type {import('../types').ReplacerFunction}
  */
 module.exports = async function () {
   const cachePath = path.join(__dirname, '..', '..', 'ai-bio-cache.md');

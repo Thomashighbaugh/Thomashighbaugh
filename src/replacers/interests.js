@@ -1,3 +1,11 @@
+// @ts-check
+
+/**
+ * Fetch user repos with topic data.
+ * @param {string} username
+ * @param {string|null} [token]
+ * @returns {Promise<import('../types').GitHubRepo[]>}
+ */
 async function getUserRepos(username, token = null) {
   const headers = { 'User-Agent': 'interests-replacer', 'Accept': 'application/vnd.github.mercy-preview+json' };
   if (token) headers.Authorization = `Bearer ${token}`;
@@ -9,6 +17,10 @@ async function getUserRepos(username, token = null) {
   return await res.json();
 }
 
+/**
+ * Interests/topics replacer — aggregates repo topics into a clickable tag cloud.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = async function (data) {
   const { user, token } = data;
   

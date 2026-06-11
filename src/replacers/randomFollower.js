@@ -1,6 +1,14 @@
+// @ts-check
+
 const { getRandomFollower } = require('../utils/githubApi');
 const { drawFollowerImage } = require('../utils/drawFollowerImage');
 
+/**
+ * Random follower showcase replacer.
+ * Fetches a deterministic follower of the day, composites their avatar,
+ * and displays enriched info (name, bio, stats).
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = async function (data) {
   try {
     const follower = await getRandomFollower(data.user);

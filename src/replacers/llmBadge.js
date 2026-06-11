@@ -1,8 +1,11 @@
+// @ts-check
+
 const { generateBadge } = require('../utils/generateBadge');
 const theme = require('../theme');
 
 /**
- * Renders a local LLM setup badge showing the ollama + DeepSeek configuration.
+ * Local LLM setup badge replacer.
+ * @type {import('../types').ReplacerFunction}
  */
 module.exports = async function () {
   const { colors } = theme;

@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * Experience timeline replacer — calculates time since started programming.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = function (data) {
   const started = data.startedProgramming.split('/').reverse();
   const past = new Date(...started).getTime();

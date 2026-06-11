@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @param {string} url
+ * @returns {Promise<any>}
+ */
 async function Request(url) {
   const headers = new Headers({
     'Content-Type': 'application/json',
@@ -6,6 +12,12 @@ async function Request(url) {
   return await (await fetch(url, headers)).json();
 }
 
+/**
+ * Fetch a random follower deterministically seeded by the current date.
+ * Filters for quality (has avatar, not a bot, has public repos).
+ * @param {string} user - GitHub username
+ * @returns {Promise<import('../types').GitHubFollower|null>}
+ */
 async function getRandomFollower(user) {
   const followers = await Request(`https://api.github.com/users/${user}/followers`);
 
@@ -39,7 +51,11 @@ async function getRandomFollower(user) {
   return pool[index];
 }
 
-// Simple string hash function for seeding
+/**
+ * Simple string hash function for seeding.
+ * @param {string} str
+ * @returns {number}
+ */
 function hashCode(str) {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
@@ -50,6 +66,11 @@ function hashCode(str) {
   return hash;
 }
 
+/**
+ * Fetch all repositories for a user.
+ * @param {string} user - GitHub username
+ * @returns {Promise<import('../types').GitHubRepo[]>}
+ */
 async function getRepositories(user) {
   const repositories = Request(`https://api.github.com/users/${user}/repos`);
   return repositories;

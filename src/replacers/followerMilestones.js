@@ -1,5 +1,14 @@
+// @ts-check
+
+/** @type {number[]} */
 const MILESTONES = [100, 250, 500, 1000, 2000, 5000, 10000];
 
+/**
+ * Fetch GitHub user profile info.
+ * @param {string} username
+ * @param {string|null} [token]
+ * @returns {Promise<import('../types').GitHubFollower>}
+ */
 async function getUserInfo(username, token = null) {
   const headers = { 'User-Agent': 'follower-milestones' };
   if (token) headers.Authorization = `Bearer ${token}`;
@@ -8,6 +17,11 @@ async function getUserInfo(username, token = null) {
   return await res.json();
 }
 
+/**
+ * Follower milestones replacer — displays follower count, celebrations,
+ * and progress toward the next milestone.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = async function (data) {
   const { user, token } = data;
   

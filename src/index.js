@@ -1,3 +1,5 @@
+// @ts-check
+
 // Import required modules
 const fs = require('fs');
 const data = require('./data.js');

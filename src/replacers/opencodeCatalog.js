@@ -1,11 +1,14 @@
+// @ts-check
+
 const fs = require('fs');
 const path = require('path');
 const theme = require('../theme');
 const { generateBadge } = require('../utils/generateBadge');
 
 /**
- * Renders the OpenCode agent/skill catalog as a README section.
- * Reads opencode-catalog.json to dynamically generate the catalog display.
+ * OpenCode agent/skill catalog replacer.
+ * Reads opencode-catalog.json and renders agent counts, skill counts, etc.
+ * @type {import('../types').ReplacerFunction}
  */
 module.exports = async function () {
   let catalog;

@@ -1,7 +1,16 @@
+// @ts-check
+
 const sharp = require('sharp');
 const dateStringifier = require('date-stringifier');
-const fs = require('fs').promises; // Use promises for file operations
+const fs = require('fs').promises;
 
+/**
+ * Composite a follower's avatar onto a CoderBase image template.
+ * Falls back gracefully if assets are missing.
+ * @param {import('../types').GitHubFollower} follower
+ * @param {string} fileName - Output filename (e.g. 'randomFollower.png')
+ * @returns {Promise<string|null>} The fileName on success, null on failure
+ */
 async function drawFollowerImage(follower, fileName) {
   try {
     // Check if required mask/base files exist before starting

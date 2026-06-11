@@ -1,13 +1,9 @@
-/* 
-  Here you can create your customized replacements
-  As an example, I'll create a Replacer that replaces %{randomNum}
-  in the README by a random number between 0 and 1000.
+// @ts-check
 
-  The file name will be the term it will look to replace
-*/
-
-// You just need to create a function
-// and return the data you will use to replace
+/**
+ * Random number replacer — returns a random number between 0 and 1000.
+ * @type {import('../types').ReplacerFunction}
+ */
 module.exports = function () {
   return Math.random() * 1000;
 };
