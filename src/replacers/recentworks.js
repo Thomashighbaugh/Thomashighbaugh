@@ -1,68 +1,154 @@
-const fetch = require('node-fetch');
-
-/**
- * Fetch recent public PushEvents for a given user.
- * @param {string} username
- * @param {string} [token] Optional GitHub token for private repos.
- * @returns {Promise<Array>} Array of unique, recently-pushed-to repos.
- */
-async function getRecentPushRepos(username, token = null) {
+async function getRecentEvents(username, token = null) {
   const headers = { 'User-Agent': 'recentworks-script' };
   if (token) headers.Authorization = `Bearer ${token}`;
-  const eventsUrl = `https://api.github.com/users/${username}/events/public`;
 
+  const eventsUrl = `https://api.github.com/users/${username}/events/public`;
   const res = await fetch(eventsUrl, { headers });
   if (!res.ok) throw new Error(`Failed to fetch events: ${res.status}`);
 
   const events = await res.json();
-  // Filter for PushEvent types and deduplicate by repo full_name
-  const seen = new Set();
-  const repoMap = [];
+
+  // Map event types to readable descriptions
+  const eventDisplay = {
+    PushEvent: (e) => {
+      const commitCount = e.payload?.commits?.length || e.payload?.distinct_size || 0;
+      const branch = e.payload?.ref?.replace('refs/heads/', '') || 'main';
+      return {
+        icon: '📝',
+        action: `Pushed ${commitCount} commit${commitCount !== 1 ? 's' : ''} to`,
+        repo: e.repo.name,
+        url: `https://github.com/${e.repo.name}`,
+        detail: `on ${branch}`,
+        date: e.created_at,
+      };
+    },
+    CreateEvent: (e) => ({
+      icon: '📦',
+      action: `Created ${e.payload.ref_type}`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: e.payload.ref ? e.payload.ref : '',
+      date: e.created_at,
+    }),
+    ForkEvent: (e) => ({
+      icon: '🔀',
+      action: `Forked`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: '',
+      date: e.created_at,
+    }),
+    IssuesEvent: (e) => ({
+      icon: '🐛',
+      action: `${e.payload.action === 'opened' ? 'Opened' : 'Closed'} issue`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: e.payload.issue?.title ? `"${e.payload.issue.title.slice(0, 60)}"` : '',
+      date: e.created_at,
+    }),
+    ReleaseEvent: (e) => ({
+      icon: '🏷️',
+      action: `Released ${e.payload.release?.tag_name || 'new version'}`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: '',
+      date: e.created_at,
+    }),
+    WatchEvent: (e) => ({
+      icon: '⭐',
+      action: `Starred`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: '',
+      date: e.created_at,
+    }),
+    PublicEvent: (e) => ({
+      icon: '🌍',
+      action: `Made public`,
+      repo: e.repo.name,
+      url: `https://github.com/${e.repo.name}`,
+      detail: '',
+      date: e.created_at,
+    }),
+  };
+
+  const activities = [];
+  const seenRepos = new Set();
+
   for (const event of events) {
-    if (event.type === 'PushEvent') {
-      const repo = event.repo;
-      if (!seen.has(repo.name)) {
-        repoMap.push({
-          name: repo.name.split('/')[1],
-          full_name: repo.name,
-          html_url: `https://github.com/${repo.name}`,
-          pushed_at: event.created_at,
-        });
-        seen.add(repo.name);
-      }
-    }
-    if (repoMap.length >= 30) break; // reasonable limit
+    const display = eventDisplay[event.type];
+    if (!display) continue;
+
+    const item = display(event);
+
+    // Deduplicate: only show each repo once per event type
+    const dedupKey = `${event.type}-${event.repo.name}`;
+    if (seenRepos.has(dedupKey)) continue;
+    seenRepos.add(dedupKey);
+
+    activities.push(item);
+    if (activities.length >= 15) break; // limit
   }
-  return repoMap;
+
+  return activities;
 }
 
-/**
- * Format a repo as an HTML link (as in your original).
- * @param {Object} repo
- * @param {string} username
- * @returns {string}
- */
-function formatRepo(repo, username) {
-  return `<a href="${repo.html_url}">
-    <img width="30%" max-height="5rem" align="center" alt="${repo.name}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${username}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/>
-  </a>`;
+function timeAgo(dateStr) {
+  const now = new Date();
+  const then = new Date(dateStr);
+  const diffMs = now - then;
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return 'today';
+  if (diffDays === 1) return 'yesterday';
+  if (diffDays < 7) return `${diffDays} days ago`;
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)} week${Math.floor(diffDays / 7) > 1 ? 's' : ''} ago`;
+  if (diffDays < 365) return `${Math.floor(diffDays / 30)} month${Math.floor(diffDays / 30) > 1 ? 's' : ''} ago`;
+  return `${Math.floor(diffDays / 365)} year${Math.floor(diffDays / 365) > 1 ? 's' : ''} ago`;
 }
 
-/**
- * Main recentworks replacer function.
- * @param {Object} data { user: string, repoQuantity: number, [token]: string }
- * @returns {Promise<string>}
- */
 module.exports = async function (data) {
-  const { user, repoQuantity, token } = data;
-  let repos;
+  const { user, token } = data;
+
   try {
-    repos = await getRecentPushRepos(user, token);
+    const events = await getRecentEvents(user, token);
+
+    if (!events || events.length === 0) {
+      return `<!-- No recent public activity -->\n<em>No recent public activity to show. Check back after the next commit!</em>`;
+    }
+
+    // Build the activity timeline
+    const activityList = events.map(e =>
+      `  <li>${e.icon} ${e.action} <a href="${e.url}">${e.repo}</a> ${e.detail ? `${e.detail} ` : ''}<small><em>— ${timeAgo(e.date)}</em></small></li>`
+    ).join('\n');
+
+    // Also generate repo pin cards for PushEvents (duck-typing: push-style events)
+    // Find unique pushed repos
+    const pushedRepos = [...new Set(
+      events
+        .filter(e => e.icon === '📝')
+        .map(e => e.repo)
+    )];
+
+    const repoCards = pushedRepos.slice(0, 6).map(repoName => {
+      const repo = repoName.split('/')[1];
+      return `<a href="https://github.com/${repoName}"><img width="30%" max-height="5rem" align="center" alt="${repo}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${user}&repo=${encodeURIComponent(repo)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
+    }).join('\n');
+
+    return `
+<details>
+<summary><strong>⚡ Recent Activity</strong></summary>
+<br>
+
+<ul>
+${activityList}
+</ul>
+
+${repoCards ? `<br>\n<p align="center">${repoCards}</p>` : ''}
+
+</details>`;
+
   } catch (err) {
     return `<!-- Failed to load recent works: ${err.message} -->`;
   }
-  return repos
-    .slice(0, repoQuantity)
-    .map(repo => formatRepo(repo, user))
-    .join('\n');
 };

@@ -9,18 +9,27 @@ on:
     branches:
       - main
 
+concurrency:
+  group: readme-generate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Use Node.js
         uses: actions/setup-node@v4.2.0
         with:
           node-version: 20.9
-      - run: npm install --omit=dev --no-audit
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - name: Install dependencies
+        run: pnpm install --prod --no-frozen-lockfile
 
       - name: Generate README
         run: node src/index.js
@@ -31,5 +40,5 @@ jobs:
           git config --global user.email "readme-bot@github.com"
           git config --global user.name "README-bot"
           git add -A
-          git commit -m "Generated readme" || exit 0
+          git commit -m "docs: regenerate profile README ($(date +%Y-%m-%d))" || exit 0
           git push

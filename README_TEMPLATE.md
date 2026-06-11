@@ -10,7 +10,6 @@ Tom's Law of Software Development
 </div>
 <br>
 <hr>
-<hr>
 <br>
 
 <div>
@@ -33,7 +32,7 @@ About Me
 Get in Touch
 </summary>
 
-<a href="https://links.thomasleonhighbaugh.me>"<img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
+<a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
 
 %{socialMedias}
 
@@ -44,18 +43,22 @@ Get in Touch
 
 </details>
 
+%{interests}
+
 <details>
 <summary>Skill Wall
 </summary>
 
 %{skillswall}
 
-</details>
+<br><br>%{llmBadge}
 
-%{llmBadge}
+</details>
 
 <details>
 <summary>Follower Showcase </summary>
+
+%{followerMilestones}
 
 <em><small>Here Is One Of The Awesome Individuals That Follows Me On GitHub, With A New Follower Highlighted Daily!</small></em>
 
@@ -64,6 +67,15 @@ Get in Touch
 </details>
 
 %{opencodeCatalog}
+
+<details>
+<summary>
+⚡ Recent Activity
+</summary>
+%{recentworks}
+</details>
+
+%{starredRepos}
 
 <details>
 <summary>
@@ -85,7 +97,7 @@ Account Statistics</summary>
   <!--- Row ---->
   <tr>
    <td>
-      https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai">
+      <img align="center" width="100%" alt="repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Thomashighbaugh&theme=monokai"/>
     </td>
    <td><img align="center" width="100%" alt="Top Langs" src="https://github-readme-stats-server.vercel.app/api/top-langs/?username=Thomashighbaugh&title_color=FE3B7B&text_color=F2F2F2&bg_color=3c3c3c&border_color=525053&show_icons=true&icon_color=F2F2F2&border_radius=15&layout=compact" /></td>
 
@@ -96,7 +108,7 @@ Account Statistics</summary>
       <img align="center" width="100%" alt="most commit languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Thomashighbaugh&theme=monokai">
     </td>
           <td>
-           <img align="center" width="100%" alt="git stars" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
+           <img align="center" width="100%" alt="git stars" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Thomashighbaugh&theme=monokai" /></td>
 
 </tr>
   </table>

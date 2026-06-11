@@ -4,6 +4,15 @@ const fs = require('fs').promises; // Use promises for file operations
 
 async function drawFollowerImage(follower, fileName) {
   try {
+    // Check if required mask/base files exist before starting
+    const maskExists = await fs.access('./src/resources/images/levelMask.png').then(() => true).catch(() => false);
+    const baseExists = await fs.access('./src/resources/images/CoderBase.png').then(() => true).catch(() => false);
+
+    if (!maskExists || !baseExists) {
+      console.warn('Skipping image compositing: required assets (levelMask.png / CoderBase.png) not found');
+      return null; // signal to fall back to plain img
+    }
+
     // 1. Fetch and Decode Avatar
     let avatarBuffer;
     try {
@@ -15,7 +24,7 @@ async function drawFollowerImage(follower, fileName) {
         avatarBuffer = await fs.readFile('./src/resources/images/default_avatar.png');
       } catch (fallbackError) {
         console.error('Error reading fallback avatar:', fallbackError);
-        return; // Exit if both fail
+        return null; // Exit if both fail
       }
     }
 
@@ -28,7 +37,7 @@ async function drawFollowerImage(follower, fileName) {
       maskBuffer = await fs.readFile('./src/resources/images/levelMask.png');
     } catch (maskError) {
       console.error('Error reading mask:', maskError);
-      return;
+      return null;
     }
 
     // 4. Apply mask to make avatar circular
@@ -45,7 +54,7 @@ async function drawFollowerImage(follower, fileName) {
       baseBuffer = await fs.readFile('./src/resources/images/CoderBase.png');
     } catch (baseError) {
       console.error('Error reading base image:', baseError);
-      return;
+      return null;
     }
 
     // 6. Composite Avatar onto Base with text overlay
@@ -74,8 +83,10 @@ async function drawFollowerImage(follower, fileName) {
     // 7. Save the final Image
 
     await fs.writeFile(`./src/resources/images/${fileName}`, composedImageBuffer);
+    return fileName;
   } catch (error) {
     console.error('General error in drawFollowerImage:', error);
+    return null;
   }
 }
 
