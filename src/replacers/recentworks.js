@@ -150,21 +150,17 @@ module.exports = async function (data) {
 
     const repoCards = pushedRepos.slice(0, 6).map(repoName => {
       const repo = repoName.split('/')[1];
-      return `<a href="https://github.com/${repoName}"><img width="30%" max-height="5rem" align="center" alt="${repo}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${user}&repo=${encodeURIComponent(repo)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
+      return `<a href="https://github.com/${repoName}"><img width="45%" style="max-height:5rem" align="center" alt="${repo}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${user}&repo=${encodeURIComponent(repo)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
     }).join('\n');
 
     return `
-<details>
-<summary><strong>⚡ Recent Activity</strong></summary>
 <br>
 
 <ul>
 ${activityList}
 </ul>
 
-${repoCards ? `<br>\n<p align="center">${repoCards}</p>` : ''}
-
-</details>`;
+${repoCards ? `<br>\n<p align="center">${repoCards}</p>` : ''}`;
 
   } catch (err) {
     return `<!-- Failed to load recent works: ${err.message} -->`;

@@ -44,7 +44,7 @@ module.exports = async function (data) {
     }
     
     const repoCards = repos.map(repo => {
-      return `<a href="${repo.html_url}"><img width="30%" max-height="5rem" align="center" alt="${repo.name}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${repo.owner.login}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
+      return `<a href="${repo.html_url}"><img width="30%" style="max-height:5rem" align="center" alt="${repo.name}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${repo.owner.login}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
     }).join('\n');
     
     return `

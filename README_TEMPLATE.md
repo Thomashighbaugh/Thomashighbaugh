@@ -20,10 +20,10 @@ About Me
 </summary>
 %{aiBio} 
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
-<small>Note: the above was generated is a Gemini generated description based on my account activity, refreshed weekly via GitHub actions. </small>
+<small>Note: the above is a Gemini-generated description based on my account activity, refreshed weekly via GitHub actions. </small>
 <ul align="left">
-<li align="left">Well Versed in Full Stack Web Development, With An Emphasis on Making Attractive Interfaces Using a Variety of Different Frameworks, Libraries and Other Javascript goodies.</li>
-<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> User (...by Choice) </li>
+<li align="left">Well-versed in full-stack web development, with an emphasis on making attractive interfaces using a variety of different frameworks, libraries and other JavaScript goodies.</li>
+<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice) </li>
  </ul>
 </details>
 
@@ -60,7 +60,7 @@ Get in Touch
 
 %{followerMilestones}
 
-<em><small>Here Is One Of The Awesome Individuals That Follows Me On GitHub, With A New Follower Highlighted Daily!</small></em>
+<em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
 
 %{randomFollower}
 
@@ -79,7 +79,8 @@ Get in Touch
 
 <details>
 <summary>
-Account Statistics</summary>
+Account Statistics
+</summary>
 
 <div style="clear:both;">
  <table>
