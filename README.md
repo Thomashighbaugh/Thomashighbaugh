@@ -58,7 +58,7 @@ Get in Touch
 <br>
 
 <p align="center">
-<a href="https://github.com/topics/nextjs" style="font-size:2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">nextjs</a><a href="https://github.com/topics/portfolio" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">portfolio</a><a href="https://github.com/topics/react" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">react</a><a href="https://github.com/topics/tailwind" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">tailwind</a><a href="https://github.com/topics/tailwindcss" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">tailwindcss</a><a href="https://github.com/topics/neovim" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">neovim</a><a href="https://github.com/topics/nvim" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">nvim</a><a href="https://github.com/topics/dark-mode" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">dark-mode</a><a href="https://github.com/topics/dotfiles" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">dotfiles</a><a href="https://github.com/topics/advance-bios" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">advance-bios</a><a href="https://github.com/topics/advanced-bios" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">advanced-bios</a><a href="https://github.com/topics/bios-underolting" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">bios-underolting</a><a href="https://github.com/topics/bootable-iso" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">bootable-iso</a><a href="https://github.com/topics/lenovo-legion" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">lenovo-legion</a><a href="https://github.com/topics/lenovo-legion-pro-5-16irx9" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">lenovo-legion-pro-5-16irx9</a><a href="https://github.com/topics/uefi" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">uefi</a><a href="https://github.com/topics/undervolting" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">undervolting</a><a href="https://github.com/topics/github" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github</a><a href="https://github.com/topics/repositories" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">repositories</a><a href="https://github.com/topics/repository" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">repository</a>
+<a href="https://github.com/topics/nextjs" style="font-size:2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">nextjs</a><a href="https://github.com/topics/portfolio" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">portfolio</a><a href="https://github.com/topics/react" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">react</a><a href="https://github.com/topics/tailwind" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">tailwind</a><a href="https://github.com/topics/tailwindcss" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">tailwindcss</a><a href="https://github.com/topics/neovim" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">neovim</a><a href="https://github.com/topics/nvim" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">nvim</a><a href="https://github.com/topics/dark-mode" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">dark-mode</a><a href="https://github.com/topics/dotfiles" style="font-size:1.6em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">dotfiles</a><a href="https://github.com/topics/github" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github</a><a href="https://github.com/topics/repositories" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">repositories</a><a href="https://github.com/topics/repository" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">repository</a><a href="https://github.com/topics/star" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">star</a><a href="https://github.com/topics/starred" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">starred</a><a href="https://github.com/topics/starred-repositories" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">starred-repositories</a><a href="https://github.com/topics/dynamic-profile" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">dynamic-profile</a><a href="https://github.com/topics/github-actions" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github-actions</a><a href="https://github.com/topics/github-profile" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github-profile</a><a href="https://github.com/topics/github-profile-card" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github-profile-card</a><a href="https://github.com/topics/github-profile-readme" style="font-size:1.2em; display:inline-block; margin:4px; text-decoration:none; color:#6AB0F3;">github-profile-readme</a>
 </p>
 
 <br>
@@ -69,33 +69,33 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="left"><strong>Languages:</strong><br><img src="https://img.shields.io/badge/javascript-3c3c3c?logo=javascript&style=plastic&logoColor=F2f2f2"/>
+<p align="left"><strong>Languages:</strong><br><img src="https://img.shields.io/badge/javascript-69676c?logo=javascript&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/python-3c3c3c?logo=python&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/lua-3c3c3c?logo=lua&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/lua-69676c?logo=lua&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/bash/zsh-3c3c3c?logo=gnu+bash&style=plastic&logoColor=F2f2f2"/>
 <br><br>
 <strong>Frontend:</strong><br><img src="https://img.shields.io/badge/react-3c3c3c?logo=react&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/tsx-69676c?logo=react&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/jquery-3c3c3c?logo=jquery&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/sass-3c3c3c?logo=sass&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/less-3c3c3c?logo=less&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/css-69676c?logo=css&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/less-69676c?logo=less&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/css-3c3c3c?logo=css&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/html-3c3c3c?logo=html&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/ant_design-3c3c3c?logo=ant+design&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/chakra-69676c?logo=chakraui&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/chakra-3c3c3c?logo=chakraui&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/bootstrap-3c3c3c?logo=bootstrap&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/styled%20components-3c3c3c?logo=styled%20components&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/tailwindcss-3c3c3c?logo=tailwindcss&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/material_ui-3c3c3c?logo=material+ui&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/storybook-3c3c3c?logo=storybook&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/storybook-69676c?logo=storybook&style=plastic&logoColor=F2f2f2"/>
 <br><br>
 <strong>Backend & Databases:</strong><br><img src="https://img.shields.io/badge/node.js-3c3c3c?logo=node.js&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/express.js-69676c?logo=express&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/fastapi-3c3c3c?logo=fastapi&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/flask-69676c?logo=flask&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/flask-3c3c3c?logo=flask&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/graphql-69676c?logo=graphql&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/firebase-3c3c3c?logo=firebase&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/firebase-69676c?logo=firebase&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/mongodb-3c3c3c?logo=mongodb&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/sqlite-3c3c3c?logo=sqlite&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/mern%20stack-3c3c3c?logo=mern%20stack&style=plastic&logoColor=F2f2f2"/>
@@ -104,21 +104,21 @@ Get in Touch
 <img src="https://img.shields.io/badge/git-3c3c3c?logo=git&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/github-69676c?logo=github&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/github%20actions-3c3c3c?logo=github%20actions&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/gitlab-3c3c3c?logo=gitlab&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/codeberg-69676c?logo=codeberg&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/gitlab-69676c?logo=gitlab&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/codeberg-3c3c3c?logo=codeberg&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/npm-3c3c3c?logo=npm&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/linux-3c3c3c?logo=linux&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/nixos-3c3c3c?logo=nixos&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/neovim-3c3c3c?logo=neovim&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/visual%20studio%20code-3c3c3c?logo=visual%20studio%20code&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/jetbrains%20ides-69676c?logo=jetbrains&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/jetbrains%20ides-3c3c3c?logo=jetbrains&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/netlify-3c3c3c?logo=netlify&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/vercel-69676c?logo=vercel&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/heroku-69676c?logo=heroku&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/github%20pages-3c3c3c?logo=github&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/github%20pages-69676c?logo=github&style=plastic&logoColor=F2f2f2"/>
 <br><br>
-<strong>Design:</strong><br><img src="https://img.shields.io/badge/figma-69676c?logo=figma&style=plastic&logoColor=F2f2f2"/>
-<img src="https://img.shields.io/badge/photoshop-3c3c3c?logo=adobe+photoshop&style=plastic&logoColor=F2f2f2"/>
+<strong>Design:</strong><br><img src="https://img.shields.io/badge/figma-3c3c3c?logo=figma&style=plastic&logoColor=F2f2f2"/>
+<img src="https://img.shields.io/badge/photoshop-69676c?logo=adobe+photoshop&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/gimp-3c3c3c?logo=gimp&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/inkscape-3c3c3c?logo=inkscape&style=plastic&logoColor=F2f2f2"/></p>
 
@@ -144,12 +144,12 @@ Get in Touch
 
 
 <p align="center">
-  <a href="https://github.com/Gandharikos"><img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/randomFollower.png" alt="Follower of the day: Gandharikos"/></a>
+  <a href="https://github.com/Crelloc"><img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/randomFollower.png" alt="Follower of the day: Crelloc"/></a>
   <br>
-  <strong><a href="https://github.com/Gandharikos">Johnson Hu</a></strong>
+  <strong><a href="https://github.com/Crelloc">Crelloc</a></strong>
   
   <br>
-  <small>37 public repos · 47 followers</small>
+  <small>29 public repos · 17 followers</small>
 </p>
 
 </details>
@@ -164,12 +164,13 @@ Get in Touch
 <br>
 
 <ul>
-  <li>⭐ Starred <a href="https://github.com/Sillyanonymous/SillyTavern-CharacterLibrary">Sillyanonymous/SillyTavern-CharacterLibrary</a> <small><em>— today</em></small></li>
-  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/thomasleonhighbaugh.me">Thomashighbaugh/thomasleonhighbaugh.me</a> on master <small><em>— yesterday</em></small></li>
-  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/mikeroyal/Self-Hosting-Guide">mikeroyal/Self-Hosting-Guide</a> <small><em>— 2 days ago</em></small></li>
-  <li>📝 Pushed 0 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— 2 days ago</em></small></li>
-  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/nvim-forge">Thomashighbaugh/nvim-forge</a> on main <small><em>— 5 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/tompassarelli/palefox">tompassarelli/palefox</a> <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/Sillyanonymous/SillyTavern-CharacterLibrary">Sillyanonymous/SillyTavern-CharacterLibrary</a> <small><em>— yesterday</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/thomasleonhighbaugh.me">Thomashighbaugh/thomasleonhighbaugh.me</a> on master <small><em>— 2 days ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/mikeroyal/Self-Hosting-Guide">mikeroyal/Self-Hosting-Guide</a> <small><em>— 3 days ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— 3 days ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/nvim-forge">Thomashighbaugh/nvim-forge</a> on main <small><em>— 6 days ago</em></small></li>
 </ul>
 
 <br>
@@ -191,11 +192,11 @@ Get in Touch
 
 <p align="center">
 <a href="https://github.com/mikeroyal/Self-Hosting-Guide"><img width="30%" style="max-height:5rem" align="center" alt="Self-Hosting-Guide" src="https://github-readme-stats-server.vercel.app/api/pin/?username=mikeroyal&repo=Self-Hosting-Guide&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
-<a href="https://github.com/saghen/blink.cmp"><img width="30%" style="max-height:5rem" align="center" alt="blink.cmp" src="https://github-readme-stats-server.vercel.app/api/pin/?username=saghen&repo=blink.cmp&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
-<a href="https://github.com/a5c-ai/babysitter"><img width="30%" style="max-height:5rem" align="center" alt="babysitter" src="https://github-readme-stats-server.vercel.app/api/pin/?username=a5c-ai&repo=babysitter&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
 <a href="https://github.com/rohitg00/skillkit"><img width="30%" style="max-height:5rem" align="center" alt="skillkit" src="https://github-readme-stats-server.vercel.app/api/pin/?username=rohitg00&repo=skillkit&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
 <a href="https://github.com/unicode-org/last-resort-font"><img width="30%" style="max-height:5rem" align="center" alt="last-resort-font" src="https://github-readme-stats-server.vercel.app/api/pin/?username=unicode-org&repo=last-resort-font&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
 <a href="https://github.com/ziontee113/color-picker.nvim"><img width="30%" style="max-height:5rem" align="center" alt="color-picker.nvim" src="https://github-readme-stats-server.vercel.app/api/pin/?username=ziontee113&repo=color-picker.nvim&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
+<a href="https://github.com/arcnations-united/evolve-core"><img width="30%" style="max-height:5rem" align="center" alt="evolve-core" src="https://github-readme-stats-server.vercel.app/api/pin/?username=arcnations-united&repo=evolve-core&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
+<a href="https://github.com/TaylanTatli/Sevi"><img width="30%" style="max-height:5rem" align="center" alt="Sevi" src="https://github-readme-stats-server.vercel.app/api/pin/?username=TaylanTatli&repo=Sevi&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>
 </p>
 
 </details>
