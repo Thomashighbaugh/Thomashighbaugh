@@ -16,6 +16,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Thomashighbaugh
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -24,17 +27,22 @@ jobs:
         uses: actions/setup-node@v4.2.0
         with:
           node-version: 22
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
+
       - name: Install dependencies
         run: pnpm install --prod --no-frozen-lockfile
 
       - name: Generate README
         run: node src/index.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push if changed
+        working-directory: Thomashighbaugh
         run: |-
           git diff
           git config --global user.email "readme-bot@github.com"

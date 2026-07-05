@@ -22,6 +22,7 @@ GitHub Profile README generator that uses GitHub Actions to run Node.js scripts.
 | Directory | Purpose |
 |-----------|---------|
 | `src/` | Application source code (see `src/AGENTS.md`) |
+| `scripts/` | Standalone utility scripts (see `scripts/AGENTS.md`) |
 | `.github/` | GitHub Actions workflows and documentation (see `.github/AGENTS.md`) |
 
 ## For AI Agents

@@ -8,6 +8,7 @@ const theme = require('./theme');
 /** @type {import('./types').ProjectData} */
 module.exports = {
   user: 'Thomashighbaugh',
+  token: process.env.GITHUB_TOKEN || null,
   startedProgramming: '06/03/2016',
   repoQuantity: 9,
   header: {

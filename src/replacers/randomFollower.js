@@ -11,7 +11,7 @@ const { drawFollowerImage } = require('../utils/drawFollowerImage');
  */
 module.exports = async function (data) {
   try {
-    const follower = await getRandomFollower(data.user);
+    const follower = await getRandomFollower(data.user, data.token);
 
     if (!follower) {
       return `<!-- No followers to showcase yet -->\n<em>No followers found yet. Once you gain followers, they'll be showcased here!</em>`;

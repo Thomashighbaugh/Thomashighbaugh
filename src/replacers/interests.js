@@ -68,7 +68,7 @@ ${topicLinks}
 </p>
 
 <br>
-<em><sub>Topics extracted from my public repositories — updated daily via GitHub Actions.</sub></em>
+<em><sub>Topics extracted from my public repositories.</sub></em>
 </details>`;
     
   } catch (err) {

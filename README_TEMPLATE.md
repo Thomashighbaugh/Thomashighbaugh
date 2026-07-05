@@ -18,13 +18,12 @@ Tom's Law of Software Development
 <summary>
 About Me
 </summary>
-%{aiBio} 
+%{aiBio}
 <img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
-<small>Note: the above is a Gemini-generated description based on my account activity, refreshed weekly via GitHub actions. </small>
 <ul align="left">
-<li align="left">Well-versed in full-stack web development, with an emphasis on making attractive interfaces using a variety of different frameworks, libraries and other JavaScript goodies.</li>
-<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice) </li>
- </ul>
+<li align="left">Building AI-powered tools and infrastructure — from agentic coding workflows and multi-agent orchestration systems to LLM-integrated applications. Check out my <a href="https://github.com/Thomashighbaugh">repos</a> for a sense of the work.</li>
+<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice)</li>
+</ul>
 </details>
 
 <details>
@@ -65,8 +64,6 @@ Get in Touch
 %{randomFollower}
 
 </details>
-
-%{opencodeCatalog}
 
 <details>
 <summary>
