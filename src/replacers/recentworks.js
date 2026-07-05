@@ -19,7 +19,7 @@ async function getRecentEvents(username, token = null) {
   // Map event types to readable descriptions
   const eventDisplay = {
     PushEvent: (e) => {
-      const commitCount = e.payload?.commits?.length || e.payload?.distinct_size || 0;
+      const commitCount = e.payload?.size || e.payload?.commits?.length || e.payload?.distinct_size || 0;
       const branch = e.payload?.ref?.replace('refs/heads/', '') || 'main';
       return {
         icon: '📝',
