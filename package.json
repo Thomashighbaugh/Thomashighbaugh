@@ -17,6 +17,10 @@
     "node-fetch": "^3.3.2",
     "sharp": "^0.33.5"
   },
+  "overrides": {
+    "js-yaml": "^4.2.0",
+    "serialize-javascript": "^7.0.5"
+  },
   "devDependencies": {
     "eslint": "^10.6.0",
     "mocha": "^10.8.2",
