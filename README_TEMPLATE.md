@@ -42,8 +42,6 @@ Get in Touch
 
 </details>
 
-%{interests}
-
 <details>
 <summary>Skill Wall
 </summary>
