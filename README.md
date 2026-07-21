@@ -66,24 +66,24 @@ Get in Touch
 <a href="https://github.com/topics/jquery"><img src="https://img.shields.io/badge/jquery-69676c?logo=jquery&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/sass"><img src="https://img.shields.io/badge/sass-3c3c3c?logo=sass&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/less"><img src="https://img.shields.io/badge/less-3c3c3c?logo=less&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/css"><img src="https://img.shields.io/badge/css-3c3c3c?logo=css&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/html"><img src="https://img.shields.io/badge/html-3c3c3c?logo=html&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/css"><img src="https://img.shields.io/badge/css-69676c?logo=css&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/html"><img src="https://img.shields.io/badge/html-69676c?logo=html&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/ant-design"><img src="https://img.shields.io/badge/ant_design-3c3c3c?logo=ant+design&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/chakra-ui"><img src="https://img.shields.io/badge/chakra-3c3c3c?logo=chakraui&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/chakra-ui"><img src="https://img.shields.io/badge/chakra-69676c?logo=chakraui&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/bootstrap"><img src="https://img.shields.io/badge/bootstrap-3c3c3c?logo=bootstrap&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/styled-components"><img src="https://img.shields.io/badge/styled%20components-3c3c3c?logo=styled%20components&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/tailwind-css"><img src="https://img.shields.io/badge/tailwindcss-3c3c3c?logo=tailwindcss&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/material-ui"><img src="https://img.shields.io/badge/material_ui-3c3c3c?logo=material+ui&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/storybook"><img src="https://img.shields.io/badge/storybook-69676c?logo=storybook&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/storybook"><img src="https://img.shields.io/badge/storybook-3c3c3c?logo=storybook&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
 <strong>Backend & Databases:</strong><br><a href="https://github.com/topics/nodejs"><img src="https://img.shields.io/badge/node.js-3c3c3c?logo=node.js&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/express-js"><img src="https://img.shields.io/badge/express.js-69676c?logo=express&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/fastapi"><img src="https://img.shields.io/badge/fastapi-3c3c3c?logo=fastapi&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/flask"><img src="https://img.shields.io/badge/flask-3c3c3c?logo=flask&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/graphql"><img src="https://img.shields.io/badge/graphql-3c3c3c?logo=graphql&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/firebase"><img src="https://img.shields.io/badge/firebase-69676c?logo=firebase&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/mongodb"><img src="https://img.shields.io/badge/mongodb-69676c?logo=mongodb&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/sqlite"><img src="https://img.shields.io/badge/sqlite-3c3c3c?logo=sqlite&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/flask"><img src="https://img.shields.io/badge/flask-69676c?logo=flask&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/graphql"><img src="https://img.shields.io/badge/graphql-69676c?logo=graphql&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/firebase"><img src="https://img.shields.io/badge/firebase-3c3c3c?logo=firebase&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/mongodb"><img src="https://img.shields.io/badge/mongodb-3c3c3c?logo=mongodb&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/sqlite"><img src="https://img.shields.io/badge/sqlite-69676c?logo=sqlite&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/mern"><img src="https://img.shields.io/badge/mern%20stack-3c3c3c?logo=mern%20stack&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
 <strong>DevOps & Tools:</strong><br><a href="https://github.com/topics/docker"><img src="https://img.shields.io/badge/docker-3c3c3c?logo=docker&style=plastic&logoColor=F2f2f2"/></a>
@@ -96,19 +96,33 @@ Get in Touch
 <a href="https://github.com/topics/linux"><img src="https://img.shields.io/badge/linux-3c3c3c?logo=linux&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/nixos"><img src="https://img.shields.io/badge/nixos-3c3c3c?logo=nixos&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/neovim"><img src="https://img.shields.io/badge/neovim-3c3c3c?logo=neovim&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/vscode"><img src="https://img.shields.io/badge/visual%20studio%20code-69676c?logo=visual%20studio%20code&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/vscode"><img src="https://img.shields.io/badge/visual%20studio%20code-3c3c3c?logo=visual%20studio%20code&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/jetbrains"><img src="https://img.shields.io/badge/jetbrains%20ides-69676c?logo=jetbrains&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/netlify"><img src="https://img.shields.io/badge/netlify-69676c?logo=netlify&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/netlify"><img src="https://img.shields.io/badge/netlify-3c3c3c?logo=netlify&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/vercel"><img src="https://img.shields.io/badge/vercel-69676c?logo=vercel&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/heroku"><img src="https://img.shields.io/badge/heroku-69676c?logo=heroku&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/github-pages"><img src="https://img.shields.io/badge/github%20pages-3c3c3c?logo=github&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
-<strong>Design:</strong><br><a href="https://github.com/topics/figma"><img src="https://img.shields.io/badge/figma-69676c?logo=figma&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/photoshop"><img src="https://img.shields.io/badge/photoshop-69676c?logo=adobe+photoshop&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/gimp"><img src="https://img.shields.io/badge/gimp-69676c?logo=gimp&style=plastic&logoColor=F2f2f2"/></a>
+<strong>Design:</strong><br><a href="https://github.com/topics/figma"><img src="https://img.shields.io/badge/figma-3c3c3c?logo=figma&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/photoshop"><img src="https://img.shields.io/badge/photoshop-3c3c3c?logo=adobe+photoshop&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/gimp"><img src="https://img.shields.io/badge/gimp-3c3c3c?logo=gimp&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/inkscape"><img src="https://img.shields.io/badge/inkscape-69676c?logo=inkscape&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
-<!-- Dynamic language detection unavailable: Failed to fetch repos: 503 --></p>
+<strong>Languages from Code:</strong><br><a href="https://github.com/topics/javascript"><img src="https://img.shields.io/badge/javascript-3c3c3c?logo=javascript&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/shell"><img src="https://img.shields.io/badge/shell-3c3c3c?logo=shell&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/typescript"><img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/python"><img src="https://img.shields.io/badge/python-3c3c3c?logo=python&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/html"><img src="https://img.shields.io/badge/html-3c3c3c?logo=html&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/lua"><img src="https://img.shields.io/badge/lua-3c3c3c?logo=lua&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/makefile"><img src="https://img.shields.io/badge/makefile-3c3c3c?logo=makefile&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/scss"><img src="https://img.shields.io/badge/scss-3c3c3c?logo=scss&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/css"><img src="https://img.shields.io/badge/css-3c3c3c?logo=css&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/astro"><img src="https://img.shields.io/badge/astro-3c3c3c?logo=astro&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/nix"><img src="https://img.shields.io/badge/nix-3c3c3c?logo=nix&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/go"><img src="https://img.shields.io/badge/go-3c3c3c?logo=go&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/vim-script"><img src="https://img.shields.io/badge/vim%20script-3c3c3c?logo=vim%20script&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/rust"><img src="https://img.shields.io/badge/rust-3c3c3c?logo=rust&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/scheme"><img src="https://img.shields.io/badge/scheme-3c3c3c?logo=scheme&style=plastic&logoColor=F2f2f2"/></a></p>
 
 <br><br><p align="center"><img src="https://img.shields.io/badge/local llm-ollama-6AB0F3?logo=ollama&style=plastic&logoColor=F2f2f2"/>
 <img src="https://img.shields.io/badge/model-deepseek-v4-flash:cloud-3c3c3c?logo=deepseek&style=plastic&logoColor=F2f2f2"/>
@@ -119,18 +133,25 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<!-- Follower milestone data unavailable -->
+
+<p align="center">
+  <strong>👥 160 Followers</strong>
+  
+  🎉 <strong>Celebrating 100+ followers!</strong>
+  
+  <small>Next milestone: <strong>250</strong> (64% there — 90 more to go)</small>
+</p>
 
 <em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
 
 
 <p align="center">
-  <a href="https://github.com/darklight147"><img style="height:150px; border-radius:8px;" src="https://avatars.githubusercontent.com/u/39389636?v=4" alt="Follower of the day: darklight147"/></a>
+  <a href="https://github.com/verejava"><img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/randomFollower.png" alt="Follower of the day: verejava"/></a>
   <br>
-  <strong><a href="https://github.com/darklight147">darklight147</a></strong>
-  
+  <strong><a href="https://github.com/verejava">Joseph Hu</a></strong>
+  <br><em>en.verejava.com</em>
   <br>
-  <small>undefined public repos · undefined followers</small>
+  <small>5 public repos · 1085 followers</small>
 </p>
 
 </details>
@@ -139,7 +160,25 @@ Get in Touch
 <summary>
 ⚡ Recent Activity
 </summary>
-<!-- Failed to load recent works: Failed to fetch events: 503 -->
+
+<br>
+
+<ul>
+  <li>⭐ Starred <a href="https://github.com/bradleyhodges/SFWindows">bradleyhodges/SFWindows</a> <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/kikyoicecream/next-choices">kikyoicecream/next-choices</a> <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/hermitm0nk/malevich">hermitm0nk/malevich</a> <small><em>— 3 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/LSPosed/DirtySepolicy">LSPosed/DirtySepolicy</a> <small><em>— 3 days ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">Sanatana-Linux/nixos-awesomewm</a> on main <small><em>— 3 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/matthewmx86/RetroThemesFirefox">matthewmx86/RetroThemesFirefox</a> <small><em>— 3 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/clifford269/FrutigerFX">clifford269/FrutigerFX</a> <small><em>— 3 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/bitdruid/docker-diffusion">bitdruid/docker-diffusion</a> <small><em>— 3 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/JARVlS/peekcss">JARVlS/peekcss</a> <small><em>— 6 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/civitai/sd_civitai_extension">civitai/sd_civitai_extension</a> <small><em>— 6 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/Cybersight-Security/Malware-Samples">Cybersight-Security/Malware-Samples</a> <small><em>— 1 week ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— 1 week ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— 1 week ago</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/github-readme-stats-server">Thomashighbaugh/github-readme-stats-server</a> on main <small><em>— 1 week ago</em></small></li>
+</ul>
 </details>
 
 
