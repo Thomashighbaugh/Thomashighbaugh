@@ -16,14 +16,46 @@ async function getRecentEvents(username, token = null) {
 
   const events = await res.json();
 
+  /**
+   * Count commits for a push event.
+   * The public events API no longer includes `size`/`commits` in
+   * PushEvent payloads, so fall back to the compare API using the
+   * `before` and `head` SHAs the event does carry.
+   * Returns null when the count cannot be determined.
+   */
+  async function getPushCommitCount(e) {
+    const { size, commits, distinct_size } = e.payload;
+    const count = size ?? commits?.length ?? distinct_size;
+    if (count !== undefined && count !== null) return count;
+
+    const { before, head, repository_id } = e.payload;
+    if (!before || !head || before === head) return null;
+
+    try {
+      const owner = e.repo.name.split('/')[0];
+      const repo = e.repo.name.split('/')[1];
+      const compare = await fetch(
+        `https://api.github.com/repositories/${repository_id}/compare/${before}...${head}`,
+        { headers },
+      );
+      if (!compare.ok) return null;
+      const data = await compare.json();
+      return data?.total_commits ?? null;
+    } catch {
+      return null;
+    }
+  }
+
   // Map event types to readable descriptions
   const eventDisplay = {
-    PushEvent: (e) => {
-      const commitCount = e.payload?.size || e.payload?.commits?.length || e.payload?.distinct_size || 0;
+    PushEvent: async (e) => {
+      const commitCount = await getPushCommitCount(e);
       const branch = e.payload?.ref?.replace('refs/heads/', '') || 'main';
       return {
         icon: '📝',
-        action: `Pushed ${commitCount} commit${commitCount !== 1 ? 's' : ''} to`,
+        action: commitCount === null
+          ? `Pushed to`
+          : `Pushed ${commitCount} commit${commitCount !== 1 ? 's' : ''} to`,
         repo: e.repo.name,
         url: `https://github.com/${e.repo.name}`,
         detail: `on ${branch}`,
@@ -87,7 +119,7 @@ async function getRecentEvents(username, token = null) {
     const display = eventDisplay[event.type];
     if (!display) continue;
 
-    const item = display(event);
+    const item = await display(event);
 
     // Deduplicate: only show each repo once per event type
     const dedupKey = `${event.type}-${event.repo.name}`;

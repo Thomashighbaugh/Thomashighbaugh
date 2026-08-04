@@ -1,0 +1,37 @@
+name: Generate AI Bio
+
+on:
+  schedule:
+    - cron: '0 5 * * 1' # Weekly on Monday 05:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ai-bio-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ai-bio:
+    runs-on: ubuntu-latest
+    if: ${{ secrets.GEMINI_API_KEY != '' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Use Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Generate AI bio
+        run: node scripts/generate-ai-bio.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push if changed
+        run: |-
+          git config --global user.email "readme-bot@github.com"
+          git config --global user.name "README-bot"
+          git add -A
+          git commit -m "docs: refresh AI bio ($(date +%Y-%m-%d))" || exit 0
+          git push

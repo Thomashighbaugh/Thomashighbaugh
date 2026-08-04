@@ -32,6 +32,37 @@ const TOPIC_MAP = {
 };
 
 /**
+ * Map of skill/language display names to valid Simple Icons slugs.
+ * Simple Icons v14 removed several brands (Twitter→x, LinkedIn, Adobe,
+ * Codepen, Heroku, VS Code), so we must not pass those as `logo=` params
+ * or shields.io renders a broken icon. `null` drops the logo entirely.
+ * @type {Record<string, string | null>}
+ */
+const LOGO_MAP = {
+  // Renamed in Simple Icons v14
+  'BASH/ZSH': 'gnu-bash',
+  'GitHub Actions': 'githubactions',
+  'TailwindCSS': 'tailwindcss',
+  'Material-UI': 'mui',
+  // Space-slugified names that collide with valid slugs
+  'Styled Components': 'styledcomponents',
+  'Ant-Design': 'antdesign',
+  'SCSS': 'sass',
+  // Removed in Simple Icons v14 — drop logo, keep badge text
+  'HTML': 'html5',
+  'LinkedIn': null,
+  'Twitter': null,
+  'Visual Studio Code': null,
+  'MERN Stack': null,
+  'Heroku': null,
+  'Photoshop': null,
+  'Makefile': null,
+  'Vim Script': null,
+  'Scheme': null,
+  'Nix': null,
+};
+
+/**
  * Normalize a skill name to a GitHub topic URL.
  * @param {string} name
  * @returns {string}
@@ -93,7 +124,9 @@ module.exports = async function (data) {
   const categorySections = skillswall.categories.map(category => {
     const badges = category.skills.map(skill => {
       const name = encodeStr(skill.name, '_');
-      const logo = encodeStr(skill.logo ?? skill.name, '+');
+      const logo = LOGO_MAP[skill.name] !== undefined
+        ? LOGO_MAP[skill.name]
+        : encodeStr(skill.logo ?? skill.name, '+');
       const colors = getWallColor({ isHighlighted: skill.isHighlighted });
       const href = toTopicUrl(skill.name);
       return generateBadge({ name, logo, href, ...badgeGenericStyles, ...colors });
@@ -120,9 +153,10 @@ module.exports = async function (data) {
     if (sortedLangs.length > 0) {
       const badges = sortedLangs.map(([lang]) => {
         const name = encodeStr(lang, '_');
+        const logo = LOGO_MAP[lang] !== undefined ? LOGO_MAP[lang] : name;
         const colors = getWallColor({ isHighlighted: true });
         const href = toTopicUrl(lang);
-        return generateBadge({ name, logo: name, href, ...badgeGenericStyles, ...colors });
+        return generateBadge({ name, logo, href, ...badgeGenericStyles, ...colors });
       }).join('\n');
 
       categorySections.push(`<strong>Languages from Code:</strong><br>${badges}`);

@@ -13,7 +13,7 @@ const formatKeyValue = ([key, value]) => {
 
 const generateQueryFromObject = (properties) => {
   return Object.entries(properties)
-    .filter((value) => !!value)
+    .filter(([, value]) => value !== undefined && value !== null && value !== '')
     .map(formatKeyValue)
     .join('&');
 };

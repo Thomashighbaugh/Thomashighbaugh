@@ -58,7 +58,8 @@ module.exports = {
     links: [
       {
         name: 'twitter',
-        href: 'https://twitter.com/thomasleonhighbaugh',
+        href: 'https://twitter.com/thomashighbaugh',
+        logo: 'x',
       },
       {
         name: 'linkedin',
@@ -77,12 +78,13 @@ module.exports = {
 
       {
         name: 'codepen',
-        href: 'https://codepen.io/thomashighbaughThomasLeonHighbaugh',
+        href: 'https://codepen.io/thomashighbaugh',
       },
       {
-        name: 'thomasleonhighbaugh',
+        name: 'discord',
         logo: 'discord',
         labelColor: theme.colors.secondary,
+        href: 'https://discord.com/ThomasHighbaugh#3886',
       },
     ],
   },
