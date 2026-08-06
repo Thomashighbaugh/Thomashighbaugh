@@ -63,7 +63,7 @@ Get in Touch
 
 <p align="left"><strong>Languages:</strong><br><a href="https://github.com/topics/javascript"><img src="https://img.shields.io/badge/javascript-3c3c3c?logo=javascript&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/typescript"><img src="https://img.shields.io/badge/typescript-3c3c3c?logo=typescript&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/python"><img src="https://img.shields.io/badge/python-69676c?logo=python&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/python"><img src="https://img.shields.io/badge/python-3c3c3c?logo=python&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/lua"><img src="https://img.shields.io/badge/lua-3c3c3c?logo=lua&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/bash"><img src="https://img.shields.io/badge/bash/zsh-3c3c3c?logo=gnu-bash&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
@@ -73,7 +73,7 @@ Get in Touch
 <a href="https://github.com/topics/sass"><img src="https://img.shields.io/badge/sass-69676c?logo=sass&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/less"><img src="https://img.shields.io/badge/less-69676c?logo=less&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/css"><img src="https://img.shields.io/badge/css-69676c?logo=css&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/html"><img src="https://img.shields.io/badge/html-69676c?logo=html5&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/html"><img src="https://img.shields.io/badge/html-3c3c3c?logo=html5&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/ant-design"><img src="https://img.shields.io/badge/ant_design-3c3c3c?logo=antdesign&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/chakra-ui"><img src="https://img.shields.io/badge/chakra-69676c?logo=chakraui&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/bootstrap"><img src="https://img.shields.io/badge/bootstrap-69676c?logo=bootstrap&style=plastic&logoColor=F2f2f2"/></a>
@@ -83,34 +83,34 @@ Get in Touch
 <a href="https://github.com/topics/storybook"><img src="https://img.shields.io/badge/storybook-69676c?logo=storybook&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
 <strong>Backend & Databases:</strong><br><a href="https://github.com/topics/nodejs"><img src="https://img.shields.io/badge/node.js-3c3c3c?logo=node.js&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/express-js"><img src="https://img.shields.io/badge/express.js-3c3c3c?logo=express&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/express-js"><img src="https://img.shields.io/badge/express.js-69676c?logo=express&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/fastapi"><img src="https://img.shields.io/badge/fastapi-3c3c3c?logo=fastapi&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/flask"><img src="https://img.shields.io/badge/flask-69676c?logo=flask&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/graphql"><img src="https://img.shields.io/badge/graphql-69676c?logo=graphql&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/firebase"><img src="https://img.shields.io/badge/firebase-3c3c3c?logo=firebase&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/mongodb"><img src="https://img.shields.io/badge/mongodb-69676c?logo=mongodb&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/graphql"><img src="https://img.shields.io/badge/graphql-3c3c3c?logo=graphql&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/firebase"><img src="https://img.shields.io/badge/firebase-69676c?logo=firebase&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/mongodb"><img src="https://img.shields.io/badge/mongodb-3c3c3c?logo=mongodb&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/sqlite"><img src="https://img.shields.io/badge/sqlite-69676c?logo=sqlite&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/mern"><img src="https://img.shields.io/badge/mern%20stack-3c3c3c?style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
 <strong>DevOps & Tools:</strong><br><a href="https://github.com/topics/docker"><img src="https://img.shields.io/badge/docker-3c3c3c?logo=docker&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/git"><img src="https://img.shields.io/badge/git-3c3c3c?logo=git&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/github"><img src="https://img.shields.io/badge/github-69676c?logo=github&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/github"><img src="https://img.shields.io/badge/github-3c3c3c?logo=github&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/github-actions"><img src="https://img.shields.io/badge/github%20actions-3c3c3c?logo=githubactions&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/gitlab"><img src="https://img.shields.io/badge/gitlab-3c3c3c?logo=gitlab&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/codeberg"><img src="https://img.shields.io/badge/codeberg-69676c?logo=codeberg&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/npm"><img src="https://img.shields.io/badge/npm-69676c?logo=npm&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/npm"><img src="https://img.shields.io/badge/npm-3c3c3c?logo=npm&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/linux"><img src="https://img.shields.io/badge/linux-3c3c3c?logo=linux&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/nixos"><img src="https://img.shields.io/badge/nixos-3c3c3c?logo=nixos&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/neovim"><img src="https://img.shields.io/badge/neovim-3c3c3c?logo=neovim&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/vscode"><img src="https://img.shields.io/badge/visual%20studio%20code-69676c?style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/jetbrains"><img src="https://img.shields.io/badge/jetbrains%20ides-3c3c3c?logo=jetbrains&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/jetbrains"><img src="https://img.shields.io/badge/jetbrains%20ides-69676c?logo=jetbrains&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/netlify"><img src="https://img.shields.io/badge/netlify-69676c?logo=netlify&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/vercel"><img src="https://img.shields.io/badge/vercel-3c3c3c?logo=vercel&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/vercel"><img src="https://img.shields.io/badge/vercel-69676c?logo=vercel&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/heroku"><img src="https://img.shields.io/badge/heroku-69676c?style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/github-pages"><img src="https://img.shields.io/badge/github%20pages-3c3c3c?logo=github&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/github-pages"><img src="https://img.shields.io/badge/github%20pages-69676c?logo=github&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
-<strong>Design:</strong><br><a href="https://github.com/topics/figma"><img src="https://img.shields.io/badge/figma-69676c?logo=figma&style=plastic&logoColor=F2f2f2"/></a>
-<a href="https://github.com/topics/photoshop"><img src="https://img.shields.io/badge/photoshop-3c3c3c?style=plastic&logoColor=F2f2f2"/></a>
+<strong>Design:</strong><br><a href="https://github.com/topics/figma"><img src="https://img.shields.io/badge/figma-3c3c3c?logo=figma&style=plastic&logoColor=F2f2f2"/></a>
+<a href="https://github.com/topics/photoshop"><img src="https://img.shields.io/badge/photoshop-69676c?style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/gimp"><img src="https://img.shields.io/badge/gimp-69676c?logo=gimp&style=plastic&logoColor=F2f2f2"/></a>
 <a href="https://github.com/topics/inkscape"><img src="https://img.shields.io/badge/inkscape-3c3c3c?logo=inkscape&style=plastic&logoColor=F2f2f2"/></a>
 <br><br>
@@ -152,12 +152,12 @@ Get in Touch
 
 
 <p align="center">
-  <a href="https://github.com/qureshikaif"><img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/randomFollower.png" alt="Follower of the day: qureshikaif"/></a>
+  <a href="https://github.com/dimkagithub"><img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/randomFollower.png" alt="Follower of the day: dimkagithub"/></a>
   <br>
-  <strong><a href="https://github.com/qureshikaif">Kaif Qureshi</a></strong>
-  <br><em>Full-Stack Developer | Next.js, React Native & MERN Stack | Building reliable and scalable web and mobile apps</em>
+  <strong><a href="https://github.com/dimkagithub">Dmitry</a></strong>
+  <br><em>Will code for food</em>
   <br>
-  <small>28 public repos · 11 followers</small>
+  <small>5 public repos · 1597 followers</small>
 </p>
 
 </details>
@@ -170,21 +170,21 @@ Get in Touch
 <br>
 
 <ul>
-  <li>⭐ Starred <a href="https://github.com/MentallyQuill/Tavernary">MentallyQuill/Tavernary</a> <small><em>— today</em></small></li>
-  <li>📝 Pushed 2 commits to <a href="https://github.com/Thomashighbaugh/Thomashighbaugh">Thomashighbaugh/Thomashighbaugh</a> on main <small><em>— today</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/bmen25124/SillyTavern-Character-Creator">bmen25124/SillyTavern-Character-Creator</a> <small><em>— today</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/chew1976/dynamic-vars">chew1976/dynamic-vars</a> <small><em>— today</em></small></li>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— yesterday</em></small></li>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/nvim-forge">Thomashighbaugh/nvim-forge</a> on main <small><em>— yesterday</em></small></li>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/firefox">Thomashighbaugh/firefox</a> on master <small><em>— yesterday</em></small></li>
-  <li>📝 Pushed 2 commits to <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">Sanatana-Linux/nixos-awesomewm</a> on main <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/kavau/atrium">kavau/atrium</a> <small><em>— yesterday</em></small></li>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/sharabha-gtk-theme">Sanatana-Linux/sharabha-gtk-theme</a> on main <small><em>— yesterday</em></small></li>
-  <li>📦 Created branch <a href="https://github.com/Sanatana-Linux/sharabha-gtk-theme">Sanatana-Linux/sharabha-gtk-theme</a> main <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/searxng/searxng">searxng/searxng</a> <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/lllyasviel/stable-diffusion-webui-forge">lllyasviel/stable-diffusion-webui-forge</a> <small><em>— 3 days ago</em></small></li>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/lightdm-greeter-ganapati">Sanatana-Linux/lightdm-greeter-ganapati</a> on main <small><em>— 4 days ago</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs">rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs</a> <small><em>— 4 days ago</em></small></li>
+  <li>📝 Pushed 2 commits to <a href="https://github.com/Thomashighbaugh/thomasleonhighbaugh.me">Thomashighbaugh/thomasleonhighbaugh.me</a> on master <small><em>— today</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/macunha1/awesomewm-media-player-widget">macunha1/awesomewm-media-player-widget</a> <small><em>— today</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/Awesome-AwesomeWM-Modules-Widgets-And-Libraries">Thomashighbaugh/Awesome-AwesomeWM-Modules-Widgets-And-Libraries</a> on main <small><em>— today</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">Sanatana-Linux/nixos-awesomewm</a> on main <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/macunha1/awesomewm-screenlock-plugin">macunha1/awesomewm-screenlock-plugin</a> <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/MentallyQuill/Tavernary">MentallyQuill/Tavernary</a> <small><em>— yesterday</em></small></li>
+  <li>📝 Pushed 2 commits to <a href="https://github.com/Thomashighbaugh/Thomashighbaugh">Thomashighbaugh/Thomashighbaugh</a> on main <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/bmen25124/SillyTavern-Character-Creator">bmen25124/SillyTavern-Character-Creator</a> <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/chew1976/dynamic-vars">chew1976/dynamic-vars</a> <small><em>— 2 days ago</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— 2 days ago</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/nvim-forge">Thomashighbaugh/nvim-forge</a> on main <small><em>— 2 days ago</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/firefox">Thomashighbaugh/firefox</a> on master <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/kavau/atrium">kavau/atrium</a> <small><em>— 2 days ago</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Sanatana-Linux/sharabha-gtk-theme">Sanatana-Linux/sharabha-gtk-theme</a> on main <small><em>— 2 days ago</em></small></li>
 </ul>
 </details>
 
