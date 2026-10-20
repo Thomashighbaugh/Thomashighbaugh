@@ -10,6 +10,7 @@
   "author": "Thomashighbaugh",
   "name": "thomashighbaugh",
   "version": "0.0.5",
+  "packageManager": "pnpm@10.19.0",
   "homepage": "https://github.com/Thomashighbaugh/Thomashighbaugh#readme",
   "dependencies": {
     "date-stringifier": "^2.0.0",
