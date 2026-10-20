@@ -136,8 +136,6 @@
 /**
  * @typedef {Object} ProjectData
  * @property {string} user
- * @property {string} startedProgramming
- * @property {number} repoQuantity
  * @property {string} [token]
  * @property {HeaderConfig} header
  * @property {SocialMediasConfig} socialMedias

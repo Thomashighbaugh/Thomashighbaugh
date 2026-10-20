@@ -36,10 +36,7 @@ Get in Touch
 
 %{socialMedias}
 
-<br clear="both" style="clear:both;" >
-<br>
-<br>
-<br>
+<br clear="both">
 
 </details>
 
@@ -71,7 +68,13 @@ Get in Touch
 %{recentworks}
 </details>
 
+<details>
+<summary>🌟 Projects I'm Following
+</summary>
+
 %{starredRepos}
+
+</details>
 
 <details>
 <summary>

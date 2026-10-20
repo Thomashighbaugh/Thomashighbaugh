@@ -13,7 +13,15 @@ module.exports = function (data) {
 
   const badgeTypes = {
     badge: (badgeProperties) => generateBadge(badgeProperties),
-    views: (badgeProperties) => generateViewsBadge({ username: data.user, ...badgeProperties }),
+    // komarev only accepts username/label/color/style/base/abbreviated —
+    // do NOT spread the shields.io generic styles (logoColor etc.) onto it
+    views: () =>
+      generateViewsBadge({
+        username: data.user,
+        label: 'Profile+Views',
+        color: badgeGenericStyles.color,
+        style: badgeGenericStyles.style,
+      }),
   };
 
   const headerImage = generateElement('img', { ...header.image });

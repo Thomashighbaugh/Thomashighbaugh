@@ -24,36 +24,31 @@ async function getUserInfo(username, token = null) {
  */
 module.exports = async function (data) {
   const { user, token } = data;
-  
+
   try {
     const info = await getUserInfo(user, token);
     const followerCount = info.followers || 0;
-    
+
     // Find crossed milestones
-    const crossedMilestones = MILESTONES.filter(m => m <= followerCount);
-    const nextMilestone = MILESTONES.find(m => m > followerCount);
-    
-    let celebrationHtml = '';
+    const crossedMilestones = MILESTONES.filter((m) => m <= followerCount);
+    const nextMilestone = MILESTONES.find((m) => m > followerCount);
+
+    const lines = [`<strong>👥 ${followerCount} Followers</strong>`];
+
     if (crossedMilestones.length > 0) {
-      // Find the highest crossed milestone
       const highest = crossedMilestones[crossedMilestones.length - 1];
-      celebrationHtml = `\n  🎉 <strong>Celebrating ${highest}+ followers!</strong>`;
+      lines.push(`🎉 <strong>Celebrating ${highest}+ followers!</strong>`);
     }
-    
-    let progressHtml = '';
+
     if (nextMilestone) {
       const remaining = nextMilestone - followerCount;
       const progress = Math.round((followerCount / nextMilestone) * 100);
-      progressHtml = `\n  <small>Next milestone: <strong>${nextMilestone}</strong> (${progress}% there — ${remaining} more to go)</small>`;
+      lines.push(
+        `<small>Next milestone: <strong>${nextMilestone}</strong> (${progress}% there — ${remaining} more to go)</small>`,
+      );
     }
-    
-    return `
-<p align="center">
-  <strong>👥 ${followerCount} Followers</strong>
-  ${celebrationHtml}
-  ${progressHtml}
-</p>`;
-    
+
+    return `<p align="center">${lines.join('<br>')}</p>`;
   } catch (err) {
     console.error('Error in followerMilestones replacer:', err.message);
     return `<!-- Follower milestone data unavailable -->`;

@@ -21,12 +21,13 @@ module.exports = async function (data) {
     const imageName = 'randomFollower.png';
     const imageGenerated = await drawFollowerImage(follower, imageName);
 
+    // GitHub strips inline styles — use the height attribute instead
     let imgTag;
     if (imageGenerated) {
-      imgTag = `<img style="height:150px; overflow:hidden; border-radius:8px;" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/${imageName}" alt="Follower of the day: ${follower.login}"/>`;
+      imgTag = `<img height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/${imageName}" alt="Follower of the day: ${follower.login}"/>`;
     } else {
       // Fallback: use GitHub avatar directly
-      imgTag = `<img style="height:150px; border-radius:8px;" src="${follower.avatar_url}" alt="Follower of the day: ${follower.login}"/>`;
+      imgTag = `<img height="150" src="${follower.avatar_url}" alt="Follower of the day: ${follower.login}"/>`;
     }
 
     // Enriched display with name, bio, stats
@@ -43,7 +44,6 @@ module.exports = async function (data) {
   <br>
   <small>${stats}</small>
 </p>`;
-
   } catch (error) {
     console.error('Error in randomFollower replacer:', error.message);
     return `<!-- Failed to load follower showcase: ${error.message} -->`;

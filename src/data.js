@@ -9,8 +9,6 @@ const theme = require('./theme');
 module.exports = {
   user: 'Thomashighbaugh',
   token: process.env.GITHUB_TOKEN || null,
-  startedProgramming: '06/03/2016',
-  repoQuantity: 9,
   header: {
     image: {
       src: 'https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg',
