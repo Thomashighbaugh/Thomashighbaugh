@@ -1,5 +1,7 @@
 // @ts-check
 
+const { escapeHtml } = require('../utils/escapeHtml');
+
 /**
  * Fetch starred repos for a user.
  * @param {string} username
@@ -46,7 +48,7 @@ module.exports = async function (data) {
     // GitHub strips inline styles — height must be an attribute, not CSS
     const repoCards = repos
       .map((repo) => {
-        return `<a href="${repo.html_url}"><img width="30%" height="80" align="center" alt="${repo.name}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${repo.owner.login}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
+        return `<a href="${escapeHtml(repo.html_url)}"><img width="30%" height="80" align="center" alt="${escapeHtml(repo.name)}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${encodeURIComponent(repo.owner.login)}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
       })
       .join('\n');
 

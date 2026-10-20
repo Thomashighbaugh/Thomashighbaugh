@@ -1,5 +1,7 @@
 // @ts-check
 
+const { escapeHtml } = require('../utils/escapeHtml');
+
 /**
  * Fetch recent public events for a user and map to readable activity items.
  * @param {string} username
@@ -53,9 +55,10 @@ async function getRecentEvents(username, token = null) {
       const branch = e.payload?.ref?.replace('refs/heads/', '') || 'main';
       return {
         icon: '📝',
-        action: commitCount === null
-          ? `Pushed to`
-          : `Pushed ${commitCount} commit${commitCount !== 1 ? 's' : ''} to`,
+        action:
+          commitCount === null
+            ? `Pushed to`
+            : `Pushed ${commitCount} commit${commitCount !== 1 ? 's' : ''} to`,
         repo: e.repo.name,
         url: `https://github.com/${e.repo.name}`,
         detail: `on ${branch}`,
@@ -112,25 +115,26 @@ async function getRecentEvents(username, token = null) {
     }),
   };
 
-  const activities = [];
   const seenRepos = new Set();
 
+  // Deduplicate first (cheap, synchronous) so we only await the events we keep.
+  const kept = [];
   for (const event of events) {
     const display = eventDisplay[event.type];
     if (!display) continue;
 
-    const item = await display(event);
-
-    // Deduplicate: only show each repo once per event type
     const dedupKey = `${event.type}-${event.repo.name}`;
     if (seenRepos.has(dedupKey)) continue;
     seenRepos.add(dedupKey);
 
-    activities.push(item);
-    if (activities.length >= 15) break; // limit
+    kept.push({ event, display });
+    if (kept.length >= 15) break; // limit
   }
 
-  return activities;
+  // Resolve the kept events in parallel; Promise.all preserves input order.
+  // PushEvents may each trigger a compare API call — serial awaits made
+  // this up to ~15 sequential round-trips.
+  return await Promise.all(kept.map(({ event, display }) => display(event)));
 }
 
 /**
@@ -147,8 +151,10 @@ function timeAgo(dateStr) {
   if (diffDays === 0) return 'today';
   if (diffDays === 1) return 'yesterday';
   if (diffDays < 7) return `${diffDays} days ago`;
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)} week${Math.floor(diffDays / 7) > 1 ? 's' : ''} ago`;
-  if (diffDays < 365) return `${Math.floor(diffDays / 30)} month${Math.floor(diffDays / 30) > 1 ? 's' : ''} ago`;
+  if (diffDays < 30)
+    return `${Math.floor(diffDays / 7)} week${Math.floor(diffDays / 7) > 1 ? 's' : ''} ago`;
+  if (diffDays < 365)
+    return `${Math.floor(diffDays / 30)} month${Math.floor(diffDays / 30) > 1 ? 's' : ''} ago`;
   return `${Math.floor(diffDays / 365)} year${Math.floor(diffDays / 365) > 1 ? 's' : ''} ago`;
 }
 
@@ -167,10 +173,15 @@ module.exports = async function (data) {
       return `<!-- No recent public activity -->\n<em>No recent public activity to show. Check back after the next commit!</em>`;
     }
 
-    // Build the activity timeline
-    const activityList = events.map(e =>
-      `  <li>${e.icon} ${e.action} <a href="${e.url}">${e.repo}</a> ${e.detail ? `${e.detail} ` : ''}<small><em>— ${timeAgo(e.date)}</em></small></li>`
-    ).join('\n');
+    // Build the activity timeline.
+    // All values originate from the GitHub API and are escaped before
+    // interpolation — issue titles, branch and tag names are attacker-controlled.
+    const activityList = events
+      .map(
+        (e) =>
+          `  <li>${e.icon} ${escapeHtml(e.action)} <a href="${escapeHtml(e.url)}">${escapeHtml(e.repo)}</a> ${e.detail ? `${escapeHtml(e.detail)} ` : ''}<small><em>— ${timeAgo(e.date)}</em></small></li>`,
+      )
+      .join('\n');
 
     return `
 <br>
@@ -178,7 +189,6 @@ module.exports = async function (data) {
 <ul>
 ${activityList}
 </ul>`;
-
   } catch (err) {
     return `<!-- Failed to load recent works: ${err.message} -->`;
   }

@@ -2,6 +2,7 @@
 
 const { getRandomFollower } = require('../utils/githubApi');
 const { drawFollowerImage } = require('../utils/drawFollowerImage');
+const { escapeHtml } = require('../utils/escapeHtml');
 
 /**
  * Random follower showcase replacer.
@@ -21,28 +22,29 @@ module.exports = async function (data) {
     const imageName = 'randomFollower.png';
     const imageGenerated = await drawFollowerImage(follower, imageName);
 
-    // GitHub strips inline styles — use the height attribute instead
+    // GitHub strips inline styles — use the height attribute instead.
+    // The alt text is third-party data and is escaped.
     let imgTag;
     if (imageGenerated) {
-      imgTag = `<img height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/${imageName}" alt="Follower of the day: ${follower.login}"/>`;
+      imgTag = `<img height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/${imageName}" alt="Follower of the day: ${escapeHtml(follower.login)}"/>`;
     } else {
       // Fallback: use GitHub avatar directly
-      imgTag = `<img height="150" src="${follower.avatar_url}" alt="Follower of the day: ${follower.login}"/>`;
+      imgTag = `<img height="150" src="${escapeHtml(follower.avatar_url)}" alt="Follower of the day: ${escapeHtml(follower.login)}"/>`;
     }
 
-    // Enriched display with name, bio, stats
+    // Enriched display with name, bio, stats (third-party data — escaped)
     const name = follower.name || follower.login;
     const bio = follower.bio ? follower.bio.slice(0, 120) : '';
     const stats = `${follower.public_repos} public repos · ${follower.followers} followers`;
 
     return `
 <p align="center">
-  <a href="${follower.html_url}">${imgTag}</a>
+  <a href="${escapeHtml(follower.html_url)}">${imgTag}</a>
   <br>
-  <strong><a href="${follower.html_url}">${name}</a></strong>
-  ${bio ? `<br><em>${bio}</em>` : ''}
+  <strong><a href="${escapeHtml(follower.html_url)}">${escapeHtml(name)}</a></strong>
+  ${bio ? `<br><em>${escapeHtml(bio)}</em>` : ''}
   <br>
-  <small>${stats}</small>
+  <small>${escapeHtml(stats)}</small>
 </p>`;
   } catch (error) {
     console.error('Error in randomFollower replacer:', error.message);

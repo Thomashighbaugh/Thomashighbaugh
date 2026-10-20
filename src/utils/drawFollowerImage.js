@@ -5,6 +5,19 @@ const dateStringifier = require('date-stringifier');
 const fs = require('fs').promises;
 
 /**
+ * Escape text for use inside an SVG <text> node.
+ * The login and date are rendered into an SVG that sharp rasterizes —
+ * unescaped `&`/`<` would break the markup or inject elements.
+ * @param {unknown} value
+ * @returns {string}
+ */
+const escapeSvgText = (value) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+/**
  * Composite a follower's avatar onto a CoderBase image template.
  * Falls back gracefully if assets are missing.
  * @param {import('../types').GitHubFollower} follower
@@ -13,11 +26,16 @@ const fs = require('fs').promises;
  */
 async function drawFollowerImage(follower, fileName) {
   try {
-    // Check if required mask/base files exist before starting
-    const maskExists = await fs.access('./src/resources/images/levelMask.png').then(() => true).catch(() => false);
-    const baseExists = await fs.access('./src/resources/images/CoderBase.png').then(() => true).catch(() => false);
-
-    if (!maskExists || !baseExists) {
+    // Read the required mask/base assets once. Previously each was stat'd with
+    // fs.access and then read again with fs.readFile — four I/O ops for two files.
+    let maskBuffer;
+    let baseBuffer;
+    try {
+      [maskBuffer, baseBuffer] = await Promise.all([
+        fs.readFile('./src/resources/images/levelMask.png'),
+        fs.readFile('./src/resources/images/CoderBase.png'),
+      ]);
+    } catch {
       console.warn('Skipping image compositing: required assets (levelMask.png / CoderBase.png) not found');
       return null; // signal to fall back to plain img
     }
@@ -40,33 +58,13 @@ async function drawFollowerImage(follower, fileName) {
     // 2. Resize Avatar
     const resizedAvatarBuffer = await sharp(avatarBuffer).resize(269, 269).toBuffer();
 
-    // 3. Load Avatar Mask
-    let maskBuffer;
-    try {
-      maskBuffer = await fs.readFile('./src/resources/images/levelMask.png');
-    } catch (maskError) {
-      console.error('Error reading mask:', maskError);
-      return null;
-    }
-
-    // 4. Apply mask to make avatar circular
+    // 3. Apply mask to make avatar circular
     // The levelMask.png is RGB (3 channels), so use its grayscale values as the
     // alpha channel of the avatar. Brighter pixels = more opaque.
     const grayMask = await sharp(maskBuffer).greyscale().toBuffer();
-    const maskedAvatarBuffer = await sharp(resizedAvatarBuffer)
-      .joinChannel(grayMask)
-      .toBuffer();
+    const maskedAvatarBuffer = await sharp(resizedAvatarBuffer).joinChannel(grayMask).toBuffer();
 
-    // 5. Load CoderBase
-    let baseBuffer;
-    try {
-      baseBuffer = await fs.readFile('./src/resources/images/CoderBase.png');
-    } catch (baseError) {
-      console.error('Error reading base image:', baseError);
-      return null;
-    }
-
-    // 6. Composite Avatar onto Base with text overlay
+    // 4. Composite Avatar onto Base with text overlay
     const baseImage = sharp(baseBuffer);
     const baseMetadata = await baseImage.metadata();
     const width = baseMetadata.width || 900;
@@ -79,15 +77,17 @@ async function drawFollowerImage(follower, fileName) {
     .name { fill: #fff; font-size: 18px; font-family: sans-serif; font-weight: bold; }
     .date { fill: #ccc; font-size: 13px; font-family: sans-serif; }
   </style>
-  <text x="150" y="270" text-anchor="middle" class="name">${follower.login}</text>
-  <text x="150" y="288" text-anchor="middle" class="date">${formattedDate}</text>
+  <text x="150" y="270" text-anchor="middle" class="name">${escapeSvgText(follower.login)}</text>
+  <text x="150" y="288" text-anchor="middle" class="date">${escapeSvgText(formattedDate)}</text>
 </svg>`;
     const textOverlay = await sharp(Buffer.from(textSvg)).toBuffer();
 
-    const composedImageBuffer = await baseImage.composite([
-      { input: maskedAvatarBuffer, top: 18, left: 16 },
-      { input: textOverlay, top: 0, left: 0 }
-    ]).toBuffer();
+    const composedImageBuffer = await baseImage
+      .composite([
+        { input: maskedAvatarBuffer, top: 18, left: 16 },
+        { input: textOverlay, top: 0, left: 0 },
+      ])
+      .toBuffer();
 
     // 7. Save the final Image
 
