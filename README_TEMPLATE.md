@@ -46,8 +46,6 @@ Get in Touch
 
 %{skillswall}
 
-<br><br>%{llmBadge}
-
 </details>
 
 <details>
@@ -82,7 +80,10 @@ Account Statistics
 </summary>
 
 <p align="center">
-  <img align="center" width="100%" src="./github-metrics.svg" alt="GitHub metrics — generated daily by lowlighter/metrics" />
+  <!-- width/height set to the SVG's intrinsic 960x6680 ratio so the browser
+       scales it proportionally; height:auto is unreliable here because the
+       generated SVG has no viewBox on its root element. -->
+  <img align="center" width="960" height="6680" src="./github-metrics.svg" alt="GitHub metrics — generated daily by lowlighter/metrics" />
 </p>
 
 </details>

@@ -35,14 +35,4 @@ function generateBadge({ name, message, color = '', href, ...properties }) {
     : badge;
 }
 
-function generateViewsBadge(badgeProperties) {
-  const query = generateQueryFromObject(badgeProperties);
-
-  const badge = generateElement('img', {
-    src: `https://komarev.com/ghpvc/?${query}`,
-  });
-
-  return badge;
-}
-
-module.exports = { generateBadge, generateViewsBadge };
+module.exports = { generateBadge };
