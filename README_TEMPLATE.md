@@ -80,10 +80,10 @@ Account Statistics
 </summary>
 
 <p align="center">
-  <!-- width/height set to the SVG's intrinsic 960x6680 ratio so the browser
-       scales it proportionally; height:auto is unreliable here because the
-       generated SVG has no viewBox on its root element. -->
-  <img align="center" width="960" height="6680" src="./github-metrics.svg" alt="GitHub metrics — generated daily by lowlighter/metrics" />
+  <!-- width only, no height: the generated SVG has an intrinsic aspect ratio
+       and its height varies run-to-run (2361px today, was 6680px). Hardcoding
+       height squashes it; omitting height lets width=100% scale proportionally. -->
+  <img align="center" width="100%" src="./github-metrics.svg" alt="GitHub metrics — generated daily by lowlighter/metrics" />
 </p>
 
 </details>

@@ -45,11 +45,13 @@ module.exports = async function (data) {
       return `<!-- No qualifying starred repos -->`;
     }
 
-    // Cards are sized by width="30%" alone — GitHub strips inline styles, so an
-    // explicit height attribute squashes them. Repo names are escaped.
+    // The pin cards come back at 120-150px tall depending on description length.
+    // height="150" on the img is a fixed attribute GitHub's sanitizer preserves
+    // (inline styles get stripped), so all six tiles render the same height.
+    // Repo names are escaped.
     const repoCards = repos
       .map((repo) => {
-        return `<a href="${escapeHtml(repo.html_url)}"><img width="30%" align="center" alt="${escapeHtml(repo.name)}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${encodeURIComponent(repo.owner.login)}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
+        return `<a href="${escapeHtml(repo.html_url)}"><img width="30%" height="150" align="center" alt="${escapeHtml(repo.name)}" src="https://github-readme-stats-server.vercel.app/api/pin/?username=${encodeURIComponent(repo.owner.login)}&repo=${encodeURIComponent(repo.name)}&title_color=FE3B7B&text_color=F2F2F2&bg_color=2c2c2c&border_color=525053&icon_color=F2F2F2&border_radius=15"/></a>`;
       })
       .join('\n');
 
