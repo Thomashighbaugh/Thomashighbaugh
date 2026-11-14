@@ -9,11 +9,13 @@ GitHub Profile README generator that uses GitHub Actions to run Node.js scripts.
 ## Key Files
 | File | Description |
 |------|-------------|
-| `package.json` | Project scripts, dependencies (sharp, node-fetch, date-stringifier) |
+| `package.json` | Project scripts, dependencies (sharp, satori, sucrase, node-fetch, date-stringifier) |
 | `pnpm-workspace.yaml` | pnpm workspace configuration |
-| `README_TEMPLATE.md` | Template with `%{replacername}` placeholders for dynamic content |
+| `readme.source.md` | Source template with ` ```vice ` JSX blocks + `%{replacername}` placeholders |
+| `README_TEMPLATE.md` | Legacy template (superseded by `readme.source.md`; kept for `npm run build:legacy`) |
 | `README.md` | Generated profile README (output of `npm start`) |
-| `github-metrics.svg` | Large SVG metrics visualization |
+| `.github/assets/` | Generated vice SVG components (committed, content-hashed filenames) |
+| `github-metrics.svg` | Legacy lowlighter/metrics output — no longer referenced by the README |
 | `CONTRIBUTING.md` | Contribution guidelines |
 | `.prettierrc` | Prettier code formatting configuration |
 | `.gitignore` | Git ignore rules |
@@ -28,18 +30,22 @@ GitHub Profile README generator that uses GitHub Actions to run Node.js scripts.
 ## For AI Agents
 
 ### Working In This Directory
-- Run `npm start` to test README generation locally (requires GITHUB_TOKEN env)
+- Run `npm start` to regenerate the README (requires GITHUB_TOKEN env for full data)
 - Run `npm test` for Mocha tests
-- Template replacement uses `%{replacername}` syntax in `README_TEMPLATE.md`
-- Replacers are auto-discovered from `src/replacers/`
+- The README is built from `readme.source.md`: ` ```vice ` blocks are rendered to
+  SVG by Satori and written to `.github/assets/`; remaining `%{tag}` tags are
+  filled by the replacers in `src/replacers/`
+- `src/resources/fonts/*.woff2` are the outline fonts vice renders with. They
+  are committed to the repo so the build works in CI with no font downloads.
+  The Coder `.fnt`/`.png` bitmap fonts are for sharp only — Satori cannot use them
 
 ### Testing Requirements
 - Mocha test suite: `npm test`
 - Verify README generation: `npm start` then check `README.md` output
 
 ### Common Patterns
-- Template-driven architecture: `README_TEMPLATE.md` + replacers = `README.md`
-- Each replacer handles one template tag and returns replacement content
+- Template-driven architecture: `readme.source.md` + vice blocks + replacers = `README.md`
+- Each vice block renders to one SVG; the filename carries a content hash for cache busting
 - Bitmap fonts (Coder 18/30/48) and web fonts for SVG rendering
 
 ## Dependencies

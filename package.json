@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/vice-build.js",
+    "build:readme": "node src/vice-build.js",
+    "build:legacy": "node src/index.js",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
@@ -15,15 +17,23 @@
   "dependencies": {
     "date-stringifier": "^2.0.0",
     "node-fetch": "^3.3.2",
-    "sharp": "^0.35.5"
+    "satori": "^0.63.2",
+    "sharp": "^0.35.5",
+    "sucrase": "^3.35.1"
   },
   "overrides": {
     "js-yaml": "^4.2.0",
     "serialize-javascript": "^7.0.5"
   },
   "devDependencies": {
-    "eslint": "^10.6.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
     "mocha": "^12.0.3",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.2"
   }
 }

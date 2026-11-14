@@ -34,8 +34,8 @@ async function getRecentEvents(username, token = null) {
     if (!before || !head || before === head) return null;
 
     try {
-      const owner = e.repo.name.split('/')[0];
-      const repo = e.repo.name.split('/')[1];
+      const _owner = e.repo.name.split('/')[0];
+      const _repo = e.repo.name.split('/')[1];
       const compare = await fetch(
         `https://api.github.com/repositories/${repository_id}/compare/${before}...${head}`,
         { headers },

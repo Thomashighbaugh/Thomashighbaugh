@@ -5,7 +5,7 @@
  * @param {string|null} [token]
  * @returns {Promise<any>}
  */
-async function Request(url, token = null) {
+async function request(url, token = null) {
   const headers = new Headers({
     'Content-Type': 'application/json',
     'user-agent': 'node.js',
@@ -26,7 +26,7 @@ async function Request(url, token = null) {
 async function getRandomFollower(user, token = null) {
   // Fetch followers with extended fields via the per-page parameter
   // to get more data in one call
-  const followers = await Request(
+  const followers = await request(
     `https://api.github.com/users/${user}/followers?per_page=100`,
     token,
   );
@@ -49,7 +49,7 @@ async function getRandomFollower(user, token = null) {
   const chosen = candidates[index];
 
   // Fetch details only for the chosen follower (1 extra call instead of N)
-  const detail = await Request(chosen.url, token);
+  const detail = await request(chosen.url, token);
 
   // Quality check on the chosen follower
   if (
@@ -87,7 +87,7 @@ function hashCode(str) {
  * @returns {Promise<import('../types').GitHubRepo[]>}
  */
 async function getRepositories(user, token = null) {
-  return Request(`https://api.github.com/users/${user}/repos?per_page=100`, token);
+  return request(`https://api.github.com/users/${user}/repos?per_page=100`, token);
 }
 
 module.exports = { getRandomFollower, getRepositories };

@@ -10,6 +10,9 @@ Core application source code for the GitHub Profile README generator. Contains t
 | File | Description |
 |------|-------------|
 | `index.js` | Main entry point — reads template, discovers replacers, performs async replacement, writes README.md |
+| `vice-build.js` | Current entry point (`npm start`) — renders ` ```vice ` blocks to SVG, fills `%{tag}` tags, writes README.md + `.github/assets/` |
+| `vice-renderer.js` | Satori/sucrase rendering core — JSX transpile, font loading, WASM init |
+| `vice-components.js` | Vice visual components — Badge, SocialButton, SkillPill, RepoCard, FollowerCard, StatsCard |
 | `data.js` | Source data including social links, experience timeline, skill definitions, recent works |
 | `theme.js` | Theme configuration (colors, styles) used across replacers |
 
@@ -23,9 +26,12 @@ Core application source code for the GitHub Profile README generator. Contains t
 ## For AI Agents
 
 ### Working In This Directory
-- `index.js` auto-discovers replacers from `replacers/` directory
+- `vice-build.js` auto-discovers replacers from `src/replacers/` and runs them for
+  the `%{tag}` tags left over after the ` ```vice ` blocks are rendered
 - Replacers are loaded dynamically via `fs.readdirSync`
 - Data is passed to each replacer function as argument
+- Every identifier a vice block references must be bound in the build context —
+  optional chaining does not protect against an *undeclared* variable
 
 ### Testing Requirements
 - Unit tests under `npm test` (Mocha)

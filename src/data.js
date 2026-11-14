@@ -100,7 +100,7 @@ module.exports = {
           { name: 'TypeScript', isHighlighted: true },
           { name: 'Python' },
           { name: 'Lua' },
-          { name: 'BASH/ZSH', logo: 'gnu-bash', isHighlighted: true },
+          { name: 'BASH/ZSH', logo: 'gnubash', isHighlighted: true },
         ],
       },
       {
@@ -161,7 +161,7 @@ module.exports = {
         name: 'Design',
         skills: [
           { name: 'Figma' },
-          { name: 'Photoshop', logo: 'adobe-photoshop' },
+          { name: 'Photoshop' },
           { name: 'GIMP' },
           { name: 'Inkscape' },
         ],

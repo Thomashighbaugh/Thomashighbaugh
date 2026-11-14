@@ -1,0 +1,173 @@
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
+
+```vice width=item.width height=30 from=headerBadges link=item.href
+<Badge
+  label={item.label}
+  value={item.value}
+  color="#3c3c3c"
+  logoColor="#6AB0F3"
+  logo={item.logo}
+  href={item.href}
+  style="for-the-badge"
+  height={30}
+/>
+```
+
+<div align="center">
+<details>
+<summary>
+About Me
+</summary>
+<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
+<ul align="left">
+<li align="left">Building AI-powered tools and infrastructure — from agentic coding workflows and multi-agent orchestration systems to LLM-integrated applications. Check out my <a href="https://github.com/Thomashighbaugh">repos</a> for a sense of the work.</li>
+<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice)</li>
+</ul>
+</details>
+</div>
+
+<div align="center">
+<strong>
+Tom's Law of Software Development
+</strong> 
+<br>
+<br>
+ <em>The more convenient, useful or helpful a software is to use, <br> the more of a painful, tedious and/or absolutely miserable it was to <br>develop and then iteratively refine into such a form.</em>
+</div>
+<br>
+<hr>
+<br>
+
+<div>
+
+<details>
+<summary>
+Get in Touch
+</summary>
+
+<a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
+
+```vice width=item.width height=36 from=socialLinks link=item.href
+<SocialButton
+  icon={item.logo}
+  text={item.text}
+  href={item.href}
+  width={item.width}
+  height={36}
+/>
+```
+
+<br clear="both">
+
+</details>
+
+<details>
+<summary>Skill Wall
+</summary>
+
+**Languages**
+
+```vice width=item.width height=24 from=skillPills.Languages link=item.href
+<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```
+
+**Frontend**
+
+```vice width=item.width height=24 from=skillPills.Frontend link=item.href
+<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```
+
+**Backend & Databases**
+
+```vice width=item.width height=24 from="skillPills.'Backend & Databases'" link=item.href
+<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```
+
+**DevOps & Tools**
+
+```vice width=item.width height=24 from="skillPills.'DevOps & Tools'" link=item.href
+<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```
+
+**Design**
+
+```vice width=item.width height=24 from=skillPills.Design link=item.href
+<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```
+
+</details>
+
+<details>
+<summary>Follower Showcase </summary>
+
+```vice width=340 height=210 from=follower link=item.href
+<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+  <FollowerCard
+    avatarUrl={item?.avatarUrl || 'https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png'}
+    login={item?.login || 'Thomashighbaugh'}
+    name={item?.name || 'Thomashighbaugh'}
+    bio={item?.bio || ''}
+    publicRepos={item?.publicRepos || 0}
+    followers={item?.followers || 0}
+    href={item?.htmlUrl || 'https://github.com/Thomashighbaugh'}
+    size={100}
+  />
+</div>
+```
+
+<em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
+
+</details>
+
+<details>
+<summary>
+⚡ Recent Activity
+</summary>
+
+%{recentworks}
+
+</details>
+
+<details>
+<summary>🌟 Projects I'm Following
+</summary>
+
+<em>Repos I've starred that I find interesting or useful:</em>
+
+<br>
+
+```vice width=240 height=124 from=github.starredRepos link=item.href
+<RepoCard
+  name={item.name}
+  fullName={item.fullName}
+  description={item.description}
+  stars={item.stars}
+  forks={item.forks}
+  language={item.language}
+  languageColor={item.languageColor}
+  href={item.href}
+  width={240}
+  height={124}
+/>
+```
+
+</details>
+
+<details>
+<summary>
+Account Statistics
+</summary>
+
+```vice width=500 height=210
+<MetricsPanel
+  totalStars={github?.stats?.totalStars || 0}
+  totalForks={github?.stats?.totalForks || 0}
+  totalRepos={github?.stats?.totalRepos || 0}
+  totalCommits={github?.stats?.totalCommits || 0}
+  languages={(github?.languages || []).slice(0, 6)}
+/>
+```
+
+</details>
+
+</div>

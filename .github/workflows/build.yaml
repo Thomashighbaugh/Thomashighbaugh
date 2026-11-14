@@ -32,10 +32,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prod
 
-      - name: Generate README
-        run: node src/index.js
+      - name: Generate README with vice
+        run: pnpm run build:readme
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: Thomashighbaugh
 
       - name: Commit and push if changed
         run: |-
