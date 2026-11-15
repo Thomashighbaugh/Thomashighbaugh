@@ -8,9 +8,6 @@ const COLORS = theme.colors;
 
 /**
  * GitHub linguist language colors.
- * The repos API does not return them, so they are mapped here. Anything not
- * listed falls back to the theme primary.
- *
  * @type {Record<string, string>}
  */
 const LANGUAGE_COLORS = {
@@ -48,40 +45,55 @@ const LANGUAGE_COLORS = {
 };
 
 /**
- * Compute the rendered width of a badge.
- * Exported so the build can size each badge's SVG viewport to fit exactly.
+ * Inline icon component — renders a Simple Icons path as a raw <path>
+ * element inside the parent SVG. No  tag, no external URL — nothing
+ * GitHub's sanitizer strips from embedded README SVGs.
  *
- * @param {string} label
- * @param {string} value
- * @param {string|null} [logo]
- * @param {string} [style]
- * @param {number} [height]
- * @param {number} [fontSize]
+ * @param {object} props
+ * @param {string} props.pathData - SVG path 'd' attribute
+ * @param {string} [props.color='currentColor']
+ * @param {number|string} [props.size] - render size in px (scales the 24x24 viewBox)
+ */
+function Icon({ pathData, color = 'currentColor', size }) {
+  if (!pathData) return null;
+  const scale = size != null ? size / 24 : 1;
+  return createElement('g', {
+    transform: scale !== 1 ? `scale(${scale})` : undefined,
+  }, [
+    createElement('path', {
+      d: pathData,
+      fill: color,
+    }),
+  ]);
+}
+
+/**
+ * Compute the rendered width of a badge.
  * @returns {number}
  */
-function badgeWidth(label, value, logo = null, style = 'plastic', height = 28, fontSize = 11) {
+function badgeWidth(label, value, icon = null, style = 'plastic', height = 28, fontSize = 11) {
   const isForTheBadge = style === 'for-the-badge';
   const padX = isForTheBadge ? 8 : 6;
   const labelW = Math.max(label.length * fontSize * 0.55 + padX * 2, 40);
   const valueW = Math.max(String(value).length * fontSize * 0.55 + padX * 2, 30);
-  const logoW = logo ? height * 0.75 + 4 : 0;
-  return Math.ceil(labelW + valueW + logoW + 4);
+  const iconW = icon ? height * 0.75 + 4 : 0;
+  return Math.ceil(labelW + valueW + iconW + 4);
 }
 
 /**
- * Shields.io-style badge component.
- * Renders a pill-shaped badge with left label, right value, and optional logo.
+ * Shields.io-style badge component — pure SVG.
  */
 function Badge({
   label,
   value,
   color = COLORS.primary,
   logoColor = COLORS.white,
-  logo,
+  icon,
   href,
   style = 'plastic',
   height = 28,
   fontSize = 11,
+  textToPaths,
 }) {
   const isForTheBadge = style === 'for-the-badge';
   const borderRadius = isForTheBadge ? 4 : height / 2;
@@ -89,84 +101,68 @@ function Badge({
 
   const labelW = Math.max(label.length * fontSize * 0.55 + padX * 2, 40);
   const valueW = Math.max(String(value).length * fontSize * 0.55 + padX * 2, 30);
-  const logoW = logo ? height * 0.75 + 4 : 0;
-  const totalW = labelW + valueW + logoW + 4;
+  const iconW = icon ? height * 0.75 + 4 : 0;
+  const totalW = labelW + valueW + iconW + 4;
 
-  const children = [];
+  const labelX = iconW + padX;
+  const valueX = labelX + labelW + padX;
 
-  if (logo) {
-    children.push(
-      createElement('div', {
-        style: {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: logoW,
-          height: '100%',
-        },
-      }, [
-        createElement('img', {
-          src: logo,
-          width: height * 0.6,
-          height: height * 0.6,
-          alt: '',
-          style: { display: 'block' },
-        }),
-      ]),
-    );
-  }
+  // Convert text to paths
+  const labelPaths = textToPaths(label, 'VT323', fontSize, labelX, height * 0.62, logoColor);
+  const valuePaths = textToPaths(value, 'VT323', fontSize, valueX, height * 0.62, logoColor);
 
-  children.push(
-    createElement('span', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize,
-        color: logoColor,
-        padding: `0 ${padX}px`,
-        userSelect: 'none',
-      },
-    }, label),
-  );
-
-  children.push(
-    createElement('span', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize,
-        color: logoColor,
-        padding: `0 ${padX}px`,
-        userSelect: 'none',
-        opacity: 0.9,
-      },
-    }, value),
-  );
-
-  const content = createElement('div', {
+  return createElement('a', {
+    href: href || undefined,
     style: {
-      display: 'flex',
-      alignItems: 'center',
-      backgroundColor: color,
-      borderRadius,
-      height,
-      width: totalW,
-      overflow: 'hidden',
-      boxSizing: 'border-box',
+      textDecoration: 'none',
+      display: 'inline-block',
     },
-  }, children);
-
-  if (href) {
-    return createElement('a', {
-      href,
-      style: { textDecoration: 'none', display: 'inline-block' },
-    }, content);
-  }
-
-  return content;
+  }, [
+    createElement('svg', {
+      width: totalW,
+      height,
+      viewBox: `0 0 ${totalW} ${height}`,
+      xmlns: 'http://www.w3.org/2000/svg',
+    }, [
+      // Background pill
+      createElement('rect', {
+        x: 0,
+        y: 0,
+        width: totalW,
+        height,
+        fill: color,
+        rx: borderRadius,
+        ry: borderRadius,
+      }),
+      // Icon
+      ...(icon ? [
+        createElement('g', {
+          transform: `translate(${padX}, ${(height - height * 0.6) / 2}) scale(${height * 0.6 / 24})`,
+        }, [
+          createElement('path', {
+            d: icon.pathData,
+            fill: logoColor,
+          }),
+        ]),
+      ] : []),
+      // Label text paths
+      ...labelPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${fontSize / fontSize})`,
+      })),
+      // Value text paths
+      ...valuePaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${fontSize / fontSize})`,
+      })),
+    ]),
+  ]);
 }
 
 /**
- * Pill-shaped social media button with icon + text.
- * Button text uses Knewave — your committed handwritten brush font.
+ * Pill-shaped social media button — pure SVG.
  */
 function SocialButton({
   icon,
@@ -177,58 +173,54 @@ function SocialButton({
   fontSize = 15,
   width = 150,
   height = 36,
-  iconSize = 18,
+  textToPaths,
 }) {
   const borderRadius = height / 2;
+  const iconSize = height * 0.5;
+  const textX = icon ? 12 + iconSize + 8 : 12;
+
+  const textPaths = textToPaths(text, 'Knewave', fontSize, textX, height * 0.55, textColor);
 
   return createElement('a', {
     href,
     style: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width,
-      height,
-      backgroundColor,
-      borderRadius,
       textDecoration: 'none',
-      boxSizing: 'border-box',
+      display: 'inline-block',
     },
   }, [
-    createElement('div', {
-      style: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 8,
-        flex: 1,
-        width: '100%',
-        height: '100%',
-        paddingLeft: 12,
-        paddingRight: 12,
-        boxSizing: 'border-box',
-      },
+    createElement('svg', {
+      width,
+      height,
+      viewBox: `0 0 ${width} ${height}`,
+      xmlns: 'http://www.w3.org/2000/svg',
     }, [
+      // Background pill
+      createElement('rect', {
+        x: 0,
+        y: 0,
+        width,
+        height,
+        fill: backgroundColor,
+        rx: borderRadius,
+        ry: borderRadius,
+      }),
+      // Icon
       ...(icon ? [
-        createElement('img', {
-          src: icon,
-          width: iconSize,
-          height: iconSize,
-          alt: '',
-          style: { flexShrink: 0, display: 'block', width: iconSize, height: iconSize },
-        }),
+        createElement('g', {
+          transform: `translate(${12}, ${(height - iconSize) / 2}) scale(${iconSize / 24})`,
+        }, [
+          createElement('path', {
+            d: icon.pathData,
+            fill: textColor,
+          }),
+        ]),
       ] : []),
-      createElement('span', {
-        style: {
-          fontFamily: 'Knewave, cursive',
-          fontWeight: 400,
-          fontSize,
-          color: textColor,
-          letterSpacing: '-0.2px',
-          userSelect: 'none',
-        },
-      }, text),
+      // Text paths
+      ...textPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${fontSize / fontSize})`,
+      })),
     ]),
   ]);
 }
@@ -238,73 +230,61 @@ function SocialButton({
  */
 function SkillPill({
   name,
-  logo,
+  icon,
   color = COLORS.primary,
   logoColor = COLORS.white,
   highlighted = false,
   fontSize = 11,
   height = 24,
   width,
+  textToPaths,
 }) {
   const fill = highlighted ? COLORS.secondary : color;
-  const totalW = width || skillPillWidth(name, logo, fontSize, height);
-  const logoW = logo ? height * 0.75 + 6 : 0;
+  const totalW = width || skillPillWidth(name, !!icon, fontSize, height);
+  const iconW = icon ? height * 0.75 + 6 : 0;
   const padX = 8;
+  const textX = iconW + padX;
 
-  const children = [];
+  const textPaths = textToPaths(name, 'VT323', fontSize, textX, height * 0.62, logoColor);
 
-  if (logo) {
-    children.push(
-      createElement('div', {
-        style: {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: logoW,
-          height: '100%',
-        },
+  return createElement('svg', {
+    width: totalW,
+    height,
+    viewBox: `0 0 ${totalW} ${height}`,
+    xmlns: 'http://www.w3.org/2000/svg',
+  }, [
+    // Background pill
+    createElement('rect', {
+      x: 0,
+      y: 0,
+      width: totalW,
+      height,
+      fill,
+      rx: height / 2,
+      ry: height / 2,
+    }),
+    // Icon
+    ...(icon ? [
+      createElement('g', {
+        transform: `translate(${padX}, ${(height - height * 0.6) / 2}) scale(${height * 0.6 / 24})`,
       }, [
-        createElement('img', {
-          src: logo,
-          width: height * 0.6,
-          height: height * 0.6,
-          alt: '',
-          style: { display: 'block' },
+        createElement('path', {
+          d: icon.pathData,
+          fill: logoColor,
         }),
       ]),
-    );
-  }
-
-  children.push(
-    createElement('span', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize,
-        color: logoColor,
-        padding: `0 ${padX}px`,
-        userSelect: 'none',
-      },
-    }, name),
-  );
-
-  return createElement('div', {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      backgroundColor: fill,
-      borderRadius: height / 2,
-      height,
-      width: totalW,
-      overflow: 'hidden',
-      boxSizing: 'border-box',
-      marginBottom: 4,
-      marginRight: 4,
-    },
-  }, children);
+    ] : []),
+    // Text paths
+    ...textPaths.map(p => createElement('path', {
+      d: p.d,
+      fill: p.fill,
+      transform: `translate(${p.x}, ${p.y}) scale(${fontSize / fontSize})`,
+    })),
+  ]);
 }
 
 /**
- * Repository pin card — styled like GitHub's repo pin cards.
+ * Repository pin card — pure SVG.
  */
 function RepoCard({
   _name,
@@ -317,135 +297,101 @@ function RepoCard({
   href,
   width = 240,
   height = 120,
+  textToPaths,
 }) {
-  const children = [];
-
-  children.push(
-    createElement('div', {
-      style: {
-        display: 'flex',
-        alignItems: 'baseline',
-        gap: 4,
-        marginBottom: 6,
-      },
-    }, [
-      createElement('span', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 12,
-          color: COLORS.secondary,
-          fontWeight: 700,
-        },
-      }, fullName.split('/').pop()),
-    ]),
-  );
-
-  if (description) {
-    children.push(
-      createElement('div', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 10,
-          color: COLORS.white,
-          lineHeight: 1.4,
-          marginBottom: 10,
-          flex: 1,
-        },
-      }, truncate(description, 90)),
-    );
-  }
-
-  const statItems = [];
-  if (language) {
-    statItems.push(
-      createElement('div', {
-        style: {
-          display: 'flex',
-          alignItems: 'center',
-          gap: 4,
-        },
-      }, [
-        createElement('div', {
-          style: {
-            width: 8,
-            height: 8,
-            backgroundColor: languageColor || LANGUAGE_COLORS[language] || COLORS.primary,
-            borderRadius: 2,
-            flexShrink: 0,
-          },
-        }),
-        createElement('span', {
-          style: {
-            fontFamily: 'VT323, monospace',
-            fontSize: 9,
-            color: '#8b949e',
-          },
-        }, language),
-      ]),
-    );
-  }
-
-  statItems.push(
-    createElement('span', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize: 9,
-        color: '#8b949e',
-      },
-    }, `★ ${stars}`),
-  );
-
-  statItems.push(
-    createElement('span', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize: 9,
-        color: '#8b949e',
-      },
-    }, `🍴 ${forks}`),
-  );
-
-  children.push(
-    createElement('div', {
-      style: {
-        display: 'flex',
-        alignItems: 'center',
-        gap: 8,
-      },
-    }, statItems),
-  );
+  const namePaths = textToPaths(fullName.split('/').pop(), 'VT323', 12, 12, 22, COLORS.secondary);
+  const descPaths = description ? textToPaths(truncate(description, 90), 'VT323', 10, 12, 42, COLORS.white) : [];
+  const starsPaths = textToPaths(`★ ${stars}`, 'VT323', 9, 0, 2, '#8b949e');
+  const forksPaths = textToPaths(`🍴 ${forks}`, 'VT323', 9, 6 + stars.toString().length * 4.5, 2, '#8b949e');
 
   return createElement('a', {
     href,
     style: {
-      display: 'block',
-      width,
-      height,
-      backgroundColor: '#0d0d0d',
-      border: '1px solid #30363d',
-      borderRadius: 4,
-      overflow: 'hidden',
       textDecoration: 'none',
-      boxSizing: 'border-box',
+      display: 'inline-block',
     },
   }, [
-    createElement('div', {
-      style: {
-        padding: 12,
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
-        boxSizing: 'border-box',
-      },
-    }, children),
+    createElement('svg', {
+      width,
+      height,
+      viewBox: `0 0 ${width} ${height}`,
+      xmlns: 'http://www.w3.org/2000/svg',
+    }, [
+      // Background card
+      createElement('rect', {
+        x: 0,
+        y: 0,
+        width,
+        height,
+        fill: '#0d0d0d',
+        rx: 4,
+        ry: 4,
+        stroke: '#30363d',
+        strokeWidth: 1,
+      }),
+      // Repo name paths
+      ...namePaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${12 / 12})`,
+      })),
+      // Description paths
+      ...descPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${10 / 10})`,
+      })),
+      // Stats row
+      createElement('g', {
+        transform: 'translate(12, 80)',
+      }, [
+        ...(language ? [
+          createElement('rect', {
+            x: 0,
+            y: -4,
+            width: 8,
+            height: 8,
+            fill: languageColor || LANGUAGE_COLORS[language] || COLORS.primary,
+            rx: 2,
+            ry: 2,
+          }),
+          ...textToPaths(language, 'VT323', 9, 12, 2, '#8b949e').map(p => createElement('path', {
+            d: p.d,
+            fill: p.fill,
+            transform: `translate(${p.x}, ${p.y}) scale(${9 / 9})`,
+          })),
+          ...starsPaths.map(p => createElement('path', {
+            d: p.d,
+            fill: p.fill,
+            transform: `translate(${p.x + 12 + 6 + language.length * 4.5}, ${p.y}) scale(${9 / 9})`,
+          })),
+          ...forksPaths.map(p => createElement('path', {
+            d: p.d,
+            fill: p.fill,
+            transform: `translate(${p.x + 12 + 6 + language.length * 4.5 + 6 + stars.toString().length * 4.5}, ${p.y}) scale(${9 / 9})`,
+          })),
+        ] : [
+          ...starsPaths.map(p => createElement('path', {
+            d: p.d,
+            fill: p.fill,
+            transform: `translate(${p.x}, ${p.y}) scale(${9 / 9})`,
+          })),
+          ...forksPaths.map(p => createElement('path', {
+            d: p.d,
+            fill: p.fill,
+            transform: `translate(${p.x + 6 + stars.toString().length * 4.5}, ${p.y}) scale(${9 / 9})`,
+          })),
+        ]),
+      ]),
+    ]),
   ]);
 }
 
 /**
- * Follower showcase card — avatar circle + name + bio + stats.
+ * Follower showcase card — pure SVG.
  */
 function FollowerCard({
-  avatarUrl,
+  icon,
   login,
   name,
   bio,
@@ -453,84 +399,64 @@ function FollowerCard({
   followers,
   href,
   size = 150,
+  textToPaths,
 }) {
   const displayName = name || login;
+  const cardW = size;
+  const cardH = size + 60;
 
-  const children = [];
-
-  children.push(
-    createElement('img', {
-      src: avatarUrl,
-      width: size,
-      height: size,
-      alt: `Follower: ${login}`,
-      style: {
-        borderRadius: '50%',
-        border: `2px solid ${COLORS.secondary}`,
-        objectFit: 'cover',
-      },
-    }),
-  );
-
-  const infoChildren = [];
-  infoChildren.push(
-    createElement('strong', {
-      style: {
-        fontFamily: 'Knewave, cursive',
-        fontSize: 18,
-        color: COLORS.white,
-      },
-    }, displayName),
-  );
-
-  if (bio) {
-    infoChildren.push(
-      createElement('div', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 11,
-          color: COLORS.lightPrimary,
-          marginTop: 4,
-          lineHeight: 1.3,
-        },
-      }, bio),
-    );
-  }
-
-  infoChildren.push(
-    createElement('div', {
-      style: {
-        fontFamily: 'VT323, monospace',
-        fontSize: 10,
-        color: COLORS.lightPrimary,
-        marginTop: 6,
-      },
-    }, `${publicRepos} repos · ${followers} followers`),
-  );
-
-  children.push(
-    createElement('div', {
-      style: {
-        marginTop: 10,
-        textAlign: 'center',
-      },
-    }, infoChildren),
-  );
+  const namePaths = textToPaths(displayName, 'Knewave', 18, cardW / 2, size * 0.5 + 30, COLORS.white);
+  const bioPaths = bio ? textToPaths(bio.slice(0, 30), 'VT323', 11, cardW / 2, size * 0.5 + 44, COLORS.lightPrimary) : [];
+  const statsPaths = textToPaths(`${publicRepos} repos · ${followers} followers`, 'VT323', 10, cardW / 2, size * 0.5 + 58, COLORS.lightPrimary);
 
   return createElement('a', {
     href,
     style: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
       textDecoration: 'none',
-      fontFamily: 'VT323, monospace',
+      display: 'inline-block',
     },
-  }, children);
+  }, [
+    createElement('svg', {
+      width: cardW,
+      height: cardH,
+      viewBox: `0 0 ${cardW} ${cardH}`,
+      xmlns: 'http://www.w3.org/2000/svg',
+    }, [
+      // Icon/avatar placeholder
+      ...(icon ? [
+        createElement('g', {
+          transform: `translate(${cardW / 2 - size * 0.175}, 10) scale(${size * 0.35 / 24})`,
+        }, [
+          createElement('path', {
+            d: icon.pathData,
+            fill: COLORS.secondary,
+          }),
+        ]),
+      ] : []),
+      // Name paths
+      ...namePaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${18 / 18})`,
+      })),
+      // Bio paths
+      ...bioPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${11 / 11})`,
+      })),
+      // Stats paths
+      ...statsPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x}, ${p.y}) scale(${10 / 10})`,
+      })),
+    ]),
+  ]);
 }
 
 /**
- * Compact metrics panel — stars, forks, repos, commits as labeled values.
+ * Compact metrics panel — pure SVG.
  */
 function StatsCard({
   totalStars,
@@ -539,60 +465,52 @@ function StatsCard({
   totalCommits,
   _width = 400,
   _height = 100,
+  textToPaths,
 }) {
   const labels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const values = [totalStars, totalForks, totalRepos, totalCommits];
+  const statW = 100;
 
-  const statChildren = values.map((value, i) => {
-    const isLast = i === values.length - 1;
-    return createElement('div', {
-      style: {
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 4,
-        borderRight: isLast ? 'none' : '1px solid #30363d',
-      },
-    }, [
-      createElement('span', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 20,
-          color: COLORS.secondary,
-          fontWeight: 700,
-        },
-      }, value.toLocaleString()),
-      createElement('span', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 10,
-          color: COLORS.white,
-          textTransform: 'uppercase',
-          letterSpacing: 1,
-        },
-      }, labels[i]),
-    ]);
-  });
-
-  return createElement('div', {
-    style: {
-      display: 'flex',
-      width: '100%',
-      height: '100%',
-      backgroundColor: '#0d0d0d',
-      border: '1px solid #30363d',
-      borderRadius: 8,
-      overflow: 'hidden',
-      fontFamily: 'VT323, monospace',
-    },
-  }, statChildren);
+  return createElement('svg', {
+    width: 400,
+    height: 100,
+    viewBox: '0 0 400 100',
+    xmlns: 'http://www.w3.org/2000/svg',
+  }, [
+    // Four stat columns
+    values.map((value, i) => {
+      const x = i * statW;
+      const isLast = i === values.length - 1;
+      const valuePaths = textToPaths(value.toLocaleString(), 'VT323', 20, x + statW / 2, 40, COLORS.secondary);
+      const labelPaths = textToPaths(labels[i], 'VT323', 10, x + statW / 2, 64, COLORS.white);
+      return [
+        createElement('rect', {
+          x,
+          y: 0,
+          width: statW,
+          height: 100,
+          fill: '#0d0d0d',
+          rx: 4,
+          ry: 4,
+          ...(isLast ? {} : { stroke: '#30363d', strokeWidth: 1 }),
+        }),
+        ...valuePaths.map(p => createElement('path', {
+          d: p.d,
+          fill: p.fill,
+          transform: `translate(${p.x - statW / 2}, ${p.y - 40}) scale(${20 / 20})`,
+        })),
+        ...labelPaths.map(p => createElement('path', {
+          d: p.d,
+          fill: p.fill,
+          transform: `translate(${p.x - statW / 2}, ${p.y - 64}) scale(${10 / 10})`,
+        })),
+      ];
+    }).flat(),
+  ]);
 }
 
 /**
- * Metrics panel — the four headline counters plus a most-used-languages
- * breakdown. Replaces the lowlighter/metrics dashboard.
+ * Metrics panel — headline counters + language breakdown.
  */
 function MetricsPanel({
   totalStars,
@@ -602,148 +520,120 @@ function MetricsPanel({
   languages = [],
   _width = 500,
   _height = 210,
+  textToPaths,
 }) {
   const statLabels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const statValues = [totalStars, totalForks, totalRepos, totalCommits];
   const statsHeight = 86;
 
   const statChildren = statValues.map((value, i) => {
+    const x = i * 125;
     const isLast = i === statValues.length - 1;
-    return createElement('div', {
-      style: {
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 3,
-        borderRight: isLast ? 'none' : '1px solid #30363d',
-      },
-    }, [
-      createElement('span', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 20,
-          color: COLORS.secondary,
-          fontWeight: 700,
-        },
-      }, value.toLocaleString()),
-      createElement('span', {
-        style: {
-          fontFamily: 'VT323, monospace',
-          fontSize: 9,
-          color: COLORS.white,
-          textTransform: 'uppercase',
-          letterSpacing: 1,
-        },
-      }, statLabels[i]),
-    ]);
-  });
-
-  const children = [];
-
-  children.push(
-    createElement('div', {
-      style: {
-        display: 'flex',
-        width: '100%',
+    const valuePaths = textToPaths(value.toLocaleString(), 'VT323', 20, x + 62.5, statsHeight / 2 - 6, COLORS.secondary);
+    const labelPaths = textToPaths(statLabels[i], 'VT323', 9, x + 62.5, statsHeight / 2 + 14, COLORS.white);
+    return [
+      createElement('rect', {
+        x,
+        y: 0,
+        width: 125,
         height: statsHeight,
-        borderBottom: '1px solid #30363d',
-      },
-    }, statChildren),
-  );
+        fill: '#0d0d0d',
+        rx: 4,
+        ry: 4,
+        ...(isLast ? {} : { stroke: '#30363d', strokeWidth: 1 }),
+      }),
+      ...valuePaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x - 62.5}, ${p.y - (statsHeight / 2 - 6)}) scale(${20 / 20})`,
+      })),
+      ...labelPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x - 62.5}, ${p.y - (statsHeight / 2 + 14)}) scale(${9 / 9})`,
+      })),
+    ];
+  }).flat();
 
-  if (languages.length > 0) {
-    const maxCount = languages[0].count || 1;
-    const langChildren = languages.map((lang) => {
-      const pct = Math.max(6, Math.round(((lang.count || 0) / maxCount) * 100));
-      return createElement('div', {
-        style: {
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-          marginBottom: 4,
-        },
-      }, [
-        createElement('div', {
-          style: {
-            width: 8,
-            height: 8,
-            backgroundColor: LANGUAGE_COLORS[lang.name] || COLORS.primary,
-            borderRadius: 2,
-            flexShrink: 0,
-          },
-        }),
-        createElement('span', {
-          style: {
-            fontFamily: 'VT323, monospace',
-            fontSize: 10,
-            color: COLORS.white,
-            width: 90,
-            flexShrink: 0,
-          },
-        }, truncate(lang.name, 14)),
-        createElement('div', {
-          style: {
-            flex: 1,
-            height: 8,
-            backgroundColor: '#1c1c1c',
-            borderRadius: 4,
-            overflow: 'hidden',
-          },
-        }, [
-          createElement('div', {
-            style: {
-              width: `${pct}%`,
-              height: '100%',
-              backgroundColor: LANGUAGE_COLORS[lang.name] || COLORS.secondary,
-              borderRadius: 4,
-            },
-          }),
-        ]),
-      ]);
-    });
+  const labelPaths = textToPaths('Most used languages', 'VT323', 10, 12, statsHeight + 16, COLORS.lightPrimary);
 
-    children.push(
-      createElement('div', {
-        style: {
-          padding: 10,
-          display: 'flex',
-          flexDirection: 'column',
-        },
-      }, [
-        createElement('div', {
-          style: {
-            fontFamily: 'VT323, monospace',
-            fontSize: 10,
-            color: COLORS.lightPrimary,
-            textTransform: 'uppercase',
-            letterSpacing: 1,
-            marginBottom: 6,
-          },
-        }, 'Most used languages'),
-        ...langChildren,
-      ]),
-    );
-  }
+  const langChildren = languages.map((lang, i) => {
+    const y = statsHeight + 14 + i * 22;
+    const pct = Math.max(6, Math.round(((lang.count || 0) / (languages[0]?.count || 1)) * 100));
+    const barW = Math.min(300, pct * 3);
+    const langPaths = textToPaths(truncate(lang.name, 14), 'VT323', 10, 24, y + 2, COLORS.white);
+    return [
+      createElement('rect', {
+        x: 12,
+        y: y - 8,
+        width: 8,
+        height: 8,
+        fill: LANGUAGE_COLORS[lang.name] || COLORS.primary,
+        rx: 2,
+        ry: 2,
+      }),
+      ...langPaths.map(p => createElement('path', {
+        d: p.d,
+        fill: p.fill,
+        transform: `translate(${p.x - 24}, ${p.y - 2}) scale(${10 / 10})`,
+      })),
+      createElement('rect', {
+        x: 120,
+        y: y - 6,
+        width: barW,
+        height: 8,
+        fill: LANGUAGE_COLORS[lang.name] || COLORS.secondary,
+        rx: 4,
+        ry: 4,
+      }),
+    ];
+  }).flat();
 
-  return createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      width: '100%',
-      height: '100%',
-      backgroundColor: '#0d0d0d',
-      border: '1px solid #30363d',
-      borderRadius: 8,
-      overflow: 'hidden',
-      fontFamily: 'VT323, monospace',
-    },
-  }, children);
+  return createElement('svg', {
+    width: 500,
+    height: 210,
+    viewBox: '0 0 500 210',
+    xmlns: 'http://www.w3.org/2000/svg',
+  }, [
+    createElement('rect', {
+      x: 0,
+      y: 0,
+      width: 500,
+      height: 210,
+      fill: '#0d0d0d',
+      rx: 8,
+      ry: 8,
+      stroke: '#30363d',
+      strokeWidth: 1,
+    }),
+    createElement('rect', {
+      x: 0,
+      y: 0,
+      width: 500,
+      height: statsHeight,
+      fill: '#0d0d0d',
+      rx: 8,
+      ry: 8,
+    }),
+    createElement('rect', {
+      x: 0,
+      y: statsHeight,
+      width: 500,
+      height: 2,
+      fill: '#30363d',
+    }),
+    ...statChildren,
+    ...labelPaths.map(p => createElement('path', {
+      d: p.d,
+      fill: p.fill,
+      transform: `translate(${p.x - 12}, ${p.y - (statsHeight + 16)}) scale(${10 / 10})`,
+    })),
+    ...langChildren,
+  ]);
 }
 
 /**
- * Truncate a string to a maximum length, appending an ellipsis when cut.
+ * Truncate a string.
  */
 function truncate(text, max) {
   if (!text) return '';
@@ -751,23 +641,17 @@ function truncate(text, max) {
 }
 
 /**
- * Compute the rendered width of a skill pill.
- * Exported so the build can size each pill's SVG viewport to fit exactly.
- *
- * @param {string} name
- * @param {string|null} [logo]
- * @param {number} [fontSize]
- * @param {number} [height]
- * @returns {number}
+ * Compute skill pill width.
  */
-function skillPillWidth(name, logo = null, fontSize = 11, height = 24) {
+function skillPillWidth(name, hasIcon = false, fontSize = 11, height = 24) {
   const padX = 8;
   const textW = Math.max(name.length * fontSize * 0.55 + padX * 2, 40);
-  const logoW = logo ? height * 0.75 + 6 : 0;
-  return Math.ceil(textW + logoW);
+  const iconW = hasIcon ? height * 0.75 + 6 : 0;
+  return Math.ceil(textW + iconW);
 }
 
 module.exports = {
+  Icon,
   Badge,
   SocialButton,
   SkillPill,

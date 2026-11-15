@@ -3,21 +3,19 @@
 const fs = require('fs');
 const path = require('path');
 const { createHash } = require('crypto');
-// Node 18+ has global fetch; node-fetch v3 is ESM-only and incompatible with this CJS project
 
-const { renderJsx, parseMeta, loadFonts } = require('./vice-renderer');
 const {
-  Badge,
-  SocialButton,
-  SkillPill,
-  RepoCard,
-  FollowerCard,
-  StatsCard,
-  MetricsPanel,
-  skillPillWidth,
-  badgeWidth,
-} = require('./vice-components');
-const { toTopicUrl, toSimpleIconsUrl } = require('./utils/skills');
+  badge,
+  socialButton,
+  skillPill,
+  repoCard,
+  followerCard,
+  statsCard,
+  metricsPanel,
+  categoryWall,
+} = require('./vice-svg');
+const { toTopicUrl } = require('./utils/skills');
+const { fetchIcon } = require('./utils/icons');
 
 const data = require('./data.js');
 const { getRandomFollower } = require('./utils/githubApi');
@@ -44,11 +42,7 @@ const VICE_BLOCK_RE = /```vice\s*([\s\S]*?)\s*```/g;
 const GITHUB_USER = process.env.GITHUB_USER || 'Thomashighbaugh';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
-/**
- * Discover all outline font files (.woff2, .woff, .ttf, .otf) in the fonts dir.
- * Bitmap fonts (.fnt/.png Coder family) are excluded — Satori cannot use them.
- */
-function discoverFonts() {
+function _discoverFonts() {
   if (!fs.existsSync(FONTS_DIR)) return [];
   return fs
     .readdirSync(FONTS_DIR, { withFileTypes: true })
@@ -64,11 +58,6 @@ function discoverFonts() {
     .sort();
 }
 
-/**
- * Resolve a dotted path against an object (e.g. `github.starredRepos`).
- * Quoted segments are supported for keys with spaces or punctuation:
- * `skillPills.'Backend & Databases'`.
- */
 function resolvePath(obj, dotted) {
   const parts = String(dotted).match(/'[^']+'|[^.]+/g) || [];
   return parts.reduce((acc, key) => {
@@ -77,20 +66,13 @@ function resolvePath(obj, dotted) {
   }, obj);
 }
 
-/**
- * Resolve a dimension that may be a number or an `item.<prop>` expression.
- */
 function resolveDimension(value, item) {
   if (typeof value === 'number') return value;
-  const path = String(value).startsWith('item.') ? value.slice(5) : value;
-  const resolved = resolvePath(item ?? {}, path);
+  const p = String(value).startsWith('item.') ? value.slice(5) : value;
+  const resolved = resolvePath(item ?? {}, p);
   return typeof resolved === 'number' ? resolved : 800;
 }
 
-/**
- * Resolve the link target for a rendered item. A `link` value of the form
- * `item.<prop>` is read off the item; anything else is a static URL.
- */
 function resolveLink(link, item) {
   if (!link) return null;
   if (link.startsWith('item.')) {
@@ -100,9 +82,6 @@ function resolveLink(link, item) {
   return link;
 }
 
-/**
- * Escape a value for use inside an HTML attribute.
- */
 function escapeAttr(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -112,13 +91,45 @@ function escapeAttr(value) {
 }
 
 /**
- * Parse a vice source markdown file, extract ```vice blocks, and return
- * the markdown with blocks replaced by placeholders plus the block list.
- *
- * Each block becomes an HTML-comment placeholder. The rendered markup
- * (one <a><img></a> per item) is substituted in once the SVGs exist, so the
- * final markdown can carry per-item links.
+ * Parse a vice JSX block to extract component name and props.
+ * Handles: <Comp prop="string" prop2={expr} prop3={42} />
+ * Expr resolves against context/item.
  */
+function parseJsxBlock(jsxContent, context) {
+  const nameMatch = jsxContent.match(/<(\w+)/);
+  if (!nameMatch) return null;
+  const componentName = nameMatch[1];
+
+  const props = {};
+  const propRegex = /(\w+)=("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|(\d+)|{([^}]+)})/g;
+  let match;
+  while ((match = propRegex.exec(jsxContent)) !== null) {
+    const propName = match[1];
+    const rawValue = match[2];
+    let resolved;
+    if (rawValue.startsWith('"') || rawValue.startsWith("'")) {
+      resolved = rawValue.slice(1, -1);
+    } else if (/^\d+$/.test(rawValue)) {
+      resolved = parseInt(rawValue, 10);
+    } else if (rawValue.startsWith('{')) {
+      const expr = rawValue.slice(1, -1).trim();
+      resolved = resolveExpr(expr, context);
+    } else {
+      resolved = rawValue;
+    }
+    props[propName] = resolved;
+  }
+
+  return { componentName, props };
+}
+
+function resolveExpr(expr, context) {
+  if (expr.startsWith('item.')) {
+    return resolvePath(context.item ?? {}, expr.slice(5));
+  }
+  return context[expr];
+}
+
 function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.md') {
   const blocks = [];
   let blockIndex = 0;
@@ -136,15 +147,10 @@ function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.
     const metaMatch = fullMatch.match(/```vice\s*(.*?)\n/);
     const meta = metaMatch ? metaMatch[1].trim() : undefined;
 
-    // Strip the meta line (first line) from the JSX content
     const firstNewline = content.indexOf('\n');
     const jsxContent = firstNewline !== -1 ? content.slice(firstNewline + 1) : '';
 
-    blocks.push({
-      index: blockIndex,
-      content: jsxContent.trim(),
-      meta,
-    });
+    blocks.push({ index: blockIndex, content: jsxContent.trim(), meta });
 
     result += source.slice(lastIndex, match.index);
     result += `<!-- __VICE_BLOCK_${blockIndex}__ -->\n`;
@@ -154,44 +160,25 @@ function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.
   }
 
   result += source.slice(lastIndex);
-
   return { markdown: result, blocks, relAssets };
 }
 
-/**
- * GitHub API request helper.
- */
 async function githubRequest(url, token = null) {
-  const headers = {
-    'User-Agent': 'vice-build',
-    Accept: 'application/vnd.github+json',
-  };
+  const headers = { 'User-Agent': 'vice-build', Accept: 'application/vnd.github+json' };
   if (token) headers.Authorization = `Bearer ${token}`;
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`GitHub API ${res.status} for ${url}`);
   return res.json();
 }
 
-/**
- * Fetch the profile view count from komarev's SVG badge.
- * The README is regenerated daily, so reading the number at build time and
- * rendering it into the SVG gives a live-enough counter without pointing the
- * rendered README at the ghpvc host (which was intermittently failing).
- *
- * @param {string} username
- * @returns {Promise<string|null>} formatted count, or null if unavailable
- */
 async function fetchProfileViews(username) {
   try {
     const res = await fetch(
       `https://komarev.com/ghpvc/?username=${username}&style=for-the-badge&color=3c3c3c`,
-      {
-        headers: { 'User-Agent': 'vice-build' },
-      },
+      { headers: { 'User-Agent': 'vice-build' } },
     );
     if (!res.ok) return null;
     const svg = await res.text();
-    // aria-label="PROFILE VIEWS: 5,998" / <title>PROFILE VIEWS: 5,998</title>
     const match = svg.match(/PROFILE VIEWS:\s*([\d,]+)/i);
     if (!match) return null;
     return match[1];
@@ -200,50 +187,26 @@ async function fetchProfileViews(username) {
   }
 }
 
-/**
- * Fetch the total commit count across all public repos via the GraphQL API.
- * The REST events API does not expose commit counts, so GraphQL is the only
- * single-request way to get an exact number. Requires a token; returns null
- * when unavailable so the caller can fall back to 0.
- *
- * @param {string} username
- * @param {string|null} token
- * @returns {Promise<number|null>}
- */
 async function fetchTotalCommits(username, token) {
   if (!token) return null;
-
   const query = `
     query ($login: String!) {
       user(login: $login) {
         repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
-          nodes {
-            defaultBranchRef {
-              target {
-                ... on Commit { history { totalCount } }
-              }
-            }
-          }
+          nodes { defaultBranchRef { target { ... on Commit { history { totalCount } } } } }
         }
       }
     }
   `;
-
   try {
     const res = await fetch('https://api.github.com/graphql', {
       method: 'POST',
-      headers: {
-        Authorization: `bearer ${token}`,
-        'Content-Type': 'application/json',
-        'User-Agent': 'vice-build',
-      },
+      headers: { Authorization: `bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'vice-build' },
       body: JSON.stringify({ query, variables: { login: username } }),
     });
     if (!res.ok) return null;
-
     const json = await res.json();
     if (json.errors) return null;
-
     const nodes = json?.data?.user?.repositories?.nodes || [];
     return nodes.reduce((sum, node) => sum + (node?.defaultBranchRef?.target?.history?.totalCount ?? 0), 0);
   } catch {
@@ -251,20 +214,11 @@ async function fetchTotalCommits(username, token) {
   }
 }
 
-/**
- * Fetch GitHub user data, stats, and starred repos for JSX context.
- */
 async function fetchContext() {
   const [user, repos, starred, profileViews, follower] = await Promise.all([
     githubRequest(`https://api.github.com/users/${GITHUB_USER}`, GITHUB_TOKEN),
-    githubRequest(
-      `https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated&direction=desc`,
-      GITHUB_TOKEN,
-    ),
-    githubRequest(
-      `https://api.github.com/users/${GITHUB_USER}/starred?per_page=30&sort=created&direction=desc`,
-      GITHUB_TOKEN,
-    ),
+    githubRequest(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated&direction=desc`, GITHUB_TOKEN),
+    githubRequest(`https://api.github.com/users/${GITHUB_USER}/starred?per_page=30&sort=created&direction=desc`, GITHUB_TOKEN),
     fetchProfileViews(GITHUB_USER),
     getRandomFollower(GITHUB_USER, GITHUB_TOKEN).catch(() => null),
   ]);
@@ -275,9 +229,7 @@ async function fetchContext() {
 
   const langCount = {};
   for (const repo of repos) {
-    if (repo.language) {
-      langCount[repo.language] = (langCount[repo.language] || 0) + 1;
-    }
+    if (repo.language) langCount[repo.language] = (langCount[repo.language] || 0) + 1;
   }
   const languages = Object.entries(langCount)
     .map(([name, count]) => ({ name, count }))
@@ -290,177 +242,109 @@ async function fetchContext() {
     .sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0))
     .slice(0, 6)
     .map((r) => ({
-      name: r.name,
-      fullName: r.full_name,
-      description: r.description || '',
-      stars: r.stargazers_count || 0,
-      forks: r.forks_count || 0,
-      language: r.language || '',
-      languageColor: '', // resolved from LANGUAGE_COLORS by the component
-      href: r.html_url,
-      alt: r.full_name || r.name,
+      name: r.name, fullName: r.full_name, description: r.description || '',
+      stars: r.stargazers_count || 0, forks: r.forks_count || 0,
+      language: r.language || '', languageColor: '', href: r.html_url, alt: r.full_name || r.name,
     }));
 
   return {
-    github: {
-      user: {
-        login: user.login,
-        name: user.name,
-        avatarUrl: user.avatar_url,
-        bio: user.bio || '',
-        followers: user.followers || 0,
-        publicRepos: user.public_repos || 0,
-        htmlUrl: user.html_url,
-      },
-      stats: {
-        totalStars,
-        totalForks,
-        totalRepos: repos.length,
-        totalCommits,
-      },
-      languages,
-      starredRepos,
-    },
+    github: { user: { login: user.login, name: user.name, avatarUrl: user.avatar_url, bio: user.bio || '', followers: user.followers || 0, publicRepos: user.public_repos || 0, htmlUrl: user.html_url }, stats: { totalStars, totalForks, totalRepos: repos.length, totalCommits }, languages, starredRepos },
     profileViews,
-    follower: follower
-      ? {
-          login: follower.login,
-          name: follower.name || follower.login,
-          avatarUrl: follower.avatar_url,
-          bio: follower.bio || '',
-          publicRepos: follower.public_repos || 0,
-          followers: follower.followers || 0,
-          htmlUrl: follower.html_url,
-          createdAt: follower.created_at,
-        }
-      : null,
+    follower: follower ? { login: follower.login, name: follower.name || follower.login, avatarUrl: follower.avatar_url, bio: follower.bio || '', publicRepos: follower.public_repos || 0, followers: follower.followers || 0, htmlUrl: follower.html_url, createdAt: follower.created_at } : null,
   };
 }
 
-/**
- * Build the clickable-item collections the vice blocks render one-per-file.
- *
- * Every entry carries its own `href` so the generated README can wrap each
- * rendered SVG in an <a> — an SVG loaded through <img> cannot contain its own
- * links, so one file per clickable element is the only way to keep them
- * clickable.
- *
- * @returns {{headerBadges: object[], socialLinks: object[], skillPills: Record<string, object[]>}}
- */
-function buildLinkables(profileViews) {
+async function fetchAllIcons() {
+  const icons = {};
+  for (const badge of data.header.badges) {
+    if (badge.logo) icons[`header:${badge.logo}`] = await fetchIcon(badge.logo, 'ffffff');
+  }
+  for (const link of data.socialMedias.links) {
+    if (link.logo) icons[`social:${link.logo}`] = await fetchIcon(link.logo, 'ffffff');
+  }
+  const skillSlugs = new Set();
+  for (const category of data.skillswall.categories) {
+    for (const skill of category.skills) {
+      const slug = skill.logo || skill.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      if (!skillSlugs.has(slug)) {
+        skillSlugs.add(slug);
+        icons[`skill:${slug}`] = await fetchIcon(slug, 'ffffff');
+      }
+    }
+  }
+  return icons;
+}
+
+function buildLinkables(profileViews, icons = {}) {
   const viewsValue = profileViews ?? 'n/a';
 
   const headerBadges = data.header.badges.map((badge) => {
     const isViews = badge.type === 'views';
     const label = isViews ? 'Profile Views' : badge.name;
     const value = isViews ? viewsValue : badge.name;
-    const logo = badge.logo ? `https://cdn.simpleicons.org/${badge.logo}/ffffff` : null;
-    return {
-      type: badge.type,
-      label,
-      value,
-      href: badge.href || null,
-      logo,
-      alt: label,
-      width: badgeWidth(label, value, logo, 'for-the-badge', 30),
-    };
+    const icon = badge.logo ? icons[`header:${badge.logo}`] : null;
+    return { type: badge.type, label, value, href: badge.href || null, icon, alt: label };
   });
 
   const socialLinks = data.socialMedias.links.map((link) => {
-    const logo = link.logo ? `https://cdn.simpleicons.org/${link.logo}/ffffff` : null;
-    // The button sizes itself to icon + gap + label + padding.
-    const width = (logo ? 18 + 8 : 0) + link.name.length * 7.5 + 24;
-    return {
-      text: link.name,
-      href: link.href,
-      logo,
-      alt: link.name,
-      width: Math.ceil(width),
-    };
+    const icon = link.logo ? icons[`social:${link.logo}`] : null;
+    const iconSize = icon ? 18 + 8 : 0;
+    return { text: link.name, href: link.href, icon, alt: link.name, width: Math.ceil(iconSize + link.name.length * 7.5 + 24) };
   });
 
-  /** @type {Record<string, object[]>} */
   const skillPills = {};
   for (const category of data.skillswall.categories) {
     skillPills[category.name] = category.skills.map((skill) => {
-      const logo = toSimpleIconsUrl(skill.name, skill.logo);
-      return {
-        name: skill.name,
-        logo,
-        highlighted: Boolean(skill.isHighlighted),
-        href: toTopicUrl(skill.name),
-        alt: skill.name,
-        width: skillPillWidth(skill.name, logo),
-      };
+      const slug = skill.logo || skill.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const icon = icons[`skill:${slug}`];
+      return { name: skill.name, icon, highlighted: Boolean(skill.isHighlighted), href: toTopicUrl(skill.name), alt: skill.name };
     });
   }
 
   return { headerBadges, socialLinks, skillPills };
 }
 
-/**
- * Main build: parse source, render all vice blocks to SVG, write assets + README.
- */
 async function build() {
   await fs.promises.mkdir(ASSETS_DIR, { recursive: true });
 
-  // Load fonts from repo
-  const fontPaths = discoverFonts();
-  console.log(`  Fonts:  ${fontPaths.length} outline font(s) discovered in ${FONTS_DIR}`);
-  const fonts = await loadFonts(fontPaths);
-
-  // Fetch GitHub data for JSX context.
-  // The built-in components are always bound — a failed API call must not
-  // break rendering, only the dynamic values inside the blocks.
   console.log(`  GitHub: @${GITHUB_USER}`);
   let context = {};
   try {
     context = await fetchContext();
-    console.log(
-      `  Fetched: ${context.github.stats.totalRepos} repos, ${context.github.stats.totalStars} stars, ${context.github.languages.length} languages`,
-    );
+    console.log(`  Fetched: ${context.github.stats.totalRepos} repos, ${context.github.stats.totalStars} stars, ${context.github.languages.length} languages`);
   } catch (err) {
     console.warn(`  Warning: GitHub API failed: ${(err && err.message) || err}`);
     console.warn('  Using empty context — blocks with dynamic data will show fallbacks.\n');
   }
 
-  // Built-in vice components available in every vice block.
-  // Every name referenced by a vice block is bound here — even to null.
-  // Optional chaining (`github?.stats`) does not protect against an
-  // *undeclared* identifier, it only guards null/undefined on a bound one.
-  const linkables = buildLinkables(context.profileViews);
+  console.log('  Icons:  pre-fetching Simple Icons...');
+  const icons = await fetchAllIcons();
+  const iconCount = Object.values(icons).filter(Boolean).length;
+  console.log(`  Icons:  ${iconCount} of ${Object.keys(icons).length} fetched`);
+
+  const linkables = buildLinkables(context.profileViews, icons);
   context = {
-    github: null,
-    profileViews: null,
-    follower: null,
-    ...context,
-    ...linkables,
-    Badge,
-    SocialButton,
-    SkillPill,
-    RepoCard,
-    FollowerCard,
-    StatsCard,
-    MetricsPanel,
+    github: null, profileViews: null, follower: null,
+    ...context, ...linkables,
   };
 
-  // Parse source
   const source = fs.readFileSync(SOURCE_PATH, 'utf-8');
   const { markdown, blocks, relAssets } = parseSource(source, ASSETS_DIR, OUTPUT_PATH);
   console.log(`  Source: ${SOURCE_PATH}`);
   console.log(`  Blocks: ${blocks.length} vice block(s) found`);
 
   if (blocks.length === 0) {
-    console.log('\n  No vice blocks found in source file.');
     fs.writeFileSync(OUTPUT_PATH, markdown, 'utf-8');
     console.log(`\n  Generated: ${OUTPUT_PATH}\n`);
     return;
   }
 
-  // Render each block to SVG.
-  // A block with `from=<path>` renders one SVG per item in the resolved
-  // collection, so every clickable element gets its own file and its own
-  // <a href> wrapper. A block without it renders a single SVG.
+  const COMPONENT_MAP = {
+    Badge: badge, SocialButton: socialButton, SkillPill: skillPill,
+    RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard,
+    MetricsPanel: metricsPanel, CategoryWall: categoryWall,
+  };
+
   const writtenFiles = [];
   const blockHtml = new Map();
 
@@ -471,58 +355,92 @@ async function build() {
 
     const htmlParts = [];
 
-    for (let i = 0; i < items.length; i++) {
-      const item = items[i] ?? null;
-      // `item` is always bound, even when null — optional chaining does not
-      // guard an *undeclared* identifier.
-      const itemContext = { ...context, item };
-
-      const width = resolveDimension(meta.width, item);
-      const height = resolveDimension(meta.height, item);
-
-      let svg;
-      try {
-        svg = await renderJsx(block.content, width, height, fonts, itemContext);
-      } catch (err) {
-        console.error(`\n  Error rendering vice block ${block.index}: ${(err && err.message) || err}\n`);
+    if (meta.merge) {
+      const parsed = parseJsxBlock(block.content, context);
+      if (!parsed) {
+        console.error(`\n  Error: cannot parse JSX in merge block ${block.index}\n`);
+        process.exit(1);
+      }
+      const { componentName, props: jsxProps } = parsed;
+      const Comp = COMPONENT_MAP[componentName];
+      if (!Comp) {
+        console.error(`\n  Error: unknown component "${componentName}" in merge block ${block.index}\n`);
         process.exit(1);
       }
 
-      // Content-hashed filename for cache busting
+      const width = resolveDimension(meta.width, { items }) || 800;
+      const height = resolveDimension(meta.height, { items }) || 300;
+
+      // categoryWall takes { items, width, height, pillHeight }
+      const svg = Comp({ items, width, height, pillHeight: 24, ...jsxProps });
       const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
-      let filename = `vice-component-${block.index}-${hash}.svg`;
-      // Guard against two items rendering byte-identical SVGs.
-      if (writtenFiles.includes(filename)) {
-        filename = `vice-component-${block.index}-${i}-${hash}.svg`;
-      }
+      const filename = `vice-component-${block.index}-${hash}.svg`;
       fs.writeFileSync(path.join(ASSETS_DIR, filename), svg, 'utf-8');
       writtenFiles.push(filename);
 
-      const alt = (item && (item.alt || item.name || item.text || item.login)) || `vice-${block.index}`;
-      const imgTag = `<img src="${relAssets}/${filename}" width="${width}" height="${height}" alt="${escapeAttr(alt)}" />`;
-
-      const href = resolveLink(meta.link, item);
+      const imgTag = `<img src="${relAssets}/${filename}" width="${width}" height="${height}" alt="vice-${block.index}" />`;
+      const href = resolveLink(meta.link, { items });
       htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
+      console.log(`    [${block.index}] Rendered -> ${filename} (${width}x${height}) [merge=${items.length} items]`);
+    } else {
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i] ?? null;
+        const itemContext = { ...context, item };
 
-      console.log(`    [${block.index}] Rendered -> ${filename} (${width}x${height})`);
+        const width = resolveDimension(meta.width, item);
+        const height = resolveDimension(meta.height, item);
+
+        const parsed = parseJsxBlock(block.content, itemContext);
+        if (!parsed) {
+          console.error(`\n  Error: cannot parse JSX in block ${block.index}\n`);
+          process.exit(1);
+        }
+        const { componentName, props: jsxProps } = parsed;
+        let Comp = COMPONENT_MAP[componentName];
+        // If the outer component is a wrapper (div/span), find the inner component
+        if (!Comp && block.content.match(/<(\w+)/)) {
+          const allComponents = block.content.match(/<(\w+)/g);
+          for (const m of allComponents) {
+            const cn = m.slice(1);
+            if (COMPONENT_MAP[cn]) {
+              Comp = COMPONENT_MAP[cn];
+              break;
+            }
+          }
+        }
+        if (!Comp) {
+          console.error(`\n  Error: unknown component "${componentName}" in block ${block.index}\n`);
+          process.exit(1);
+        }
+
+        // JSX hardcoded props take precedence over item/context props
+        const props = { ...item, ...context, ...jsxProps };
+        const svg = Comp(props);
+        const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
+        let filename = `vice-component-${block.index}-${hash}.svg`;
+        if (writtenFiles.includes(filename)) {
+          filename = `vice-component-${block.index}-${i}-${hash}.svg`;
+        }
+        fs.writeFileSync(path.join(ASSETS_DIR, filename), svg, 'utf-8');
+        writtenFiles.push(filename);
+
+        const alt = (item && (item.alt || item.name || item.text || item.login)) || `vice-${block.index}`;
+        const imgTag = `<img src="${relAssets}/${filename}" width="${width}" height="${height}" alt="${escapeAttr(alt)}" />`;
+        const href = resolveLink(meta.link, item);
+        htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
+        console.log(`    [${block.index}] Rendered -> ${filename} (${width}x${height})`);
+      }
     }
 
     blockHtml.set(block.index, htmlParts.join(''));
   }
 
-  // Substitute each block placeholder with its rendered markup.
-  // Inline images flow side by side inside a centered paragraph, so a block
-  // of N items lays out as a row (or wraps to more rows) on its own.
   let finalMd = markdown;
   for (const block of blocks) {
     const html = blockHtml.get(block.index) || '';
-    finalMd = finalMd.replace(
-      `<!-- __VICE_BLOCK_${block.index}__ -->`,
-      `<p align="center">${html}</p>`,
-    );
+    finalMd = finalMd.replace(`<!-- __VICE_BLOCK_${block.index}__ -->`, `<p align="center">${html}</p>`);
   }
 
-  // Process remaining %{tag} template tags using existing replacers
   const replacementRegex = new RegExp(`%{(${Object.keys(replacers).join('|')})}`, 'gm');
   async function replaceAsync(str, regex, asyncFn) {
     const promises = [];
@@ -547,7 +465,6 @@ async function build() {
   console.log(`\n  Generated: ${OUTPUT_PATH}`);
   console.log(`  SVGs saved to: ${ASSETS_DIR}\n`);
 
-  // Remove stale SVGs from previous builds (not in this build's writtenFiles)
   const generatedPattern = /^vice-component-\d+-[\w]+\.svg$/;
   try {
     const existing = await fs.promises.readdir(ASSETS_DIR);
@@ -557,13 +474,10 @@ async function build() {
       }
     }
   } catch {
-    // Assets dir may not exist yet on first run
+    // Stale asset cleanup is best-effort
   }
 }
 
-// Only run when executed directly. The mocha glob (`src/**/*.{js,jsx,ts,tsx}`)
-// loads every file in src/ as a test file — without this guard, `npm test`
-// would regenerate the README as a side effect.
 if (require.main === module) {
   build().catch((err) => {
     console.error('Vice build failed:', err);
@@ -572,3 +486,18 @@ if (require.main === module) {
 }
 
 module.exports = { build, parseSource };
+
+function parseMeta(meta) {
+  const defaults = { width: 800, height: 400 };
+  if (!meta) return defaults;
+  const pairs = [...meta.matchAll(/(\w+)=("[^"]*"|[^\s]+)/g)];
+  for (const [, key, rawValue] of pairs) {
+    const value = rawValue.startsWith('"') ? rawValue.slice(1, -1) : rawValue;
+    if (key === 'width') defaults.width = /^\d+$/.test(value) ? parseInt(value, 10) : value;
+    if (key === 'height') defaults.height = /^\d+$/.test(value) ? parseInt(value, 10) : value;
+    if (key === 'link') defaults.link = value;
+    if (key === 'from') defaults.from = value;
+  }
+  if (/\bmerge\b/.test(meta)) defaults.merge = true;
+  return defaults;
+}

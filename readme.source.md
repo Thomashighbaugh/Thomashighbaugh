@@ -67,32 +67,32 @@ Get in Touch
 
 **Languages**
 
-```vice width=item.width height=24 from=skillPills.Languages link=item.href
-<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```vice width=800 height=140 merge from=skillPills.Languages
+<CategoryWall items={item.items} pillHeight={24} />
 ```
 
 **Frontend**
 
-```vice width=item.width height=24 from=skillPills.Frontend link=item.href
-<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```vice width=800 height=140 merge from=skillPills.Frontend
+<CategoryWall items={item.items} pillHeight={24} />
 ```
 
 **Backend & Databases**
 
-```vice width=item.width height=24 from="skillPills.'Backend & Databases'" link=item.href
-<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```vice width=800 height=140 merge from="skillPills.'Backend & Databases'"
+<CategoryWall items={item.items} pillHeight={24} />
 ```
 
 **DevOps & Tools**
 
-```vice width=item.width height=24 from="skillPills.'DevOps & Tools'" link=item.href
-<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```vice width=800 height=140 merge from="skillPills.'DevOps & Tools'"
+<CategoryWall items={item.items} pillHeight={24} />
 ```
 
 **Design**
 
-```vice width=item.width height=24 from=skillPills.Design link=item.href
-<SkillPill name={item.name} logo={item.logo} highlighted={item.highlighted} width={item.width} height={24} />
+```vice width=800 height=100 merge from=skillPills.Design
+<CategoryWall items={item.items} pillHeight={24} />
 ```
 
 </details>

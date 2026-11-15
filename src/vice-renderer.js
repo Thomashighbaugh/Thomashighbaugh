@@ -37,9 +37,10 @@ function createElement(type, props, ...children) {
  *   width=N height=N   — SVG dimensions (numbers, or `item.width` expressions)
  *   link="url"         — wrap the rendered image in an <a href>
  *   from=path.dotted   — render one SVG per item in the resolved context array
+ *   merge              — render all items into a single SVG (category wall)
  *
  * @param {string} [meta]
- * @returns {{width: number|string, height: number|string, link?: string, from?: string}}
+ * @returns {{width: number|string, height: number|string, link?: string, from?: string, merge?: boolean}}
  */
 function parseMeta(meta) {
   const defaults = { width: 800, height: 400 };
@@ -53,6 +54,8 @@ function parseMeta(meta) {
     if (key === 'link') defaults.link = value;
     if (key === 'from') defaults.from = value;
   }
+
+  if (/\bmerge\b/.test(meta)) defaults.merge = true;
 
   return defaults;
 }
@@ -124,7 +127,14 @@ async function renderJsx(jsxString, width, height, fonts = [], context = {}) {
   });
 
   const argNames = ['React', ...Object.keys(context)];
-  const argValues = [{ createElement }, ...Object.values(context)];
+  const contextValues = Object.values(context);
+  const contextMap = Object.fromEntries(Object.keys(context).map((k, i) => [k, contextValues[i]]));
+  const createElementWithContext = (type, props, ...children) => {
+    const mergedProps = { ...props, ...contextMap };
+    return createElement(type, mergedProps, ...children);
+  };
+  const react = { createElement: createElementWithContext };
+  const argValues = [react, ...contextValues];
   const fn = new Function(...argNames, code);
   const element = fn(...argValues);
 
