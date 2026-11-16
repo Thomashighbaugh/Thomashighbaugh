@@ -129,13 +129,13 @@ function resolveExpr(expr, context) {
   return context[expr];
 }
 
-function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.md') {
+function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.md', assetsUrl = './.github/assets') {
   const blocks = [];
   let blockIndex = 0;
 
   const absAssets = path.resolve(assetsDir);
   const absOutput = path.resolve(outputPath);
-  const relAssets = './' + path.relative(path.dirname(absOutput), absAssets).replace(/\\/g, '/');
+  const relAssets = assetsUrl;
 
   let match;
   let lastIndex = 0;
@@ -333,7 +333,7 @@ async function build() {
   };
 
   const source = fs.readFileSync(SOURCE_PATH, 'utf-8');
-  const { markdown, blocks, relAssets } = parseSource(source, ASSETS_DIR, OUTPUT_PATH);
+  const { markdown, blocks, relAssets } = parseSource(source, ASSETS_DIR, OUTPUT_PATH, 'https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets');
   console.log(`  Source: ${SOURCE_PATH}`);
   console.log(`  Blocks: ${blocks.length} vice block(s) found`);
 
