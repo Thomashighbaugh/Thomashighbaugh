@@ -4,19 +4,26 @@ const fs = require('fs');
 const path = require('path');
 const { createHash } = require('crypto');
 
-const {
-  badge,
-  socialButton,
-  skillPill,
-  repoCard,
-  followerCard,
-  statsCard,
-  metricsPanel,
-  categoryWall,
-} = require('./vice-svg');
-const { toTopicUrl } = require('./utils/skills');
-const { fetchIcon } = require('./utils/icons');
+// Import taste-skill palettes
+const PALS = JSON.parse(fs.readFileSync(
+  path.resolve('.opencode/skills/taste-skill/library/palettes.json'), 'utf8'
+));
 
+// Import icon resolver from taste-skill
+const { fetchIcon } = require('./utils/icons');
+// Import vice components
+const {
+  Badge,
+  SocialButton,
+  SkillPill,
+  RepoCard,
+  FollowerCard,
+  StatsCard,
+  MetricsPanel,
+  CategoryWall,
+} = require('./vice-components');
+const { toTopicUrl } = require('./utils/skills');
+const { textToPathStrings } = require('./vice-components');
 const data = require('./data.js');
 const { getRandomFollower } = require('./utils/githubApi');
 const replacers = fs
@@ -35,27 +42,21 @@ const replacers = fs
 const SOURCE_PATH = path.resolve('readme.source.md');
 const OUTPUT_PATH = path.resolve('README.md');
 const ASSETS_DIR = path.resolve('.github/assets');
-const FONTS_DIR = path.resolve('src/resources/fonts');
 
 const VICE_BLOCK_RE = /```vice\s*([\s\S]*?)\s*```/g;
 
 const GITHUB_USER = process.env.GITHUB_USER || 'Thomashighbaugh';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
-function _discoverFonts() {
-  if (!fs.existsSync(FONTS_DIR)) return [];
-  return fs
-    .readdirSync(FONTS_DIR, { withFileTypes: true })
-    .flatMap((entry) => {
-      if (entry.isDirectory()) {
-        return fs
-          .readdirSync(path.join(FONTS_DIR, entry.name), { withFileTypes: true })
-          .filter((f) => f.isFile() && /\.(woff2|woff|ttf|otf)$/i.test(f.name))
-          .map((f) => path.join(FONTS_DIR, entry.name, f.name));
-      }
-      return /\.(woff2|woff|ttf|otf)$/i.test(entry.name) ? [path.join(FONTS_DIR, entry.name)] : [];
-    })
-    .sort();
+// Deal a palette for the software profile kind (saas/devtool trade)
+function dealPalette() {
+  const palettes = PALS.filter(p =>
+    p.trades && p.trades.includes('saas') && p.trades.includes('devtool')
+  );
+  // Prefer light-neutral palettes for a profile README
+  const light = palettes.filter(p => p.tags && p.tags.includes('light-neutral'));
+  const pool = light.length ? light : palettes;
+  return pool[Math.floor(Math.random() * pool.length)];
 }
 
 function resolvePath(obj, dotted) {
@@ -92,8 +93,6 @@ function escapeAttr(value) {
 
 /**
  * Parse a vice JSX block to extract component name and props.
- * Handles: <Comp prop="string" prop2={expr} prop3={42} />
- * Expr resolves against context/item.
  */
 function parseJsxBlock(jsxContent, context) {
   const nameMatch = jsxContent.match(/<(\w+)/);
@@ -101,7 +100,7 @@ function parseJsxBlock(jsxContent, context) {
   const componentName = nameMatch[1];
 
   const props = {};
-  const propRegex = /(\w+)=("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|(\d+)|{([^}]+)})/g;
+  const propRegex = /(\w+)=("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|(\d+)|\{([^}]+)\})/g;
   let match;
   while ((match = propRegex.exec(jsxContent)) !== null) {
     const propName = match[1];
@@ -317,6 +316,10 @@ async function build() {
     console.warn('  Using empty context — blocks with dynamic data will show fallbacks.\n');
   }
 
+  console.log('  Palette:  dealing from taste-skill library...');
+  const palette = dealPalette();
+  console.log(`  Palette:  ${palette.name} (${palette.id}) — ${palette.bg} / ${palette.ink} / ${palette.accent}`);
+
   console.log('  Icons:  pre-fetching Simple Icons...');
   const icons = await fetchAllIcons();
   const iconCount = Object.values(icons).filter(Boolean).length;
@@ -326,6 +329,7 @@ async function build() {
   context = {
     github: null, profileViews: null, follower: null,
     ...context, ...linkables,
+    palette, textToPathStrings,
   };
 
   const source = fs.readFileSync(SOURCE_PATH, 'utf-8');
@@ -340,9 +344,9 @@ async function build() {
   }
 
   const COMPONENT_MAP = {
-    Badge: badge, SocialButton: socialButton, SkillPill: skillPill,
-    RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard,
-    MetricsPanel: metricsPanel, CategoryWall: categoryWall,
+    Badge, SocialButton, SkillPill,
+    RepoCard, FollowerCard, StatsCard,
+    MetricsPanel, CategoryWall,
   };
 
   const writtenFiles = [];
@@ -371,7 +375,6 @@ async function build() {
       const width = resolveDimension(meta.width, { items }) || 800;
       const height = resolveDimension(meta.height, { items }) || 300;
 
-      // categoryWall takes { items, width, height, pillHeight }
       const svg = Comp({ items, width, height, pillHeight: 24, ...jsxProps });
       const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
       const filename = `vice-component-${block.index}-${hash}.svg`;
@@ -397,7 +400,6 @@ async function build() {
         }
         const { componentName, props: jsxProps } = parsed;
         let Comp = COMPONENT_MAP[componentName];
-        // If the outer component is a wrapper (div/span), find the inner component
         if (!Comp && block.content.match(/<(\w+)/)) {
           const allComponents = block.content.match(/<(\w+)/g);
           for (const m of allComponents) {
@@ -413,7 +415,6 @@ async function build() {
           process.exit(1);
         }
 
-        // JSX hardcoded props take precedence over item/context props
         const props = { ...item, ...context, ...jsxProps };
         const svg = Comp(props);
         const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
@@ -475,6 +476,19 @@ async function build() {
     }
   } catch {
     // Stale asset cleanup is best-effort
+  }
+
+  console.log('  Gate:   running taste-skill finish gate...');
+  try {
+    const { execSync } = require('node:child_process');
+    const gateResult = execSync(
+      `node scripts/gate.mjs ${OUTPUT_PATH} --kind software --category "agentic coding profile" --primary "View profile" --quick --profile .taste-skill/chrome-taste`,
+      { stdio: 'inherit', cwd: path.resolve('.opencode/skills/taste-skill') }
+    );
+    console.log(`  Gate:   ${gateResult.stdout || 'complete'}`);
+  } catch (err) {
+    console.warn(`  Warning: Gate check failed: ${err.message}`);
+    console.warn('  Build continues — review gate output above.');
   }
 }
 

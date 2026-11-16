@@ -76,17 +76,15 @@ function textToPaths(text, fontName, fontSize, x, y, fill = 'currentColor') {
     }
 
     const path = glyph.getPath(currentX, y, fontSize);
-    const svgPath = path.toSVG();
-    const dMatch = svgPath.match(/d="([^"]*)"/);
-    if (dMatch) {
-      paths.push({
-        d: dMatch[1],
-        x: currentX,
-        y,
-        fill,
-        fontSize,
-      });
-    }
+    const d = path.commands.map(cmd => {
+      if (cmd.type === 'M') return `M ${cmd.x} ${cmd.y}`;
+      if (cmd.type === 'L') return `L ${cmd.x} ${cmd.y}`;
+      if (cmd.type === 'Q') return `Q ${cmd.x1} ${cmd.y1} ${cmd.x} ${cmd.y}`;
+      if (cmd.type === 'C') return `C ${cmd.x1} ${cmd.y1} ${cmd.x2} ${cmd.y2} ${cmd.x} ${cmd.y}`;
+      if (cmd.type === 'Z') return 'Z';
+      return '';
+    }).filter(Boolean).join(' ');
+    paths.push(`<path d="${d}" fill="${fill}" />`);
 
     currentX += glyph.advanceWidth ? glyph.advanceWidth / font.unitsPerEm * fontSize : fontSize * 0.6;
   }

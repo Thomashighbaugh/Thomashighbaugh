@@ -37,7 +37,7 @@ Get in Touch
 
 <a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
 
-<p align="center"><a href="https://twitter.com/thomashighbaugh"><img src="./.github/assets/vice-component-1-64873531.svg" width="103" height="36" alt="twitter" /></a><a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="./.github/assets/vice-component-1-34920cc4.svg" width="84" height="36" alt="linkedin" /></a><a href="mailto:thighbaugh@zoho.com"><img src="./.github/assets/vice-component-1-3d4ea70a.svg" width="88" height="36" alt="email" /></a><a href="mailto:me@thomasleonhighbaugh.me"><img src="./.github/assets/vice-component-1-49b44c8a.svg" width="178" height="36" alt="alternative email" /></a><a href="https://codepen.io/thomashighbaugh"><img src="./.github/assets/vice-component-1-761ec333.svg" width="77" height="36" alt="codepen" /></a><a href="https://discord.com/ThomasHighbaugh#3886"><img src="./.github/assets/vice-component-1-7da188b2.svg" width="103" height="36" alt="discord" /></a></p>
+<p align="center"><a href="https://twitter.com/thomashighbaugh"><img src="./.github/assets/vice-component-1-7396ded0.svg" width="103" height="36" alt="twitter" /></a><a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="./.github/assets/vice-component-1-34920cc4.svg" width="84" height="36" alt="linkedin" /></a><a href="mailto:thighbaugh@zoho.com"><img src="./.github/assets/vice-component-1-4e2bba1c.svg" width="88" height="36" alt="email" /></a><a href="mailto:me@thomasleonhighbaugh.me"><img src="./.github/assets/vice-component-1-e4e5f3d7.svg" width="178" height="36" alt="alternative email" /></a><a href="https://codepen.io/thomashighbaugh"><img src="./.github/assets/vice-component-1-761ec333.svg" width="77" height="36" alt="codepen" /></a><a href="https://discord.com/ThomasHighbaugh#3886"><img src="./.github/assets/vice-component-1-d88c3e99.svg" width="103" height="36" alt="discord" /></a></p>
 
 
 <br clear="both">
@@ -78,7 +78,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<p align="center"><img src="./.github/assets/vice-component-7-7d1bde7e.svg" width="340" height="210" alt="noman275" /></p>
+<p align="center"><img src="./.github/assets/vice-component-7-7d1bde7e.svg" width="340" height="210" alt="kitty" /></p>
 
 
 <em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
@@ -94,12 +94,20 @@ Get in Touch
 <br>
 
 <ul>
-  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— 2 days ago</em></small></li>
-  <li>📝 Pushed 4 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/zapers/SillyTavern-Character-Card-Suggestions">zapers/SillyTavern-Character-Card-Suggestions</a> <small><em>— today</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/Mubelotix/SimRepo">Mubelotix/SimRepo</a> <small><em>— today</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/EnchantedRobot/jai-proxy">EnchantedRobot/jai-proxy</a> <small><em>— today</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/EnchantedRobot/SillyTavern-Character-Tools-Server">EnchantedRobot/SillyTavern-Character-Tools-Server</a> <small><em>— today</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/buchbinder">Thomashighbaugh/buchbinder</a> on main <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/c8r/x0">c8r/x0</a> <small><em>— today</em></small></li>
+  <li>📝 Pushed 2 commits to <a href="https://github.com/Sanatana-Linux/sharabha-gtk-theme">Sanatana-Linux/sharabha-gtk-theme</a> on main <small><em>— today</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/satsvi97/lorebook-sync">satsvi97/lorebook-sync</a> <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/KritBlade/mvu-helper">KritBlade/mvu-helper</a> <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/Uberspace/lab">Uberspace/lab</a> <small><em>— yesterday</em></small></li>
+  <li>📝 Pushed 0 commits to <a href="https://github.com/Thomashighbaugh/Thomashighbaugh">Thomashighbaugh/Thomashighbaugh</a> on main <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/erosman/firemonkey">erosman/firemonkey</a> <small><em>— yesterday</em></small></li>
+  <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— yesterday</em></small></li>
+  <li>📝 Pushed 4 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/zapers/SillyTavern-Character-Card-Suggestions">zapers/SillyTavern-Character-Card-Suggestions</a> <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/Mubelotix/SimRepo">Mubelotix/SimRepo</a> <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/EnchantedRobot/jai-proxy">EnchantedRobot/jai-proxy</a> <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/EnchantedRobot/SillyTavern-Character-Tools-Server">EnchantedRobot/SillyTavern-Character-Tools-Server</a> <small><em>— 2 days ago</em></small></li>
 </ul>
 
 </details>
@@ -112,7 +120,7 @@ Get in Touch
 
 <br>
 
-<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="./.github/assets/vice-component-8-579dd6f6.svg" width="240" height="124" alt="rtk-ai/rtk" /></a><a href="https://github.com/mnfst/awesome-free-llm-apis"><img src="./.github/assets/vice-component-8-4ef1d074.svg" width="240" height="124" alt="mnfst/awesome-free-llm-apis" /></a><a href="https://github.com/anudeepND/whitelist"><img src="./.github/assets/vice-component-8-aba93f19.svg" width="240" height="124" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="./.github/assets/vice-component-8-46472538.svg" width="240" height="124" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="./.github/assets/vice-component-8-0062839c.svg" width="240" height="124" alt="kyechan99/capsule-render" /></a><a href="https://github.com/simonw/showboat"><img src="./.github/assets/vice-component-8-7d81a315.svg" width="240" height="124" alt="simonw/showboat" /></a></p>
+<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="./.github/assets/vice-component-8-0ac1a500.svg" width="240" height="124" alt="rtk-ai/rtk" /></a><a href="https://github.com/anudeepND/whitelist"><img src="./.github/assets/vice-component-8-82ce4454.svg" width="240" height="124" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="./.github/assets/vice-component-8-0f6811d8.svg" width="240" height="124" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="./.github/assets/vice-component-8-cadd844f.svg" width="240" height="124" alt="kyechan99/capsule-render" /></a><a href="https://github.com/c8r/x0"><img src="./.github/assets/vice-component-8-f0919879.svg" width="240" height="124" alt="c8r/x0" /></a><a href="https://github.com/simonw/showboat"><img src="./.github/assets/vice-component-8-bf6ff09e.svg" width="240" height="124" alt="simonw/showboat" /></a></p>
 
 
 </details>

@@ -49,7 +49,7 @@ Get in Touch
 
 ```vice width=item.width height=36 from=socialLinks link=item.href
 <SocialButton
-  icon={item.logo}
+  icon={item.icon}
   text={item.text}
   href={item.href}
   width={item.width}
