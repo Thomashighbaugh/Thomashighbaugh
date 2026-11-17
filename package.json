@@ -15,6 +15,7 @@
   "packageManager": "pnpm@10.19.0",
   "homepage": "https://github.com/Thomashighbaugh/Thomashighbaugh#readme",
   "dependencies": {
+    "@shuding/opentype.js": "1.4.0-beta.0",
     "date-stringifier": "^2.0.0",
     "node-fetch": "^3.3.2",
     "satori": "^0.63.2",
@@ -27,7 +28,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@shuding/opentype.js": "1.4.0-beta.0",
     "@types/node": "^24.19.2",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",

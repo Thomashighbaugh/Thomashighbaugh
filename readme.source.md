@@ -101,18 +101,16 @@ Get in Touch
 <summary>Follower Showcase </summary>
 
 ```vice width=340 height=210 from=follower link=item.href
-<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
-  <FollowerCard
-    avatarUrl={item?.avatarUrl || 'https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png'}
-    login={item?.login || 'Thomashighbaugh'}
-    name={item?.name || 'Thomashighbaugh'}
-    bio={item?.bio || ''}
-    publicRepos={item?.publicRepos || 0}
-    followers={item?.followers || 0}
-    href={item?.htmlUrl || 'https://github.com/Thomashighbaugh'}
-    size={100}
-  />
-</div>
+<FollowerCard
+  icon={item?.icon}
+  login={item?.login || 'Thomashighbaugh'}
+  name={item?.name || 'Thomashighbaugh'}
+  bio={item?.bio || ''}
+  publicRepos={item?.publicRepos || 0}
+  followers={item?.followers || 0}
+  width={340}
+  height={210}
+/>
 ```
 
 <em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
@@ -158,13 +156,14 @@ Get in Touch
 Account Statistics
 </summary>
 
-```vice width=500 height=210
+```vice width=500
 <MetricsPanel
   totalStars={github?.stats?.totalStars || 0}
   totalForks={github?.stats?.totalForks || 0}
   totalRepos={github?.stats?.totalRepos || 0}
   totalCommits={github?.stats?.totalCommits || 0}
   languages={(github?.languages || []).slice(0, 6)}
+  width={500}
 />
 ```
 

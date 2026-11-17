@@ -4,10 +4,18 @@ const fs = require('fs');
 const path = require('path');
 const { createHash } = require('crypto');
 
-// Import taste-skill palettes
-const PALS = JSON.parse(fs.readFileSync(
-  path.resolve('.opencode/skills/taste-skill/library/palettes.json'), 'utf8'
-));
+// Import taste-skill palettes.
+// The skill lives in .opencode/ which is gitignored, so the build must read
+// the committed copy in src/resources/ — GitHub Actions never sees .opencode/.
+const PALETTE_PATHS = [
+  path.resolve('src/resources/palettes.json'),
+  path.resolve('.opencode/skills/taste-skill/library/palettes.json'),
+];
+const palettePath = PALETTE_PATHS.find((p) => fs.existsSync(p));
+if (!palettePath) {
+  throw new Error(`No palette library found. Looked in:\n  ${PALETTE_PATHS.join('\n  ')}`);
+}
+const PALS = JSON.parse(fs.readFileSync(palettePath, 'utf8'));
 
 // Import icon resolver from taste-skill
 const { fetchIcon } = require('./utils/icons');
@@ -48,15 +56,31 @@ const VICE_BLOCK_RE = /```vice\s*([\s\S]*?)\s*```/g;
 const GITHUB_USER = process.env.GITHUB_USER || 'Thomashighbaugh';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
-// Deal a palette for the software profile kind (saas/devtool trade)
+// Deal a palette for the software profile kind (saas/devtool trade).
+// The choice is deterministic: a random palette would repaint every SVG on each
+// daily Action run and commit hundreds of cache-busted files for no reason.
 function dealPalette() {
   const palettes = PALS.filter(p =>
     p.trades && p.trades.includes('saas') && p.trades.includes('devtool')
   );
-  // Prefer light-neutral palettes for a profile README
   const light = palettes.filter(p => p.tags && p.tags.includes('light-neutral'));
   const pool = light.length ? light : palettes;
-  return pool[Math.floor(Math.random() * pool.length)];
+  const seed = hashCode(GITHUB_USER) % pool.length;
+  return pool[Math.abs(seed)];
+}
+
+/**
+ * Stable small hash for deterministic picks.
+ * @param {string} str
+ * @returns {number}
+ */
+function hashCode(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0;
+  }
+  return hash;
 }
 
 function resolvePath(obj, dotted) {
@@ -115,27 +139,154 @@ function parseJsxBlock(jsxContent, context) {
       resolved = resolveExpr(expr, context);
     } else {
       resolved = rawValue;
-    }
-    props[propName] = resolved;
+    }    props[propName] = resolved;
   }
 
   return { componentName, props };
 }
 
 function resolveExpr(expr, context) {
-  if (expr.startsWith('item.')) {
-    return resolvePath(context.item ?? {}, expr.slice(5));
+  const raw = String(expr).trim();
+
+  // Parenthesised expression: (github?.languages || [])
+  if (isWrappedInParens(raw)) {
+    return resolveExpr(raw.slice(1, -1), context);
   }
-  return context[expr];
+
+  // Numeric literal: size={100}
+  if (/^-?\d+(\.\d+)?$/.test(raw)) return Number(raw);
+
+  // String literal: 'dflt' or "dflt"
+  if ((raw.startsWith("'") && raw.endsWith("'")) || (raw.startsWith('"') && raw.endsWith('"'))) {
+    return raw.slice(1, -1);
+  }
+
+  // Boolean/null literal
+  if (raw === 'true') return true;
+  if (raw === 'false') return false;
+  if (raw === 'null') return null;
+
+  // Array literal: []
+  if (raw === '[]') return [];
+
+  // Optional chaining: item?.name → treat `?.` as a plain path separator.
+  const path = raw.replace(/\?\./g, '.');
+
+  // Method call on a resolved expression: (github?.languages || []).slice(0, 6)
+  // The target may itself contain `||`, so match the trailing `.method(args)`
+  // and resolve the target separately.
+  const callMatch = path.match(/^(.*)\.([A-Za-z_$][\w$]*)\((.*)\)$/);
+  if (callMatch) {
+    const [, target, method, argsRaw] = callMatch;
+    const targetValue = resolveExpr(target, context);
+    const args = splitTopLevel(argsRaw, ',')
+      .map((a) => resolveExpr(a, context))
+      .filter((a) => a !== undefined);
+    const methodFn = targetValue == null ? null : targetValue[method];
+    if (typeof methodFn === 'function') {
+      return methodFn.apply(targetValue, args);
+    }
+    return undefined;
+  }
+
+  // `a || b` — the left side wins when it is truthy, otherwise the right side.
+  // Split on the top-level `||` only (not inside brackets or strings).
+  const orParts = splitTopLevel(raw, '||');
+  if (orParts.length > 1) {
+    for (const part of orParts) {
+      const value = resolveExpr(part, context);
+      if (value !== undefined && value !== null && value !== '' && value !== 0 && value !== false) {
+        return value;
+      }
+    }
+    return resolveExpr(orParts[orParts.length - 1], context);
+  }
+
+  // Path lookup against the context: item.label, github.stats.totalStars
+  if (path.startsWith('item.')) {
+    return resolvePath(context.item ?? {}, path.slice(5));
+  }
+  return resolvePath(context, path);
 }
 
-function parseSource(source, assetsDir = '.github/assets', outputPath = 'README.md', assetsUrl = './.github/assets') {
+/**
+ * True when the whole expression is wrapped in a single matching pair of
+ * parentheses — `(a || b)` is wrapped, `(a) || (b)` is not.
+ */
+function isWrappedInParens(input) {
+  if (!input.startsWith('(') || !input.endsWith(')')) return false;
+  let depth = 0;
+  let quote = null;
+  for (let i = 0; i < input.length; i++) {
+    const ch = input[i];
+    if (quote) {
+      if (ch === quote && input[i - 1] !== '\\') quote = null;
+      continue;
+    }
+    if (ch === '"' || ch === "'") {
+      quote = ch;
+      continue;
+    }
+    if (ch === '(') depth++;
+    else if (ch === ')') {
+      depth--;
+      if (depth === 0) return i === input.length - 1;
+    }
+  }
+  return false;
+}
+
+/**
+ * Split a string on a separator that appears at the top level only —
+ * not inside brackets, parentheses, or string literals.
+ */
+function splitTopLevel(input, separator) {
+  const parts = [];
+  let depth = 0;
+  let quote = null;
+  let current = '';
+
+  for (let i = 0; i < input.length; i++) {
+    const ch = input[i];
+
+    if (quote) {
+      current += ch;
+      if (ch === quote && input[i - 1] !== '\\') quote = null;
+      continue;
+    }
+
+    if (ch === '"' || ch === "'") {
+      quote = ch;
+      current += ch;
+      continue;
+    }
+
+    if (ch === '(' || ch === '[' || ch === '{') depth++;
+    if (ch === ')' || ch === ']' || ch === '}') depth--;
+
+    if (depth === 0 && input.startsWith(separator, i)) {
+      parts.push(current);
+      current = '';
+      i += separator.length - 1;
+      continue;
+    }
+
+    current += ch;
+  }
+
+  parts.push(current);
+  return parts.map((p) => p.trim()).filter((p) => p !== '');
+}
+
+function parseSource(source, assetDir = '.github/assets', sourcePath = 'README.md', assetsUrl = './.github/assets') {
   const blocks = [];
   let blockIndex = 0;
 
-  const absAssets = path.resolve(assetsDir);
-  const absOutput = path.resolve(outputPath);
+  // The asset URL is resolved by the caller (a raw.githubusercontent base in
+  // production) — relative paths do not work on github.com.
   const relAssets = assetsUrl;
+  void assetDir;
+  void sourcePath;
 
   let match;
   let lastIndex = 0;
@@ -249,8 +400,7 @@ async function fetchContext() {
   return {
     github: { user: { login: user.login, name: user.name, avatarUrl: user.avatar_url, bio: user.bio || '', followers: user.followers || 0, publicRepos: user.public_repos || 0, htmlUrl: user.html_url }, stats: { totalStars, totalForks, totalRepos: repos.length, totalCommits }, languages, starredRepos },
     profileViews,
-    follower: follower ? { login: follower.login, name: follower.name || follower.login, avatarUrl: follower.avatar_url, bio: follower.bio || '', publicRepos: follower.public_repos || 0, followers: follower.followers || 0, htmlUrl: follower.html_url, createdAt: follower.created_at } : null,
-  };
+    follower: follower ? { login: follower.login, name: follower.name || follower.login, avatarUrl: follower.avatar_url, bio: follower.bio || '', publicRepos: follower.public_repos || 0, followers: follower.followers || 0, htmlUrl: follower.html_url, createdAt: follower.created_at } : null,  };
 }
 
 async function fetchAllIcons() {
@@ -279,8 +429,9 @@ function buildLinkables(profileViews, icons = {}) {
 
   const headerBadges = data.header.badges.map((badge) => {
     const isViews = badge.type === 'views';
+    // A views badge is label + count; every other badge is a single label.
     const label = isViews ? 'Profile Views' : badge.name;
-    const value = isViews ? viewsValue : badge.name;
+    const value = isViews ? viewsValue : '';
     const icon = badge.logo ? icons[`header:${badge.logo}`] : null;
     return { type: badge.type, label, value, href: badge.href || null, icon, alt: label };
   });
@@ -332,6 +483,12 @@ async function build() {
     palette, textToPathStrings,
   };
 
+  // The follower card renders a brand mark, not the raster avatar: the README
+  // must stay free of raster <image> data.
+  if (context.follower && !context.follower.icon) {
+    context.follower.icon = await fetchIcon('github', '6AB0F3');
+  }
+
   const source = fs.readFileSync(SOURCE_PATH, 'utf-8');
   const { markdown, blocks, relAssets } = parseSource(source, ASSETS_DIR, OUTPUT_PATH, 'https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets');
   console.log(`  Source: ${SOURCE_PATH}`);
@@ -375,23 +532,29 @@ async function build() {
       const width = resolveDimension(meta.width, { items }) || 800;
       const height = resolveDimension(meta.height, { items }) || 300;
 
-      const svg = Comp({ items, width, height, pillHeight: 24, ...jsxProps });
+      // jsxProps may carry `items={item.items}` from the source template, which
+      // is undefined in merge mode — the merged list is the source of truth.
+      const mergedProps = { ...jsxProps };
+      delete mergedProps.items;
+
+      const svg = Comp({ ...mergedProps, items, width, height, pillHeight: 24 });
       const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
       const filename = `vice-component-${block.index}-${hash}.svg`;
       fs.writeFileSync(path.join(ASSETS_DIR, filename), svg, 'utf-8');
       writtenFiles.push(filename);
 
-      const imgTag = `<img src="${relAssets}/${filename}" width="${width}" height="${height}" alt="vice-${block.index}" />`;
+      const dims = svgDimensions(svg);
+      const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="vice-${block.index}" />`;
       const href = resolveLink(meta.link, { items });
       htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
-      console.log(`    [${block.index}] Rendered -> ${filename} (${width}x${height}) [merge=${items.length} items]`);
+      console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height}) [merge=${items.length} items]`);
     } else {
       for (let i = 0; i < items.length; i++) {
         const item = items[i] ?? null;
         const itemContext = { ...context, item };
 
-        const width = resolveDimension(meta.width, item);
-        const height = resolveDimension(meta.height, item);
+        // Dimensions come from the rendered SVG itself (svgDimensions), so the
+        // block meta width/height are not needed here.
 
         const parsed = parseJsxBlock(block.content, itemContext);
         if (!parsed) {
@@ -426,10 +589,11 @@ async function build() {
         writtenFiles.push(filename);
 
         const alt = (item && (item.alt || item.name || item.text || item.login)) || `vice-${block.index}`;
-        const imgTag = `<img src="${relAssets}/${filename}" width="${width}" height="${height}" alt="${escapeAttr(alt)}" />`;
+        const dims = svgDimensions(svg);
+        const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="${escapeAttr(alt)}" />`;
         const href = resolveLink(meta.link, item);
         htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
-        console.log(`    [${block.index}] Rendered -> ${filename} (${width}x${height})`);
+        console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height})`);
       }
     }
 
@@ -499,7 +663,26 @@ if (require.main === module) {
   });
 }
 
-module.exports = { build, parseSource };
+/**
+ * Read the intrinsic width and height of a rendered SVG.
+ * The <img> tag must match the SVG exactly or the browser scales it and the
+ * layout drifts.
+ *
+ * @param {string} svg
+ * @returns {{width: number, height: number}}
+ */
+function svgDimensions(svg) {
+  const open = svg.match(/<svg\b[^>]*>/);
+  if (!open) return { width: 0, height: 0 };
+  const w = open[0].match(/\bwidth="([\d.]+)"/);
+  const h = open[0].match(/\bheight="([\d.]+)"/);
+  return {
+    width: w ? Math.round(Number(w[1])) : 0,
+    height: h ? Math.round(Number(h[1])) : 0,
+  };
+}
+
+module.exports = { build, parseSource, resolveExpr, parseJsxBlock };
 
 function parseMeta(meta) {
   const defaults = { width: 800, height: 400 };

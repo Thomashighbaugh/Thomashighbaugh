@@ -13,12 +13,17 @@ concurrency:
   group: readme-generate-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -30,7 +35,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prod
+        run: pnpm install --frozen-lockfile
 
       - name: Generate README with vice
         run: pnpm run build:readme
@@ -40,9 +45,12 @@ jobs:
 
       - name: Commit and push if changed
         run: |-
-          git diff
           git config --global user.email "readme-bot@github.com"
           git config --global user.name "README-bot"
-          git add -A
-          git commit -m "docs: regenerate profile README ($(date +%Y-%m-%d))" || exit 0
-          git push
+          git add README.md .github/assets
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "docs: regenerate profile README ($(date +%Y-%m-%d))"
+          git push origin HEAD:${{ github.ref_name }}
