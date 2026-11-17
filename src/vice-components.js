@@ -651,6 +651,61 @@ function layoutPills(items, maxWidth, pillHeight, fontSize, gapX) {
 }
 
 /**
+ * Read the nested backdrop pattern out of banner.svg.
+ *
+ * The banner tiles a small SVG (a circuit-board motif) behind its content using
+ * `background-image: url("data:image/svg+xml,…")`. SVG has no background-image,
+ * so the same markup is re-emitted as a <pattern> and the banner stays the
+ * single source of truth for the artwork.
+ *
+ * @returns {{markup: string, width: number, height: number} | null}
+ */
+let bannerPatternCache;
+function getBannerPattern() {
+  if (bannerPatternCache !== undefined) return bannerPatternCache;
+  bannerPatternCache = null;
+
+  try {
+    const svg = fs.readFileSync(path.resolve('src/resources/images/banner.svg'), 'utf8');
+    const styleStart = svg.indexOf('<style>');
+    const styleEnd = svg.indexOf('</style>');
+    if (styleStart < 0 || styleEnd < 0) return null;
+    const css = svg.slice(styleStart, styleEnd);
+
+    const matches = css.matchAll(/background-image:\s*url\("data:image\/svg\+xml,([^"]+)"\)/g);
+    for (const match of matches) {
+      let decoded;
+      try {
+        decoded = decodeURIComponent(match[1]);
+      } catch {
+        continue;
+      }
+      // The page backdrop carries no `class`; the other data URIs are octicon
+      // images applied to individual elements.
+      if (/\bclass=/.test(decoded)) continue;
+
+      const open = decoded.match(/<svg\b[^>]*>/);
+      if (!open) continue;
+      const widthMatch = open[0].match(/\bwidth='?(\d+)/);
+      const heightMatch = open[0].match(/\bheight='?(\d+)/);
+      const closeAt = decoded.lastIndexOf('</svg>');
+      if (!widthMatch || !heightMatch || closeAt < 0) continue;
+
+      bannerPatternCache = {
+        markup: decoded.slice(open[0].length, closeAt),
+        width: Number(widthMatch[1]),
+        height: Number(heightMatch[1]),
+      };
+      return bannerPatternCache;
+    }
+  } catch {
+    // No banner or no pattern — the wall simply keeps its flat background.
+  }
+
+  return bannerPatternCache;
+}
+
+/**
  * BentoGrid — every skill group laid out in a multi-column grid.
  *
  * Each cell is a heading plus its pills, drawn on a fully transparent canvas:
@@ -706,7 +761,16 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const totalH = Math.ceil(contentH + padBottom);
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+
+  // Base colour from the banner, then the banner's own tiled motif on top of it.
+  const pattern = getBannerPattern();
+  if (pattern) {
+    svg += `<defs><pattern id="vice-banner-backdrop" width="${pattern.width}" height="${pattern.height}" patternUnits="userSpaceOnUse">${pattern.markup}</pattern></defs>`;
+  }
   svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="#1c1c1c" rx="6" ry="6" />`;
+  if (pattern) {
+    svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="url(#vice-banner-backdrop)" rx="6" ry="6" />`;
+  }
 
   for (const { group, x0, y0, placed } of cells) {
     svg += textToPathStrings(group.label, BUTTON_FONT, labelSize, x0, y0 + labelBaseline, ACCENT).join('');

@@ -110,6 +110,11 @@ const TOPIC_MAP = {
   'NVIDIA NIM': 'nvidia-nim',
   RAG: 'retrieval-augmented-generation',
   Embeddings: 'embeddings',
+  opencode: 'opencode',
+  'ONNX Runtime': 'onnx',
+  'Vector Databases': 'vector-database',
+  'Knowledge Graphs': 'knowledge-graph',
+  'Self-Improving Agents': 'self-improving-agent',
 };
 
 /**

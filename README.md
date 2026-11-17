@@ -48,7 +48,7 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-c9ecbb5a.svg" width="800" height="936" alt="Skill wall" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-e1350c63.svg" width="800" height="978" alt="Skill wall" /></p>
 
 
 </details>

@@ -154,6 +154,11 @@ module.exports = {
           { name: 'RAG', logo: 'fa-database' },
           { name: 'Embeddings', logo: 'fa-circle-nodes' },
           { name: 'Streamlit', logo: 'streamlit' },
+          { name: 'opencode', logo: 'opencode', isHighlighted: true },
+          { name: 'ONNX Runtime', logo: 'onnx' },
+          { name: 'Vector Databases', logo: 'fa-server' },
+          { name: 'Knowledge Graphs', logo: 'fa-share-nodes' },
+          { name: 'Self-Improving Agents', logo: 'fa-arrows-rotate' },
         ],
       },
       {
