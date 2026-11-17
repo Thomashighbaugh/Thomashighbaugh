@@ -60,22 +60,32 @@ Get in Touch
 
 **Backend & Databases**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-ab841176.svg" width="800" height="68" alt="vice-4" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-6a297aa2.svg" width="800" height="68" alt="vice-4" /></p>
 
 
 **AI & Agents**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-2a908fa4.svg" width="800" height="30" alt="vice-5" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-aa6e6399.svg" width="800" height="68" alt="vice-5" /></p>
 
 
-**DevOps & Tools**
+**OS & Desktop**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-e3b211ac.svg" width="800" height="144" alt="vice-6" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-d33cff6f.svg" width="800" height="30" alt="vice-6" /></p>
+
+
+**Build & Deploy**
+
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-3b579655.svg" width="800" height="68" alt="vice-7" /></p>
+
+
+**Dev Tools**
+
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-8-5283cb60.svg" width="800" height="68" alt="vice-8" /></p>
 
 
 **Design**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-90ffd92a.svg" width="800" height="68" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-90ffd92a.svg" width="800" height="68" alt="vice-9" /></p>
 
 
 </details>
@@ -83,7 +93,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-8-c350f4ab.svg" width="340" height="210" alt="Isaias Bueno" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-10-c350f4ab.svg" width="340" height="210" alt="Isaias Bueno" /></p>
 
 
 <em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
@@ -99,21 +109,21 @@ Get in Touch
 <br>
 
 <ul>
+  <li>⭐ Starred <a href="https://github.com/jtojnar/nixpkgs-hammering">jtojnar/nixpkgs-hammering</a> <small><em>— today</em></small></li>
   <li>⭐ Starred <a href="https://github.com/pengelana/blocklist">pengelana/blocklist</a> <small><em>— today</em></small></li>
   <li>📝 Pushed 7 commits to <a href="https://github.com/Sanatana-Linux/nixos-config">Sanatana-Linux/nixos-config</a> on main <small><em>— yesterday</em></small></li>
   <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/Thomashighbaugh">Thomashighbaugh/Thomashighbaugh</a> on main <small><em>— today</em></small></li>
   <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/buchbinder">Thomashighbaugh/buchbinder</a> on main <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/c8r/x0">c8r/x0</a> <small><em>— yesterday</em></small></li>
   <li>📝 Pushed 2 commits to <a href="https://github.com/Sanatana-Linux/sharabha-gtk-theme">Sanatana-Linux/sharabha-gtk-theme</a> on main <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/satsvi97/lorebook-sync">satsvi97/lorebook-sync</a> <small><em>— yesterday</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/KritBlade/mvu-helper">KritBlade/mvu-helper</a> <small><em>— yesterday</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/satsvi97/lorebook-sync">satsvi97/lorebook-sync</a> <small><em>— 2 days ago</em></small></li>
+  <li>⭐ Starred <a href="https://github.com/KritBlade/mvu-helper">KritBlade/mvu-helper</a> <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/Uberspace/lab">Uberspace/lab</a> <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/erosman/firemonkey">erosman/firemonkey</a> <small><em>— 2 days ago</em></small></li>
   <li>📝 Pushed 1 commit to <a href="https://github.com/Thomashighbaugh/opencode">Thomashighbaugh/opencode</a> on main <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/zapers/SillyTavern-Character-Card-Suggestions">zapers/SillyTavern-Character-Card-Suggestions</a> <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/Mubelotix/SimRepo">Mubelotix/SimRepo</a> <small><em>— 2 days ago</em></small></li>
   <li>⭐ Starred <a href="https://github.com/EnchantedRobot/jai-proxy">EnchantedRobot/jai-proxy</a> <small><em>— 2 days ago</em></small></li>
-  <li>⭐ Starred <a href="https://github.com/EnchantedRobot/SillyTavern-Character-Tools-Server">EnchantedRobot/SillyTavern-Character-Tools-Server</a> <small><em>— 2 days ago</em></small></li>
 </ul>
 
 </details>
@@ -126,7 +136,7 @@ Get in Touch
 
 <br>
 
-<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-64ba3cfe.svg" width="260" height="126" alt="rtk-ai/rtk" /></a><a href="https://github.com/anudeepND/whitelist"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-213f74e0.svg" width="260" height="126" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-1ccc1fcd.svg" width="260" height="126" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-dc617464.svg" width="260" height="126" alt="kyechan99/capsule-render" /></a><a href="https://github.com/c8r/x0"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-8c866581.svg" width="260" height="126" alt="c8r/x0" /></a><a href="https://github.com/simonw/showboat"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-fb1ba120.svg" width="260" height="126" alt="simonw/showboat" /></a></p>
+<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-70ddce56.svg" width="260" height="126" alt="rtk-ai/rtk" /></a><a href="https://github.com/anudeepND/whitelist"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-213f74e0.svg" width="260" height="126" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-1ccc1fcd.svg" width="260" height="126" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-dc617464.svg" width="260" height="126" alt="kyechan99/capsule-render" /></a><a href="https://github.com/c8r/x0"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-8c866581.svg" width="260" height="126" alt="c8r/x0" /></a><a href="https://github.com/simonw/showboat"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-11-fb1ba120.svg" width="260" height="126" alt="simonw/showboat" /></a></p>
 
 
 </details>
@@ -136,7 +146,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-10-4592c21d.svg" width="500" height="322" alt="vice-10" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-12-9c91caaf.svg" width="500" height="322" alt="vice-12" /></p>
 
 
 </details>

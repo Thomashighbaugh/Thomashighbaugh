@@ -104,6 +104,12 @@ const TOPIC_MAP = {
   Base16: 'base16',
   'Firefox userChrome': 'userchrome',
   Dotfiles: 'dotfiles',
+  LangChain: 'langchain',
+  Ollama: 'ollama',
+  'Google Gemini': 'google-gemini',
+  'NVIDIA NIM': 'nvidia-nim',
+  RAG: 'retrieval-augmented-generation',
+  Embeddings: 'embeddings',
 };
 
 /**

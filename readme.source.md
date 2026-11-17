@@ -88,9 +88,21 @@ Get in Touch
 <CategoryWall items={item.items} pillHeight={30} />
 ```
 
-**DevOps & Tools**
+**OS & Desktop**
 
-```vice width=800 merge from="skillPills.'DevOps & Tools'"
+```vice width=800 merge from="skillPills.'OS & Desktop'"
+<CategoryWall items={item.items} pillHeight={30} />
+```
+
+**Build & Deploy**
+
+```vice width=800 merge from="skillPills.'Build & Deploy'"
+<CategoryWall items={item.items} pillHeight={30} />
+```
+
+**Dev Tools**
+
+```vice width=800 merge from="skillPills.'Dev Tools'"
 <CategoryWall items={item.items} pillHeight={30} />
 ```
 
