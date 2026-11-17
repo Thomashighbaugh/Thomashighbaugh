@@ -598,7 +598,11 @@ async function build() {
       }
     }
 
-    blockHtml.set(block.index, htmlParts.join(''));
+    // GitHub strips CSS from READMEs, so spacing between inline images has to
+    // come from markup. Non-breaking spaces give a real gap without touching
+    // the image itself (GitHub paints a background behind every <img>).
+    const gap = '&nbsp;'.repeat(meta.gap || 0);
+    blockHtml.set(block.index, htmlParts.join(gap));
   }
 
   let finalMd = markdown;
@@ -697,6 +701,7 @@ function parseMeta(meta) {
     if (key === 'height') defaults.height = /^\d+$/.test(value) ? parseInt(value, 10) : value;
     if (key === 'link') defaults.link = value;
     if (key === 'from') defaults.from = value;
+    if (key === 'gap') defaults.gap = /^\d+$/.test(value) ? parseInt(value, 10) : 0;
   }
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
   return defaults;

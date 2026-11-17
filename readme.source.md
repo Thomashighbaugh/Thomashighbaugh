@@ -1,10 +1,12 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-```vice from=headerBadges link=item.href
+```vice from=headerBadges link=item.href gap=2
 <Badge
   label={item.label}
   value={item.value}
   color="#3c3c3c"
+  logoColor="#ffffff"
+  border="#ffffff"
   icon={item.icon}
   style="for-the-badge"
   height={36}

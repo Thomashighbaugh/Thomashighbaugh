@@ -319,9 +319,9 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
 /**
  * Badge — SVG string.
  */
-function badge({ label, value, color = COLORS.primary, logoColor = ACCENT, icon, style = 'plastic', height = 34, fontSize = 16 }) {
+function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5 }) {
   const isForTheBadge = style === 'for-the-badge';
-  const borderRadius = isForTheBadge ? 4 : height / 2;
+  const borderRadius = isForTheBadge ? 5 : height / 2;
   const padX = isForTheBadge ? 10 : 9;
   const hasValue = value !== undefined && value !== null && String(value) !== '';
   const labelText = String(label ?? '');
@@ -347,8 +347,12 @@ function badge({ label, value, color = COLORS.primary, logoColor = ACCENT, icon,
     ? textToPathStrings(valueText, BUTTON_FONT, fontSize, valueX, baseline, logoColor)
     : [];
 
+  // The outline is inset by half its width so the SVG viewBox does not clip it.
+  const inset = border ? borderWidth / 2 : 0;
+  const strokeAttr = border ? ` stroke="${border}" stroke-width="${borderWidth}"` : '';
+
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<rect x="0" y="0" width="${totalW}" height="${height}" fill="${color}" rx="${borderRadius}" ry="${borderRadius}" />`;
+  svg += `<rect x="${inset}" y="${inset}" width="${totalW - inset * 2}" height="${height - inset * 2}" fill="${color}" rx="${borderRadius}" ry="${borderRadius}"${strokeAttr} />`;
   if (icon) {
     svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, logoColor);
   }
