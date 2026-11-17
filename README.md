@@ -48,7 +48,7 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-e1350c63.svg" width="800" height="978" alt="Skill wall" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-385af2c6.svg" width="800" height="978" alt="Skill wall" /></p>
 
 
 </details>
@@ -99,7 +99,7 @@ Get in Touch
 
 <br>
 
-<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-51a29327.svg" width="260" height="126" alt="rtk-ai/rtk" /></a><a href="https://github.com/anudeepND/whitelist"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-213f74e0.svg" width="260" height="126" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-f58e570e.svg" width="260" height="126" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-dc617464.svg" width="260" height="126" alt="kyechan99/capsule-render" /></a><a href="https://github.com/c8r/x0"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-8c866581.svg" width="260" height="126" alt="c8r/x0" /></a><a href="https://github.com/simonw/showboat"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-fb1ba120.svg" width="260" height="126" alt="simonw/showboat" /></a></p>
+<p align="center"><a href="https://github.com/rtk-ai/rtk"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-d1b65ff7.svg" width="260" height="126" alt="rtk-ai/rtk" /></a><a href="https://github.com/anudeepND/whitelist"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-213f74e0.svg" width="260" height="126" alt="anudeepND/whitelist" /></a><a href="https://github.com/alexgreensh/token-optimizer"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-f58e570e.svg" width="260" height="126" alt="alexgreensh/token-optimizer" /></a><a href="https://github.com/kyechan99/capsule-render"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-dc617464.svg" width="260" height="126" alt="kyechan99/capsule-render" /></a><a href="https://github.com/c8r/x0"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-8c866581.svg" width="260" height="126" alt="c8r/x0" /></a><a href="https://github.com/simonw/showboat"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-fb1ba120.svg" width="260" height="126" alt="simonw/showboat" /></a></p>
 
 
 </details>
@@ -109,7 +109,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-691ddc36.svg" width="500" height="322" alt="vice-5" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-001d618f.svg" width="500" height="322" alt="vice-5" /></p>
 
 
 </details>

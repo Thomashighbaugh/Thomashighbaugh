@@ -408,8 +408,15 @@ function socialButton({ icon, text, backgroundColor = '#3c3c3c', textColor = '#f
 /**
  * SkillPill — SVG string.
  */
-function skillPill({ name, icon, color = COLORS.primary, logoColor = ACCENT, highlighted = false, fontSize = 15, height = 30, width }) {
+function skillPill({ name, icon, color = '#3c3c3c', logoColor = '#f4f4f4', highlighted = false, fontSize = 15, height = 30, width }) {
+  // Plain pills borrow the banner's chip styling (banner.svg .list button):
+  // #3c3c3c fill, #f4f4f4 label, #f4f4f7 solid border. Highlighted pills stay
+  // on the accent so they still stand out.
   const fill = highlighted ? '#222222' : color;
+  const fg = highlighted ? ACCENT : logoColor;
+  const stroke = highlighted ? ACCENT : '#f4f4f7';
+  const borderWidth = highlighted ? 1.5 : 2;
+  const inset = borderWidth / 2;
   const padX = 9;
   const iconSize = height * 0.58;
   // The icon box is exactly as wide as the icon it holds.
@@ -421,15 +428,12 @@ function skillPill({ name, icon, color = COLORS.primary, logoColor = ACCENT, hig
   const totalW = width || Math.ceil(textX + textW + padX);
 
   const baseline = height / 2 + fontSize * 0.36;
-  const textPaths = textToPathStrings(name, BUTTON_FONT, fontSize, textX, baseline, logoColor);
+  const textPaths = textToPathStrings(name, BUTTON_FONT, fontSize, textX, baseline, fg);
 
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-  // Highlighted skills get an accent outline instead of a light fill, so the
-  // label and icon stay the accent colour on every pill.
-  const strokeAttr = highlighted ? ` stroke="${ACCENT}" stroke-width="1.5"` : '';
-  svg += `<rect x="0.75" y="0.75" width="${totalW - 1.5}" height="${height - 1.5}" fill="${fill}" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}"${strokeAttr} />`;
+  svg += `<rect x="${inset}" y="${inset}" width="${totalW - inset * 2}" height="${height - inset * 2}" fill="${fill}" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="${stroke}" stroke-width="${borderWidth}" />`;
   if (icon) {
-    svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, logoColor);
+    svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, fg);
   }
   svg += textPaths.join('');
   svg += `</svg>`;
@@ -706,6 +710,24 @@ function getBannerPattern() {
 }
 
 /**
+ * The banner's motion, ported for the pills.
+ *
+ * banner.svg sets `.list button` to `jerkup 5ms infinite, jerk 10ms infinite`
+ * — a 1px vibration — and its headings carry `glitch1`, a 3px jump. Stacking
+ * both on one element does not work: they all animate `transform`, so the last
+ * one wins. They are therefore split across two nested groups, whose transforms
+ * compose. Each pill gets a negative delay so they drift out of phase instead
+ * of twitching in unison.
+ */
+const PILL_MOTION_CSS = `
+@keyframes vice-jerk { 0% { transform: translateY(1px); } 50% { transform: translateX(1px); } 51% { transform: translate(0, 0); } 100% { transform: translateY(-1px); } }
+@keyframes vice-glitch { 0%, 30%, 32%, 98% { transform: translateX(0); } 31%, 100% { transform: translateX(3px); } }
+.pill-jerk { animation: vice-jerk 10ms infinite; }
+.pill-glitch { animation: vice-glitch 2.8s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .pill-jerk, .pill-glitch { animation: none; } }
+`.replace(/\s+/g, ' ').trim();
+
+/**
  * BentoGrid — every skill group laid out in a multi-column grid.
  *
  * Each cell is a heading plus its pills, drawn on a fully transparent canvas:
@@ -761,6 +783,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const totalH = Math.ceil(contentH + padBottom);
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<style>${PILL_MOTION_CSS}</style>`;
 
   // Base colour from the banner, then the banner's own tiled motif on top of it.
   const pattern = getBannerPattern();
@@ -772,11 +795,18 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
     svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="url(#vice-banner-backdrop)" rx="6" ry="6" />`;
   }
 
+  let pillIndex = 0;
   for (const { group, x0, y0, placed } of cells) {
     svg += textToPathStrings(group.label, BUTTON_FONT, labelSize, x0, y0 + labelBaseline, ACCENT).join('');
     const pillTop = y0 + labelBlock + labelGap;
     for (const { pill, x, y, w } of placed) {
+      // Outer group positions, the two inner groups animate — so the twitch and
+      // the glitch jump compose instead of overwriting each other.
+      const jerkDelay = -(((pillIndex * 0.37) % 1.6)).toFixed(2);
+      const glitchDelay = -(((pillIndex * 0.83) % 2.8)).toFixed(2);
       svg += `<g transform="translate(${x0 + x},${pillTop + y})">`;
+      svg += `<g class="pill-jerk" style="animation-delay:${jerkDelay}s">`;
+      svg += `<g class="pill-glitch" style="animation-delay:${glitchDelay}s">`;
       svg += skillPill({
         name: pill.name,
         icon: pill.icon,
@@ -785,7 +815,8 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
         height: pillHeight,
         width: w,
       }).replace(/<svg[^>]*>/, '').replace(/<\/svg>/, '');
-      svg += `</g>`;
+      svg += `</g></g></g>`;
+      pillIndex++;
     }
   }
 
