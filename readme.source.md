@@ -82,6 +82,12 @@ Get in Touch
 <CategoryWall items={item.items} pillHeight={30} />
 ```
 
+**AI & Agents**
+
+```vice width=800 merge from="skillPills.'AI & Agents'"
+<CategoryWall items={item.items} pillHeight={30} />
+```
+
 **DevOps & Tools**
 
 ```vice width=800 merge from="skillPills.'DevOps & Tools'"

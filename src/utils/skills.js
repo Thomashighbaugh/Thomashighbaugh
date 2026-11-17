@@ -88,6 +88,22 @@ const TOPIC_MAP = {
   'Visual Studio Code ': 'vscode',
   Heroku: 'heroku',
   Figma: 'figma',
+  // Slugs whose auto-slugified form does not match a real GitHub topic.
+  'Next.js': 'nextjs',
+  Nix: 'nix',
+  Vimscript: 'vim',
+  TinaCMS: 'tinacms',
+  'OpenAI API': 'openai-api',
+  'Prompt Engineering': 'prompt-engineering',
+  'Agentic Workflows': 'agentic-workflow',
+  'Arch Linux': 'arch-linux',
+  AwesomeWM: 'awesomewm',
+  'GTK Themes': 'gtk-theme',
+  'Icon Themes': 'icon-theme',
+  'GRUB Themes': 'grub-theme',
+  Base16: 'base16',
+  'Firefox userChrome': 'userchrome',
+  Dotfiles: 'dotfiles',
 };
 
 /**
