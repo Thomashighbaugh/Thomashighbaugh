@@ -5,9 +5,7 @@
   label={item.label}
   value={item.value}
   color="#3c3c3c"
-  logoColor="#6AB0F3"
-  logo={item.logo}
-  href={item.href}
+  icon={item.icon}
   style="for-the-badge"
   height={36}
 />
