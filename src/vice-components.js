@@ -374,7 +374,9 @@ module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPil
 /**
  * SocialButton — SVG string.
  */
-function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = ACCENT, fontSize = 20, width, height = 42 }) {
+function socialButton({ icon, text, backgroundColor = '#3c3c3c', textColor = '#f4f4f4', fontSize = 20, width, height = 42, border = '#f4f4f7', borderWidth = 2 }) {
+  // Matches the chips under the banner in banner.svg (.list button):
+  // #3c3c3c fill, #f4f4f4 label, #f4f4f7 solid border.
   const borderRadius = BUTTON_RADIUS;
   const iconSize = height * 0.52;
   const padX = 14;
@@ -388,8 +390,12 @@ function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = ACC
   const baseline = height / 2 + fontSize * 0.36;
   const textPaths = textToPathStrings(text, BUTTON_FONT, fontSize, textX, baseline, textColor);
 
+  // Inset by half the stroke so the outline is not clipped by the viewBox.
+  const inset = border ? borderWidth / 2 : 0;
+  const strokeAttr = border ? ` stroke="${border}" stroke-width="${borderWidth}"` : '';
+
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<rect x="0" y="0" width="${totalW}" height="${height}" fill="${backgroundColor}" rx="${borderRadius}" ry="${borderRadius}" />`;
+  svg += `<rect x="${inset}" y="${inset}" width="${totalW - inset * 2}" height="${height - inset * 2}" fill="${backgroundColor}" rx="${borderRadius}" ry="${borderRadius}"${strokeAttr} />`;
   if (icon) {
     svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, textColor);
   }
@@ -671,9 +677,12 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const labelBlock = 24;
   const labelBaseline = 18;
   const labelGap = 4;
-  const padTop = 7;
-  const padBottom = 4;
-  const colW = Math.floor((width - colGap * (columns - 1)) / columns);
+  // The wall carries the banner's own background (#1c1c1c, .screen/.menu in
+  // banner.svg) and the same 6px corner GitHub puts on README images.
+  const padX = 16;
+  const padTop = 16;
+  const padBottom = 14;
+  const colW = Math.floor((width - padX * 2 - colGap * (columns - 1)) / columns);
 
   const colY = new Array(columns).fill(padTop);
   const cells = [];
@@ -687,7 +696,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
       if (colY[i] < colY[col] - 0.5) col = i;
     }
 
-    const x0 = col * (colW + colGap);
+    const x0 = padX + col * (colW + colGap);
     const y0 = colY[col];
     cells.push({ group, x0, y0, placed });
     colY[col] = y0 + labelBlock + labelGap + height + groupGap;
@@ -697,6 +706,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const totalH = Math.ceil(contentH + padBottom);
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="#1c1c1c" rx="6" ry="6" />`;
 
   for (const { group, x0, y0, placed } of cells) {
     svg += textToPathStrings(group.label, BUTTON_FONT, labelSize, x0, y0 + labelBaseline, ACCENT).join('');

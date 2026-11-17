@@ -65,15 +65,9 @@ module.exports = {
       },
       {
         name: 'email',
-        logo: 'zoho',
-        href: 'mailto:thighbaugh@zoho.com',
-      },
-      {
-        name: 'alternative email',
         logo: 'thunderbird',
         href: 'mailto:me@thomasleonhighbaugh.me',
       },
-
       {
         name: 'codepen',
         href: 'https://codepen.io/thomashighbaugh',
