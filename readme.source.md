@@ -26,14 +26,9 @@ About Me
 </details>
 </div>
 
-<div align="center">
-<strong>
-Tom's Law of Software Development
-</strong> 
-<br>
-<br>
- <em>The more convenient, useful or helpful a software is to use, <br> the more of a painful, tedious and/or absolutely miserable it was to <br>develop and then iteratively refine into such a form.</em>
-</div>
+```vice width=800 alt="Tom's Law of Software Development"
+<LawPanel width={800} titleSize={34} bodySize={16} />
+```
 <br>
 <hr>
 <br>

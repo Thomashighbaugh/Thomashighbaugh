@@ -22,7 +22,9 @@ function loadFont(fontName) {
       for (const file of fs.readdirSync(subDir, { withFileTypes: true })) {
         if (!file.isFile()) continue;
         const ext = path.extname(file.name).toLowerCase();
-        if (['.woff2', '.woff', '.ttf', '.otf'].includes(ext)) {
+        // .woff2 is deliberately excluded: opentype.js cannot parse it, and
+        // picking one here shadows the parseable WOFF1/TTF sibling.
+        if (['.ttf', '.otf', '.woff'].includes(ext)) {
           const baseName = path.basename(file.name, ext)
             .replace(/[-_](Regular|Bold|Italic|Light|Medium|SemiBold|ExtraBold|Black|\d+)/gi, '')
             .replace(/\s+/g, ' ');

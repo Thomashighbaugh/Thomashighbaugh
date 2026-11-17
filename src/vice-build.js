@@ -30,6 +30,7 @@ const {
   MetricsPanel,
   CategoryWall,
   BentoGrid,
+  LawPanel,
 } = require('./vice-components');
 const { toTopicUrl } = require('./utils/skills');
 const { textToPathStrings } = require('./vice-components');
@@ -511,7 +512,7 @@ async function build() {
   const COMPONENT_MAP = {
     Badge, SocialButton, SkillPill,
     RepoCard, FollowerCard, StatsCard,
-    MetricsPanel, CategoryWall, BentoGrid,
+    MetricsPanel, CategoryWall, BentoGrid, LawPanel,
   };
 
   const writtenFiles = [];
@@ -597,7 +598,7 @@ async function build() {
         fs.writeFileSync(path.join(ASSETS_DIR, filename), svg, 'utf-8');
         writtenFiles.push(filename);
 
-        const alt = (item && (item.alt || item.name || item.text || item.login)) || `vice-${block.index}`;
+        const alt = meta.alt || (item && (item.alt || item.name || item.text || item.login)) || `vice-${block.index}`;
         const dims = svgDimensions(svg);
         const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="${escapeAttr(alt)}" />`;
         const href = resolveLink(meta.link, item);

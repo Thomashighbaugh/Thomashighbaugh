@@ -189,7 +189,8 @@ function findFontFile(fontName) {
     for (const file of fs.readdirSync(subDir, { withFileTypes: true })) {
       if (!file.isFile()) continue;
       const ext = path.extname(file.name).toLowerCase();
-      if (!['.ttf', '.otf'].includes(ext)) continue;
+      // .woff is accepted too: a WOFF1 file parses with opentype.js (WOFF2 does not).
+      if (!['.ttf', '.otf', '.woff'].includes(ext)) continue;
       const baseName = path.basename(file.name, ext)
         .replace(/[-_](Regular|Bold|Italic|Light|Medium|SemiBold|ExtraBold|Black|\d+)/gi, '')
         .replace(/\s+/g, ' ');
@@ -369,7 +370,7 @@ function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', ic
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
 
 /**
  * SocialButton — SVG string.
@@ -719,13 +720,86 @@ function getBannerPattern() {
  * compose. Each pill gets a negative delay so they drift out of phase instead
  * of twitching in unison.
  */
-const PILL_MOTION_CSS = `
+const MOTION_CSS = `
 @keyframes vice-jerk { 0% { transform: translateY(1px); } 50% { transform: translateX(1px); } 51% { transform: translate(0, 0); } 100% { transform: translateY(-1px); } }
 @keyframes vice-glitch { 0%, 30%, 32%, 98% { transform: translateX(0); } 31%, 100% { transform: translateX(3px); } }
-.pill-jerk { animation: vice-jerk 10ms infinite; }
-.pill-glitch { animation: vice-glitch 2.8s linear infinite; }
-@media (prefers-reduced-motion: reduce) { .pill-jerk, .pill-glitch { animation: none; } }
+.motion-jerk { animation: vice-jerk 10ms infinite; }
+.motion-glitch { animation: vice-glitch 2.8s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .motion-jerk, .motion-glitch { animation: none; } }
 `.replace(/\s+/g, ' ').trim();
+
+/**
+ * LawPanel — the "Tom's Law" statement drawn as a banner-style card.
+ *
+ * Mirrors banner.svg: the same #1c1c1c canvas with its tiled motif, the heading
+ * in Knewave at #fc618d with a #4c4c4c drop, and the statement set in Tiny5
+ * inside a single chip styled like `.list button` (fill, border, black shadow).
+ * The heading glitches and the chip vibrates, as the banner's h1 and buttons do.
+ *
+ * @param {{width?: number, title?: string, body?: string, titleSize?: number, bodySize?: number}} props
+ * @returns {string}
+ */
+function lawPanel({ width = 800, title = "Tom's Law of Software Development", body, titleSize = 34, bodySize = 16 }) {
+  const statement = body || "The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or absolutely miserable it was to develop and then iteratively refine into such a form.";
+
+  const PINK = '#fc618d';      // banner header h1 colour
+  const PINK_SHADOW = '#4c4c4c'; // banner h1 text-shadow
+  const CHIP_FILL = '#3c3c3c';   // banner .list button
+  const CHIP_INK = '#f4f4f4';
+  const CHIP_BORDER = '#f4f4f7';
+
+  const padX = 26;
+  const titleBaseline = 30 + titleSize * 0.8;
+  const chipTop = titleBaseline + 26;
+  const chipW = width - padX * 2;
+  const chipPadX = 24;
+  const chipPadY = 20;
+  const lineHeight = Math.round(bodySize * 1.7);
+  const shadowOffset = 12;
+
+  // Heading, smaller than the banner's own 66px display type.
+  const titleW = measureText(title, 'Knewave', titleSize);
+  const titleX = (width - titleW) / 2;
+
+  // Statement, wrapped inside the chip.
+  const lines = wrapText(statement, 'Tiny5', bodySize, chipW - chipPadX * 2, 6);
+  const chipH = chipPadY * 2 + lines.length * lineHeight;
+  const totalH = Math.ceil(chipTop + chipH + shadowOffset + 10);
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<style>${MOTION_CSS}</style>`;
+
+  // Backdrop: banner base colour plus the banner's own tiled motif.
+  const pattern = getBannerPattern();
+  if (pattern) {
+    svg += `<defs><pattern id="vice-law-backdrop" width="${pattern.width}" height="${pattern.height}" patternUnits="userSpaceOnUse">${pattern.markup}</pattern></defs>`;
+  }
+  svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="#1c1c1c" rx="6" ry="6" />`;
+  if (pattern) {
+    svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="url(#vice-law-backdrop)" rx="6" ry="6" />`;
+  }
+
+  // Heading: hard drop, then the face itself, with the banner's glitch.
+  svg += `<g class="motion-jerk"><g class="motion-glitch">`;
+  svg += `<g transform="translate(3,3)">${textToPathStrings(title, 'Knewave', titleSize, titleX, titleBaseline, PINK_SHADOW).join('')}</g>`;
+  svg += textToPathStrings(title, 'Knewave', titleSize, titleX, titleBaseline, PINK).join('');
+  svg += `</g></g>`;
+
+  // Chip: black offset block first, then the bordered face, then the text.
+  svg += `<g class="motion-jerk">`;
+  svg += `<rect x="${padX + shadowOffset}" y="${chipTop + shadowOffset}" width="${chipW}" height="${chipH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+  svg += `<rect x="${padX}" y="${chipTop}" width="${chipW}" height="${chipH}" fill="${CHIP_FILL}" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="${CHIP_BORDER}" stroke-width="2" />`;
+  lines.forEach((line, i) => {
+    const lineW = measureText(line, 'Tiny5', bodySize);
+    const lineX = padX + (chipW - lineW) / 2;
+    const lineY = chipTop + chipPadY + (i + 1) * lineHeight - Math.round(lineHeight * 0.28);
+    svg += textToPathStrings(line, 'Tiny5', bodySize, lineX, lineY, CHIP_INK).join('');
+  });
+  svg += `</g>`;
+
+  svg += `</svg>`;
+  return svg;
+}
 
 /**
  * BentoGrid — every skill group laid out in a multi-column grid.
@@ -783,7 +857,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const totalH = Math.ceil(contentH + padBottom);
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<style>${PILL_MOTION_CSS}</style>`;
+  svg += `<style>${MOTION_CSS}</style>`;
 
   // Base colour from the banner, then the banner's own tiled motif on top of it.
   const pattern = getBannerPattern();
@@ -805,8 +879,8 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
       const jerkDelay = -(((pillIndex * 0.37) % 1.6)).toFixed(2);
       const glitchDelay = -(((pillIndex * 0.83) % 2.8)).toFixed(2);
       svg += `<g transform="translate(${x0 + x},${pillTop + y})">`;
-      svg += `<g class="pill-jerk" style="animation-delay:${jerkDelay}s">`;
-      svg += `<g class="pill-glitch" style="animation-delay:${glitchDelay}s">`;
+      svg += `<g class="motion-jerk" style="animation-delay:${jerkDelay}s">`;
+      svg += `<g class="motion-glitch" style="animation-delay:${glitchDelay}s">`;
       svg += skillPill({
         name: pill.name,
         icon: pill.icon,
@@ -849,4 +923,4 @@ function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
