@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-```vice width=item.width height=30 from=headerBadges link=item.href
+```vice from=headerBadges link=item.href
 <Badge
   label={item.label}
   value={item.value}
@@ -9,7 +9,7 @@
   logo={item.logo}
   href={item.href}
   style="for-the-badge"
-  height={30}
+  height={36}
 />
 ```
 
@@ -47,13 +47,12 @@ Get in Touch
 
 <a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
 
-```vice width=item.width height=36 from=socialLinks link=item.href
+```vice from=socialLinks link=item.href
 <SocialButton
   icon={item.icon}
   text={item.text}
   href={item.href}
-  width={item.width}
-  height={36}
+  height={44}
 />
 ```
 
@@ -67,32 +66,32 @@ Get in Touch
 
 **Languages**
 
-```vice width=800 height=140 merge from=skillPills.Languages
-<CategoryWall items={item.items} pillHeight={24} />
+```vice width=800 merge from=skillPills.Languages
+<CategoryWall items={item.items} pillHeight={30} />
 ```
 
 **Frontend**
 
-```vice width=800 height=140 merge from=skillPills.Frontend
-<CategoryWall items={item.items} pillHeight={24} />
+```vice width=800 merge from=skillPills.Frontend
+<CategoryWall items={item.items} pillHeight={30} />
 ```
 
 **Backend & Databases**
 
-```vice width=800 height=140 merge from="skillPills.'Backend & Databases'"
-<CategoryWall items={item.items} pillHeight={24} />
+```vice width=800 merge from="skillPills.'Backend & Databases'"
+<CategoryWall items={item.items} pillHeight={30} />
 ```
 
 **DevOps & Tools**
 
-```vice width=800 height=140 merge from="skillPills.'DevOps & Tools'"
-<CategoryWall items={item.items} pillHeight={24} />
+```vice width=800 merge from="skillPills.'DevOps & Tools'"
+<CategoryWall items={item.items} pillHeight={30} />
 ```
 
 **Design**
 
-```vice width=800 height=100 merge from=skillPills.Design
-<CategoryWall items={item.items} pillHeight={24} />
+```vice width=800 merge from=skillPills.Design
+<CategoryWall items={item.items} pillHeight={30} />
 ```
 
 </details>
@@ -134,7 +133,7 @@ Get in Touch
 
 <br>
 
-```vice width=240 height=124 from=github.starredRepos link=item.href
+```vice from=github.starredRepos link=item.href
 <RepoCard
   name={item.name}
   fullName={item.fullName}
@@ -144,8 +143,8 @@ Get in Touch
   language={item.language}
   languageColor={item.languageColor}
   href={item.href}
-  width={240}
-  height={124}
+  width={260}
+  height={126}
 />
 ```
 

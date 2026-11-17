@@ -93,9 +93,10 @@ function resolvePath(obj, dotted) {
 
 function resolveDimension(value, item) {
   if (typeof value === 'number') return value;
+  if (value === undefined || value === null || value === '') return undefined;
   const p = String(value).startsWith('item.') ? value.slice(5) : value;
   const resolved = resolvePath(item ?? {}, p);
-  return typeof resolved === 'number' ? resolved : 800;
+  return typeof resolved === 'number' ? resolved : undefined;
 }
 
 function resolveLink(link, item) {
@@ -438,8 +439,8 @@ function buildLinkables(profileViews, icons = {}) {
 
   const socialLinks = data.socialMedias.links.map((link) => {
     const icon = link.logo ? icons[`social:${link.logo}`] : null;
-    const iconSize = icon ? 18 + 8 : 0;
-    return { text: link.name, href: link.href, icon, alt: link.name, width: Math.ceil(iconSize + link.name.length * 7.5 + 24) };
+    // No width: the button measures its own label with the real font metrics.
+    return { text: link.name, href: link.href, icon, alt: link.name };
   });
 
   const skillPills = {};
@@ -530,14 +531,14 @@ async function build() {
       }
 
       const width = resolveDimension(meta.width, { items }) || 800;
-      const height = resolveDimension(meta.height, { items }) || 300;
+      const height = resolveDimension(meta.height, { items });
 
       // jsxProps may carry `items={item.items}` from the source template, which
       // is undefined in merge mode — the merged list is the source of truth.
       const mergedProps = { ...jsxProps };
       delete mergedProps.items;
 
-      const svg = Comp({ ...mergedProps, items, width, height, pillHeight: 24 });
+      const svg = Comp({ ...mergedProps, items, width, ...(height ? { height } : {}), pillHeight: 30 });
       const hash = createHash('sha256').update(svg).digest('hex').slice(0, 8);
       const filename = `vice-component-${block.index}-${hash}.svg`;
       fs.writeFileSync(path.join(ASSETS_DIR, filename), svg, 'utf-8');
@@ -685,7 +686,9 @@ function svgDimensions(svg) {
 module.exports = { build, parseSource, resolveExpr, parseJsxBlock };
 
 function parseMeta(meta) {
-  const defaults = { width: 800, height: 400 };
+  // No height default: components size themselves, and a bogus default would
+  // pad every auto-sized panel with empty space.
+  const defaults = { width: 800 };
   if (!meta) return defaults;
   const pairs = [...meta.matchAll(/(\w+)=("[^"]*"|[^\s]+)/g)];
   for (const [, key, rawValue] of pairs) {

@@ -8,6 +8,14 @@ const theme = require('./theme');
 
 const COLORS = theme.colors;
 
+// Accent lifted from banner.svg: the footer "GITHUB PROFILE README" line is
+// #5ad4e6. Button text and the icons inside those buttons use it verbatim.
+const ACCENT = '#5ad4e6';
+
+// Every label on a button/pill is set in Black Han Sans: its heavy strokes stay
+// legible at the small sizes a README renders at.
+const BUTTON_FONT = 'BlackHanSans';
+
 const FONTS_DIR = path.resolve('src/resources/fonts');
 
 /**
@@ -53,7 +61,7 @@ const LANGUAGE_COLORS = {
  */
 function truncate(text, max) {
   if (!text) return '';
-  return text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text;
+  return text.length > max ? `${text.slice(0, max - 3).trimEnd()}...` : text;
 }
 
 /**
@@ -68,9 +76,11 @@ function truncate(text, max) {
  */
 function measureText(text, fontName, fontSize) {
   const font = getFont(fontName);
-  if (!font) return text.length * fontSize * 0.55;
+  if (!font) return String(text).length * fontSize * 0.55;
+  // Measure the normalised string so widths match what is actually drawn.
+  const normalized = normalizeForFont(text, font);
   let width = 0;
-  for (const char of String(text)) {
+  for (const char of normalized) {
     const glyph = font.charToGlyph(char);
     width += glyph && glyph.advanceWidth
       ? (glyph.advanceWidth / font.unitsPerEm) * fontSize
@@ -94,10 +104,10 @@ function truncateToWidth(text, fontName, fontSize, maxWidth) {
   if (measureText(source, fontName, fontSize) <= maxWidth) return source;
 
   let cut = source;
-  while (cut.length > 1 && measureText(`${cut}…`, fontName, fontSize) > maxWidth) {
+  while (cut.length > 1 && measureText(`${cut}...`, fontName, fontSize) > maxWidth) {
     cut = cut.slice(0, -1);
   }
-  return `${cut.trimEnd()}…`;
+  return `${cut.trimEnd()}...`;
 }
 
 /**
@@ -117,39 +127,49 @@ function wrapText(text, fontName, fontSize, maxWidth, maxLines = 3) {
   const words = source.split(/\s+/);
   const lines = [];
   let current = '';
+  let i = 0;
 
-  for (const word of words) {
-    const candidate = current ? `${current} ${word}` : word;
+  while (i < words.length && lines.length < maxLines) {
+    const candidate = current ? `${current} ${words[i]}` : words[i];
     if (measureText(candidate, fontName, fontSize) <= maxWidth) {
       current = candidate;
+      i++;
       continue;
     }
-    if (current) lines.push(current);
-    current = word;
-    if (lines.length >= maxLines) break;
+    if (current) {
+      lines.push(current);
+      current = '';
+      continue;
+    }
+    // A single word wider than the line — hard-break it.
+    lines.push(truncateToWidth(words[i], fontName, fontSize, maxWidth));
+    i++;
   }
+
   if (current && lines.length < maxLines) lines.push(current);
 
-  if (lines.length === 0) return [];
-  if (lines.length === maxLines && measureText(lines[maxLines - 1], fontName, fontSize) > maxWidth - 8) {
-    // The last line was cut mid-way — trim it back and add an ellipsis.
-    let last = lines[maxLines - 1];
-    while (last.length > 1 && measureText(`${last}…`, fontName, fontSize) > maxWidth) {
-      last = last.slice(0, -1);
+  // Anything left over was cut: mark the last line so it does not read as a
+  // complete sentence.
+  if (i < words.length && lines.length) {
+    const lastIndex = lines.length - 1;
+    let cut = lines[lastIndex];
+    while (cut.length > 1 && measureText(`${cut}...`, fontName, fontSize) > maxWidth) {
+      cut = cut.slice(0, -1);
     }
-    lines[maxLines - 1] = `${last.trimEnd()}…`;
+    lines[lastIndex] = `${cut.trimEnd()}...`;
   }
+
   return lines;
 }
 
 /**
  * Compute skill pill width.
  */
-function skillPillWidth(name, hasIcon = false, fontSize = 11, height = 24) {
-  const padX = 8;
-  const iconSize = height * 0.6;
-  const iconW = hasIcon ? iconSize + 6 : 0;
-  const textW = measureText(String(name ?? ''), 'VT323', fontSize);
+function skillPillWidth(name, hasIcon = false, fontSize = 15, height = 30) {
+  const padX = 9;
+  const iconSize = height * 0.58;
+  const iconW = hasIcon ? iconSize + 7 : 0;
+  const textW = measureText(String(name ?? ''), BUTTON_FONT, fontSize);
   return Math.ceil(iconW + padX + textW + padX);
 }
 
@@ -192,6 +212,55 @@ function getFont(fontName) {
 }
 
 /**
+ * Characters the outline fonts lack, mapped to safe ASCII equivalents.
+ * Black Han Sans (and VT323) carry no U+2026/U+2014/U+00B7 glyphs, and a
+ * missing glyph is silently drawn as nothing — text would vanish rather than
+ * degrade. Everything is normalised before measuring or drawing.
+ */
+const GLYPH_FALLBACKS = {
+  '…': '...',
+  '—': '-',
+  '–': '-',
+  '·': '-',
+  '•': '-',
+  '“': '"',
+  '”': '"',
+  '‘': "'",
+  '’': "'",
+  '→': '->',
+  '←': '<-',
+  '★': '*',
+  '☆': '*',
+};
+
+/**
+ * Replace characters the font cannot draw with readable ASCII.
+ *
+ * @param {string} text
+ * @param {import('@shuding/opentype.js').Font | null} font
+ * @returns {string}
+ */
+function normalizeForFont(text, font) {
+  const source = String(text ?? '');
+  if (!font) return source;
+  let out = '';
+  for (const char of source) {
+    const glyph = font.charToGlyph(char);
+    if (glyph && glyph.index !== 0) {
+      out += char;
+      continue;
+    }
+    if (GLYPH_FALLBACKS[char] !== undefined) {
+      out += GLYPH_FALLBACKS[char];
+    } else if (char === ' ') {
+      out += ' ';
+    }
+    // Anything else with no glyph is dropped rather than rendering a blank.
+  }
+  return out;
+}
+
+/**
  * Render an icon as SVG markup.
  * Icons are normalised to a 0 0 24 24 box by the fetcher, so `size` is the
  * rendered edge length in pixels.
@@ -200,16 +269,17 @@ function getFont(fontName) {
  * @param {number} x - Left edge
  * @param {number} y - Top edge
  * @param {number} size - Edge length in pixels
- * @param {string} [fallbackFill] - Fill for paths without their own
+ * @param {string} [fill] - Colour every path is painted in
  * @returns {string}
  */
-function iconMarkup(icon, x, y, size, fallbackFill = '#ffffff') {
+function iconMarkup(icon, x, y, size, fill = ACCENT) {
   if (!icon || !icon.paths || !icon.paths.length) return '';
   const scale = size / 24;
+  // Every path is painted in the caller's colour: brand-coloured logos would
+  // otherwise break the "icon matches the label" rule.
   const parts = icon.paths
-    .map((p) => `<path d="${p.d}" fill="${p.fill || fallbackFill}" />`)
+    .map((p) => `<path d="${p.d}" fill="${fill}" />`)
     .join('');
-  // The fetcher's transform maps the source viewBox onto 0 0 24 24.
   const norm = icon.transform ? `<g transform="${icon.transform}">${parts}</g>` : parts;
   return `<g transform="translate(${x},${y}) scale(${scale})">${norm}</g>`;
 }
@@ -223,10 +293,11 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
   if (!font) return [];
   const paths = [];
   let currentX = x;
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
+  const source = normalizeForFont(text, font);
+  for (let i = 0; i < source.length; i++) {
+    const char = source[i];
     const glyph = font.charToGlyph(char);
-    if (!glyph) {
+    if (!glyph || glyph.index === 0) {
       currentX += fontSize * 0.6;
       continue;
     }
@@ -248,18 +319,19 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
 /**
  * Badge — SVG string.
  */
-function badge({ label, value, color = COLORS.primary, logoColor = COLORS.white, icon, style = 'plastic', height = 28, fontSize = 11 }) {
+function badge({ label, value, color = COLORS.primary, logoColor = ACCENT, icon, style = 'plastic', height = 34, fontSize = 16 }) {
   const isForTheBadge = style === 'for-the-badge';
   const borderRadius = isForTheBadge ? 4 : height / 2;
-  const padX = isForTheBadge ? 8 : 6;
+  const padX = isForTheBadge ? 10 : 9;
   const hasValue = value !== undefined && value !== null && String(value) !== '';
   const labelText = String(label ?? '');
   const valueText = hasValue ? String(value) : '';
 
   // Measure with the real font metrics so the pill fits its text exactly.
-  const labelTextW = measureText(labelText, 'VT323', fontSize);
-  const valueTextW = hasValue ? measureText(valueText, 'VT323', fontSize) : 0;
-  const iconW = icon ? height * 0.6 + 6 : 0;
+  const labelTextW = measureText(labelText, BUTTON_FONT, fontSize);
+  const valueTextW = hasValue ? measureText(valueText, BUTTON_FONT, fontSize) : 0;
+  const iconSize = height * 0.62;
+  const iconW = icon ? iconSize + 7 : 0;
 
   const labelW = labelTextW + padX * 2;
   const valueW = hasValue ? valueTextW + padX * 2 : 0;
@@ -267,15 +339,18 @@ function badge({ label, value, color = COLORS.primary, logoColor = COLORS.white,
   const labelX = iconW + padX;
   const valueX = labelX + labelTextW + padX * 2;
 
-  const labelPaths = textToPathStrings(labelText, 'VT323', fontSize, labelX, height * 0.62, logoColor);
+  // Black Han Sans puts its cap height around 0.72em; this centres the label.
+  const baseline = height / 2 + fontSize * 0.36;
+
+  const labelPaths = textToPathStrings(labelText, BUTTON_FONT, fontSize, labelX, baseline, logoColor);
   const valuePaths = hasValue
-    ? textToPathStrings(valueText, 'VT323', fontSize, valueX, height * 0.62, logoColor)
+    ? textToPathStrings(valueText, BUTTON_FONT, fontSize, valueX, baseline, logoColor)
     : [];
 
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="0" y="0" width="${totalW}" height="${height}" fill="${color}" rx="${borderRadius}" ry="${borderRadius}" />`;
   if (icon) {
-    svg += iconMarkup(icon, padX, (height - height * 0.6) / 2, height * 0.6, logoColor);
+    svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, logoColor);
   }
   svg += labelPaths.join('');
   svg += valuePaths.join('');
@@ -291,17 +366,19 @@ module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPil
 /**
  * SocialButton — SVG string.
  */
-function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = '#F2f2f2', fontSize = 15, width, height = 36 }) {
+function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = ACCENT, fontSize = 20, width, height = 42 }) {
   const borderRadius = height / 2;
-  const iconSize = height * 0.5;
-  const padX = 12;
-  const textX = icon ? padX + iconSize + 8 : padX;
+  const iconSize = height * 0.52;
+  const padX = 14;
+  const textX = icon ? padX + iconSize + 9 : padX;
 
-  // Measure with the same font the text is drawn in (Knewave).
-  const textW = measureText(String(text ?? ''), 'Knewave', fontSize);
+  // Measure with the same font the label is drawn in (Black Han Sans).
+  const textW = measureText(String(text ?? ''), BUTTON_FONT, fontSize);
   const totalW = width || Math.ceil(textX + textW + padX);
 
-  const textPaths = textToPathStrings(text, 'Knewave', fontSize, textX, height * 0.55, textColor);
+  // Baseline for a 0.72em cap height, vertically centred.
+  const baseline = height / 2 + fontSize * 0.36;
+  const textPaths = textToPathStrings(text, BUTTON_FONT, fontSize, textX, baseline, textColor);
 
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="0" y="0" width="${totalW}" height="${height}" fill="${backgroundColor}" rx="${borderRadius}" ry="${borderRadius}" />`;
@@ -317,26 +394,28 @@ function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = '#F
 /**
  * SkillPill — SVG string.
  */
-function skillPill({ name, icon, color = COLORS.primary, logoColor = COLORS.white, highlighted = false, fontSize = 11, height = 24, width }) {
-  const fill = highlighted ? COLORS.secondary : color;
-  // The accent fill is light, so the text and icon must be dark to stay legible.
-  const fg = highlighted ? COLORS.black : logoColor;
-  const padX = 8;
-  const iconSize = height * 0.6;
+function skillPill({ name, icon, color = COLORS.primary, logoColor = ACCENT, highlighted = false, fontSize = 15, height = 30, width }) {
+  const fill = highlighted ? '#222222' : color;
+  const padX = 9;
+  const iconSize = height * 0.58;
   // The icon box is exactly as wide as the icon it holds.
-  const iconW = icon ? iconSize + 6 : 0;
+  const iconW = icon ? iconSize + 7 : 0;
   const textX = iconW + padX;
 
   // Size the pill to its text using real font metrics.
-  const textW = measureText(String(name ?? ''), 'VT323', fontSize);
+  const textW = measureText(String(name ?? ''), BUTTON_FONT, fontSize);
   const totalW = width || Math.ceil(textX + textW + padX);
 
-  const textPaths = textToPathStrings(name, 'VT323', fontSize, textX, height * 0.62, fg);
+  const baseline = height / 2 + fontSize * 0.36;
+  const textPaths = textToPathStrings(name, BUTTON_FONT, fontSize, textX, baseline, logoColor);
 
   let svg = `<svg width="${totalW}" height="${height}" viewBox="0 0 ${totalW} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<rect x="0" y="0" width="${totalW}" height="${height}" fill="${fill}" rx="${height / 2}" ry="${height / 2}" />`;
+  // Highlighted skills get an accent outline instead of a light fill, so the
+  // label and icon stay the accent colour on every pill.
+  const strokeAttr = highlighted ? ` stroke="${ACCENT}" stroke-width="1.5"` : '';
+  svg += `<rect x="0.75" y="0.75" width="${totalW - 1.5}" height="${height - 1.5}" fill="${fill}" rx="${height / 2}" ry="${height / 2}"${strokeAttr} />`;
   if (icon) {
-    svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, fg);
+    svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, logoColor);
   }
   svg += textPaths.join('');
   svg += `</svg>`;
@@ -346,13 +425,14 @@ function skillPill({ name, icon, color = COLORS.primary, logoColor = COLORS.whit
 /**
  * RepoCard — SVG string.
  */
-function repoCard({ _name, fullName, description, stars, forks, language, languageColor, width = 240, height = 120 }) {
-  const namePaths = textToPathStrings(fullName.split('/').pop(), 'VT323', 12, 12, 22, COLORS.secondary);
+function repoCard({ _name, fullName, description, stars, forks, language, languageColor, width = 260, height = 126 }) {
+  const nameSize = 15;
+  const namePaths = textToPathStrings(fullName.split('/').pop(), BUTTON_FONT, nameSize, 12, 26, ACCENT);
 
   // Wrap the description to the card width so it never overflows the frame.
-  const descFont = 'VT323';
-  const descSize = 10;
-  const descLineHeight = 12;
+  const descFont = BUTTON_FONT;
+  const descSize = 12;
+  const descLineHeight = 16;
   const maxDescW = width - 24;
   const descLines = wrapText(description || '', descFont, descSize, maxDescW, 3);
 
@@ -361,10 +441,10 @@ function repoCard({ _name, fullName, description, stars, forks, language, langua
   svg += namePaths.join('');
 
   descLines.forEach((line, i) => {
-    svg += textToPathStrings(line, descFont, descSize, 12, 40 + i * descLineHeight, COLORS.white).join('');
+    svg += textToPathStrings(line, descFont, descSize, 12, 48 + i * descLineHeight, COLORS.white).join('');
   });
 
-  // Star glyph — drawn as a path because VT323 has no U+2605.
+  // Star glyph — drawn as a path because the outline font has no U+2605.
   const starPath = (cx, cy, r) => {
     const pts = [];
     for (let i = 0; i < 10; i++) {
@@ -377,23 +457,24 @@ function repoCard({ _name, fullName, description, stars, forks, language, langua
 
   // Fork glyph — three tines on a stem, drawn as a path for the same reason.
   const forkPath = (x, y) => {
-    const tine = (tx) => `M ${tx} ${y} L ${tx} ${y + 5}`;
-    return `${tine(x)} M ${x + 3.5} ${y} L ${x + 3.5} ${y + 3} M ${x + 7} ${y} L ${x + 7} ${y + 5} M ${x} ${y + 5} L ${x + 7} ${y + 5} M ${x + 3.5} ${y + 3} L ${x + 3.5} ${y + 8}`;
+    const tine = (tx) => `M ${tx} ${y} L ${tx} ${y + 6}`;
+    return `${tine(x)} M ${x + 4} ${y} L ${x + 4} ${y + 4} M ${x + 8} ${y} L ${x + 8} ${y + 6} M ${x} ${y + 6} L ${x + 8} ${y + 6} M ${x + 4} ${y + 4} L ${x + 4} ${y + 10}`;
   };
 
-  const statY = height - 14;
+  const statSize = 11;
+  const statY = height - 15;
   let cursorX = 12;
   if (language) {
-    svg += `<rect x="12" y="${statY - 8}" width="8" height="8" fill="${languageColor || LANGUAGE_COLORS[language] || COLORS.primary}" rx="2" ry="2" />`;
-    cursorX = 24;
+    svg += `<rect x="12" y="${statY - 9}" width="9" height="9" fill="${languageColor || LANGUAGE_COLORS[language] || COLORS.primary}" rx="2" ry="2" />`;
+    cursorX = 27;
   }
-  svg += `<path d="${starPath(cursorX + 4, statY - 4, 4)}" fill="#8b949e" />`;
-  cursorX += 12;
-  svg += textToPathStrings(String(stars), 'VT323', 9, cursorX, statY, '#8b949e').join('');
-  cursorX += measureText(String(stars), 'VT323', 9) + 8;
-  svg += `<path d="${forkPath(cursorX, statY - 8)}" fill="none" stroke="#8b949e" stroke-width="1" stroke-linecap="round" />`;
-  cursorX += 12;
-  svg += textToPathStrings(String(forks), 'VT323', 9, cursorX, statY, '#8b949e').join('');
+  svg += `<path d="${starPath(cursorX + 5, statY - 5, 5)}" fill="#8b949e" />`;
+  cursorX += 14;
+  svg += textToPathStrings(String(stars), BUTTON_FONT, statSize, cursorX, statY, '#8b949e').join('');
+  cursorX += measureText(String(stars), BUTTON_FONT, statSize) + 10;
+  svg += `<path d="${forkPath(cursorX, statY - 10)}" fill="none" stroke="#8b949e" stroke-width="1.2" stroke-linecap="round" />`;
+  cursorX += 14;
+  svg += textToPathStrings(String(forks), BUTTON_FONT, statSize, cursorX, statY, '#8b949e').join('');
 
   svg += `</svg>`;
 
@@ -407,33 +488,36 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
   const displayName = name || login || 'Follower';
   const cardW = width;
   const cardH = height;
-  const avatarSize = Math.min(72, cardH * 0.4);
+  const avatarSize = Math.min(80, cardH * 0.42);
   const avatarX = (cardW - avatarSize) / 2;
-  const avatarY = 12;
+  const avatarY = 14;
 
-  const nameSize = 18;
-  const bioSize = 11;
-  const statsSize = 10;
-  const nameW = measureText(displayName, 'Knewave', nameSize);
+  const nameSize = 26;
+  const bioSize = 14;
+  const statsSize = 12;
+  const nameW = measureText(displayName, BUTTON_FONT, nameSize);
   const nameX = (cardW - nameW) / 2;
+  const nameY = avatarY + avatarSize + 30;
 
-  const namePaths = displayName ? textToPathStrings(displayName, 'Knewave', nameSize, nameX, avatarY + avatarSize + 22, COLORS.white) : [];
+  const namePaths = displayName
+    ? textToPathStrings(displayName, BUTTON_FONT, nameSize, nameX, nameY, ACCENT)
+    : [];
 
   // Bio wraps inside the card so it never spills past the frame.
-  const bioLines = wrapText(bio || '', 'VT323', bioSize, cardW - 28, 2);
+  const bioLines = wrapText(bio || '', BUTTON_FONT, bioSize, cardW - 28, 2);
 
   const statsText = `${publicRepos} repos / ${followers} followers`;
-  const statsPaths = textToPathStrings(statsText, 'VT323', statsSize, 14, cardH - 14, COLORS.lightPrimary);
+  const statsPaths = textToPathStrings(statsText, BUTTON_FONT, statsSize, 14, cardH - 16, COLORS.lightPrimary);
 
   let svg = `<svg width="${cardW}" height="${cardH}" viewBox="0 0 ${cardW} ${cardH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="0" y="0" width="${cardW}" height="${cardH}" fill="#0d0d0d" rx="8" ry="8" stroke="#30363d" stroke-width="1" />`;
   if (icon) {
-    svg += iconMarkup(icon, avatarX, avatarY, avatarSize, COLORS.secondary);
+    svg += iconMarkup(icon, avatarX, avatarY, avatarSize, ACCENT);
   }
   // textToPathStrings returns ready-made <path> elements, already positioned.
   svg += namePaths.join('');
   bioLines.forEach((line, i) => {
-    svg += textToPathStrings(line, 'VT323', bioSize, 14, avatarY + avatarSize + 44 + i * 13, COLORS.lightPrimary).join('');
+    svg += textToPathStrings(line, BUTTON_FONT, bioSize, 14, nameY + 22 + i * 19, COLORS.lightPrimary).join('');
   });
   svg += statsPaths.join('');
   svg += `</svg>`;
@@ -447,18 +531,19 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
 function statsCard({ totalStars, totalForks, totalRepos, totalCommits }) {
   const labels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const values = [totalStars, totalForks, totalRepos, totalCommits];
-  const statW = 100;
+  const statW = 110;
+  const cardH = 110;
 
-  let svg = `<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">`;
+  let svg = `<svg width="${statW * 4}" height="${cardH}" viewBox="0 0 ${statW * 4} ${cardH}" xmlns="http://www.w3.org/2000/svg">`;
   values.forEach((value, i) => {
     const x = i * statW;
     const isLast = i === values.length - 1;
-    svg += `<rect x="${x}" y="0" width="${statW}" height="100" fill="#0d0d0d" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
+    svg += `<rect x="${x}" y="0" width="${statW}" height="${cardH}" fill="#0d0d0d" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
     const valueText = value.toLocaleString();
-    const valueW = measureText(valueText, 'VT323', 20);
-    svg += textToPathStrings(valueText, 'VT323', 20, x + statW / 2 - valueW / 2, 40, COLORS.secondary).join('');
-    const labelW = measureText(labels[i], 'VT323', 10);
-    svg += textToPathStrings(labels[i], 'VT323', 10, x + statW / 2 - labelW / 2, 64, COLORS.white).join('');
+    const valueW = measureText(valueText, BUTTON_FONT, 28);
+    svg += textToPathStrings(valueText, BUTTON_FONT, 28, x + statW / 2 - valueW / 2, 50, ACCENT).join('');
+    const labelW = measureText(labels[i], BUTTON_FONT, 13);
+    svg += textToPathStrings(labels[i], BUTTON_FONT, 13, x + statW / 2 - labelW / 2, 78, COLORS.white).join('');
   });
   svg += `</svg>`;
   return svg;
@@ -471,14 +556,16 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   const statLabels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const statValues = [totalStars, totalForks, totalRepos, totalCommits];
   const panelW = width;
-  const statsHeight = 86;
-  const labelX = 12;
-  const barX = 150;
+  const statW = panelW / 4;
+  const statsHeight = 96;
+  const labelX = 14;
+  const barX = 170;
   const barMaxW = panelW - barX - 16;
+  const rowH = 28;
 
   // The panel grows with the number of language rows so nothing is clipped.
-  const rowsH = languages.length ? 38 + languages.length * 22 : 0;
-  const panelH = height || statsHeight + rowsH + 12;
+  const rowsH = languages.length ? 44 + languages.length * rowH : 0;
+  const panelH = height || statsHeight + rowsH + 14;
 
   let svg = `<svg width="${panelW}" height="${panelH}" viewBox="0 0 ${panelW} ${panelH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="0" y="0" width="${panelW}" height="${panelH}" fill="#0d0d0d" rx="8" ry="8" stroke="#30363d" stroke-width="1" />`;
@@ -486,34 +573,34 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   svg += `<rect x="0" y="${statsHeight}" width="${panelW}" height="2" fill="#30363d" />`;
 
   statValues.forEach((value, i) => {
-    const x = i * 125;
+    const x = i * statW;
     const isLast = i === statValues.length - 1;
-    svg += `<rect x="${x}" y="0" width="125" height="${statsHeight}" fill="#0d0d0d" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
+    svg += `<rect x="${x}" y="0" width="${statW}" height="${statsHeight}" fill="#0d0d0d" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
     const valueText = value.toLocaleString();
-    const valueW = measureText(valueText, 'VT323', 20);
-    svg += textToPathStrings(valueText, 'VT323', 20, x + 62.5 - valueW / 2, statsHeight / 2 - 6, COLORS.secondary).join('');
-    const labelW = measureText(statLabels[i], 'VT323', 9);
-    svg += textToPathStrings(statLabels[i], 'VT323', 9, x + 62.5 - labelW / 2, statsHeight / 2 + 14, COLORS.white).join('');
+    const valueW = measureText(valueText, BUTTON_FONT, 28);
+    svg += textToPathStrings(valueText, BUTTON_FONT, 28, x + statW / 2 - valueW / 2, statsHeight / 2 + 2, ACCENT).join('');
+    const labelW = measureText(statLabels[i], BUTTON_FONT, 13);
+    svg += textToPathStrings(statLabels[i], BUTTON_FONT, 13, x + statW / 2 - labelW / 2, statsHeight / 2 + 26, COLORS.white).join('');
   });
 
-  svg += textToPathStrings('Most used languages', 'VT323', 10, labelX, statsHeight + 18, COLORS.lightPrimary).join('');
+  svg += textToPathStrings('Most used languages', BUTTON_FONT, 13, labelX, statsHeight + 24, COLORS.lightPrimary).join('');
 
   const topCount = languages[0]?.count || 1;
   languages.forEach((lang, i) => {
-    const y = statsHeight + 38 + i * 22;
+    const y = statsHeight + 44 + i * rowH;
     const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
     const barW = Math.min(barMaxW, (barMaxW * pct) / 100);
     const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
 
-    svg += `<rect x="${labelX}" y="${y - 8}" width="8" height="8" fill="${color}" rx="2" ry="2" />`;
+    svg += `<rect x="${labelX}" y="${y - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;
 
     // The language name is clipped to the space before the bar starts.
-    const nameX = labelX + 14;
-    const nameMaxW = barX - nameX - 8;
-    const name = truncateToWidth(lang.name, 'VT323', 10, nameMaxW);
-    svg += textToPathStrings(name, 'VT323', 10, nameX, y + 2, COLORS.white).join('');
+    const nameX = labelX + 16;
+    const nameMaxW = barX - nameX - 10;
+    const name = truncateToWidth(lang.name, BUTTON_FONT, 12, nameMaxW);
+    svg += textToPathStrings(name, BUTTON_FONT, 12, nameX, y + 2, COLORS.white).join('');
 
-    svg += `<rect x="${barX}" y="${y - 6}" width="${barW}" height="8" fill="${color}" rx="4" ry="4" />`;
+    svg += `<rect x="${barX}" y="${y - 7}" width="${barW}" height="9" fill="${color}" rx="4" ry="4" />`;
   });
 
   svg += `</svg>`;
@@ -523,23 +610,41 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
 /**
  * Category wall — combines multiple skill pills into one SVG.
  */
-function categoryWall({ items = [], width = 800, height = 300, pillHeight = 24 }) {
-  let svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">`;
+function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
+  const fontSize = 15;
+  const gapX = 9;
+  const rowHeight = pillHeight + 8;
+
+  // Lay out first so the wall is exactly as tall as the pills it holds.
+  const placed = [];
   let currentX = 0;
   let currentY = 0;
-  const rowHeight = pillHeight + 4;
 
   for (const pill of items) {
-    const pillW = pill.width || skillPillWidth(pill.name, !!pill.icon, 11, pillHeight);
-    if (currentX + pillW > width) {
+    const pillW = pill.width || skillPillWidth(pill.name, !!pill.icon, fontSize, pillHeight);
+    if (currentX > 0 && currentX + pillW > width) {
       currentX = 0;
       currentY += rowHeight;
-      if (currentY + pillHeight > height) break;
     }
-    svg += `<g transform="translate(${currentX},${currentY})">`;
-    svg += skillPill({ name: pill.name, icon: pill.icon, highlighted: pill.highlighted, fontSize: 11, height: pillHeight, width: pillW }).replace(/<svg[^>]*>/, '').replace(/<\/svg>/, '');
+    placed.push({ pill, x: currentX, y: currentY, w: pillW });
+    currentX += pillW + gapX;
+  }
+
+  const neededH = placed.length ? currentY + pillHeight : 0;
+  const wallH = height ? Math.max(height, neededH) : neededH;
+
+  let svg = `<svg width="${width}" height="${wallH}" viewBox="0 0 ${width} ${wallH}" xmlns="http://www.w3.org/2000/svg">`;
+  for (const { pill, x, y, w } of placed) {
+    svg += `<g transform="translate(${x},${y})">`;
+    svg += skillPill({
+      name: pill.name,
+      icon: pill.icon,
+      highlighted: pill.highlighted,
+      fontSize,
+      height: pillHeight,
+      width: w,
+    }).replace(/<svg[^>]*>/, '').replace(/<\/svg>/, '');
     svg += `</g>`;
-    currentX += pillW + 8;
   }
   svg += `</svg>`;
   return svg;
