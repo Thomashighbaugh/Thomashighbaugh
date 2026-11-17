@@ -20,6 +20,11 @@ const SI_VER = '16.30.0';
 const logoFileUrl = (n) => GH + 'logos/' + n + '.svg';
 const siIcon = (s) => `${CDN}simple-icons@${SI_VER}/icons/${s}.svg`;
 
+// Font Awesome free solid, used only as an approximation for marks that have no
+// brand icon at all. A skill opts in with a slug prefixed `fa-`, e.g. `fa-icons`.
+const FA_VER = '6.7.2';
+const faIcon = (n) => `${CDN}@fortawesome/fontawesome-free@${FA_VER}/svgs/solid/${n}.svg`;
+
 for (const dir of CACHE_DIRS) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -95,6 +100,17 @@ function parseIcon(svg, fallbackColor) {
  */
 async function fetchIcon(slug, color = 'ffffff') {
   const fallbackColor = `#${color.replace(/^#/, '')}`;
+
+  // `fa-<name>` asks for a Font Awesome approximation (generic skills that have
+  // no brand mark). Skip the brand sources entirely for these.
+  if (slug.startsWith('fa-')) {
+    try {
+      const svg = await fetchCached(faIcon(slug.slice(3)));
+      return parseIcon(svg, fallbackColor);
+    } catch {
+      return null;
+    }
+  }
 
   // Try Simple Icons first (one-colour marks painted in brand hex)
   try {

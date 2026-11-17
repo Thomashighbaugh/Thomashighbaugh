@@ -29,6 +29,7 @@ const {
   StatsCard,
   MetricsPanel,
   CategoryWall,
+  BentoGrid,
 } = require('./vice-components');
 const { toTopicUrl } = require('./utils/skills');
 const { textToPathStrings } = require('./vice-components');
@@ -452,7 +453,13 @@ function buildLinkables(profileViews, icons = {}) {
     });
   }
 
-  return { headerBadges, socialLinks, skillPills };
+  // Grouped form for the bento grid: one entry per category, pills included.
+  const skillGroups = data.skillswall.categories.map((category) => ({
+    label: category.name,
+    items: skillPills[category.name] || [],
+  }));
+
+  return { headerBadges, socialLinks, skillPills, skillGroups };
 }
 
 async function build() {
@@ -504,7 +511,7 @@ async function build() {
   const COMPONENT_MAP = {
     Badge, SocialButton, SkillPill,
     RepoCard, FollowerCard, StatsCard,
-    MetricsPanel, CategoryWall,
+    MetricsPanel, CategoryWall, BentoGrid,
   };
 
   const writtenFiles = [];
@@ -545,7 +552,8 @@ async function build() {
       writtenFiles.push(filename);
 
       const dims = svgDimensions(svg);
-      const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="vice-${block.index}" />`;
+      const altText = meta.alt || `vice-${block.index}`;
+      const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="${escapeAttr(altText)}" />`;
       const href = resolveLink(meta.link, { items });
       htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
       console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height}) [merge=${items.length} items]`);
@@ -702,6 +710,7 @@ function parseMeta(meta) {
     if (key === 'link') defaults.link = value;
     if (key === 'from') defaults.from = value;
     if (key === 'gap') defaults.gap = /^\d+$/.test(value) ? parseInt(value, 10) : 0;
+    if (key === 'alt') defaults.alt = value.replace(/^["']|["']$/g, '');
   }
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
   return defaults;

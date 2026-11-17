@@ -369,7 +369,7 @@ function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', ic
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
 
 /**
  * SocialButton — SVG string.
@@ -616,29 +616,115 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
 }
 
 /**
+ * Flow pills into rows of a fixed width.
+ *
+ * @param {Array<{name: string, icon?: object, width?: number}>} items
+ * @param {number} maxWidth
+ * @param {number} pillHeight
+ * @param {number} fontSize
+ * @param {number} gapX
+ * @returns {{placed: Array<{pill: object, x: number, y: number, w: number}>, height: number}}
+ */
+function layoutPills(items, maxWidth, pillHeight, fontSize, gapX) {
+  const placed = [];
+  const rowHeight = pillHeight + 8;
+  let x = 0;
+  let y = 0;
+
+  for (const pill of items) {
+    const w = pill.width || skillPillWidth(pill.name, !!pill.icon, fontSize, pillHeight);
+    if (x > 0 && x + w > maxWidth) {
+      x = 0;
+      y += rowHeight;
+    }
+    placed.push({ pill, x, y, w });
+    x += w + gapX;
+  }
+
+  return { placed, height: placed.length ? y + pillHeight : 0 };
+}
+
+/**
+ * BentoGrid — every skill group laid out in a multi-column grid.
+ *
+ * Each cell is a heading plus its pills, drawn on a fully transparent canvas:
+ * no panel fills, only the pills themselves. The heading is set in the same
+ * face and colour as the pill labels. Groups are dropped into whichever column
+ * is currently shortest, so the columns stay even.
+ *
+ * @param {{groups?: Array<{label: string, items: object[]}>, items?: Array<object>, width?: number, columns?: number, pillHeight?: number}} props
+ * @returns {string}
+ */
+function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 }) {
+  const source = Array.isArray(groups) && groups.length
+    ? groups
+    : (Array.isArray(items) ? items : []);
+  const data = source.filter((g) => g && Array.isArray(g.items) && g.items.length);
+
+  const fontSize = 15;
+  const labelSize = 17;
+  const gapX = 9;
+  const colGap = 28;
+  const groupGap = 22;
+  // Vertical room reserved for a heading: its cap height sits inside this band
+  // so the first row is not clipped by the top edge of the canvas.
+  const labelBlock = 24;
+  const labelBaseline = 18;
+  const labelGap = 4;
+  const padTop = 7;
+  const padBottom = 4;
+  const colW = Math.floor((width - colGap * (columns - 1)) / columns);
+
+  const colY = new Array(columns).fill(padTop);
+  const cells = [];
+
+  for (const group of data) {
+    const { placed, height } = layoutPills(group.items, colW, pillHeight, fontSize, gapX);
+
+    // Drop into the shortest column; ties go to the leftmost.
+    let col = 0;
+    for (let i = 1; i < columns; i++) {
+      if (colY[i] < colY[col] - 0.5) col = i;
+    }
+
+    const x0 = col * (colW + colGap);
+    const y0 = colY[col];
+    cells.push({ group, x0, y0, placed });
+    colY[col] = y0 + labelBlock + labelGap + height + groupGap;
+  }
+
+  const contentH = data.length ? Math.max(...colY) - groupGap : padTop;
+  const totalH = Math.ceil(contentH + padBottom);
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+
+  for (const { group, x0, y0, placed } of cells) {
+    svg += textToPathStrings(group.label, BUTTON_FONT, labelSize, x0, y0 + labelBaseline, ACCENT).join('');
+    const pillTop = y0 + labelBlock + labelGap;
+    for (const { pill, x, y, w } of placed) {
+      svg += `<g transform="translate(${x0 + x},${pillTop + y})">`;
+      svg += skillPill({
+        name: pill.name,
+        icon: pill.icon,
+        highlighted: pill.highlighted,
+        fontSize,
+        height: pillHeight,
+        width: w,
+      }).replace(/<svg[^>]*>/, '').replace(/<\/svg>/, '');
+      svg += `</g>`;
+    }
+  }
+
+  svg += `</svg>`;
+  return svg;
+}
+
+/**
  * Category wall — combines multiple skill pills into one SVG.
  */
 function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
   const fontSize = 15;
-  const gapX = 9;
-  const rowHeight = pillHeight + 8;
-
-  // Lay out first so the wall is exactly as tall as the pills it holds.
-  const placed = [];
-  let currentX = 0;
-  let currentY = 0;
-
-  for (const pill of items) {
-    const pillW = pill.width || skillPillWidth(pill.name, !!pill.icon, fontSize, pillHeight);
-    if (currentX > 0 && currentX + pillW > width) {
-      currentX = 0;
-      currentY += rowHeight;
-    }
-    placed.push({ pill, x: currentX, y: currentY, w: pillW });
-    currentX += pillW + gapX;
-  }
-
-  const neededH = placed.length ? currentY + pillHeight : 0;
+  const { placed, height: neededH } = layoutPills(items, width, pillHeight, fontSize, 9);
   const wallH = height ? Math.max(height, neededH) : neededH;
 
   let svg = `<svg width="${width}" height="${wallH}" viewBox="0 0 ${width} ${wallH}" xmlns="http://www.w3.org/2000/svg">`;
@@ -658,4 +744,4 @@ function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };

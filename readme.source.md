@@ -64,52 +64,8 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-**Languages**
-
-```vice width=800 merge from=skillPills.Languages
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**Frontend**
-
-```vice width=800 merge from=skillPills.Frontend
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**Backend & Databases**
-
-```vice width=800 merge from="skillPills.'Backend & Databases'"
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**AI & Agents**
-
-```vice width=800 merge from="skillPills.'AI & Agents'"
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**OS & Desktop**
-
-```vice width=800 merge from="skillPills.'OS & Desktop'"
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**Build & Deploy**
-
-```vice width=800 merge from="skillPills.'Build & Deploy'"
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**Dev Tools**
-
-```vice width=800 merge from="skillPills.'Dev Tools'"
-<CategoryWall items={item.items} pillHeight={30} />
-```
-
-**Design**
-
-```vice width=800 merge from=skillPills.Design
-<CategoryWall items={item.items} pillHeight={30} />
+```vice width=800 merge from=skillGroups alt="Skill wall"
+<BentoGrid groups={items} columns={2} pillHeight={30} width={800} />
 ```
 
 </details>
