@@ -16,6 +16,10 @@ const ACCENT = '#5ad4e6';
 // legible at the small sizes a README renders at.
 const BUTTON_FONT = 'BlackHanSans';
 
+// Corner radius shared by every button so the header badges, social buttons
+// and skill pills read as one set.
+const BUTTON_RADIUS = 5;
+
 const FONTS_DIR = path.resolve('src/resources/fonts');
 
 /**
@@ -321,7 +325,7 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
  */
 function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5 }) {
   const isForTheBadge = style === 'for-the-badge';
-  const borderRadius = isForTheBadge ? 5 : height / 2;
+  const borderRadius = isForTheBadge ? BUTTON_RADIUS : height / 2;
   const padX = isForTheBadge ? 10 : 9;
   const hasValue = value !== undefined && value !== null && String(value) !== '';
   const labelText = String(label ?? '');
@@ -371,7 +375,7 @@ module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPil
  * SocialButton — SVG string.
  */
 function socialButton({ icon, text, backgroundColor = '#1c1c1c', textColor = ACCENT, fontSize = 20, width, height = 42 }) {
-  const borderRadius = height / 2;
+  const borderRadius = BUTTON_RADIUS;
   const iconSize = height * 0.52;
   const padX = 14;
   const textX = icon ? padX + iconSize + 9 : padX;
@@ -417,7 +421,7 @@ function skillPill({ name, icon, color = COLORS.primary, logoColor = ACCENT, hig
   // Highlighted skills get an accent outline instead of a light fill, so the
   // label and icon stay the accent colour on every pill.
   const strokeAttr = highlighted ? ` stroke="${ACCENT}" stroke-width="1.5"` : '';
-  svg += `<rect x="0.75" y="0.75" width="${totalW - 1.5}" height="${height - 1.5}" fill="${fill}" rx="${height / 2}" ry="${height / 2}"${strokeAttr} />`;
+  svg += `<rect x="0.75" y="0.75" width="${totalW - 1.5}" height="${height - 1.5}" fill="${fill}" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}"${strokeAttr} />`;
   if (icon) {
     svg += iconMarkup(icon, padX, (height - iconSize) / 2, iconSize, logoColor);
   }

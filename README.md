@@ -37,7 +37,7 @@ Get in Touch
 
 <a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
 
-<p align="center"><a href="https://twitter.com/thomashighbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-b1bf2696.svg" width="136" height="44" alt="twitter" /></a><a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-6b45f6e5.svg" width="120" height="44" alt="linkedin" /></a><a href="mailto:thighbaugh@zoho.com"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-10ea65fe.svg" width="123" height="44" alt="email" /></a><a href="mailto:me@thomasleonhighbaugh.me"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-8c24eacc.svg" width="251" height="44" alt="alternative email" /></a><a href="https://codepen.io/thomashighbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-fd1dbe30.svg" width="124" height="44" alt="codepen" /></a><a href="https://discord.com/ThomasHighbaugh#3886"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-5b3747c7.svg" width="143" height="44" alt="discord" /></a></p>
+<p align="center"><a href="https://twitter.com/thomashighbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-e0dd09e7.svg" width="136" height="44" alt="twitter" /></a><a href="https://linkedin.com/in/thomas-leon-highbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-0a0874c1.svg" width="120" height="44" alt="linkedin" /></a><a href="mailto:thighbaugh@zoho.com"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-90880190.svg" width="123" height="44" alt="email" /></a><a href="mailto:me@thomasleonhighbaugh.me"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-0b5c79a1.svg" width="251" height="44" alt="alternative email" /></a><a href="https://codepen.io/thomashighbaugh"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-f30eb367.svg" width="124" height="44" alt="codepen" /></a><a href="https://discord.com/ThomasHighbaugh#3886"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-6deb5464.svg" width="143" height="44" alt="discord" /></a></p>
 
 
 <br clear="both">
@@ -50,27 +50,27 @@ Get in Touch
 
 **Languages**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-483e3c38.svg" width="800" height="30" alt="vice-2" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-c5dd60c0.svg" width="800" height="30" alt="vice-2" /></p>
 
 
 **Frontend**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-2d8c8262.svg" width="800" height="106" alt="vice-3" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-1a1a870f.svg" width="800" height="106" alt="vice-3" /></p>
 
 
 **Backend & Databases**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-ecc9752f.svg" width="800" height="68" alt="vice-4" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-7fab4fa9.svg" width="800" height="68" alt="vice-4" /></p>
 
 
 **DevOps & Tools**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-7ed1a761.svg" width="800" height="106" alt="vice-5" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-02d6084c.svg" width="800" height="106" alt="vice-5" /></p>
 
 
 **Design**
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-c155d3f5.svg" width="800" height="30" alt="vice-6" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-c61bd283.svg" width="800" height="30" alt="vice-6" /></p>
 
 
 </details>
@@ -130,7 +130,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-2a9b9c42.svg" width="500" height="322" alt="vice-9" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-9-5d469371.svg" width="500" height="322" alt="vice-9" /></p>
 
 
 </details>
