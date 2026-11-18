@@ -634,6 +634,17 @@ async function build() {
         const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="${escapeAttr(alt)}" />`;
         const href = resolveLink(meta.link, item);
         htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
+
+        // A caption renders beneath the image as its own clickable line.
+        if (meta.caption) {
+          const captionText = resolveExpr(meta.caption, itemContext);
+          if (captionText) {
+            const label = `@${escapeAttr(String(captionText))}`;
+            const captionHtml = href ? `<a href="${escapeAttr(href)}">${label}</a>` : label;
+            htmlParts.push(`<br />${captionHtml}`);
+          }
+        }
+
         console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height})`);
       }
     }
@@ -743,6 +754,7 @@ function parseMeta(meta) {
     if (key === 'from') defaults.from = value;
     if (key === 'gap') defaults.gap = /^\d+$/.test(value) ? parseInt(value, 10) : 0;
     if (key === 'alt') defaults.alt = value.replace(/^["']|["']$/g, '');
+    if (key === 'caption') defaults.caption = value.replace(/^["']|["']$/g, '');
   }
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
   return defaults;

@@ -46,23 +46,28 @@ async function getRandomFollower(user, token = null) {
   const dateStr = new Date().toISOString().slice(0, 10);
   const seed = hashCode(dateStr);
   const index = Math.abs(seed) % candidates.length;
-  const chosen = candidates[index];
+  // A profile whose bio reads like placeholder chrome ("Loading...") looks
+  // broken on a rendered card, so those are skipped in favour of the next
+  // follower. Only a handful of detail calls are made before giving up.
+  const PLACEHOLDER_BIO = /^(loading|please wait|coming soon)[.\u2026!\s]*$/i;
+  const MAX_ATTEMPTS = 5;
 
-  // Fetch details only for the chosen follower (1 extra call instead of N)
-  const detail = await request(chosen.url, token);
+  for (let attempt = 0; attempt < Math.min(MAX_ATTEMPTS, candidates.length); attempt++) {
+    const pick = candidates[(index + attempt) % candidates.length];
+    const detail = await request(pick.url, token).catch(() => null);
 
-  // Quality check on the chosen follower
-  if (
-    detail &&
-    detail.avatar_url &&
-    !detail.type?.includes('Bot') &&
-    detail.public_repos > 0
-  ) {
-    return detail;
+    const usable =
+      detail &&
+      detail.avatar_url &&
+      !detail.type?.includes('Bot') &&
+      detail.public_repos > 0 &&
+      !PLACEHOLDER_BIO.test(String(detail.bio || '').trim());
+
+    if (usable) return detail;
   }
 
-  // Fallback: return the basic follower data if detail fetch fails
-  return chosen;
+  // Nothing passed: fall back to the seeded candidate so the card still renders.
+  return candidates[index];
 }
 
 /**

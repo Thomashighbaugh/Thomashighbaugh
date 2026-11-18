@@ -53,7 +53,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-```vice width=340 height=210 from=follower link=item.href
+```vice width=340 height=210 from=follower link=item.htmlUrl caption=item.login
 <FollowerCard
   icon={item?.icon}
   login={item?.login || 'Thomashighbaugh'}

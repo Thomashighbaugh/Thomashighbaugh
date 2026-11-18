@@ -506,43 +506,65 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
   const displayName = name || login || 'Follower';
   const cardW = width;
   const cardH = height;
-  const avatarSize = Math.min(76, cardH * 0.4);
-  const avatarX = (cardW - avatarSize) / 2;
-  const avatarY = 16;
 
-  // Banner typography: Knewave heading in the h1 pink, Tiny5 body in #f4f4f4.
+  const avatarSize = Math.min(64, cardH * 0.34);
+  const avatarX = (cardW - avatarSize) / 2;
+  const avatarY = 14;
+
+  // Banner typography: Knewave heading in the h1 pink, Tiny5 for the bio, and
+  // the banner footer's Press Start 2P accent for the counters.
   const nameSize = 26;
-  const bioSize = 13;
-  const statsSize = 12;
+  const bioSize = 11;
   const nameW = measureText(displayName, 'Knewave', nameSize);
   const nameX = (cardW - nameW) / 2;
   const nameY = avatarY + avatarSize + 26;
 
-  const bioLines = wrapText(bio || '', 'Tiny5', bioSize, cardW - 28, 2);
+  const cleanBio = String(bio || '').trim();
+  const bioLines = cleanBio ? wrapText(cleanBio, 'Tiny5', bioSize, cardW - 68, 2) : [];
+  const chipPadX = 14;
+  const chipPadY = 9;
+  const bioLineH = 13;
+  const chipTop = nameY + 10;
+  const chipH = bioLines.length ? chipPadY * 2 + bioLines.length * bioLineH : 0;
+
   const statsText = `${publicRepos} repos / ${followers} followers`;
+  const statsSize = 8;
 
   let svg = `<svg width="${cardW}" height="${cardH}" viewBox="0 0 ${cardW} ${cardH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
   svg += bannerBackdrop(cardW, cardH, 'vice-follower-backdrop');
 
-  const statsW = measureText(statsText, 'Tiny5', statsSize);
-  const statsY = cardH - 16;
-
   svg += `<g class="motion-jerk">`;
   if (icon) {
     svg += iconMarkup(icon, avatarX, avatarY, avatarSize, '#fc618d');
   }
+
   // Heading glitches, like the banner's h1.
   svg += `<g class="motion-glitch">`;
   svg += headingWithShadow(displayName, nameSize, nameX, nameY);
   svg += `</g>`;
-  bioLines.forEach((line, i) => {
-    const lineW = measureText(line, 'Tiny5', bioSize);
-    svg += textToPathStrings(line, 'Tiny5', bioSize, (cardW - lineW) / 2, nameY + 22 + i * 17, '#f4f4f4').join('');
-  });
-  svg += textToPathStrings(statsText, 'Tiny5', statsSize, (cardW - statsW) / 2, statsY, '#f4f4f4').join('');
-  svg += `</g>`;
 
+  // Bio sits in a banner-button chip: #3c3c3c face, #f4f4f7 border, hard black offset.
+  if (bioLines.length) {
+    const longest = Math.max(...bioLines.map((line) => measureText(line, 'Tiny5', bioSize)));
+    const chipW = Math.min(cardW - 32, Math.ceil(longest + chipPadX * 2));
+    const chipX = (cardW - chipW) / 2;
+    svg += `<rect x="${chipX + 4}" y="${chipTop + 4}" width="${chipW}" height="${chipH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+    svg += `<rect x="${chipX}" y="${chipTop}" width="${chipW}" height="${chipH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+    bioLines.forEach((line, i) => {
+      const lineW = measureText(line, 'Tiny5', bioSize);
+      svg += textToPathStrings(line, 'Tiny5', bioSize, (cardW - lineW) / 2, chipTop + chipPadY + bioLineH * (i + 1) - 3, '#f4f4f4').join('');
+    });
+  }
+
+  // Counters in the banner footer's face and colour, with its own hard drop.
+  const statsW = measureText(statsText, 'PressStart2P', statsSize);
+  const statsX = (cardW - statsW) / 2;
+  const statsY = cardH - 16;
+  svg += `<g transform="translate(1,1)">${textToPathStrings(statsText, 'PressStart2P', statsSize, statsX, statsY, '#2c2c2c').join('')}</g>`;
+  svg += textToPathStrings(statsText, 'PressStart2P', statsSize, statsX, statsY, '#5ad4e6').join('');
+
+  svg += `</g>`;
   svg += `</svg>`;
 
   return svg;
