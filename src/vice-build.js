@@ -33,6 +33,9 @@ const {
   LawPanel,
   ActivityPanel,
   ProjectsGrid,
+  BentoBoard,
+  BadgeRow,
+  SocialRow,
 } = require('./vice-components');
 const { getRecentEvents, timeAgo } = require('./replacers/recentworks.js');
 const { toTopicUrl } = require('./utils/skills');
@@ -543,7 +546,7 @@ async function build() {
   const COMPONENT_MAP = {
     Badge, SocialButton, SkillPill,
     RepoCard, FollowerCard, StatsCard,
-    MetricsPanel, CategoryWall, BentoGrid, LawPanel, ActivityPanel, ProjectsGrid,
+    MetricsPanel, CategoryWall, BentoGrid, LawPanel, ActivityPanel, ProjectsGrid, BentoBoard, BadgeRow, SocialRow,
   };
 
   const writtenFiles = [];
@@ -652,6 +655,14 @@ async function build() {
 
         if (meta.links) {
           blockSuffix.set(block.index, linkListHtml(items, meta.linksLabel));
+        }
+
+        if (meta.followerLink && context.follower && context.follower.htmlUrl) {
+          const login = context.follower.login || 'profile';
+          blockSuffix.set(
+            block.index,
+            `<p align="center"><a href="${escapeAttr(context.follower.htmlUrl)}">@${escapeAttr(login)}</a></p>`,
+          );
         }
 
         console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height})`);
@@ -792,5 +803,8 @@ function parseMeta(meta) {
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
   // A bare `links` token asks for a <details> list of links beneath the image.
   if (/\blinks\b/.test(meta)) defaults.links = true;
+  // A bare `followerLink` token emits the follower's profile link beneath the
+  // image, keeping it reachable even when the card itself is inside a board.
+  if (/\bfollowerLink\b/.test(meta)) defaults.followerLink = true;
   return defaults;
 }

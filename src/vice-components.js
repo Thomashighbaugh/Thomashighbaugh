@@ -513,7 +513,7 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
 
   // Banner typography: Knewave heading in the h1 pink, Tiny5 for the bio, and
   // the banner footer's Press Start 2P accent for the counters.
-  const nameSize = 26;
+  const nameSize = fitTextSize(displayName, 'Knewave', 26, cardW - 24);
   const bioSize = 11;
   const nameW = measureText(displayName, 'Knewave', nameSize);
   const nameX = (cardW - nameW) / 2;
@@ -863,8 +863,10 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
   const lineHeight = Math.round(bodySize * 1.7);
   const shadowOffset = 12;
 
-  // Heading, smaller than the banner's own 66px display type.
-  const titleW = measureText(title, 'Knewave', titleSize);
+  // Heading, smaller than the banner's own 66px display type, and shrunk again
+  // if the panel is too narrow to hold it.
+  const titleFit = fitTextSize(title, 'Knewave', titleSize, width - 44);
+  const titleW = measureText(title, 'Knewave', titleFit);
   const titleX = (width - titleW) / 2;
 
   // Statement, wrapped inside the chip.
@@ -879,7 +881,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
 
   // Heading: hard drop, then the face itself, with the banner's glitch.
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += headingWithShadow(title, titleSize, titleX, titleBaseline, PINK);
+  svg += headingWithShadow(title, titleFit, titleX, titleBaseline, PINK);
   svg += `</g></g>`;
 
   // Chip: black offset block first, then the bordered face, then the text.
@@ -1046,9 +1048,10 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
   svg += `<defs><clipPath id="vice-activity-clip"><rect x="0" y="0" width="${width}" height="${totalH}" rx="6" ry="6" /></clipPath></defs>`;
   svg += `<g clip-path="url(#vice-activity-clip)">`;
 
-  const titleW = measureText(title, 'Knewave', titleSize);
+  const titleFit = fitTextSize(title, 'Knewave', titleSize, width - 32);
+  const titleW = measureText(title, 'Knewave', titleFit);
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += headingWithShadow(title, titleSize, (width - titleW) / 2, titleBaseline);
+  svg += headingWithShadow(title, titleFit, (width - titleW) / 2, titleBaseline);
   svg += `</g></g>`;
 
   // Bullet plus one line of text, trimmed to whatever room is left.
@@ -1096,9 +1099,10 @@ function projectsGrid({ items = [], width = 800, title = "Projects I'm Following
   svg += `<style>${MOTION_CSS}</style>`;
   svg += bannerBackdrop(width, totalH, 'vice-projects-backdrop');
 
-  const titleW = measureText(title, 'Knewave', titleSize);
+  const titleFit = fitTextSize(title, 'Knewave', titleSize, width - 40);
+  const titleW = measureText(title, 'Knewave', titleFit);
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += headingWithShadow(title, titleSize, (width - titleW) / 2, titleBaseline);
+  svg += headingWithShadow(title, titleFit, (width - titleW) / 2, titleBaseline);
   svg += `</g></g>`;
 
   repos.forEach((repo, i) => {
@@ -1128,4 +1132,199 @@ function projectsGrid({ items = [], width = 800, title = "Projects I'm Following
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+/**
+ * Shrink a font size until the string fits a given width.
+ * @param {string} text
+ * @param {string} font
+ * @param {number} size - preferred size
+ * @param {number} maxWidth
+ * @param {number} [min=11]
+ * @returns {number}
+ */
+function fitTextSize(text, font, size, maxWidth, min = 11) {
+  let current = size;
+  while (current > min && measureText(text, font, current) > maxWidth) current -= 1;
+  return current;
+}
+
+/**
+ * Split a rendered SVG into its inner markup and intrinsic size.
+ * @param {string} svg
+ * @returns {{body: string, width: number, height: number} | null}
+ */
+function svgBody(svg) {
+  const open = svg.match(/<svg\b[^>]*>/);
+  if (!open) return null;
+  const w = open[0].match(/width="([\d.]+)"/);
+  const h = open[0].match(/height="([\d.]+)"/);
+  const close = svg.lastIndexOf('</svg>');
+  if (!w || !h || close < 0) return null;
+  return { body: svg.slice(open[0].length, close), width: Number(w[1]), height: Number(h[1]) };
+}
+
+/**
+ * Lay boxes out into centred rows of a fixed width.
+ * @param {Array<{body: string, width: number, height: number}>} boxes
+ * @param {number} maxWidth
+ * @param {number} gap
+ * @returns {{svg: string, height: number}}
+ */
+function centeredRow(boxes, maxWidth, gap) {
+  const rows = [];
+  let current = [];
+  let used = 0;
+
+  for (const box of boxes) {
+    if (current.length && used + box.width > maxWidth) {
+      rows.push(current);
+      current = [];
+      used = 0;
+    }
+    current.push(box);
+    used += box.width + gap;
+  }
+  if (current.length) rows.push(current);
+
+  let svg = '';
+  let y = 0;
+  for (const row of rows) {
+    const rowW = row.reduce((n, b) => n + b.width, 0) + gap * (row.length - 1);
+    let x = Math.max(0, (maxWidth - rowW) / 2);
+    const rowH = Math.max(...row.map((b) => b.height));
+    for (const box of row) {
+      svg += `<g transform="translate(${x},${y})">${box.body}</g>`;
+      x += box.width + gap;
+    }
+    y += rowH + gap;
+  }
+
+  return { svg, height: Math.max(0, y - gap) };
+}
+
+/**
+ * BadgeRow — the header badges on one canvas.
+ */
+function badgeRow({ items = [], width = 780, gap = 10, height = 36 }) {
+  const boxes = (items || [])
+    .map((item) => {
+      const svg = badge({
+        label: item.label,
+        value: item.value,
+        icon: item.icon,
+        color: item.color || '#3c3c3c',
+        logoColor: '#ffffff',
+        border: '#ffffff',
+        style: 'for-the-badge',
+        height,
+      });
+      return svgBody(svg);
+    })
+    .filter(Boolean);
+
+  const { svg: inner, height: h } = centeredRow(boxes, width, gap);
+  return `<svg width="${width}" height="${h}" viewBox="0 0 ${width} ${h}" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+}
+
+/**
+ * SocialRow — the Get in Touch buttons on one canvas.
+ */
+function socialRow({ items = [], width = 780, gap = 10, height = 42 }) {
+  const boxes = (items || [])
+    .map((item) => svgBody(socialButton({ icon: item.icon, text: item.text, height })))
+    .filter(Boolean);
+
+  const { svg: inner, height: h } = centeredRow(boxes, width, gap);
+  return `<svg width="${width}" height="${h}" viewBox="0 0 ${width} ${h}" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+}
+
+/**
+ * BentoBoard — every panel composed into one 3-column bento canvas below the
+ * banner. Cells declare a column span; rows are packed in declaration order so
+ * spans of 1/2/3 interlock.
+ */
+function bentoBoard({
+  headerBadges = [],
+  socialLinks = [],
+  skillGroups = [],
+  follower = null,
+  activity = [],
+  github = null,
+  width = 800,
+  columns = 3,
+  gap = 10,
+}) {
+  const padX = 10;
+  const padY = 10;
+  const colW = Math.floor((width - padX * 2 - gap * (columns - 1)) / columns);
+  const spanW = (span) => Math.round(colW * span + gap * (span - 1));
+
+  const stats = (github && github.stats) || {};
+  const repos = (github && github.starredRepos) || [];
+  const languages = ((github && github.languages) || []).slice(0, 6);
+  const scopes = (github && github.scopes) || [];
+
+  // Paired so the two cells in a row are of a similar height — the law panel
+  // and the activity feed are both tall, the buttons and the follower card both
+  // short, which keeps the rows tight instead of leaving dead space.
+  const cells = [
+    { span: 3, render: () => badgeRow({ items: headerBadges, width: spanW(3) }) },
+    { span: 2, render: () => lawPanel({ width: spanW(2) }) },
+    { span: 1, render: () => activityPanel({ items: activity, width: spanW(1), title: 'Activity', maxRows: 10 }) },
+    { span: 2, render: () => socialRow({ items: socialLinks, width: spanW(2) }) },
+    { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210 }) },
+    { span: 3, render: () => bentoGrid({ groups: skillGroups, width: spanW(3), columns: 2, title: 'Skill Wall' }) },
+    { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3 }) },
+    { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3) }) },
+  ];
+
+  // Pack into rows whose spans sum to at most `columns`.
+  const rows = [];
+  let current = [];
+  let used = 0;
+  for (const cell of cells) {
+    if (used + cell.span > columns) {
+      rows.push(current);
+      current = [];
+      used = 0;
+    }
+    current.push(cell);
+    used += cell.span;
+  }
+  if (current.length) rows.push(current);
+
+  // Render each cell at its span width, then let the row height be the tallest.
+  for (const row of rows) {
+    for (const cell of row) {
+      const info = svgBody(cell.render());
+      cell.body = info ? info.body : '';
+      cell.height = info ? info.height : 0;
+      cell.width = spanW(cell.span);
+    }
+    row.height = Math.max(...row.map((c) => c.height), 0);
+  }
+
+  const totalH = Math.round(
+    padY * 2 + rows.reduce((n, r) => n + r.height, 0) + gap * Math.max(0, rows.length - 1),
+  );
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<style>${MOTION_CSS}</style>`;
+  svg += bannerBackdrop(width, totalH, 'vice-board-backdrop');
+
+  let y = padY;
+  for (const row of rows) {
+    let x = padX;
+    for (const cell of row) {
+      svg += `<g transform="translate(${x},${y})">${cell.body}</g>`;
+      // Card outline so each cell reads as its own tile.
+      svg += `<rect x="${x}" y="${y}" width="${cell.width}" height="${row.height}" rx="6" ry="6" fill="none" stroke="#2e2e2e" stroke-width="1" />`;
+      x += cell.width + gap;
+    }
+    y += row.height + gap;
+  }
+
+  svg += `</svg>`;
+  return svg;
+}
+
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
