@@ -1243,8 +1243,6 @@ function socialRow({ items = [], width = 780, gap = 10, height = 42 }) {
  * spans of 1/2/3 interlock.
  */
 function bentoBoard({
-  headerBadges = [],
-  socialLinks = [],
   skillGroups = [],
   follower = null,
   activity = [],
@@ -1266,12 +1264,12 @@ function bentoBoard({
   // Paired so the two cells in a row are of a similar height — the law panel
   // and the activity feed are both tall, the buttons and the follower card both
   // short, which keeps the rows tight instead of leaving dead space.
+  // Only the panels that were given the banner treatment live on the board.
+  // The badges and the contact buttons stay in Markdown so their links work.
   const cells = [
-    { span: 3, render: () => badgeRow({ items: headerBadges, width: spanW(3) }) },
-    { span: 2, render: () => lawPanel({ width: spanW(2) }) },
-    { span: 1, render: () => activityPanel({ items: activity, width: spanW(1), title: 'Activity', maxRows: 10 }) },
-    { span: 2, render: () => socialRow({ items: socialLinks, width: spanW(2) }) },
+    { span: 3, render: () => lawPanel({ width: spanW(3) }) },
     { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210 }) },
+    { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10 }) },
     { span: 3, render: () => bentoGrid({ groups: skillGroups, width: spanW(3), columns: 2, title: 'Skill Wall' }) },
     { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3 }) },
     { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3) }) },
