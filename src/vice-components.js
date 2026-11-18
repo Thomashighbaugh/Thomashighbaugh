@@ -601,9 +601,15 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   const statLabels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const statValues = [totalStars, totalForks, totalRepos, totalCommits];
   const panelW = width;
-  const statW = panelW / 4;
-  const statsHeight = 96;
   const labelX = 16;
+  // The four headline figures are drawn as banner buttons: fill, 2px border and
+  // a hard black offset, so they need a gap and room for the offset.
+  const cellGap = 10;
+  const cellTop = 14;
+  const cellH = 84;
+  const cellShadow = 6;
+  const cellW = (panelW - labelX * 2 - cellGap * (statValues.length - 1)) / statValues.length;
+  const statsHeight = cellTop + cellH + cellShadow;
   const barX = 176;
   const barMaxW = panelW - barX - 18;
   const rowH = 28;
@@ -622,14 +628,19 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
 
   svg += `<g class="motion-jerk">`;
   statValues.forEach((value, i) => {
-    const x = i * statW;
-    const isLast = i === statValues.length - 1;
-    svg += `<rect x="${x}" y="0" width="${statW}" height="${statsHeight}" fill="#1c1c1c" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
+    const x = labelX + i * (cellW + cellGap);
+    const y = cellTop;
+
+    // Banner button: hard black offset, #3c3c3c face, 2px #f4f4f7 border.
+    svg += `<rect x="${x + cellShadow}" y="${y + cellShadow}" width="${cellW}" height="${cellH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+    svg += `<rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+
+    // Text styling is unchanged: Knewave pink figures with the h1 drop, Tiny5 labels.
     const valueText = value.toLocaleString();
     const valueW = measureText(valueText, 'Knewave', 26);
-    svg += headingWithShadow(valueText, 26, x + statW / 2 - valueW / 2, statsHeight / 2 + 2);
+    svg += headingWithShadow(valueText, 26, x + cellW / 2 - valueW / 2, y + cellH / 2 + 4);
     const labelW = measureText(statLabels[i], 'Tiny5', 12);
-    svg += textToPathStrings(statLabels[i], 'Tiny5', 12, x + statW / 2 - labelW / 2, statsHeight / 2 + 26, '#f4f4f4').join('');
+    svg += textToPathStrings(statLabels[i], 'Tiny5', 12, x + cellW / 2 - labelW / 2, y + cellH / 2 + 28, '#f4f4f4').join('');
   });
   svg += `</g>`;
 

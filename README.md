@@ -70,7 +70,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-d67da17e.svg" width="500" height="444" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-ef22bdee.svg" width="500" height="452" alt="vice-7" /></p>
 
 
 </details>
