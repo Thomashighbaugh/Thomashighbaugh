@@ -3,19 +3,6 @@
 <p align="center"><a href="https://links.thomasleonhighbaugh.me"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-5e6a072b.svg" width="125" height="36" alt="contacts" /></a>&nbsp;&nbsp;<a href="https://thomasleonhighbaugh.me"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-a8396877.svg" width="121" height="36" alt="website" /></a>&nbsp;&nbsp;<a href="https://resume.thomasleonhighbaugh.me"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-91f0aae1.svg" width="117" height="36" alt="resume" /></a>&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-e549e7a6.svg" width="201" height="36" alt="Profile Views" /></p>
 
 
-<div align="center">
-<details>
-<summary>
-About Me
-</summary>
-<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
-<ul align="left">
-<li align="left">Building AI-powered tools and infrastructure — from agentic coding workflows and multi-agent orchestration systems to LLM-integrated applications. Check out my <a href="https://github.com/Thomashighbaugh">repos</a> for a sense of the work.</li>
-<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice)</li>
-</ul>
-</details>
-</div>
-
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-704b42c8.svg" width="800" height="200" alt="Tom's Law of Software Development" /></p>
 
 <br>
@@ -40,7 +27,7 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-b8bb9864.svg" width="800" height="978" alt="Skill wall" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
 
 
 </details>
@@ -83,7 +70,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-39d2f319.svg" width="500" height="444" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-3eed19ab.svg" width="500" height="444" alt="vice-7" /></p>
 
 
 </details>

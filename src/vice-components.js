@@ -876,7 +876,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
  * @param {{groups?: Array<{label: string, items: object[]}>, items?: Array<object>, width?: number, columns?: number, pillHeight?: number}} props
  * @returns {string}
  */
-function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 }) {
+function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30, title = '' }) {
   const source = Array.isArray(groups) && groups.length
     ? groups
     : (Array.isArray(items) ? items : []);
@@ -899,7 +899,13 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   const padBottom = 14;
   const colW = Math.floor((width - padX * 2 - colGap * (columns - 1)) / columns);
 
-  const colY = new Array(columns).fill(padTop);
+  // Optional banner h1 at the top, matching the other panels.
+  const heading = String(title || '').trim();
+  const titleSize = 30;
+  const titleBaseline = padTop + titleSize * 0.8;
+  const titleBlock = heading ? Math.round(titleSize * 0.8) + 30 : 0;
+
+  const colY = new Array(columns).fill(padTop + titleBlock);
   const cells = [];
 
   for (const group of data) {
@@ -917,13 +923,20 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
     colY[col] = y0 + labelBlock + labelGap + height + groupGap;
   }
 
-  const contentH = data.length ? Math.max(...colY) - groupGap : padTop;
+  const contentH = data.length ? Math.max(...colY) - groupGap : padTop + titleBlock;
   const totalH = Math.ceil(contentH + padBottom);
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
 
   svg += bannerBackdrop(width, totalH, 'vice-banner-backdrop');
+
+  if (heading) {
+    const headingW = measureText(heading, 'Knewave', titleSize);
+    svg += `<g class="motion-jerk"><g class="motion-glitch">`;
+    svg += headingWithShadow(heading, titleSize, (width - headingW) / 2, titleBaseline);
+    svg += `</g></g>`;
+  }
 
   let pillIndex = 0;
   for (const { group, x0, y0, placed } of cells) {

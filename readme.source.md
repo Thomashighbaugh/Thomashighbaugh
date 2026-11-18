@@ -13,19 +13,6 @@
 />
 ```
 
-<div align="center">
-<details>
-<summary>
-About Me
-</summary>
-<img align="right" height="150" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" />
-<ul align="left">
-<li align="left">Building AI-powered tools and infrastructure — from agentic coding workflows and multi-agent orchestration systems to LLM-integrated applications. Check out my <a href="https://github.com/Thomashighbaugh">repos</a> for a sense of the work.</li>
-<li align="left"><a href="https://github.com/Sanatana-Linux/nixos-config">NixOS</a> + <a href="https://github.com/Sanatana-Linux/nixos-awesomewm">AwesomeWM</a> + <a href="https://github.com/Thomashighbaugh/nvim-forge">Neovim</a> user (...by choice)</li>
-</ul>
-</details>
-</div>
-
 ```vice width=800 alt="Tom's Law of Software Development"
 <LawPanel width={800} titleSize={34} bodySize={16} />
 ```
@@ -58,7 +45,7 @@ Get in Touch
 </summary>
 
 ```vice width=800 merge from=skillGroups alt="Skill wall"
-<BentoGrid groups={items} columns={2} pillHeight={30} width={800} />
+<BentoGrid groups={items} columns={2} pillHeight={30} width={800} title="Skill Wall" />
 ```
 
 </details>
