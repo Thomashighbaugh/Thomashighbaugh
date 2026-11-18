@@ -48,7 +48,7 @@ Get in Touch
 <details>
 <summary>Follower Showcase </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-1aefbac4.svg" width="340" height="210" alt="Ömer R. Sak" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-4-63c5c864.svg" width="340" height="210" alt="Ömer R. Sak" /></p>
 
 
 <em><small>Here is one of the awesome individuals that follows me on GitHub, with a new follower highlighted daily!</small></em>
@@ -60,7 +60,7 @@ Get in Touch
 ⚡ Recent Activity
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-a22641c5.svg" width="800" height="362" alt="Recent activity" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-77fe8aed.svg" width="800" height="362" alt="Recent activity" /></p>
 
 
 </details>
@@ -73,7 +73,7 @@ Get in Touch
 
 <br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-c920de1a.svg" width="800" height="504" alt="Projects I am following" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-0f59c810.svg" width="800" height="504" alt="Projects I am following" /></p>
 
 
 </details>
@@ -83,7 +83,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-19a66749.svg" width="500" height="444" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-8c21ec08.svg" width="500" height="444" alt="vice-7" /></p>
 
 
 </details>

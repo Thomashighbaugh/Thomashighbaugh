@@ -534,7 +534,7 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
   }
   // Heading glitches, like the banner's h1.
   svg += `<g class="motion-glitch">`;
-  svg += textToPathStrings(displayName, 'Knewave', nameSize, nameX, nameY, '#fc618d').join('');
+  svg += headingWithShadow(displayName, nameSize, nameX, nameY);
   svg += `</g>`;
   bioLines.forEach((line, i) => {
     const lineW = measureText(line, 'Tiny5', bioSize);
@@ -605,7 +605,7 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
     svg += `<rect x="${x}" y="0" width="${statW}" height="${statsHeight}" fill="#1c1c1c" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
     const valueText = value.toLocaleString();
     const valueW = measureText(valueText, 'Knewave', 26);
-    svg += textToPathStrings(valueText, 'Knewave', 26, x + statW / 2 - valueW / 2, statsHeight / 2 + 2, '#fc618d').join('');
+    svg += headingWithShadow(valueText, 26, x + statW / 2 - valueW / 2, statsHeight / 2 + 2);
     const labelW = measureText(statLabels[i], 'Tiny5', 12);
     svg += textToPathStrings(statLabels[i], 'Tiny5', 12, x + statW / 2 - labelW / 2, statsHeight / 2 + 26, '#f4f4f4').join('');
   });
@@ -615,7 +615,7 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   let cursorY = statsHeight;
   if (scopes.length) {
     cursorY += 24;
-    svg += textToPathStrings('By account', 'Knewave', 18, labelX, cursorY, '#fc618d').join('');
+    svg += headingWithShadow('By account', 18, labelX, cursorY);
     cursorY += 8;
     const colX = panelW - 190;
     scopes.forEach((scope) => {
@@ -632,7 +632,7 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
 
   if (languages.length) {
     cursorY += 24;
-    svg += textToPathStrings('Most used languages', 'Knewave', 18, labelX, cursorY, '#fc618d').join('');
+    svg += headingWithShadow('Most used languages', 18, labelX, cursorY);
     const topCount = languages[0]?.count || 1;
     languages.forEach((lang) => {
       cursorY += rowH;
@@ -758,6 +758,30 @@ const MOTION_CSS = `
 `.replace(/\s+/g, ' ').trim();
 
 /**
+ * Pink banner heading with the h1's hard drop shadow.
+ *
+ * banner.svg sets `header h1 { text-shadow: #4c4c4c 0.35rem 0.35rem; }` at
+ * 66px, i.e. an offset of roughly 0.085em. The drop is drawn as a duplicate of
+ * the glyph paths so it scales with whatever size the heading is set at.
+ *
+ * @param {string} text
+ * @param {number} fontSize
+ * @param {number} x
+ * @param {number} y - baseline
+ * @param {string} [fill] - face colour
+ * @param {string} [font]
+ * @returns {string}
+ */
+function headingWithShadow(text, fontSize, x, y, fill = '#fc618d', font = 'Knewave') {
+  const offset = Math.max(2, Math.round(fontSize * 0.085));
+  let out = `<g transform="translate(${offset},${offset})">`;
+  out += textToPathStrings(text, font, fontSize, x, y, '#4c4c4c').join('');
+  out += `</g>`;
+  out += textToPathStrings(text, font, fontSize, x, y, fill).join('');
+  return out;
+}
+
+/**
  * Banner-style backdrop for a panel: #1c1c1c plus the banner's tiled motif.
  *
  * @param {number} width
@@ -793,7 +817,6 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
   const statement = body || "The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or absolutely miserable it was to develop and then iteratively refine into such a form.";
 
   const PINK = '#fc618d';      // banner header h1 colour
-  const PINK_SHADOW = '#4c4c4c'; // banner h1 text-shadow
   const CHIP_FILL = '#3c3c3c';   // banner .list button
   const CHIP_INK = '#f4f4f4';
   const CHIP_BORDER = '#f4f4f7';
@@ -823,8 +846,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
 
   // Heading: hard drop, then the face itself, with the banner's glitch.
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += `<g transform="translate(3,3)">${textToPathStrings(title, 'Knewave', titleSize, titleX, titleBaseline, PINK_SHADOW).join('')}</g>`;
-  svg += textToPathStrings(title, 'Knewave', titleSize, titleX, titleBaseline, PINK).join('');
+  svg += headingWithShadow(title, titleSize, titleX, titleBaseline, PINK);
   svg += `</g></g>`;
 
   // Chip: black offset block first, then the bordered face, then the text.
@@ -976,7 +998,7 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
 
   const titleW = measureText(title, 'Knewave', titleSize);
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += textToPathStrings(title, 'Knewave', titleSize, (width - titleW) / 2, titleBaseline, '#fc618d').join('');
+  svg += headingWithShadow(title, titleSize, (width - titleW) / 2, titleBaseline);
   svg += `</g></g>`;
 
   svg += `<g class="motion-jerk">`;
@@ -1021,7 +1043,7 @@ function projectsGrid({ items = [], width = 800, title = "Projects I'm Following
 
   const titleW = measureText(title, 'Knewave', titleSize);
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
-  svg += textToPathStrings(title, 'Knewave', titleSize, (width - titleW) / 2, titleBaseline, '#fc618d').join('');
+  svg += headingWithShadow(title, titleSize, (width - titleW) / 2, titleBaseline);
   svg += `</g></g>`;
 
   repos.forEach((repo, i) => {
