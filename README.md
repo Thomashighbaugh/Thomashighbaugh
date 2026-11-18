@@ -47,7 +47,7 @@ Get in Touch
 ⚡ Recent Activity
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-77fe8aed.svg" width="800" height="362" alt="Recent activity" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-5-e5522881.svg" width="400" height="362" alt="Recent activity" /></p>
 
 
 </details>
@@ -70,7 +70,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-8f794cef.svg" width="500" height="444" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-d67da17e.svg" width="500" height="444" alt="vice-7" /></p>
 
 
 </details>

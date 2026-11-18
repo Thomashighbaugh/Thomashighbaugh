@@ -75,8 +75,8 @@ Get in Touch
 ⚡ Recent Activity
 </summary>
 
-```vice width=800 merge from=activity alt="Recent activity"
-<ActivityPanel items={items} width={800} />
+```vice width=400 merge from=activity alt="Recent activity"
+<ActivityPanel items={items} width={400} />
 ```
 
 </details>

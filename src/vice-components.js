@@ -1031,10 +1031,18 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
   svg += `<style>${MOTION_CSS}</style>`;
   svg += bannerBackdrop(width, totalH, 'vice-activity-backdrop');
 
+  // Nothing may paint outside the card, however long a line gets.
+  svg += `<defs><clipPath id="vice-activity-clip"><rect x="0" y="0" width="${width}" height="${totalH}" rx="6" ry="6" /></clipPath></defs>`;
+  svg += `<g clip-path="url(#vice-activity-clip)">`;
+
   const titleW = measureText(title, 'Knewave', titleSize);
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
   svg += headingWithShadow(title, titleSize, (width - titleW) / 2, titleBaseline);
   svg += `</g></g>`;
+
+  // Bullet plus one line of text, trimmed to whatever room is left.
+  const textX = padX + 17;
+  const lineMaxW = width - textX - padX;
 
   svg += `<g class="motion-jerk">`;
   if (!rows.length) {
@@ -1043,10 +1051,11 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
   rows.forEach((item, i) => {
     const y = rowsTop + i * rowH + rowSize;
     const text = `${item.action || ''} ${item.repo || ''}${item.detail ? ` ${item.detail}` : ''}${item.ago ? ` - ${item.ago}` : ''}`;
-    const label = truncateToWidth(text.replace(/\s+/g, ' ').trim(), 'Tiny5', rowSize, width - padX * 2 - 20);
+    const label = truncateToWidth(text.replace(/\s+/g, ' ').trim(), 'Tiny5', rowSize, lineMaxW);
     svg += `<rect x="${padX}" y="${y - 9}" width="9" height="9" fill="#5ad4e6" rx="2" ry="2" />`;
-    svg += textToPathStrings(label, 'Tiny5', rowSize, padX + 17, y, '#f4f4f4').join('');
+    svg += textToPathStrings(label, 'Tiny5', rowSize, textX, y, '#f4f4f4').join('');
   });
+  svg += `</g>`;
   svg += `</g>`;
 
   svg += `</svg>`;
