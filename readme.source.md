@@ -40,9 +40,7 @@ About Me
 Get in Touch
 </summary>
 
-<a href="https://links.thomasleonhighbaugh.me"><img align="left" width="120" src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/logo.png" /></a>
-
-```vice from=socialLinks link=item.href
+```vice from=socialLinks link=item.href gap=2
 <SocialButton
   icon={item.icon}
   text={item.text}
@@ -90,7 +88,9 @@ Get in Touch
 ⚡ Recent Activity
 </summary>
 
-%{recentworks}
+```vice width=800 merge from=activity alt="Recent activity"
+<ActivityPanel items={items} width={800} />
+```
 
 </details>
 
@@ -102,19 +102,8 @@ Get in Touch
 
 <br>
 
-```vice from=github.starredRepos link=item.href
-<RepoCard
-  name={item.name}
-  fullName={item.fullName}
-  description={item.description}
-  stars={item.stars}
-  forks={item.forks}
-  language={item.language}
-  languageColor={item.languageColor}
-  href={item.href}
-  width={260}
-  height={126}
-/>
+```vice width=800 merge from=github.starredRepos alt="Projects I am following"
+<ProjectsGrid items={items} width={800} columns={2} />
 ```
 
 </details>
@@ -131,6 +120,7 @@ Account Statistics
   totalRepos={github?.stats?.totalRepos || 0}
   totalCommits={github?.stats?.totalCommits || 0}
   languages={(github?.languages || []).slice(0, 6)}
+  orgs={github?.scopes || []}
   width={500}
 />
 ```

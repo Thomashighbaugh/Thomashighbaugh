@@ -193,3 +193,6 @@ ${activityList}
     return `<!-- Failed to load recent works: ${err.message} -->`;
   }
 };
+
+module.exports.getRecentEvents = getRecentEvents;
+module.exports.timeAgo = timeAgo;

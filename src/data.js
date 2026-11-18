@@ -61,6 +61,7 @@ module.exports = {
       },
       {
         name: 'linkedin',
+        logo: 'fa-brand-linkedin',
         href: 'https://linkedin.com/in/thomas-leon-highbaugh',
       },
       {
@@ -70,6 +71,7 @@ module.exports = {
       },
       {
         name: 'codepen',
+        logo: 'fa-brand-codepen',
         href: 'https://codepen.io/thomashighbaugh',
       },
       {

@@ -31,7 +31,10 @@ const {
   CategoryWall,
   BentoGrid,
   LawPanel,
+  ActivityPanel,
+  ProjectsGrid,
 } = require('./vice-components');
+const { getRecentEvents, timeAgo } = require('./replacers/recentworks.js');
 const { toTopicUrl } = require('./utils/skills');
 const { textToPathStrings } = require('./vice-components');
 const data = require('./data.js');
@@ -56,6 +59,9 @@ const ASSETS_DIR = path.resolve('.github/assets');
 const VICE_BLOCK_RE = /```vice\s*([\s\S]*?)\s*```/g;
 
 const GITHUB_USER = process.env.GITHUB_USER || 'Thomashighbaugh';
+
+// Accounts whose repositories are rolled into the account statistics.
+const ORGS = ['Sanatana-Linux', 'TLH-Deprecated-Linux-Configurations'];
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
 // Deal a palette for the software profile kind (saas/devtool trade).
@@ -368,20 +374,44 @@ async function fetchTotalCommits(username, token) {
 }
 
 async function fetchContext() {
-  const [user, repos, starred, profileViews, follower] = await Promise.all([
+  const [user, repos, starred, profileViews, follower, orgRepoLists, activity] = await Promise.all([
     githubRequest(`https://api.github.com/users/${GITHUB_USER}`, GITHUB_TOKEN),
     githubRequest(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated&direction=desc`, GITHUB_TOKEN),
     githubRequest(`https://api.github.com/users/${GITHUB_USER}/starred?per_page=30&sort=created&direction=desc`, GITHUB_TOKEN),
     fetchProfileViews(GITHUB_USER),
     getRandomFollower(GITHUB_USER, GITHUB_TOKEN).catch(() => null),
+    Promise.all(
+      ORGS.map((org) =>
+        githubRequest(`https://api.github.com/orgs/${org}/repos?per_page=100&sort=updated`, GITHUB_TOKEN).catch(() => []),
+      ),
+    ),
+    getRecentEvents(GITHUB_USER, GITHUB_TOKEN).catch(() => []),
   ]);
 
-  const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
-  const totalForks = repos.reduce((sum, r) => sum + (r.forks_count || 0), 0);
+  const personalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+  const personalForks = repos.reduce((sum, r) => sum + (r.forks_count || 0), 0);
   const totalCommits = (await fetchTotalCommits(GITHUB_USER, GITHUB_TOKEN)) ?? 0;
 
+  // One row per account, so the organisations appear in the statistics.
+  const scopes = [
+    { name: GITHUB_USER, repos: repos.length, stars: personalStars, forks: personalForks },
+    ...ORGS.map((name, i) => {
+      const list = orgRepoLists[i] || [];
+      return {
+        name,
+        repos: list.length,
+        stars: list.reduce((sum, r) => sum + (r.stargazers_count || 0), 0),
+        forks: list.reduce((sum, r) => sum + (r.forks_count || 0), 0),
+      };
+    }),
+  ];
+  const allRepos = scopes.reduce((n, s) => n + s.repos, 0);
+  const totalStars = scopes.reduce((n, s) => n + s.stars, 0);
+  const totalForks = scopes.reduce((n, s) => n + s.forks, 0);
+
+  const orgRepos = orgRepoLists.flat();
   const langCount = {};
-  for (const repo of repos) {
+  for (const repo of [...repos, ...orgRepos]) {
     if (repo.language) langCount[repo.language] = (langCount[repo.language] || 0) + 1;
   }
   const languages = Object.entries(langCount)
@@ -401,7 +431,8 @@ async function fetchContext() {
     }));
 
   return {
-    github: { user: { login: user.login, name: user.name, avatarUrl: user.avatar_url, bio: user.bio || '', followers: user.followers || 0, publicRepos: user.public_repos || 0, htmlUrl: user.html_url }, stats: { totalStars, totalForks, totalRepos: repos.length, totalCommits }, languages, starredRepos },
+    github: { user: { login: user.login, name: user.name, avatarUrl: user.avatar_url, bio: user.bio || '', followers: user.followers || 0, publicRepos: user.public_repos || 0, htmlUrl: user.html_url }, stats: { totalStars, totalForks, totalRepos: allRepos, totalCommits }, scopes, languages, starredRepos },
+    activity: (activity || []).map((e) => ({ action: e.action, repo: e.repo, detail: e.detail, ago: timeAgo(e.date) })),
     profileViews,
     follower: follower ? { login: follower.login, name: follower.name || follower.login, avatarUrl: follower.avatar_url, bio: follower.bio || '', publicRepos: follower.public_repos || 0, followers: follower.followers || 0, htmlUrl: follower.html_url, createdAt: follower.created_at } : null,  };
 }
@@ -512,7 +543,7 @@ async function build() {
   const COMPONENT_MAP = {
     Badge, SocialButton, SkillPill,
     RepoCard, FollowerCard, StatsCard,
-    MetricsPanel, CategoryWall, BentoGrid, LawPanel,
+    MetricsPanel, CategoryWall, BentoGrid, LawPanel, ActivityPanel, ProjectsGrid,
   };
 
   const writtenFiles = [];

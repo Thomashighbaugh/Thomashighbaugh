@@ -370,7 +370,6 @@ function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', ic
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
 
 /**
  * SocialButton — SVG string.
@@ -507,38 +506,43 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
   const displayName = name || login || 'Follower';
   const cardW = width;
   const cardH = height;
-  const avatarSize = Math.min(80, cardH * 0.42);
+  const avatarSize = Math.min(76, cardH * 0.4);
   const avatarX = (cardW - avatarSize) / 2;
-  const avatarY = 14;
+  const avatarY = 16;
 
+  // Banner typography: Knewave heading in the h1 pink, Tiny5 body in #f4f4f4.
   const nameSize = 26;
-  const bioSize = 14;
+  const bioSize = 13;
   const statsSize = 12;
-  const nameW = measureText(displayName, BUTTON_FONT, nameSize);
+  const nameW = measureText(displayName, 'Knewave', nameSize);
   const nameX = (cardW - nameW) / 2;
-  const nameY = avatarY + avatarSize + 30;
+  const nameY = avatarY + avatarSize + 26;
 
-  const namePaths = displayName
-    ? textToPathStrings(displayName, BUTTON_FONT, nameSize, nameX, nameY, ACCENT)
-    : [];
-
-  // Bio wraps inside the card so it never spills past the frame.
-  const bioLines = wrapText(bio || '', BUTTON_FONT, bioSize, cardW - 28, 2);
-
+  const bioLines = wrapText(bio || '', 'Tiny5', bioSize, cardW - 28, 2);
   const statsText = `${publicRepos} repos / ${followers} followers`;
-  const statsPaths = textToPathStrings(statsText, BUTTON_FONT, statsSize, 14, cardH - 16, COLORS.lightPrimary);
 
   let svg = `<svg width="${cardW}" height="${cardH}" viewBox="0 0 ${cardW} ${cardH}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<rect x="0" y="0" width="${cardW}" height="${cardH}" fill="#0d0d0d" rx="8" ry="8" stroke="#30363d" stroke-width="1" />`;
+  svg += `<style>${MOTION_CSS}</style>`;
+  svg += bannerBackdrop(cardW, cardH, 'vice-follower-backdrop');
+
+  const statsW = measureText(statsText, 'Tiny5', statsSize);
+  const statsY = cardH - 16;
+
+  svg += `<g class="motion-jerk">`;
   if (icon) {
-    svg += iconMarkup(icon, avatarX, avatarY, avatarSize, ACCENT);
+    svg += iconMarkup(icon, avatarX, avatarY, avatarSize, '#fc618d');
   }
-  // textToPathStrings returns ready-made <path> elements, already positioned.
-  svg += namePaths.join('');
+  // Heading glitches, like the banner's h1.
+  svg += `<g class="motion-glitch">`;
+  svg += textToPathStrings(displayName, 'Knewave', nameSize, nameX, nameY, '#fc618d').join('');
+  svg += `</g>`;
   bioLines.forEach((line, i) => {
-    svg += textToPathStrings(line, BUTTON_FONT, bioSize, 14, nameY + 22 + i * 19, COLORS.lightPrimary).join('');
+    const lineW = measureText(line, 'Tiny5', bioSize);
+    svg += textToPathStrings(line, 'Tiny5', bioSize, (cardW - lineW) / 2, nameY + 22 + i * 17, '#f4f4f4').join('');
   });
-  svg += statsPaths.join('');
+  svg += textToPathStrings(statsText, 'Tiny5', statsSize, (cardW - statsW) / 2, statsY, '#f4f4f4').join('');
+  svg += `</g>`;
+
   svg += `</svg>`;
 
   return svg;
@@ -571,56 +575,81 @@ function statsCard({ totalStars, totalForks, totalRepos, totalCommits }) {
 /**
  * MetricsPanel — SVG string.
  */
-function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCommits = 0, languages = [], width = 500, height }) {
+function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCommits = 0, languages = [], orgs = [], width = 500, height }) {
   const statLabels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const statValues = [totalStars, totalForks, totalRepos, totalCommits];
   const panelW = width;
   const statW = panelW / 4;
   const statsHeight = 96;
-  const labelX = 14;
-  const barX = 170;
-  const barMaxW = panelW - barX - 16;
+  const labelX = 16;
+  const barX = 176;
+  const barMaxW = panelW - barX - 18;
   const rowH = 28;
+  const orgRowH = 26;
 
-  // The panel grows with the number of language rows so nothing is clipped.
-  const rowsH = languages.length ? 44 + languages.length * rowH : 0;
-  const panelH = height || statsHeight + rowsH + 14;
+  const scopes = (orgs || []).filter((o) => o && o.name);
+
+  // The panel grows with whatever it is asked to show.
+  const orgsH = scopes.length ? 40 + scopes.length * orgRowH : 0;
+  const langsH = languages.length ? 44 + languages.length * rowH : 0;
+  const panelH = height || statsHeight + orgsH + langsH + 18;
 
   let svg = `<svg width="${panelW}" height="${panelH}" viewBox="0 0 ${panelW} ${panelH}" xmlns="http://www.w3.org/2000/svg">`;
-  svg += `<rect x="0" y="0" width="${panelW}" height="${panelH}" fill="#0d0d0d" rx="8" ry="8" stroke="#30363d" stroke-width="1" />`;
-  svg += `<rect x="0" y="0" width="${panelW}" height="${statsHeight}" fill="#0d0d0d" rx="8" ry="8" />`;
-  svg += `<rect x="0" y="${statsHeight}" width="${panelW}" height="2" fill="#30363d" />`;
+  svg += `<style>${MOTION_CSS}</style>`;
+  svg += bannerBackdrop(panelW, panelH, 'vice-metrics-backdrop');
 
+  svg += `<g class="motion-jerk">`;
   statValues.forEach((value, i) => {
     const x = i * statW;
     const isLast = i === statValues.length - 1;
-    svg += `<rect x="${x}" y="0" width="${statW}" height="${statsHeight}" fill="#0d0d0d" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
+    svg += `<rect x="${x}" y="0" width="${statW}" height="${statsHeight}" fill="#1c1c1c" rx="4" ry="4"${isLast ? '' : ' stroke="#30363d" stroke-width="1"'} />`;
     const valueText = value.toLocaleString();
-    const valueW = measureText(valueText, BUTTON_FONT, 28);
-    svg += textToPathStrings(valueText, BUTTON_FONT, 28, x + statW / 2 - valueW / 2, statsHeight / 2 + 2, ACCENT).join('');
-    const labelW = measureText(statLabels[i], BUTTON_FONT, 13);
-    svg += textToPathStrings(statLabels[i], BUTTON_FONT, 13, x + statW / 2 - labelW / 2, statsHeight / 2 + 26, COLORS.white).join('');
+    const valueW = measureText(valueText, 'Knewave', 26);
+    svg += textToPathStrings(valueText, 'Knewave', 26, x + statW / 2 - valueW / 2, statsHeight / 2 + 2, '#fc618d').join('');
+    const labelW = measureText(statLabels[i], 'Tiny5', 12);
+    svg += textToPathStrings(statLabels[i], 'Tiny5', 12, x + statW / 2 - labelW / 2, statsHeight / 2 + 26, '#f4f4f4').join('');
   });
+  svg += `</g>`;
 
-  svg += textToPathStrings('Most used languages', BUTTON_FONT, 13, labelX, statsHeight + 24, COLORS.lightPrimary).join('');
+  // Per-account breakdown, including the organisations.
+  let cursorY = statsHeight;
+  if (scopes.length) {
+    cursorY += 24;
+    svg += textToPathStrings('By account', 'Knewave', 18, labelX, cursorY, '#fc618d').join('');
+    cursorY += 8;
+    const colX = panelW - 190;
+    scopes.forEach((scope) => {
+      cursorY += orgRowH;
+      const label = truncateToWidth(scope.name, 'Tiny5', 12, colX - labelX - 12);
+      svg += `<rect x="${labelX}" y="${cursorY - 9}" width="9" height="9" fill="#5ad4e6" rx="2" ry="2" />`;
+      svg += textToPathStrings(label, 'Tiny5', 12, labelX + 16, cursorY, '#f4f4f4').join('');
+      const figures = `${scope.repos} repos / ${scope.stars} stars / ${scope.forks} forks`;
+      const figW = measureText(figures, 'Tiny5', 12);
+      svg += textToPathStrings(figures, 'Tiny5', 12, panelW - 18 - figW, cursorY, '#f4f4f4').join('');
+    });
+    cursorY += 10;
+  }
 
-  const topCount = languages[0]?.count || 1;
-  languages.forEach((lang, i) => {
-    const y = statsHeight + 44 + i * rowH;
-    const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
-    const barW = Math.min(barMaxW, (barMaxW * pct) / 100);
-    const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
+  if (languages.length) {
+    cursorY += 24;
+    svg += textToPathStrings('Most used languages', 'Knewave', 18, labelX, cursorY, '#fc618d').join('');
+    const topCount = languages[0]?.count || 1;
+    languages.forEach((lang) => {
+      cursorY += rowH;
+      const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
+      const barW = Math.min(barMaxW, (barMaxW * pct) / 100);
+      const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
 
-    svg += `<rect x="${labelX}" y="${y - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;
+      svg += `<rect x="${labelX}" y="${cursorY - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;
 
-    // The language name is clipped to the space before the bar starts.
-    const nameX = labelX + 16;
-    const nameMaxW = barX - nameX - 10;
-    const name = truncateToWidth(lang.name, BUTTON_FONT, 12, nameMaxW);
-    svg += textToPathStrings(name, BUTTON_FONT, 12, nameX, y + 2, COLORS.white).join('');
+      const nameX = labelX + 16;
+      const nameMaxW = barX - nameX - 10;
+      const name = truncateToWidth(lang.name, 'Tiny5', 12, nameMaxW);
+      svg += textToPathStrings(name, 'Tiny5', 12, nameX, cursorY, '#f4f4f4').join('');
 
-    svg += `<rect x="${barX}" y="${y - 7}" width="${barW}" height="9" fill="${color}" rx="4" ry="4" />`;
-  });
+      svg += `<rect x="${barX}" y="${cursorY - 7}" width="${barW}" height="9" fill="${color}" rx="4" ry="4" />`;
+    });
+  }
 
   svg += `</svg>`;
   return svg;
@@ -729,6 +758,27 @@ const MOTION_CSS = `
 `.replace(/\s+/g, ' ').trim();
 
 /**
+ * Banner-style backdrop for a panel: #1c1c1c plus the banner's tiled motif.
+ *
+ * @param {number} width
+ * @param {number} height
+ * @param {string} id - unique pattern id (one per SVG document)
+ * @returns {string}
+ */
+function bannerBackdrop(width, height, id) {
+  const pattern = getBannerPattern();
+  let out = '';
+  if (pattern) {
+    out += `<defs><pattern id="${id}" width="${pattern.width}" height="${pattern.height}" patternUnits="userSpaceOnUse">${pattern.markup}</pattern></defs>`;
+  }
+  out += `<rect x="0" y="0" width="${width}" height="${height}" fill="#1c1c1c" rx="6" ry="6" />`;
+  if (pattern) {
+    out += `<rect x="0" y="0" width="${width}" height="${height}" fill="url(#${id})" rx="6" ry="6" />`;
+  }
+  return out;
+}
+
+/**
  * LawPanel — the "Tom's Law" statement drawn as a banner-style card.
  *
  * Mirrors banner.svg: the same #1c1c1c canvas with its tiled motif, the heading
@@ -769,15 +819,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
 
-  // Backdrop: banner base colour plus the banner's own tiled motif.
-  const pattern = getBannerPattern();
-  if (pattern) {
-    svg += `<defs><pattern id="vice-law-backdrop" width="${pattern.width}" height="${pattern.height}" patternUnits="userSpaceOnUse">${pattern.markup}</pattern></defs>`;
-  }
-  svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="#1c1c1c" rx="6" ry="6" />`;
-  if (pattern) {
-    svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="url(#vice-law-backdrop)" rx="6" ry="6" />`;
-  }
+  svg += bannerBackdrop(width, totalH, 'vice-law-backdrop');
 
   // Heading: hard drop, then the face itself, with the banner's glitch.
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
@@ -859,15 +901,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30 })
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
 
-  // Base colour from the banner, then the banner's own tiled motif on top of it.
-  const pattern = getBannerPattern();
-  if (pattern) {
-    svg += `<defs><pattern id="vice-banner-backdrop" width="${pattern.width}" height="${pattern.height}" patternUnits="userSpaceOnUse">${pattern.markup}</pattern></defs>`;
-  }
-  svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="#1c1c1c" rx="6" ry="6" />`;
-  if (pattern) {
-    svg += `<rect x="0" y="0" width="${width}" height="${totalH}" fill="url(#vice-banner-backdrop)" rx="6" ry="6" />`;
-  }
+  svg += bannerBackdrop(width, totalH, 'vice-banner-backdrop');
 
   let pillIndex = 0;
   for (const { group, x0, y0, placed } of cells) {
@@ -923,4 +957,98 @@ function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
   return svg;
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+/**
+ * ActivityPanel — recent public activity on a banner-style canvas.
+ */
+function activityPanel({ items = [], width = 800, title = 'Recent Activity', maxRows = 12 }) {
+  const rows = (items || []).slice(0, maxRows);
+  const padX = 26;
+  const titleSize = 30;
+  const rowSize = 13;
+  const rowH = 23;
+  const titleBaseline = 30 + titleSize * 0.8;
+  const rowsTop = titleBaseline + 20;
+  const totalH = Math.ceil(rowsTop + Math.max(rows.length, 1) * rowH + 12);
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<style>${MOTION_CSS}</style>`;
+  svg += bannerBackdrop(width, totalH, 'vice-activity-backdrop');
+
+  const titleW = measureText(title, 'Knewave', titleSize);
+  svg += `<g class="motion-jerk"><g class="motion-glitch">`;
+  svg += textToPathStrings(title, 'Knewave', titleSize, (width - titleW) / 2, titleBaseline, '#fc618d').join('');
+  svg += `</g></g>`;
+
+  svg += `<g class="motion-jerk">`;
+  if (!rows.length) {
+    svg += textToPathStrings('No recent public activity.', 'Tiny5', rowSize, padX, rowsTop + rowSize, '#f4f4f4').join('');
+  }
+  rows.forEach((item, i) => {
+    const y = rowsTop + i * rowH + rowSize;
+    const text = `${item.action || ''} ${item.repo || ''}${item.detail ? ` ${item.detail}` : ''}${item.ago ? ` - ${item.ago}` : ''}`;
+    const label = truncateToWidth(text.replace(/\s+/g, ' ').trim(), 'Tiny5', rowSize, width - padX * 2 - 20);
+    svg += `<rect x="${padX}" y="${y - 9}" width="9" height="9" fill="#5ad4e6" rx="2" ry="2" />`;
+    svg += textToPathStrings(label, 'Tiny5', rowSize, padX + 17, y, '#f4f4f4').join('');
+  });
+  svg += `</g>`;
+
+  svg += `</svg>`;
+  return svg;
+}
+
+/**
+ * ProjectsGrid — every followed repository on one canvas, each drawn as a chip
+ * in the banner's button style (#3c3c3c fill, #f4f4f7 border, black offset).
+ */
+function projectsGrid({ items = [], width = 800, title = "Projects I'm Following", columns = 2 }) {
+  const repos = items || [];
+  const padX = 26;
+  const gapX = 18;
+  const gapY = 18;
+  const titleSize = 30;
+  const chipW = Math.floor((width - padX * 2 - gapX * (columns - 1)) / columns);
+  const chipH = 120;
+  const shadow = 8;
+  const titleBaseline = 30 + titleSize * 0.8;
+  const gridTop = titleBaseline + 22;
+
+  const rows = Math.ceil(repos.length / columns);
+  const totalH = Math.ceil(gridTop + Math.max(rows, 1) * (chipH + gapY) + shadow + 6);
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<style>${MOTION_CSS}</style>`;
+  svg += bannerBackdrop(width, totalH, 'vice-projects-backdrop');
+
+  const titleW = measureText(title, 'Knewave', titleSize);
+  svg += `<g class="motion-jerk"><g class="motion-glitch">`;
+  svg += textToPathStrings(title, 'Knewave', titleSize, (width - titleW) / 2, titleBaseline, '#fc618d').join('');
+  svg += `</g></g>`;
+
+  repos.forEach((repo, i) => {
+    const col = i % columns;
+    const row = Math.floor(i / columns);
+    const x = padX + col * (chipW + gapX);
+    const y = gridTop + row * (chipH + gapY);
+    const jerkDelay = -(((i * 0.37) % 1.6)).toFixed(2);
+
+    const name = truncateToWidth(repo.fullName ? repo.fullName.split('/').pop() : (repo.name || ''), 'Tiny5', 16, chipW - 32);
+    const descLines = wrapText(repo.description || '', 'Tiny5', 12, chipW - 32, 2);
+    const statsText = `${repo.stars ?? 0} stars / ${repo.forks ?? 0} forks${repo.language ? ` / ${repo.language}` : ''}`;
+
+    svg += `<g transform="translate(${x},${y})">`;
+    svg += `<g class="motion-jerk" style="animation-delay:${jerkDelay}s">`;
+    svg += `<rect x="${shadow}" y="${shadow}" width="${chipW}" height="${chipH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+    svg += `<rect x="0" y="0" width="${chipW}" height="${chipH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+    svg += textToPathStrings(name, 'Tiny5', 16, 16, 30, '#f4f4f4').join('');
+    descLines.forEach((line, li) => {
+      svg += textToPathStrings(line, 'Tiny5', 12, 16, 54 + li * 18, '#f4f4f4').join('');
+    });
+    svg += textToPathStrings(truncateToWidth(statsText, 'Tiny5', 10, chipW - 32), 'Tiny5', 10, 16, chipH - 16, '#5ad4e6').join('');
+    svg += `</g></g>`;
+  });
+
+  svg += `</svg>`;
+  return svg;
+}
+
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };

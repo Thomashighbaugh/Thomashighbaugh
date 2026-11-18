@@ -23,7 +23,7 @@ const siIcon = (s) => `${CDN}simple-icons@${SI_VER}/icons/${s}.svg`;
 // Font Awesome free solid, used only as an approximation for marks that have no
 // brand icon at all. A skill opts in with a slug prefixed `fa-`, e.g. `fa-icons`.
 const FA_VER = '6.7.2';
-const faIcon = (n) => `${CDN}@fortawesome/fontawesome-free@${FA_VER}/svgs/solid/${n}.svg`;
+const faIcon = (n, style = 'solid') => `${CDN}@fortawesome/fontawesome-free@${FA_VER}/svgs/${style}/${n}.svg`;
 
 for (const dir of CACHE_DIRS) {
   fs.mkdirSync(dir, { recursive: true });
@@ -104,8 +104,12 @@ async function fetchIcon(slug, color = 'ffffff') {
   // `fa-<name>` asks for a Font Awesome approximation (generic skills that have
   // no brand mark). Skip the brand sources entirely for these.
   if (slug.startsWith('fa-')) {
+    // `fa-brand-<name>` pulls from the brands set (LinkedIn, CodePen, …), which
+    // Simple Icons has dropped; plain `fa-<name>` uses the solid set.
+    const brand = slug.startsWith('fa-brand-');
+    const name = brand ? slug.slice(9) : slug.slice(3);
     try {
-      const svg = await fetchCached(faIcon(slug.slice(3)));
+      const svg = await fetchCached(faIcon(name, brand ? 'brands' : 'solid'));
       return parseIcon(svg, fallbackColor);
     } catch {
       return null;
