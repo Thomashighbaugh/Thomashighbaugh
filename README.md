@@ -40,7 +40,7 @@ Get in Touch
 <summary>Skill Wall
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-bebd9f8c.svg" width="800" height="978" alt="Skill wall" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-b8bb9864.svg" width="800" height="978" alt="Skill wall" /></p>
 
 
 </details>
@@ -83,7 +83,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-8c21ec08.svg" width="500" height="444" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-39d2f319.svg" width="500" height="444" alt="vice-7" /></p>
 
 
 </details>
