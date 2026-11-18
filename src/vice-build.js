@@ -657,6 +657,10 @@ async function build() {
           blockSuffix.set(block.index, linkListHtml(items, meta.linksLabel));
         }
 
+        if (meta.linkDetails) {
+          blockSuffix.set(block.index, linkDetailsHtml(context, meta.linkDetailsLabel));
+        }
+
         if (meta.followerLink && context.follower && context.follower.htmlUrl) {
           const login = context.follower.login || 'profile';
           blockSuffix.set(
@@ -760,6 +764,46 @@ function svgDimensions(svg) {
 }
 
 /**
+ * One collapsed <details> holding the follower's profile and every project the
+ * board shows. Both change daily, so the list is derived from the same context
+ * that rendered the cards.
+ *
+ * @param {object} context
+ * @param {string} [label]
+ * @returns {string}
+ */
+function linkDetailsHtml(context, label = 'Links') {
+  const follower = context.follower;
+  const repos = (context.github && context.github.starredRepos) || [];
+
+  const parts = [];
+
+  if (follower && follower.htmlUrl) {
+    const handle = follower.login || follower.name || 'profile';
+    parts.push(
+      `<p align="center"><strong>Follower of the day</strong><br />` +
+        `<a href="${escapeAttr(follower.htmlUrl)}">@${escapeAttr(handle)}</a></p>`,
+    );
+  }
+
+  const repoRows = repos
+    .filter((r) => r && r.href)
+    .map((r) => {
+      const text = r.fullName || r.name || r.href;
+      return `<li><a href="${escapeAttr(r.href)}">${escapeAttr(text)}</a></li>`;
+    });
+
+  if (repoRows.length) {
+    parts.push(
+      `<p align="center"><strong>Projects I'm following</strong></p><ul>${repoRows.join('')}</ul>`,
+    );
+  }
+
+  if (!parts.length) return '';
+  return `<details><summary>${escapeAttr(label)}</summary>${parts.join('')}</details>`;
+}
+
+/**
  * Build a collapsed <details> list linking to every item a block rendered.
  *
  * It is emitted after the block's <p>, because a <details> is flow content and
@@ -799,6 +843,7 @@ function parseMeta(meta) {
     if (key === 'alt') defaults.alt = value.replace(/^["']|["']$/g, '');
     if (key === 'caption') defaults.caption = value.replace(/^["']|["']$/g, '');
     if (key === 'linksLabel') defaults.linksLabel = value.replace(/^["']|["']$/g, '');
+    if (key === 'linkDetailsLabel') defaults.linkDetailsLabel = value.replace(/^["']|["']$/g, '');
   }
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
   // A bare `links` token asks for a <details> list of links beneath the image.
@@ -806,5 +851,7 @@ function parseMeta(meta) {
   // A bare `followerLink` token emits the follower's profile link beneath the
   // image, keeping it reachable even when the card itself is inside a board.
   if (/\bfollowerLink\b/.test(meta)) defaults.followerLink = true;
+  // `linkDetails` emits one collapsed block holding the follower and project links.
+  if (/\blinkDetails\b/.test(meta)) defaults.linkDetails = true;
   return defaults;
 }
