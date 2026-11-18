@@ -89,7 +89,7 @@ Get in Touch
 
 <br>
 
-```vice width=800 merge from=github.starredRepos alt="Projects I am following"
+```vice width=800 merge from=github.starredRepos alt="Projects I am following" links linksLabel="Project links"
 <ProjectsGrid items={items} width={800} columns={2} />
 ```
 

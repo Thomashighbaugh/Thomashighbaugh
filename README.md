@@ -60,7 +60,7 @@ Get in Touch
 
 <br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-49cacc15.svg" width="800" height="504" alt="Projects I am following" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-6-49cacc15.svg" width="800" height="504" alt="Projects I am following" /></p><details><summary>Project links</summary><ul><li><a href="https://github.com/rtk-ai/rtk">rtk-ai/rtk</a></li><li><a href="https://github.com/anudeepND/whitelist">anudeepND/whitelist</a></li><li><a href="https://github.com/alexgreensh/token-optimizer">alexgreensh/token-optimizer</a></li><li><a href="https://github.com/kyechan99/capsule-render">kyechan99/capsule-render</a></li><li><a href="https://github.com/c8r/x0">c8r/x0</a></li><li><a href="https://github.com/simonw/showboat">simonw/showboat</a></li></ul></details>
 
 
 </details>
@@ -70,7 +70,7 @@ Get in Touch
 Account Statistics
 </summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-ef22bdee.svg" width="500" height="452" alt="vice-7" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-7-17d62ea4.svg" width="500" height="452" alt="vice-7" /></p>
 
 
 </details>

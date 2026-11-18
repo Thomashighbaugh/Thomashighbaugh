@@ -548,6 +548,7 @@ async function build() {
 
   const writtenFiles = [];
   const blockHtml = new Map();
+  const blockSuffix = new Map();
 
   for (const block of blocks) {
     const meta = parseMeta(block.meta);
@@ -588,6 +589,10 @@ async function build() {
       const imgTag = `<img src="${relAssets}/${filename}" width="${dims.width}" height="${dims.height}" alt="${escapeAttr(altText)}" />`;
       const href = resolveLink(meta.link, { items });
       htmlParts.push(href ? `<a href="${escapeAttr(href)}">${imgTag}</a>` : imgTag);
+
+      if (meta.links) {
+        blockSuffix.set(block.index, linkListHtml(items, meta.linksLabel));
+      }
       console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height}) [merge=${items.length} items]`);
     } else {
       for (let i = 0; i < items.length; i++) {
@@ -645,6 +650,10 @@ async function build() {
           }
         }
 
+        if (meta.links) {
+          blockSuffix.set(block.index, linkListHtml(items, meta.linksLabel));
+        }
+
         console.log(`    [${block.index}] Rendered -> ${filename} (${dims.width}x${dims.height})`);
       }
     }
@@ -659,7 +668,8 @@ async function build() {
   let finalMd = markdown;
   for (const block of blocks) {
     const html = blockHtml.get(block.index) || '';
-    finalMd = finalMd.replace(`<!-- __VICE_BLOCK_${block.index}__ -->`, `<p align="center">${html}</p>`);
+    const suffix = blockSuffix.get(block.index) || '';
+    finalMd = finalMd.replace(`<!-- __VICE_BLOCK_${block.index}__ -->`, `<p align="center">${html}</p>${suffix}`);
   }
 
   const replacementRegex = new RegExp(`%{(${Object.keys(replacers).join('|')})}`, 'gm');
@@ -738,6 +748,28 @@ function svgDimensions(svg) {
   };
 }
 
+/**
+ * Build a collapsed <details> list linking to every item a block rendered.
+ *
+ * It is emitted after the block's <p>, because a <details> is flow content and
+ * cannot legally live inside a paragraph.
+ *
+ * @param {Array<object>} items
+ * @param {string} [label] - summary text
+ * @returns {string}
+ */
+function linkListHtml(items, label = 'Links to these projects') {
+  const rows = (items || [])
+    .filter((item) => item && (item.href || item.url))
+    .map((item) => {
+      const url = escapeAttr(item.href || item.url);
+      const text = escapeAttr(item.fullName || item.name || item.text || item.login || url);
+      return `<li><a href="${url}">${text}</a></li>`;
+    });
+  if (!rows.length) return '';
+  return `<details><summary>${escapeAttr(label)}</summary><ul>${rows.join('')}</ul></details>`;
+}
+
 module.exports = { build, parseSource, resolveExpr, parseJsxBlock };
 
 function parseMeta(meta) {
@@ -755,7 +787,10 @@ function parseMeta(meta) {
     if (key === 'gap') defaults.gap = /^\d+$/.test(value) ? parseInt(value, 10) : 0;
     if (key === 'alt') defaults.alt = value.replace(/^["']|["']$/g, '');
     if (key === 'caption') defaults.caption = value.replace(/^["']|["']$/g, '');
+    if (key === 'linksLabel') defaults.linksLabel = value.replace(/^["']|["']$/g, '');
   }
   if (/\bmerge\b/.test(meta)) defaults.merge = true;
+  // A bare `links` token asks for a <details> list of links beneath the image.
+  if (/\blinks\b/.test(meta)) defaults.links = true;
   return defaults;
 }
