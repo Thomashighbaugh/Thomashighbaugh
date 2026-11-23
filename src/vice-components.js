@@ -478,13 +478,11 @@ function followerButton({ name, login, publicRepos = 0, followers = 0, height = 
 }
 
 /**
- * FollowerPanel — the whole follower readout inside one button, built the same
- * way as the languages panel: a bordered, shadowed block spanning the column,
- * carrying its data as rows rather than a single line.
+ * FollowerPanel — the whole follower readout inside one button, the same
+ * bordered, shadowed block the languages panel uses.
  *
  * row 1: the name
- * row 2: repos
- * row 3: followers
+ * row 2: both counts inline, in the banner footer's Press Start 2P accent
  *
  * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, width?: number}} props
  * @returns {string}
@@ -495,35 +493,30 @@ function followerPanel({ name, login, publicRepos = 0, followers = 0, width = 80
   const padY = 12;
   const shadow = 6;
   const nameSize = 17;
-  const rowSize = 12;
   const nameRowH = 28;
-  const rowH = 22;
+  const statsRowH = 22;
+  const statsSize = 10;
 
   const label = String(name || login || 'Follower');
-  const rows = [
-    { text: 'Repos', value: String(publicRepos), color: CHART_PALETTE[1] },
-    { text: 'Followers', value: String(followers), color: CHART_PALETTE[2] },
-  ];
+  // Same face, colour and hard drop the banner gives its own footer line.
+  const statsText = `Repos ${publicRepos} / Followers ${followers}`;
 
   const boxW = panelW - shadow;
-  const height = padY * 2 + nameRowH + rows.length * rowH;
+  const height = padY * 2 + nameRowH + statsRowH;
+  const textX = padX + 18;
+  const statsY = padY + nameRowH + 14;
 
   let svg = `<svg width="${panelW}" height="${height + shadow}" viewBox="0 0 ${panelW} ${height + shadow}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="${shadow}" y="${shadow}" width="${boxW}" height="${height}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
   svg += `<rect x="0" y="0" width="${boxW}" height="${height}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
 
-  // Name row
+  // Name
   svg += `<rect x="${padX}" y="${padY + nameRowH / 2 - 5}" width="10" height="10" fill="${CHART_PALETTE[0]}" rx="2" ry="2" />`;
-  svg += textToPathStrings(label, BUTTON_FONT, nameSize, padX + 18, padY + nameSize + 2, '#f4f4f4').join('');
+  svg += textToPathStrings(label, BUTTON_FONT, nameSize, textX, padY + nameSize + 2, '#f4f4f4').join('');
 
-  // Value rows, laid out like the language rows
-  rows.forEach((row, i) => {
-    const y = padY + nameRowH + (i + 1) * rowH - 7;
-    const valueW = measureText(row.value, BUTTON_FONT, rowSize);
-    svg += `<rect x="${padX}" y="${y - 9}" width="9" height="9" fill="${row.color}" rx="2" ry="2" />`;
-    svg += textToPathStrings(row.text, BUTTON_FONT, rowSize, padX + 16, y, '#f4f4f4').join('');
-    svg += textToPathStrings(row.value, BUTTON_FONT, rowSize, boxW - padX - valueW, y, ACCENT).join('');
-  });
+  // Counts, inline, in the footer styling
+  svg += `<g transform="translate(2,2)">${textToPathStrings(statsText, 'PressStart2P', statsSize, textX, statsY, '#2c2c2c').join('')}</g>`;
+  svg += textToPathStrings(statsText, 'PressStart2P', statsSize, textX, statsY, ACCENT).join('');
 
   svg += `</svg>`;
   return svg;
