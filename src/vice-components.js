@@ -324,7 +324,7 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
 /**
  * Badge — SVG string.
  */
-function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5 }) {
+function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5, valuePad = 0 }) {
   const isForTheBadge = style === 'for-the-badge';
   const borderRadius = isForTheBadge ? BUTTON_RADIUS : height / 2;
   const padX = isForTheBadge ? 10 : 9;
@@ -340,9 +340,10 @@ function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', ic
 
   const labelW = labelTextW + padX * 2;
   const valueW = hasValue ? valueTextW + padX * 2 : 0;
-  const totalW = Math.ceil(labelW + valueW + iconW);
+  const totalW = Math.ceil(labelW + valueW + iconW + valuePad);
   const labelX = iconW + padX;
-  const valueX = labelX + labelTextW + padX * 2;
+  // valuePad pushes the figure away from the label.
+  const valueX = labelX + labelTextW + padX * 2 + valuePad;
 
   // Black Han Sans puts its cap height around 0.72em; this centres the label.
   const baseline = height / 2 + fontSize * 0.36;
@@ -502,7 +503,7 @@ function repoCard({ _name, fullName, description, stars, forks, language, langua
 /**
  * FollowerCard — SVG string.
  */
-function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, followers = 0, width = 340, height = 210 }) {
+function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, followers = 0, width = 340, height = 210, bare = false }) {
   const displayName = name || login || 'Follower';
   const cardW = width;
   const cardH = height;
@@ -532,7 +533,7 @@ function followerCard({ icon, login = '', name = '', bio = '', publicRepos = 0, 
 
   let svg = `<svg width="${cardW}" height="${cardH}" viewBox="0 0 ${cardW} ${cardH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
-  svg += bannerBackdrop(cardW, cardH, 'vice-follower-backdrop');
+  if (!bare) svg += bannerBackdrop(cardW, cardH, 'vice-follower-backdrop');
 
   svg += `<g class="motion-jerk">`;
   if (icon) {
@@ -597,7 +598,7 @@ function statsCard({ totalStars, totalForks, totalRepos, totalCommits }) {
 /**
  * MetricsPanel — SVG string.
  */
-function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCommits = 0, languages = [], orgs = [], width = 500, height }) {
+function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCommits = 0, languages = [], orgs = [], width = 500, height, bare = false }) {
   const statLabels = ['Stars', 'Forks', 'Repos', 'Commits'];
   const statValues = [totalStars, totalForks, totalRepos, totalCommits];
   const panelW = width;
@@ -624,7 +625,7 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
 
   let svg = `<svg width="${panelW}" height="${panelH}" viewBox="0 0 ${panelW} ${panelH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
-  svg += bannerBackdrop(panelW, panelH, 'vice-metrics-backdrop');
+  if (!bare) svg += bannerBackdrop(panelW, panelH, 'vice-metrics-backdrop');
 
   svg += `<g class="motion-jerk">`;
   statValues.forEach((value, i) => {
@@ -846,7 +847,7 @@ function bannerBackdrop(width, height, id) {
  * @param {{width?: number, title?: string, body?: string, titleSize?: number, bodySize?: number}} props
  * @returns {string}
  */
-function lawPanel({ width = 800, title = "Tom's Law of Software Development", body, titleSize = 34, bodySize = 16 }) {
+function lawPanel({ width = 800, title = "Tom's Law of Software Development", body, titleSize = 34, bodySize = 16, bare = false }) {
   const statement = body || "The more convenient, useful or helpful a software is to use, the more of a painful, tedious and/or absolutely miserable it was to develop and then iteratively refine into such a form.";
 
   const PINK = '#fc618d';      // banner header h1 colour
@@ -877,7 +878,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
 
-  svg += bannerBackdrop(width, totalH, 'vice-law-backdrop');
+  if (!bare) svg += bannerBackdrop(width, totalH, 'vice-law-backdrop');
 
   // Heading: hard drop, then the face itself, with the banner's glitch.
   svg += `<g class="motion-jerk"><g class="motion-glitch">`;
@@ -911,7 +912,7 @@ function lawPanel({ width = 800, title = "Tom's Law of Software Development", bo
  * @param {{groups?: Array<{label: string, items: object[]}>, items?: Array<object>, width?: number, columns?: number, pillHeight?: number}} props
  * @returns {string}
  */
-function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30, title = '' }) {
+function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30, title = '', bare = false }) {
   const source = Array.isArray(groups) && groups.length
     ? groups
     : (Array.isArray(items) ? items : []);
@@ -964,7 +965,7 @@ function bentoGrid({ groups, items, width = 800, columns = 2, pillHeight = 30, t
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
 
-  svg += bannerBackdrop(width, totalH, 'vice-banner-backdrop');
+  if (!bare) svg += bannerBackdrop(width, totalH, 'vice-banner-backdrop');
 
   if (heading) {
     const headingW = measureText(heading, 'Knewave', titleSize);
@@ -1030,7 +1031,7 @@ function categoryWall({ items = [], width = 800, height, pillHeight = 30 }) {
 /**
  * ActivityPanel — recent public activity on a banner-style canvas.
  */
-function activityPanel({ items = [], width = 800, title = 'Recent Activity', maxRows = 12 }) {
+function activityPanel({ items = [], width = 800, title = 'Recent Activity', maxRows = 12, bare = false }) {
   const rows = (items || []).slice(0, maxRows);
   const padX = 26;
   const titleSize = 30;
@@ -1042,7 +1043,7 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
-  svg += bannerBackdrop(width, totalH, 'vice-activity-backdrop');
+  if (!bare) svg += bannerBackdrop(width, totalH, 'vice-activity-backdrop');
 
   // Nothing may paint outside the card, however long a line gets.
   svg += `<defs><clipPath id="vice-activity-clip"><rect x="0" y="0" width="${width}" height="${totalH}" rx="6" ry="6" /></clipPath></defs>`;
@@ -1080,7 +1081,7 @@ function activityPanel({ items = [], width = 800, title = 'Recent Activity', max
  * ProjectsGrid — every followed repository on one canvas, each drawn as a chip
  * in the banner's button style (#3c3c3c fill, #f4f4f7 border, black offset).
  */
-function projectsGrid({ items = [], width = 800, title = "Projects I'm Following", columns = 2 }) {
+function projectsGrid({ items = [], width = 800, title = "Projects I'm Following", columns = 2, bare = false }) {
   const repos = items || [];
   const padX = 26;
   const gapX = 18;
@@ -1097,7 +1098,7 @@ function projectsGrid({ items = [], width = 800, title = "Projects I'm Following
 
   let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
-  svg += bannerBackdrop(width, totalH, 'vice-projects-backdrop');
+  if (!bare) svg += bannerBackdrop(width, totalH, 'vice-projects-backdrop');
 
   const titleFit = fitTextSize(title, 'Knewave', titleSize, width - 40);
   const titleW = measureText(title, 'Knewave', titleFit);
@@ -1267,12 +1268,12 @@ function bentoBoard({
   // Only the panels that were given the banner treatment live on the board.
   // The badges and the contact buttons stay in Markdown so their links work.
   const cells = [
-    { span: 3, render: () => lawPanel({ width: spanW(3) }) },
-    { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210 }) },
-    { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10 }) },
-    { span: 3, render: () => bentoGrid({ groups: skillGroups, width: spanW(3), columns: 2, title: 'Skill Wall' }) },
-    { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3 }) },
-    { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3) }) },
+    { span: 3, render: () => lawPanel({ width: spanW(3), bare: true }) },
+    { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210, bare: true }) },
+    { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10, bare: true }) },
+    { span: 3, render: () => bentoGrid({ groups: skillGroups, width: spanW(3), columns: 2, title: 'Skill Wall', bare: true }) },
+    { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3, bare: true }) },
+    { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }) },
   ];
 
   // Pack into rows whose spans sum to at most `columns`.

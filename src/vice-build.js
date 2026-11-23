@@ -464,14 +464,18 @@ async function fetchAllIcons() {
 function buildLinkables(profileViews, icons = {}) {
   const viewsValue = profileViews ?? 'n/a';
 
-  const headerBadges = data.header.badges.map((badge) => {
+  let viewsBadge = null;
+  const headerBadges = [];
+  for (const badge of data.header.badges) {
     const isViews = badge.type === 'views';
-    // A views badge is label + count; every other badge is a single label.
     const label = isViews ? 'Profile Views' : badge.name;
     const value = isViews ? viewsValue : '';
     const icon = badge.logo ? icons[`header:${badge.logo}`] : null;
-    return { type: badge.type, label, value, href: badge.href || null, icon, alt: label };
-  });
+    const entry = { type: badge.type, label, value, href: badge.href || null, icon, alt: label };
+    // The views counter is rendered on its own in the Links panel.
+    if (isViews) viewsBadge = entry;
+    else headerBadges.push(entry);
+  }
 
   const socialLinks = data.socialMedias.links.map((link) => {
     const icon = link.logo ? icons[`social:${link.logo}`] : null;
@@ -494,7 +498,7 @@ function buildLinkables(profileViews, icons = {}) {
     items: skillPills[category.name] || [],
   }));
 
-  return { headerBadges, socialLinks, skillPills, skillGroups };
+  return { headerBadges, viewsBadge, socialLinks, skillPills, skillGroups };
 }
 
 async function build() {
