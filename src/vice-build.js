@@ -33,6 +33,7 @@ const {
   LawPanel,
   ActivityPanel,
   ProjectsGrid,
+  FollowerButton,
   BentoBoard,
   BadgeRow,
   SocialRow,
@@ -550,7 +551,7 @@ async function build() {
   const COMPONENT_MAP = {
     Badge, SocialButton, SkillPill,
     RepoCard, FollowerCard, StatsCard,
-    MetricsPanel, CategoryWall, BentoGrid, LawPanel, ActivityPanel, ProjectsGrid, BentoBoard, BadgeRow, SocialRow,
+    MetricsPanel, CategoryWall, BentoGrid, LawPanel, ActivityPanel, ProjectsGrid, FollowerButton, BentoBoard, BadgeRow, SocialRow,
   };
 
   const writtenFiles = [];

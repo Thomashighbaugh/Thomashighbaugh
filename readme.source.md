@@ -25,12 +25,16 @@
 />
 ```
 
-**Follower of the Day**
-
-A randomly chosen follower, picked fresh on every rebuild. Go say hello.
+**Follower Highlight**
 
 ```vice from=follower link=item.htmlUrl
-<SocialButton icon={item.icon} text={item.login} height={38} />
+<FollowerButton
+  name={item.name}
+  login={item.login}
+  publicRepos={item.publicRepos}
+  followers={item.followers}
+  height={44}
+/>
 ```
 
 **Projects I'm following**

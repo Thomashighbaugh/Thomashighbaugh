@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-4dd4e3f0.svg" width="800" height="1447" alt="Profile dashboard" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-6bbdfd68.svg" width="800" height="1447" alt="Profile dashboard" /></p>
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
@@ -12,11 +12,9 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-4d947986.svg" width="219" height="48" alt="vice-2" /></p>
 
 
-**Follower of the Day**
+**Follower Highlight**
 
-A randomly chosen follower, picked fresh on every rebuild. Go say hello.
-
-<p align="center"><a href="https://github.com/valcho"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-8e1b4dce.svg" width="130" height="38" alt="Valentin Ganchev" /></a></p>
+<p align="center"><a href="https://github.com/mwickerson"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-dcce9f4c.svg" width="408" height="44" alt="Michael Wickerson" /></a></p>
 
 
 **Projects I'm following**

@@ -336,7 +336,7 @@ function textToPathStrings(text, fontName, fontSize, x, y, fill = 'currentColor'
 /**
  * Badge — SVG string.
  */
-function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5, valuePad = 0 }) {
+function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', valueColor, icon, style = 'plastic', height = 34, fontSize = 16, border, borderWidth = 1.5, valuePad = 0 }) {
   const isForTheBadge = style === 'for-the-badge';
   const borderRadius = isForTheBadge ? BUTTON_RADIUS : height / 2;
   const padX = isForTheBadge ? 10 : 9;
@@ -362,7 +362,7 @@ function badge({ label, value, color = COLORS.primary, logoColor = '#ffffff', ic
 
   const labelPaths = textToPathStrings(labelText, BUTTON_FONT, fontSize, labelX, baseline, logoColor);
   const valuePaths = hasValue
-    ? textToPathStrings(valueText, BUTTON_FONT, fontSize, valueX, baseline, logoColor)
+    ? textToPathStrings(valueText, BUTTON_FONT, fontSize, valueX, baseline, valueColor || logoColor)
     : [];
 
   // The outline is inset by half its width so the SVG viewBox does not clip it.
@@ -451,6 +451,30 @@ function skillPill({ name, icon, color = '#3c3c3c', logoColor = '#f4f4f4', highl
   svg += textPaths.join('');
   svg += `</svg>`;
   return svg;
+}
+
+/**
+ * FollowerButton — the whole follower readout on one button: name and counts.
+ *
+ * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, height?: number}} props
+ * @returns {string}
+ */
+function followerButton({ name, login, publicRepos = 0, followers = 0, height = 44 }) {
+  const label = String(name || login || 'Follower');
+  const plural = (n, word) => `${n} ${word}${Number(n) === 1 ? '' : 's'}`;
+  const value = `${plural(publicRepos, 'repo')} / ${plural(followers, 'follower')}`;
+  return badge({
+    label,
+    value,
+    color: '#3c3c3c',
+    logoColor: '#f4f4f4',
+    valueColor: ACCENT,
+    border: '#f4f4f7',
+    style: 'for-the-badge',
+    height,
+    fontSize: 15,
+    valuePad: 14,
+  });
 }
 
 /**
@@ -1415,4 +1439,4 @@ function chipRow(items, maxWidth, opts = {}) {
   return { svg: out, height: Math.max(0, y - gap - shadow) };
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, FollowerButton: followerButton, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
