@@ -25,15 +25,15 @@
 />
 ```
 
-**Follower Highlight**
+### Follower Highlight
 
-```vice from=follower link=item.htmlUrl
-<FollowerButton
+```vice width=800 from=follower link=item.htmlUrl
+<FollowerPanel
   name={item.name}
   login={item.login}
   publicRepos={item.publicRepos}
   followers={item.followers}
-  height={44}
+  width={800}
 />
 ```
 

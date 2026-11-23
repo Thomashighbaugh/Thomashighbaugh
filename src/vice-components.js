@@ -478,6 +478,37 @@ function followerButton({ name, login, publicRepos = 0, followers = 0, height = 
 }
 
 /**
+ * FollowerPanel — the follower readout as one full-width button, built the same
+ * way as the languages panel: a bordered, shadowed block spanning the column.
+ *
+ * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, width?: number}} props
+ * @returns {string}
+ */
+function followerPanel({ name, login, publicRepos = 0, followers = 0, width = 800 }) {
+  const panelW = width;
+  const padX = 18;
+  const height = 64;
+  const shadow = 6;
+  const label = String(name || login || 'Follower');
+  const plural = (n, word) => `${n} ${word}${Number(n) === 1 ? '' : 's'}`;
+  const counts = `${plural(publicRepos, 'repo')} / ${plural(followers, 'follower')}`;
+
+  const nameSize = 18;
+  const countSize = 13;
+  const countW = measureText(counts, BUTTON_FONT, countSize);
+  const baseline = height / 2 + nameSize * 0.34;
+  const boxW = panelW - shadow;
+
+  let svg = `<svg width="${panelW}" height="${height + shadow}" viewBox="0 0 ${panelW} ${height + shadow}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<rect x="${shadow}" y="${shadow}" width="${boxW}" height="${height}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+  svg += `<rect x="0" y="0" width="${boxW}" height="${height}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+  svg += textToPathStrings(label, BUTTON_FONT, nameSize, padX, baseline, '#f4f4f4').join('');
+  svg += textToPathStrings(counts, BUTTON_FONT, countSize, boxW - padX - countW, baseline, ACCENT).join('');
+  svg += `</svg>`;
+  return svg;
+}
+
+/**
  * RepoCard — SVG string.
  */
 function repoCard({ _name, fullName, description, stars, forks, language, languageColor, width = 260, height = 126 }) {
@@ -1439,4 +1470,4 @@ function chipRow(items, maxWidth, opts = {}) {
   return { svg: out, height: Math.max(0, y - gap - shadow) };
 }
 
-module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, FollowerButton: followerButton, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
+module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, FollowerButton: followerButton, FollowerPanel: followerPanel, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };
