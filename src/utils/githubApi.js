@@ -42,10 +42,9 @@ async function getRandomFollower(user, token = null) {
 
   if (candidates.length === 0) return null;
 
-  // Use date-based seeding for "follower of the day" consistency
-  const dateStr = new Date().toISOString().slice(0, 10);
-  const seed = hashCode(dateStr);
-  const index = Math.abs(seed) % candidates.length;
+  // Pick a fresh follower on every build. Date-seeding pinned the choice for a
+  // whole day, so repeated rebuilds looked frozen — the card never changed.
+  const index = Math.floor(Math.random() * candidates.length);
   // A profile whose bio reads like placeholder chrome ("Loading...") looks
   // broken on a rendered card, so those are skipped in favour of the next
   // follower. Only a handful of detail calls are made before giving up.
@@ -68,21 +67,6 @@ async function getRandomFollower(user, token = null) {
 
   // Nothing passed: fall back to the seeded candidate so the card still renders.
   return candidates[index];
-}
-
-/**
- * Simple string hash function for seeding.
- * @param {string} str
- * @returns {number}
- */
-function hashCode(str) {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash |= 0;
-  }
-  return hash;
 }
 
 /**

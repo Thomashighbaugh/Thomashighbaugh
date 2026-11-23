@@ -27,7 +27,7 @@
 
 **Follower of the Day**
 
-A randomly chosen follower — rotated every day. Go say hello.
+A randomly chosen follower, picked fresh on every rebuild. Go say hello.
 
 ```vice from=follower link=item.htmlUrl
 <SocialButton icon={item.icon} text={item.login} height={38} />

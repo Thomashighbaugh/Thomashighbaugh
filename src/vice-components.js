@@ -625,21 +625,25 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
     availW,
   );
 
-  const languageChips = chipRow(
-    languages.map((lang) => ({
-      text: lang.name,
-      value: String(lang.count ?? ''),
-      dot: LANGUAGE_COLORS[lang.name] || COLORS.primary,
-    })),
-    availW,
-  );
+  // Languages stay a bar chart, but the whole chart is one banner button that
+  // spans the column.
+  const langPadX = 14;
+  const langPadY = 12;
+  const langRowH = 26;
+  const langShadow = 6;
+  const langNameW = languages.length
+    ? Math.max(...languages.map((l) => measureText(l.name, 'Tiny5', 12)), 40)
+    : 40;
+  const langBarX = langPadX + 14 + langNameW + 14;
+  const langBarMaxW = availW - langBarX - langPadX;
+  const langButtonH = languages.length ? langPadY * 2 + languages.length * langRowH : 0;
 
   // Heading baseline offset, gap below a heading, and gap between blocks.
   const headingLead = 26;
   const headingGap = 20;
   const blockGap = 30;
   const orgsH = scopes.length ? headingLead + headingGap + accountChips.height + blockGap : 0;
-  const langsH = languages.length ? headingLead + headingGap + languageChips.height : 0;
+  const langsH = languages.length ? headingLead + headingGap + langButtonH + langShadow : 0;
   const panelH = height || statsHeight + orgsH + langsH + 16;
 
   let svg = `<svg width="${panelW}" height="${panelH}" viewBox="0 0 ${panelW} ${panelH}" xmlns="http://www.w3.org/2000/svg">`;
@@ -677,7 +681,20 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
     cursorY += headingLead;
     svg += headingWithShadow('Most used languages', 18, labelX, cursorY);
     cursorY += headingGap;
-    svg += `<g transform="translate(${labelX},${cursorY})">${languageChips.svg}</g>`;
+    const topCount = languages[0]?.count || 1;
+    svg += `<g transform="translate(${labelX},${cursorY})">`;
+    svg += `<rect x="${langShadow}" y="${langShadow}" width="${availW}" height="${langButtonH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+    svg += `<rect x="0" y="0" width="${availW}" height="${langButtonH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+    languages.forEach((lang, i) => {
+      const y = langPadY + (i + 1) * langRowH - 8;
+      const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
+      const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
+      const barW = Math.max(4, Math.round((langBarMaxW * pct) / 100));
+      svg += `<rect x="${langPadX}" y="${y - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;
+      svg += textToPathStrings(lang.name, 'Tiny5', 12, langPadX + 14, y, '#f4f4f4').join('');
+      svg += `<rect x="${langBarX}" y="${y - 7}" width="${barW}" height="9" fill="${color}" rx="4" ry="4" />`;
+    });
+    svg += `</g>`;
   }
 
   svg += `</svg>`;
