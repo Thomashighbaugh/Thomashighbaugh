@@ -20,6 +20,18 @@ const BUTTON_FONT = 'BlackHanSans';
 // and skill pills read as one set.
 const BUTTON_RADIUS = 5;
 
+// Chart palette: the banner's own h1 pink and footer cyan, then four softened
+// hues complementary to them. Brand colours per language were too garish next
+// to the banner, and gave no sense of order down the list.
+const CHART_PALETTE = [
+  '#fc618d', // banner h1
+  '#5ad4e6', // banner footer
+  '#c084e0', // violet, softened
+  '#7ed6a8', // mint, softened
+  '#e0b07a', // sand, softened
+  '#8fa6e0', // periwinkle, softened
+];
+
 const FONTS_DIR = path.resolve('src/resources/fonts');
 
 /**
@@ -687,7 +699,7 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
     svg += `<rect x="0" y="0" width="${availW}" height="${langButtonH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
     languages.forEach((lang, i) => {
       const y = langPadY + (i + 1) * langRowH - 8;
-      const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
+      const color = CHART_PALETTE[i % CHART_PALETTE.length];
       const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
       const barW = Math.max(4, Math.round((langBarMaxW * pct) / 100));
       svg += `<rect x="${langPadX}" y="${y - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;

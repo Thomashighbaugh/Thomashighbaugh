@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-5ad04883.svg" width="800" height="1447" alt="Profile dashboard" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-4dd4e3f0.svg" width="800" height="1447" alt="Profile dashboard" /></p>
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
@@ -16,7 +16,7 @@
 
 A randomly chosen follower, picked fresh on every rebuild. Go say hello.
 
-<p align="center"><a href="https://github.com/Crelloc"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-ff0aba6b.svg" width="132" height="38" alt="Crelloc" /></a></p>
+<p align="center"><a href="https://github.com/valcho"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-8e1b4dce.svg" width="130" height="38" alt="Valentin Ganchev" /></a></p>
 
 
 **Projects I'm following**
