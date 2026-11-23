@@ -611,17 +611,36 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   const cellShadow = 6;
   const cellW = (panelW - labelX * 2 - cellGap * (statValues.length - 1)) / statValues.length;
   const statsHeight = cellTop + cellH + cellShadow;
-  const barX = 176;
-  const barMaxW = panelW - barX - 18;
-  const rowH = 28;
-  const orgRowH = 26;
 
   const scopes = (orgs || []).filter((o) => o && o.name);
+  const availW = panelW - labelX * 2;
 
-  // The panel grows with whatever it is asked to show.
-  const orgsH = scopes.length ? 40 + scopes.length * orgRowH : 0;
-  const langsH = languages.length ? 44 + languages.length * rowH : 0;
-  const panelH = height || statsHeight + orgsH + langsH + 18;
+  // Both lower sections are chip rows in the same banner-button style as the
+  // projects grid.
+  const accountChips = chipRow(
+    scopes.map((scope) => ({
+      text: scope.name,
+      value: `${scope.repos} repos / ${scope.stars} stars / ${scope.forks} forks`,
+    })),
+    availW,
+  );
+
+  const languageChips = chipRow(
+    languages.map((lang) => ({
+      text: lang.name,
+      value: String(lang.count ?? ''),
+      dot: LANGUAGE_COLORS[lang.name] || COLORS.primary,
+    })),
+    availW,
+  );
+
+  // Heading baseline offset, gap below a heading, and gap between blocks.
+  const headingLead = 26;
+  const headingGap = 20;
+  const blockGap = 30;
+  const orgsH = scopes.length ? headingLead + headingGap + accountChips.height + blockGap : 0;
+  const langsH = languages.length ? headingLead + headingGap + languageChips.height : 0;
+  const panelH = height || statsHeight + orgsH + langsH + 16;
 
   let svg = `<svg width="${panelW}" height="${panelH}" viewBox="0 0 ${panelW} ${panelH}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<style>${MOTION_CSS}</style>`;
@@ -645,44 +664,20 @@ function metricsPanel({ totalStars = 0, totalForks = 0, totalRepos = 0, totalCom
   });
   svg += `</g>`;
 
-  // Per-account breakdown, including the organisations.
   let cursorY = statsHeight;
   if (scopes.length) {
-    cursorY += 24;
+    cursorY += headingLead;
     svg += headingWithShadow('By account', 18, labelX, cursorY);
-    cursorY += 8;
-    const colX = panelW - 190;
-    scopes.forEach((scope) => {
-      cursorY += orgRowH;
-      const label = truncateToWidth(scope.name, 'Tiny5', 12, colX - labelX - 12);
-      svg += `<rect x="${labelX}" y="${cursorY - 9}" width="9" height="9" fill="#5ad4e6" rx="2" ry="2" />`;
-      svg += textToPathStrings(label, 'Tiny5', 12, labelX + 16, cursorY, '#f4f4f4').join('');
-      const figures = `${scope.repos} repos / ${scope.stars} stars / ${scope.forks} forks`;
-      const figW = measureText(figures, 'Tiny5', 12);
-      svg += textToPathStrings(figures, 'Tiny5', 12, panelW - 18 - figW, cursorY, '#f4f4f4').join('');
-    });
-    cursorY += 10;
+    cursorY += headingGap;
+    svg += `<g transform="translate(${labelX},${cursorY})">${accountChips.svg}</g>`;
+    cursorY += accountChips.height + blockGap;
   }
 
   if (languages.length) {
-    cursorY += 24;
+    cursorY += headingLead;
     svg += headingWithShadow('Most used languages', 18, labelX, cursorY);
-    const topCount = languages[0]?.count || 1;
-    languages.forEach((lang) => {
-      cursorY += rowH;
-      const pct = Math.max(6, Math.round(((lang.count || 0) / topCount) * 100));
-      const barW = Math.min(barMaxW, (barMaxW * pct) / 100);
-      const color = LANGUAGE_COLORS[lang.name] || COLORS.primary;
-
-      svg += `<rect x="${labelX}" y="${cursorY - 9}" width="9" height="9" fill="${color}" rx="2" ry="2" />`;
-
-      const nameX = labelX + 16;
-      const nameMaxW = barX - nameX - 10;
-      const name = truncateToWidth(lang.name, 'Tiny5', 12, nameMaxW);
-      svg += textToPathStrings(name, 'Tiny5', 12, nameX, cursorY, '#f4f4f4').join('');
-
-      svg += `<rect x="${barX}" y="${cursorY - 7}" width="${barW}" height="9" fill="${color}" rx="4" ry="4" />`;
-    });
+    cursorY += headingGap;
+    svg += `<g transform="translate(${labelX},${cursorY})">${languageChips.svg}</g>`;
   }
 
   svg += `</svg>`;
@@ -1244,7 +1239,6 @@ function socialRow({ items = [], width = 780, gap = 10, height = 42 }) {
  * spans of 1/2/3 interlock.
  */
 function bentoBoard({
-  skillGroups = [],
   follower = null,
   activity = [],
   github = null,
@@ -1271,7 +1265,6 @@ function bentoBoard({
     { span: 3, render: () => lawPanel({ width: spanW(3), bare: true }) },
     { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210, bare: true }) },
     { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10, bare: true }) },
-    { span: 3, render: () => bentoGrid({ groups: skillGroups, width: spanW(3), columns: 2, title: 'Skill Wall', bare: true }) },
     { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3, bare: true }) },
     { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }) },
   ];
@@ -1324,6 +1317,73 @@ function bentoBoard({
 
   svg += `</svg>`;
   return svg;
+}
+
+/**
+ * Lay out banner-button chips in rows.
+ * Each chip is a hard black offset, a #3c3c3c face, a 2px #f4f4f7 border, an
+ * optional colour dot, a Tiny5 label and an accent value.
+ *
+ * @param {Array<{text: string, value?: string, dot?: string}>} items
+ * @param {number} maxWidth
+ * @param {{gap?: number, height?: number, fontSize?: number, padX?: number, shadow?: number}} [opts]
+ * @returns {{svg: string, height: number}}
+ */
+function chipRow(items, maxWidth, opts = {}) {
+  const gap = opts.gap ?? 10;
+  const chipH = opts.height ?? 36;
+  const fontSize = opts.fontSize ?? 12;
+  const padX = opts.padX ?? 12;
+  const shadow = opts.shadow ?? 5;
+  const valueGap = 18;
+  const dotW = 12;
+
+  const boxes = (items || []).map((item) => {
+    const textW = measureText(item.text, BUTTON_FONT, fontSize);
+    const valueW = item.value ? measureText(String(item.value), BUTTON_FONT, fontSize) : 0;
+    const width = Math.ceil(padX * 2 + (item.dot ? dotW : 0) + textW + (item.value ? valueGap : 0) + valueW);
+    return { ...item, width, textW, valueW };
+  });
+
+  const rows = [];
+  let current = [];
+  let used = 0;
+  for (const box of boxes) {
+    if (current.length && used + box.width > maxWidth) {
+      rows.push(current);
+      current = [];
+      used = 0;
+    }
+    current.push(box);
+    used += box.width + gap;
+  }
+  if (current.length) rows.push(current);
+
+  let out = '';
+  let y = 0;
+  for (const row of rows) {
+    let x = 0;
+    for (const box of row) {
+      const baseline = chipH / 2 + fontSize * 0.36;
+      out += `<g transform="translate(${x},${y})">`;
+      out += `<rect x="${shadow}" y="${shadow}" width="${box.width}" height="${chipH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+      out += `<rect x="0" y="0" width="${box.width}" height="${chipH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+      let tx = padX;
+      if (box.dot) {
+        out += `<rect x="${tx}" y="${chipH / 2 - 4}" width="8" height="8" fill="${box.dot}" rx="2" ry="2" />`;
+        tx += dotW;
+      }
+      out += textToPathStrings(box.text, BUTTON_FONT, fontSize, tx, baseline, '#f4f4f4').join('');
+      if (box.value) {
+        out += textToPathStrings(String(box.value), BUTTON_FONT, fontSize, tx + box.textW + valueGap, baseline, ACCENT).join('');
+      }
+      out += `</g>`;
+      x += box.width + gap;
+    }
+    y += chipH + shadow + gap;
+  }
+
+  return { svg: out, height: Math.max(0, y - gap - shadow) };
 }
 
 module.exports = { Badge: badge, SocialButton: socialButton, SkillPill: skillPill, RepoCard: repoCard, FollowerCard: followerCard, StatsCard: statsCard, MetricsPanel: metricsPanel, CategoryWall: categoryWall, BentoGrid: bentoGrid, LawPanel: lawPanel, ActivityPanel: activityPanel, ProjectsGrid: projectsGrid, BentoBoard: bentoBoard, BadgeRow: badgeRow, SocialRow: socialRow, LANGUAGE_COLORS, skillPillWidth, truncate, textToPathStrings };

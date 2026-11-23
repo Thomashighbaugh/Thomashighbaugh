@@ -4,6 +4,10 @@
 <BentoBoard width={800} columns={3} />
 ```
 
+```vice width=800 merge from=skillGroups alt="Skill wall"
+<BentoGrid groups={items} columns={2} title="Skill Wall" />
+```
+
 <details>
 <summary>Links</summary>
 
