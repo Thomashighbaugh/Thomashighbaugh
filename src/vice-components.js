@@ -478,32 +478,53 @@ function followerButton({ name, login, publicRepos = 0, followers = 0, height = 
 }
 
 /**
- * FollowerPanel — the follower readout as one full-width button, built the same
- * way as the languages panel: a bordered, shadowed block spanning the column.
+ * FollowerPanel — the whole follower readout inside one button, built the same
+ * way as the languages panel: a bordered, shadowed block spanning the column,
+ * carrying its data as rows rather than a single line.
+ *
+ * row 1: the name
+ * row 2: repos
+ * row 3: followers
  *
  * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, width?: number}} props
  * @returns {string}
  */
 function followerPanel({ name, login, publicRepos = 0, followers = 0, width = 800 }) {
   const panelW = width;
-  const padX = 18;
-  const height = 64;
+  const padX = 16;
+  const padY = 12;
   const shadow = 6;
-  const label = String(name || login || 'Follower');
-  const plural = (n, word) => `${n} ${word}${Number(n) === 1 ? '' : 's'}`;
-  const counts = `${plural(publicRepos, 'repo')} / ${plural(followers, 'follower')}`;
+  const nameSize = 17;
+  const rowSize = 12;
+  const nameRowH = 28;
+  const rowH = 22;
 
-  const nameSize = 18;
-  const countSize = 13;
-  const countW = measureText(counts, BUTTON_FONT, countSize);
-  const baseline = height / 2 + nameSize * 0.34;
+  const label = String(name || login || 'Follower');
+  const rows = [
+    { text: 'Repos', value: String(publicRepos), color: CHART_PALETTE[1] },
+    { text: 'Followers', value: String(followers), color: CHART_PALETTE[2] },
+  ];
+
   const boxW = panelW - shadow;
+  const height = padY * 2 + nameRowH + rows.length * rowH;
 
   let svg = `<svg width="${panelW}" height="${height + shadow}" viewBox="0 0 ${panelW} ${height + shadow}" xmlns="http://www.w3.org/2000/svg">`;
   svg += `<rect x="${shadow}" y="${shadow}" width="${boxW}" height="${height}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
   svg += `<rect x="0" y="0" width="${boxW}" height="${height}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
-  svg += textToPathStrings(label, BUTTON_FONT, nameSize, padX, baseline, '#f4f4f4').join('');
-  svg += textToPathStrings(counts, BUTTON_FONT, countSize, boxW - padX - countW, baseline, ACCENT).join('');
+
+  // Name row
+  svg += `<rect x="${padX}" y="${padY + nameRowH / 2 - 5}" width="10" height="10" fill="${CHART_PALETTE[0]}" rx="2" ry="2" />`;
+  svg += textToPathStrings(label, BUTTON_FONT, nameSize, padX + 18, padY + nameSize + 2, '#f4f4f4').join('');
+
+  // Value rows, laid out like the language rows
+  rows.forEach((row, i) => {
+    const y = padY + nameRowH + (i + 1) * rowH - 7;
+    const valueW = measureText(row.value, BUTTON_FONT, rowSize);
+    svg += `<rect x="${padX}" y="${y - 9}" width="9" height="9" fill="${row.color}" rx="2" ry="2" />`;
+    svg += textToPathStrings(row.text, BUTTON_FONT, rowSize, padX + 16, y, '#f4f4f4').join('');
+    svg += textToPathStrings(row.value, BUTTON_FONT, rowSize, boxW - padX - valueW, y, ACCENT).join('');
+  });
+
   svg += `</svg>`;
   return svg;
 }
