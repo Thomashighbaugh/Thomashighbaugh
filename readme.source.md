@@ -25,18 +25,6 @@
 />
 ```
 
-### Follower Highlight
-
-```vice width=800 from=follower link=item.htmlUrl
-<FollowerPanel
-  name={item.name}
-  login={item.login}
-  publicRepos={item.publicRepos}
-  followers={item.followers}
-  width={800}
-/>
-```
-
 **Projects I'm following**
 
 ```vice from=github.starredRepos link=item.href gap=2

@@ -1361,7 +1361,7 @@ function bentoBoard({
   // The badges and the contact buttons stay in Markdown so their links work.
   const cells = [
     { span: 3, render: () => lawPanel({ width: spanW(3), bare: true }) },
-    { span: 1, render: () => followerCard({ ...(follower || {}), width: spanW(1), height: 210, bare: true }) },
+    { span: 1, render: () => followerButton({ ...(follower || {}), height: 38 }) },
     { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10, bare: true }) },
     { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3, bare: true }) },
     { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }) },
