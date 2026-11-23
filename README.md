@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-92a78701.svg" width="800" height="1447" alt="Profile dashboard" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-8ab5c6d2.svg" width="800" height="1447" alt="Profile dashboard" /></p>
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
@@ -14,7 +14,7 @@
 
 ### Follower Highlight
 
-<p align="center"><a href="https://github.com/kroitor"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-57d1f1fb.svg" width="800" height="80" alt="Igor Kroitor" /></a></p>
+<p align="center"><a href="https://github.com/vasek0001"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-867f1cb7.svg" width="800" height="80" alt="vasek0001" /></a></p>
 
 
 **Projects I'm following**
