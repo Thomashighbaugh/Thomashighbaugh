@@ -1332,6 +1332,30 @@ function socialRow({ items = [], width = 780, gap = 10, height = 42 }) {
 }
 
 /**
+ * Wrap an inner SVG with an h3-style heading on top, sized to the cell width.
+ * The heading uses the banner's Knewave heading style so it reads as a panel
+ * title; the inner content is shifted down to sit beneath it.
+ *
+ * @param {{title: string, inner: string, width: number, titleSize?: number}} props
+ * @returns {string}
+ */
+function titledCell({ title, inner, width, titleSize = 18 }) {
+  const body = svgBody(inner);
+  if (!body) return inner;
+  const fit = fitTextSize(title, 'Knewave', titleSize, width - 32);
+  const titleW = measureText(title, 'Knewave', fit);
+  const baseline = 30 + fit * 0.8;
+  const headingH = Math.ceil(baseline + fit * 0.4);
+  const totalH = headingH + body.height;
+
+  let svg = `<svg width="${width}" height="${totalH}" viewBox="0 0 ${width} ${totalH}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += headingWithShadow(title, fit, (width - titleW) / 2, baseline);
+  svg += `<g transform="translate(0,${headingH})">${body.body}</g>`;
+  svg += `</svg>`;
+  return svg;
+}
+
+/**
  * BentoBoard — every panel composed into one 3-column bento canvas below the
  * banner. Cells declare a column span; rows are packed in declaration order so
  * spans of 1/2/3 interlock.
@@ -1361,10 +1385,10 @@ function bentoBoard({
   // The badges and the contact buttons stay in Markdown so their links work.
   const cells = [
     { span: 3, render: () => lawPanel({ width: spanW(3), bare: true }) },
-    { span: 1, render: () => followerButton({ ...(follower || {}), height: 38 }) },
+    { span: 1, render: () => titledCell({ title: 'Follower Highlight', inner: followerButton({ ...(follower || {}), height: 38 }), width: spanW(1) }) },
     { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10, bare: true }) },
     { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3, bare: true }) },
-    { span: 3, render: () => metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }) },
+    { span: 3, render: () => titledCell({ title: 'Account Statistics', inner: metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }), width: spanW(3) }) },
   ];
 
   // Pack into rows whose spans sum to at most `columns`.
