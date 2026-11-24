@@ -1374,7 +1374,7 @@ function socialRow({ items = [], width = 780, gap = 10, height = 42 }) {
  * @param {{title: string, inner: string, width: number, titleSize?: number}} props
  * @returns {string}
  */
-function titledCell({ title, inner, width, titleSize = 18 }) {
+function titledCell({ title, inner, width, titleSize = 24 }) {
   const body = svgBody(inner);
   if (!body) return inner;
   const fit = fitTextSize(title, 'Knewave', titleSize, width - 32);
