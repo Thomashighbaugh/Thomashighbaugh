@@ -20,6 +20,7 @@ Font assets for SVG rendering and image generation. Contains bitmap fonts (Coder
 | `Press_Start_2P/` | Press Start 2P web font (.woff2 + OFL license) |
 | `Tiny5/` | Tiny5 web font (.woff2 + OFL license) |
 | `VT323/` | VT323 web font (.woff2 + OFL license) |
+| `ttf/` | Flat duplicate of font files in .ttf/.woff formats used for text measurement |
 
 ## For AI Agents
 

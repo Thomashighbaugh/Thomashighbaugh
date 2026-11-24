@@ -11,18 +11,15 @@ Image assets used in the generated profile README. Includes custom-designed SVG 
 |------|-------------|
 | `banner.svg` | Profile header banner (850x450, custom vector art) |
 | `logo.svg` / `logo.png` | Personal logo in vector and raster formats |
-| `icon.png` | Profile icon/avatar |
 | `CoderBase.png` | Base image for Coder bitmap font rendering |
 | `levelMask.png` | Mask image for level/badge overlays |
-| `lastFollower.png` | Cached last displayed follower image |
-| `randomFollower.png` | Current random follower of the day image |
 
 ## For AI Agents
 
 ### Working In This Directory
 - SVG files are vector assets for high-quality rendering
 - PNG files are generated/updated by `utils/drawFollowerImage.js`
-- `randomFollower.png` is overwritten daily by GitHub Actions
+- `randomFollower.png` is generated daily by GitHub Actions and written to this directory (runtime artifact, not committed source)
 
 ### Common Patterns
 - SVG for static design assets, PNG for dynamically generated content

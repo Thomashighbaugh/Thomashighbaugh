@@ -1,3 +1,5 @@
 node_modules
 prompt.txt
 .opencode/
+.cache/
+src/resources/images/randomFollower.png

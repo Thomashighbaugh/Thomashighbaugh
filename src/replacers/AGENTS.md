@@ -10,12 +10,11 @@ Template replacer modules that handle dynamic content injection into `README_TEM
 | File | Description |
 |------|-------------|
 | `header.js` | Generates the profile header banner section |
-| `myexperience.js` | Generates the experience timeline from data |
 | `randomFollower.js` | Fetches and displays a random follower of the day |
-| `randomNum.js` | Generates random numbers for display |
 | `recentworks.js` | Lists recent GitHub works and projects |
 | `skillswall.js` | Generates the skill badges wall |
 | `socialMedias.js` | Renders social media link badges |
+| `starredRepos.js` | Lists recently starred repositories |
 
 ## For AI Agents
 
