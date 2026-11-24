@@ -456,13 +456,48 @@ function skillPill({ name, icon, color = '#3c3c3c', logoColor = '#f4f4f4', highl
 /**
  * FollowerButton — the whole follower readout on one button: name and counts.
  *
- * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, height?: number}} props
+ * When `width` is given it draws a full-width two-line button (name on row 1,
+ * repos/followers on row 2) constrained to that width so it never overflows
+ * its cell. A GitHub icon may be passed to sit beside the name. When `width`
+ * is omitted it falls back to the single-line `badge` layout.
+ *
+ * @param {{name?: string, login?: string, publicRepos?: number, followers?: number, height?: number, width?: number, icon?: object}} props
  * @returns {string}
  */
-function followerButton({ name, login, publicRepos = 0, followers = 0, height = 44 }) {
+function followerButton({ name, login, publicRepos = 0, followers = 0, height = 44, width, icon }) {
   const label = String(name || login || 'Follower');
   const plural = (n, word) => `${n} ${word}${Number(n) === 1 ? '' : 's'}`;
   const value = `${plural(publicRepos, 'repo')} / ${plural(followers, 'follower')}`;
+
+  // Full-width two-line button: name on row 1, stats on row 2, icon beside name.
+  if (width) {
+    const panelW = width;
+    const padX = 16;
+    const padY = 10;
+    const shadow = 6;
+    const nameSize = 15;
+    const nameRowH = 24;
+    const statsRowH = 18;
+    const statsSize = 11;
+    const iconSize = nameRowH * 0.55;
+    const iconGap = 8;
+    const totalH = padY * 2 + nameRowH + statsRowH;
+    const textX = padX + (icon ? iconSize + iconGap : 0);
+    const maxNameW = panelW - textX - padX;
+    const nameText = truncateToWidth(label, BUTTON_FONT, nameSize, maxNameW);
+
+    let svg = `<svg width="${panelW}" height="${totalH + shadow}" viewBox="0 0 ${panelW} ${totalH + shadow}" xmlns="http://www.w3.org/2000/svg">`;
+    svg += `<rect x="${shadow}" y="${shadow}" width="${panelW - shadow}" height="${totalH}" fill="#000000" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" />`;
+    svg += `<rect x="0" y="0" width="${panelW}" height="${totalH}" fill="#3c3c3c" rx="${BUTTON_RADIUS}" ry="${BUTTON_RADIUS}" stroke="#f4f4f7" stroke-width="2" />`;
+    if (icon) {
+      svg += iconMarkup(icon, padX, padY + (nameRowH - iconSize) / 2, iconSize, '#f4f4f4');
+    }
+    svg += textToPathStrings(nameText, BUTTON_FONT, nameSize, textX, padY + nameSize + 2, '#f4f4f4').join('');
+    svg += textToPathStrings(value, BUTTON_FONT, statsSize, textX, padY + nameRowH + statsSize + 2, ACCENT).join('');
+    svg += `</svg>`;
+    return svg;
+  }
+
   return badge({
     label,
     value,
@@ -1385,7 +1420,7 @@ function bentoBoard({
   // The badges and the contact buttons stay in Markdown so their links work.
   const cells = [
     { span: 3, render: () => lawPanel({ width: spanW(3), bare: true }) },
-    { span: 1, render: () => titledCell({ title: 'Follower Highlight', inner: followerButton({ ...(follower || {}), height: 38 }), width: spanW(1) }) },
+    { span: 1, render: () => titledCell({ title: 'Follower Highlight', inner: followerButton({ ...(follower || {}), width: spanW(1), icon: (follower || {}).icon }), width: spanW(1) }) },
     { span: 2, render: () => activityPanel({ items: activity, width: spanW(2), title: 'Activity', maxRows: 10, bare: true }) },
     { span: 3, render: () => projectsGrid({ items: repos, width: spanW(3), columns: 3, bare: true }) },
     { span: 3, render: () => titledCell({ title: 'Account Statistics', inner: metricsPanel({ ...stats, languages, orgs: scopes, width: spanW(3), bare: true }), width: spanW(3) }) },
