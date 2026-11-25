@@ -493,7 +493,8 @@ function followerButton({ name, login, publicRepos = 0, followers = 0, height = 
       svg += iconMarkup(icon, padX, padY + (nameRowH - iconSize) / 2, iconSize, '#f4f4f4');
     }
     svg += textToPathStrings(nameText, BUTTON_FONT, nameSize, textX, padY + nameSize + 2, '#f4f4f4').join('');
-    svg += textToPathStrings(value, BUTTON_FONT, statsSize, textX, padY + nameRowH + statsSize + 2, ACCENT).join('');
+    const valueText = truncateToWidth(value, BUTTON_FONT, statsSize, maxNameW);
+    svg += textToPathStrings(valueText, BUTTON_FONT, statsSize, textX, padY + nameRowH + statsSize + 2, ACCENT).join('');
     svg += `</svg>`;
     return svg;
   }
