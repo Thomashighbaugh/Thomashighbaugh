@@ -10,7 +10,7 @@ Image assets used in the generated profile README. Includes custom-designed SVG 
 | File | Description |
 |------|-------------|
 | `banner.svg` | Profile header banner (850x450, custom vector art) |
-| `logo.svg` / `logo.png` | Personal logo in vector and raster formats |
+| `logo.png` | Personal logo in raster format (referenced by the legacy build template) |
 | `CoderBase.png` | Base image for Coder bitmap font rendering |
 | `levelMask.png` | Mask image for level/badge overlays |
 
