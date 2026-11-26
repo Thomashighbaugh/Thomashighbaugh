@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-5f756187.svg" width="800" height="1460" alt="Profile dashboard" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-f8eaa03b.svg" width="800" height="1460" alt="Profile dashboard" /></p>
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
@@ -9,7 +9,7 @@
 <details>
 <summary>Links</summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-4d947986.svg" width="219" height="48" alt="vice-2" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-48008bd9.svg" width="219" height="48" alt="vice-2" /></p>
 
 
 **Projects I'm following**
