@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/src/resources/images/banner.svg" width="850" height="450" alt="Thomashighbaugh" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-29700051.svg" width="800" height="1460" alt="Profile dashboard" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-0-84fcf46b.svg" width="800" height="1506" alt="Profile dashboard" /></p>
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-1-307b07d0.svg" width="800" height="1032" alt="Skill wall" /></p>
@@ -9,12 +9,12 @@
 <details>
 <summary>Links</summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-48008bd9.svg" width="219" height="48" alt="vice-2" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-2-3268c0e7.svg" width="219" height="48" alt="vice-2" /></p>
 
 
 **Projects I'm following**
 
-<p align="center"><a href="https://github.com/pbakaus/impeccable"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-3a0e9a84.svg" width="261" height="38" alt="pbakaus/impeccable" /></a>&nbsp;&nbsp;<a href="https://github.com/alchaincyf/nuwa-skill"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-835956b1.svg" width="271" height="38" alt="alchaincyf/nuwa-skill" /></a>&nbsp;&nbsp;<a href="https://github.com/alchaincyf/huashu-design"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-4183e3e2.svg" width="320" height="38" alt="alchaincyf/huashu-design" /></a>&nbsp;&nbsp;<a href="https://github.com/titanwings/distilly"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-cc4ae9ff.svg" width="235" height="38" alt="titanwings/distilly" /></a>&nbsp;&nbsp;<a href="https://github.com/hardikpandya/stop-slop"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-44633a1a.svg" width="301" height="38" alt="hardikpandya/stop-slop" /></a>&nbsp;&nbsp;<a href="https://github.com/dembrandt/dembrandt"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-6dd2ccc5.svg" width="284" height="38" alt="dembrandt/dembrandt" /></a></p>
+<p align="center"><a href="https://github.com/pbakaus/impeccable"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-3a0e9a84.svg" width="261" height="38" alt="pbakaus/impeccable" /></a>&nbsp;&nbsp;<a href="https://github.com/HKUDS/CLI-Anything"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-bba02d6d.svg" width="251" height="38" alt="HKUDS/CLI-Anything" /></a>&nbsp;&nbsp;<a href="https://github.com/alchaincyf/nuwa-skill"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-835956b1.svg" width="271" height="38" alt="alchaincyf/nuwa-skill" /></a>&nbsp;&nbsp;<a href="https://github.com/alchaincyf/huashu-design"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-4183e3e2.svg" width="320" height="38" alt="alchaincyf/huashu-design" /></a>&nbsp;&nbsp;<a href="https://github.com/titanwings/distilly"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-cc4ae9ff.svg" width="235" height="38" alt="titanwings/distilly" /></a>&nbsp;&nbsp;<a href="https://github.com/hardikpandya/stop-slop"><img src="https://raw.githubusercontent.com/Thomashighbaugh/Thomashighbaugh/main/.github/assets/vice-component-3-44633a1a.svg" width="301" height="38" alt="hardikpandya/stop-slop" /></a></p>
 
 
 </details>
